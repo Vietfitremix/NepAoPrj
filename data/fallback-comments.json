@@ -1,0 +1,21 @@
+{
+  "byGarmentOccasion": {
+    "ao_ngu_than|ky_yeu": {"title": "Ngũ thân cho ngày kỷ yếu",
+      "comment": "Áo ngũ thân giúp cả lớp trông chỉn chu mà vẫn trẻ trung trong ảnh tập thể. Màu {color1} làm chủ đạo, {color2} làm điểm nhấn sẽ lên ảnh rất sáng."},
+    "ao_dai|ky_yeu": {"title": "Áo dài kỷ yếu nhẹ nhàng",
+      "comment": "Áo dài là lựa chọn quen thuộc mà không bao giờ cũ cho ngày chia tay mái trường. Tông {color1} phối {color2} giữ cho ảnh dịu và sáng."},
+    "ao_tu_than|le_hoi_chua": {"title": "Tứ thân đi hội",
+      "comment": "Áo tứ thân hợp không khí lễ hội và hội làng. Màu {color1} trầm ấm, thêm {color2} cho điểm nhấn là vừa đẹp."}
+  },
+  "byGarment": {
+    "ao_dai": {"title": "Áo dài thanh lịch", "comment": "Áo dài dễ mặc, hợp nhiều dịp. Màu {color1} kết hợp {color2} cho tổng thể hài hòa."},
+    "ao_ngu_than": {"title": "Ngũ thân chỉn chu", "comment": "Áo ngũ thân có cổ đứng và 5 khuy, nhìn trang trọng mà vẫn trẻ. Màu {color1} phối {color2} khá ăn ý."},
+    "ao_tu_than": {"title": "Tứ thân dân dã", "comment": "Áo tứ thân mang nét mộc mạc, rất hợp chụp ảnh. Màu {color1} với {color2} giữ được chất truyền thống."}
+  },
+  "byRule": {
+    "R07": "Đi sneaker vẫn ổn nha, chỉ cần giữ cổ đứng và đủ 5 khuy để áo vẫn ra chất ngũ thân.",
+    "R12": "Toàn trắng kèm khăn trắng dễ khiến người lớn liên tưởng tới tang phục, bạn thử thêm một màu ấm nhé.",
+    "R15": "Nhật bình vốn là lễ phục cung đình, dạo phố thì áo dài hoặc ngũ thân sẽ tự nhiên hơn."
+  },
+  "defaultTip": "Bạn có thể vào studio để đổi màu và phụ kiện theo ý mình."
+}

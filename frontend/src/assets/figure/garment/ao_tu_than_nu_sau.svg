@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
+  <!-- ao_tu_than_nu – hướng SAU. Dựng từ bản hướng trước (cùng đường bao), bỏ chi tiết chỉ có ở mặt trước. Sinh bằng tools/gen_garment_views.py. -->
+  
+  <g id="ao_tu_than_nu_sau" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
+    <g id="tay_ao">
+      <path id="tay_ao_trai" d="M151 174 C138 180 132 198 132 222 C130 260 124 292 122 318 C120 352 117 394 116 430 L141 434 C142 398 144 354 147 318 C150 290 156 250 158 224 Z" fill="#FF0000"/>
+      <path id="tay_ao_phai" d="M249 174 C262 180 268 198 268 222 C270 260 276 292 278 318 C280 352 283 394 284 430 L259 434 C258 398 256 354 253 318 C250 290 244 250 242 224 Z" fill="#FF0000"/>
+      <path id="bong_tay" d="M158 224 L147 318 L141 434 L134 433 L140 318 L151 228 Z M242 224 L253 318 L259 434 L266 433 L260 318 L249 228 Z" fill="#000" fill-opacity="0.13" stroke="none"/>
+      <path id="nep_khuyu" d="M123 310 Q134 318 145 312 M277 310 Q266 318 255 312 M118 420 L141 424 M282 420 L259 424" fill="none" stroke="#000" stroke-opacity="0.28" stroke-width="1.2"/>
+    </g>
+
+    <path id="than_sau" d="M151 174 C168 167 186 164 200 164 C214 164 232 167 249 174 L242 224 C243 300 247 360 251 400 L257 702 Q200 710 143 702 L149 400 C154 360 157 300 158 224 Z" fill="#FF0000"/>
+    <path id="bong_than_sau" d="M149 400 L160 400 L160 704 L143 702 Z M251 400 L240 400 L240 704 L257 702 Z" fill="#000" fill-opacity="0.16" stroke="none"/>
+    <path id="duong_song_lung" d="M200 166 L200 706" fill="none" stroke-opacity="0.28"/>
+    <path id="that_lung" d="M170 314 L230 314 L230 330 L170 330 Z" fill="#FF00FF"/>
+  </g>
+</svg>

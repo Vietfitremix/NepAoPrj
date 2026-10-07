@@ -1,0 +1,6 @@
+[
+  {"id": "truyen_thong", "name": "Truyền thống", "preferColors": ["do_son", "nau_dat", "vang_hoang", "den_tuyen"]},
+  {"id": "toi_gian", "name": "Tối giản", "preferColors": ["trang_nga", "be_kem", "den_tuyen", "xanh_reu"]},
+  {"id": "duong_pho", "name": "Đường phố", "preferColors": ["den_tuyen", "xanh_lam", "do_son", "xanh_ngoc"]},
+  {"id": "pastel", "name": "Pastel", "preferColors": ["hong_dao", "trang_nga", "xanh_ngoc", "be_kem"]}
+]

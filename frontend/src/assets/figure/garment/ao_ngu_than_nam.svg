@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
+  <!-- Áo ngũ thân nam, mặc cùng quần trắng (bottom/quan_nam) và khăn xếp.
+       #FF0000 = màu chính (c-main), #00FF00 = cổ áo (c-lining).
+       Tham khảo: cổ cao, thẳng, vuông; 5 khuy cài bên phải người mặc; dáng chữ A rộng dần xuống gấu;
+       hai vạt dài quá gối; tay dài, rộng. Bám số đo nam: vai 138 đến 262. -->
+  <g id="ao_ngu_than_nam" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
+    <g id="tay_ao">
+      <path id="tay_ao_trai" d="M140 172 C126 180 120 198 120 224 C118 262 112 292 110 318 C108 352 106 394 105 430 L135 434 C136 398 138 354 141 318 C144 290 151 252 154 226 Z" fill="#FF0000"/>
+      <path id="tay_ao_phai" d="M260 172 C274 180 280 198 280 224 C282 262 288 292 290 318 C292 352 294 394 295 430 L265 434 C264 398 262 354 259 318 C256 290 249 252 246 226 Z" fill="#FF0000"/>
+      <path id="bong_tay" d="M154 226 L141 318 L135 434 L127 433 L134 318 L147 230 Z M246 226 L259 318 L265 434 L273 433 L266 318 L253 230 Z" fill="#000" fill-opacity="0.13" stroke="none"/>
+      <path id="nep_khuyu" d="M111 310 Q124 318 139 312 M289 310 Q276 318 261 312 M106 424 L135 428 M294 424 L265 428" fill="none" stroke="#000" stroke-opacity="0.28" stroke-width="1.2"/>
+    </g>
+
+    <path id="than_ao" d="M140 172 C160 164 182 160 200 160 C218 160 240 164 260 172 L246 226
+      C249 320 258 470 266 622 Q200 634 134 622 C142 470 151 320 154 226 Z" fill="#FF0000"/>
+    <path id="bong_than" d="M154 226 L164 230 L152 622 L135 622 Z M246 226 L236 230 L248 622 L265 622 Z M197 330 L192 630 L206 630 Z" fill="#000" fill-opacity="0.12" stroke="none"/>
+    <path id="nep_than" d="M176 420 Q170 520 164 624 M224 420 Q230 520 236 624" fill="none" stroke="#000" stroke-opacity="0.18" stroke-width="1.2"/>
+
+    <path id="vat_truoc" d="M193 162 Q172 178 160 224 L153 330 L141 624" fill="none"/>
+    <path id="co_dung" d="M184 138 L216 138 L217 162 Q200 167 183 162 Z" fill="#00FF00"/>
+    <g id="khuy" fill="#D9B44A" stroke-width="1.2">
+      <circle cx="200" cy="150" r="3.8"/><circle cx="185" cy="173" r="3.8"/><circle cx="173" cy="191" r="3.8"/>
+      <circle cx="164" cy="212" r="3.8"/><circle cx="159" cy="262" r="3.8"/>
+    </g>
+  </g>
+</svg>

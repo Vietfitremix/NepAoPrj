@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
+  <!-- Váy dài xếp ly chấm đất nữ (đi cùng áo tứ thân thả vạt). Cạp ở eo y=314, gấu y≈778 phủ mu bàn chân, loe rộng.
+       #0000FF = màu váy (c-bottom). Bám số đo nữ: hông 151–249 (y=414); váy phủ 147–253 ở hông. -->
+  <g id="vay_xep_ly_nu" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round">
+    <path id="vai_vay" d="M166 314 L234 314 C242 356 250 392 253 430 L270 774 Q200 784 130 774 L147 430 C150 392 158 356 166 314 Z" fill="#0000FF"/>
+    <path id="bong" d="M147 430 L156 430 L142 776 L130 774 Z M253 430 L244 430 L258 776 L270 774 Z" fill="#000" fill-opacity="0.1" stroke="none"/>
+    <path id="nep_ly" d="M172 440 L158 776 M186 440 L178 778 M200 440 L200 780 M214 440 L222 778 M228 440 L242 776" fill="none" stroke="#000" stroke-opacity="0.16" stroke-width="1.2"/>
+  </g>
+</svg>

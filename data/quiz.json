@@ -1,0 +1,66 @@
+[
+  {"id": "occasion", "field": "occasion", "type": "single", "required": true,
+   "question": "Bạn sẽ mặc Việt phục vào dịp nào?",
+   "options": [
+     {"value": "tet", "label": "Tết / du xuân"},
+     {"value": "ky_yeu", "label": "Chụp kỷ yếu / tốt nghiệp"},
+     {"value": "dam_cuoi", "label": "Đám cưới, ăn hỏi"},
+     {"value": "le_hoi_chua", "label": "Lễ hội / đi chùa"},
+     {"value": "dao_pho", "label": "Dạo phố / chụp ảnh"}
+   ],
+   "placeholder": "Hoặc kể dịp của bạn, ví dụ: đi hội làng cuối tuần"},
+  {"id": "weather", "field": "weather", "type": "single", "required": false,
+   "question": "Thời tiết hôm đó thế nào?",
+   "options": [
+     {"value": "nang_nong", "label": "Nắng nóng"},
+     {"value": "mat_me", "label": "Mát mẻ"},
+     {"value": "lanh", "label": "Se lạnh / lạnh"},
+     {"value": "mua", "label": "Có mưa"}
+   ],
+   "placeholder": "Ví dụ: tháng 12 ở Hà Nội, trời hanh"},
+  {"id": "setting", "field": "setting", "type": "single", "required": false,
+   "question": "Bạn ở trong nhà hay ngoài trời?",
+   "options": [
+     {"value": "ngoai_troi", "label": "Ngoài trời"},
+     {"value": "trong_nha", "label": "Trong nhà"},
+     {"value": "ca_hai", "label": "Cả hai"}
+   ],
+   "placeholder": "Ví dụ: chụp ở công viên rồi vào nhà hàng"},
+  {"id": "timeOfDay", "field": "timeOfDay", "type": "single", "required": false,
+   "question": "Vào buổi nào?",
+   "options": [
+     {"value": "ban_ngay", "label": "Ban ngày"},
+     {"value": "buoi_toi", "label": "Buổi tối"}
+   ],
+   "placeholder": "Ví dụ: tiệc tối"},
+  {"id": "role", "field": "role", "type": "single", "required": false,
+   "question": "Bạn tham gia với vai trò gì?",
+   "options": [
+     {"value": "khach", "label": "Khách mời"},
+     {"value": "nhan_vat_chinh", "label": "Nhân vật chính (cô dâu, chú rể, người tốt nghiệp…)"},
+     {"value": "be_trap", "label": "Bê tráp / phụ dâu, phụ rể"},
+     {"value": "nhom", "label": "Đi cùng nhóm / cả lớp"},
+     {"value": "chup_anh", "label": "Đi chơi, chụp ảnh"}
+   ],
+   "placeholder": "Ví dụ: mình là phù dâu"},
+  {"id": "style", "field": "style", "type": "single", "required": false,
+   "question": "Bạn thích phong cách nào?",
+   "options": [
+     {"value": "truyen_thong", "label": "Truyền thống"},
+     {"value": "toi_gian", "label": "Tối giản"},
+     {"value": "duong_pho", "label": "Đường phố, cá tính"},
+     {"value": "pastel", "label": "Pastel, nhẹ nhàng"}
+   ],
+   "placeholder": "Ví dụ: nhẹ nhàng nhưng vẫn nổi bật"},
+  {"id": "gender", "field": "gender", "type": "single", "required": false,
+   "question": "Người mặc là nam hay nữ?",
+   "options": [
+     {"value": "nu", "label": "Nữ"},
+     {"value": "nam", "label": "Nam"}
+   ],
+   "placeholder": ""},
+  {"id": "colors", "field": "preferredColors", "type": "multi", "required": false,
+   "question": "Màu bạn thích? (chọn tối đa 3, có thể bỏ qua)",
+   "options": "palette",
+   "placeholder": "Ví dụ: thích tông ấm, không thích màu hồng"}
+]

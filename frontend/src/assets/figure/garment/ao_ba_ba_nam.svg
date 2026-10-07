@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
+  <!-- Áo bà ba nam (Nam Bộ), mặc cùng quần cùng màu hoặc màu đen (bottom/quan_nam). #FF0000 = màu áo (c-main).
+       Tham khảo ảnh "Peasant in áo bà ba": cổ tròn không bâu, hàng khuy giữa thân trước,
+       hai túi to may ốp phía dưới, dài qua hông, xẻ hai bên, tay dài suông. -->
+  <g id="ao_ba_ba_nam" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
+    <g id="tay_ao">
+      <path id="tay_ao_trai" d="M140 172 C127 180 122 198 121.5 222 C120 262 114 292 112 318 C110 352 108 394 107 431 L134.5 434 C135.5 398 137.5 354 140.5 318 C143.5 290 150 252 153 226 Z" fill="#FF0000"/>
+      <path id="tay_ao_phai" d="M260 172 C273 180 278 198 278.5 222 C280 262 286 292 288 318 C290 352 292 394 293 431 L265.5 434 C264.5 398 262.5 354 259.5 318 C256.5 290 250 252 247 226 Z" fill="#FF0000"/>
+      <path id="bong_tay" d="M153 226 L140.5 318 L134.5 434 L127 433 L134 318 L146 230 Z M247 226 L259.5 318 L265.5 434 L273 433 L266 318 L254 230 Z" fill="#000" fill-opacity="0.12" stroke="none"/>
+      <path id="nep_tay" d="M113 310 Q125 318 139 312 M287 310 Q275 318 261 312" fill="none" stroke="#000" stroke-opacity="0.25" stroke-width="1.2"/>
+    </g>
+
+    <path id="than_ao" d="M140 172 C152 167 166 165 178 164 Q200 182 222 164 C234 165 248 167 260 172 L247 226
+      C248 300 250 380 252 456 Q200 462 148 456 C150 380 152 300 153 226 Z" fill="#FF0000"/>
+    <path id="bong_than" d="M153 226 L162 230 L160 456 L148 456 Z M247 226 L238 230 L240 456 L252 456 Z" fill="#000" fill-opacity="0.11" stroke="none"/>
+    <path id="xe_ta" d="M149 418 L157 420 M251 418 L243 420" fill="none" stroke-opacity="0.45"/>
+    <path id="duong_vai" d="M140 172 Q150 196 153 226 M260 172 Q250 196 247 226" fill="none" stroke-opacity="0.2"/>
+
+    <path id="duong_cai" d="M200 182 L200 458" fill="none" stroke-opacity="0.35"/>
+    <g id="khuy" fill="#1E1E1E" fill-opacity="0.7" stroke-width="0.6">
+      <circle cx="200" cy="194" r="2.3"/><circle cx="200" cy="230" r="2.3"/><circle cx="200" cy="266" r="2.3"/>
+      <circle cx="200" cy="302" r="2.3"/><circle cx="200" cy="338" r="2.3"/><circle cx="200" cy="374" r="2.3"/>
+    </g>
+    <g id="tui" fill="none" stroke-opacity="0.45">
+      <path d="M160 388 L190 388 L190 436 L160 436 Z M240 388 L210 388 L210 436 L240 436 Z"/>
+      <path d="M160 394 L190 394 M240 394 L210 394" stroke-opacity="0.25"/>
+    </g>
+  </g>
+</svg>

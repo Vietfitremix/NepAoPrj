@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nếp Áo – Xem thử người mẫu giấy</title>
+<style>
+  :root {
+    --bg: #faf6ef; --ink: #2b2b2b; --muted: #6b645a; --card: #fff; --line: #e6ddcc; --accent: #8b2e1f;
+    --c-main: #B3261E; --c-lining: #F5F0E1; --c-bottom: #F5F0E1; --c-accent: #D9A21B;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 system-ui, "Segoe UI", sans-serif; }
+  header { padding: 16px; border-bottom: 1px solid var(--line); }
+  header h1 { margin: 0; font-size: 20px; color: var(--accent); }
+  header p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+  main { display: grid; grid-template-columns: minmax(260px, 420px) 1fr; gap: 24px; padding: 16px; max-width: 1100px; margin: 0 auto; }
+  .stage { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px; position: sticky; top: 12px; align-self: start; }
+  .stage svg { width: 100%; height: auto; display: block; }
+  .panel { display: grid; gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .card h2 { margin: 0 0 10px; font-size: 15px; }
+  .slot { margin-bottom: 12px; }
+  .slot-title { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  .swatches { display: flex; flex-wrap: wrap; gap: 6px; }
+  .sw { width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--line); cursor: pointer; padding: 0; }
+  .sw[aria-pressed="true"] { border-color: var(--ink); box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--ink); }
+  label { display: flex; align-items: center; gap: 8px; padding: 4px 0; cursor: pointer; }
+  .legend { display: grid; grid-template-columns: auto 1fr; gap: 6px 10px; font-size: 13px; align-items: center; }
+  .chip { width: 18px; height: 18px; border-radius: 4px; border: 1px solid var(--line); }
+  .guides line { stroke: #1e88e5; stroke-dasharray: 4 4; stroke-width: 1; }
+  .guides text { fill: #1e88e5; font-size: 11px; font-family: system-ui, sans-serif; }
+  .raw .layer [fill="var(--c-main)"] { fill: #FF0000; }
+  .raw .layer [fill="var(--c-lining)"] { fill: #00FF00; }
+  .raw .layer [fill="var(--c-bottom)"] { fill: #0000FF; }
+  .raw .layer [fill="var(--c-accent)"] { fill: #FF00FF; }
+  @media (max-width: 720px) { main { grid-template-columns: 1fr; } .stage { position: static; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Nếp Áo – Xem thử người mẫu giấy</h1>
+  <p>Bản mẫu: các lớp SVG dùng chung khung 400×800, màu vải đổi bằng biến CSS.</p>
+</header>
+<main>
+  <div class="stage">
+    <svg id="figure" viewBox="0 0 400 800" role="img" aria-label="Người mẫu mặc áo ngũ thân">
+{{LAYERS}}
+      <g class="guides" style="display:none">
+        <line x1="0" x2="400" y1="42" y2="42"/><text x="4" y="38">đỉnh đầu 42</text>
+        <line x1="0" x2="400" y1="140" y2="140"/><text x="4" y="136">cằm 140</text>
+        <line x1="0" x2="400" y1="178" y2="178"/><text x="4" y="174">vai 178</text>
+        <line x1="0" x2="400" y1="238" y2="238"/><text x="4" y="234">ngực 238</text>
+        <line x1="0" x2="400" y1="318" y2="318"/><text x="4" y="314">eo 318</text>
+        <line x1="0" x2="400" y1="414" y2="414"/><text x="4" y="410">hông 414</text>
+        <line x1="0" x2="400" y1="440" y2="440"/><text x="4" y="452">đáy chậu 440</text>
+        <line x1="0" x2="400" y1="590" y2="590"/><text x="4" y="586">gối 590</text>
+        <line x1="0" x2="400" y1="748" y2="748"/><text x="4" y="744">mắt cá 748</text>
+        <line x1="0" x2="400" y1="781" y2="781"/><text x="4" y="777">đáy chân 781</text>
+        <line x1="200" x2="200" y1="0" y2="800"/><text x="204" y="20">trục x=200</text>
+      </g>
+    </svg>
+  </div>
+
+  <div class="panel">
+    <div class="card" id="colors">
+      <h2>Đổi màu</h2>
+      <div class="slot" data-slot="main"><div class="slot-title">Màu chính (thân áo, tay áo)</div><div class="swatches"></div></div>
+      <div class="slot" data-slot="lining"><div class="slot-title">Lót / viền (cổ đứng, cổ tay)</div><div class="swatches"></div></div>
+      <div class="slot" data-slot="bottom"><div class="slot-title">Quần</div><div class="swatches"></div></div>
+      <div class="slot" data-slot="accent"><div class="slot-title">Điểm nhấn (khăn vấn)</div><div class="swatches"></div></div>
+    </div>
+
+    <div class="card">
+      <h2>Bật / tắt lớp</h2>
+{{TOGGLES}}
+    </div>
+
+    <div class="card">
+      <h2>Dành cho người thiết kế</h2>
+      <label><input type="checkbox" id="guides"> Hiện đường gióng mốc tọa độ</label>
+      <label><input type="checkbox" id="raw"> Hiện màu đánh dấu gốc</label>
+      <div class="legend" style="margin-top:8px">
+        <span class="chip" style="background:#FF0000"></span><span><code>#FF0000</code> → màu chính</span>
+        <span class="chip" style="background:#00FF00"></span><span><code>#00FF00</code> → lót / viền</span>
+        <span class="chip" style="background:#0000FF"></span><span><code>#0000FF</code> → quần / váy</span>
+        <span class="chip" style="background:#FF00FF"></span><span><code>#FF00FF</code> → điểm nhấn</span>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+  const PALETTE = {{PALETTE}};
+  const DEFAULTS = { main: "do_son", lining: "trang_nga", bottom: "trang_nga", accent: "vang_hoang" };
+  const fig = document.getElementById("figure");
+
+  function setColor(slot, id) {
+    const c = PALETTE.find(p => p.id === id);
+    document.documentElement.style.setProperty(`--c-${slot}`, c.hex);
+    document.querySelectorAll(`[data-slot="${slot}"] .sw`).forEach(b =>
+      b.setAttribute("aria-pressed", String(b.dataset.id === id)));
+  }
+
+  document.querySelectorAll("#colors .slot").forEach(slotEl => {
+    const slot = slotEl.dataset.slot;
+    const box = slotEl.querySelector(".swatches");
+    PALETTE.forEach(p => {
+      const b = document.createElement("button");
+      b.className = "sw"; b.style.background = p.hex; b.title = p.name;
+      b.dataset.id = p.id; b.setAttribute("aria-label", p.name);
+      b.onclick = () => setColor(slot, p.id);
+      box.appendChild(b);
+    });
+    setColor(slot, DEFAULTS[slot]);
+  });
+
+  const showLayer = (key, on) => {
+    fig.querySelector(`[data-layer="${key}"]`).style.display = on ? "" : "none";
+    document.querySelector(`[data-toggle="${key}"]`).checked = on;
+  };
+  document.querySelectorAll("[data-toggle]").forEach(cb => cb.onchange = () => {
+    const key = cb.dataset.toggle;
+    // Chỉ hiện một người mẫu tại một thời điểm
+    if (key.startsWith("body/") && cb.checked)
+      document.querySelectorAll('[data-toggle^="body/"]').forEach(o => { if (o !== cb) showLayer(o.dataset.toggle, false); });
+    showLayer(key, cb.checked);
+  });
+  document.getElementById("guides").onchange = e => fig.querySelector(".guides").style.display = e.target.checked ? "" : "none";
+  document.getElementById("raw").onchange = e => fig.classList.toggle("raw", e.target.checked);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
+  <!-- ao_dai_nu – hướng SAU. Dựng từ bản hướng trước (cùng đường bao), bỏ chi tiết chỉ có ở mặt trước. Sinh bằng tools/gen_garment_views.py. -->
+  
+  <g id="ao_dai_nu_sau" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
+    <g id="tay_ao">
+      <path id="tay_ao_trai" d="M151 175 C141 182 136 198 135.5 222 C134 262 128 292 126.5 318 C124.5 352 121.5 394 120 431 L140 434 C141 398 143.5 354 147 318 C150 292 156 252 159.5 226 Z" fill="#FF0000"/>
+      <path id="tay_ao_phai" d="M249 175 C259 182 264 198 264.5 222 C266 262 272 292 273.5 318 C275.5 352 278.5 394 280 431 L260 434 C259 398 256.5 354 253 318 C250 292 244 252 240.5 226 Z" fill="#FF0000"/>
+      <path id="bong_tay" d="M159.5 226 L147 318 L140 434 L134 433 L141 318 L153 230 Z M240.5 226 L253 318 L260 434 L266 433 L259 318 L247 230 Z" fill="#000" fill-opacity="0.12" stroke="none"/>
+      <path id="vien_co_tay" d="M120 426 L140 429 M280 426 L260 429" fill="none" stroke-opacity="0.35"/>
+    </g>
+
+    <path id="than_ao" d="M151 175 C168 167 186 164 200 164 C214 164 232 167 249 175 L240.5 226
+      C241.5 248 239.5 262 238.5 270 C236 292 233.5 306 233.5 318 C236 340 248 366 251 392
+      L242 400 L244 738 Q200 746 156 738 L158 400 L149 392 C152 366 164 340 166.5 318
+      C166.5 306 164 292 161.5 270 C160.5 262 158.5 248 159.5 226 Z" fill="#FF0000"/>
+
+    <path id="bong_than" d="M159.5 226 L166 230 L170 318 L166.5 318 Z M240.5 226 L234 230 L230 318 L233.5 318 Z
+      M196 330 L190 742 L206 742 Z M158 400 L166 400 L164 738 L156 738 Z M242 400 L234 400 L236 738 L244 738 Z" fill="#000" fill-opacity="0.11" stroke="none"/>
+    <path id="nep_ta" d="M178 420 Q176 580 172 736 M222 420 Q224 580 228 736" fill="none" stroke="#000" stroke-opacity="0.16" stroke-width="1.1"/>
+
+    <path id="duong_raglan" d="M187 166 L159.5 226 M213 166 L240.5 226" fill="none" stroke-opacity="0.25"/>
+    <path id="co_ao" d="M187 143 L213 143 L214 166 Q200 171 186 166 Z" fill="#00FF00"/>
+    <path id="nep_lung" d="M184 262 Q186 300 188 328 M216 262 Q214 300 212 328" fill="none" stroke="#000" stroke-opacity="0.18" stroke-width="1.1"/>
+  </g>
+</svg>

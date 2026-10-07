@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nếp Áo – AI playground</title>
+<style>
+  :root {
+    --bg: #faf6ef; --card: #fff; --ink: #2b2b2b; --muted: #6b645a; --line: #e6ddcc;
+    --accent: #8b2e1f; --ok: #2e7d32; --consider: #b26a00; --risk: #b3261e;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 system-ui, "Segoe UI", sans-serif; }
+  header { padding: 14px 16px; border-bottom: 1px solid var(--line); display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
+  header h1 { margin: 0; font-size: 20px; color: var(--accent); }
+  .status { font-size: 13px; color: var(--muted); }
+  body { min-height: 100vh; display: flex; flex-direction: column; }
+  /* vùng nội dung chiếm phần còn lại của màn hình, trang ngắn (quiz, gợi ý) nằm giữa theo cả chiều dọc */
+  main { max-width: 1240px; width: 100%; margin: 0 auto; padding: 16px; display: grid; gap: 20px; flex: 1; align-content: center; }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  h2 { margin: 0 0 12px; font-size: 17px; }
+  h3 { margin: 0 0 6px; font-size: 15px; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  input[type=text] { flex: 1 1 320px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; font: inherit; }
+  button { font: inherit; border: 1px solid var(--line); background: #fff; border-radius: 8px; padding: 8px 12px; cursor: pointer; }
+  button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  button.chip { border-radius: 999px; font-size: 13px; padding: 5px 12px; }
+  button.chip[aria-pressed=true] { background: var(--accent); color: #fff; border-color: var(--accent); }
+  button:disabled { opacity: .6; cursor: not-allowed; }
+  .muted { color: var(--muted); font-size: 13px; }
+  .quiz { display: grid; gap: 12px; max-width: 760px; }
+  .progress { height: 6px; background: var(--line); border-radius: 99px; overflow: hidden; }
+  .progress > div { height: 100%; background: var(--accent); transition: width .2s; }
+  .qtitle { font-size: 17px; font-weight: 600; }
+  .summary { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { background: #f3ece0; border-radius: 999px; padding: 3px 10px; font-size: 13px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; margin-top: 14px; }
+  .card { border: 1px solid var(--line); border-radius: 12px; padding: 12px; display: grid; grid-template-columns: 120px 1fr; gap: 12px; }
+  .card .fig svg { width: 100%; height: auto; }
+  .why { background: #fbf3e4; border-left: 3px solid var(--accent); padding: 4px 8px; font-size: 13px; margin: 6px 0; }
+  .badge { display: inline-block; font-size: 12px; padding: 1px 8px; border-radius: 999px; color: #fff; margin: 2px 4px 2px 0; }
+  .b-ok { background: var(--ok); } .b-consider { background: var(--consider); } .b-risk { background: var(--risk); }
+  .studio { display: grid; grid-template-columns: minmax(260px, 360px) 1fr; gap: 20px; }
+  .studio .figwrap { position: sticky; top: 12px; align-self: start; }
+  .studio .big svg { width: 100%; height: auto; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+  .views { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 8px; }
+  .views button { padding: 2px; border-radius: 8px; }
+  .views button[aria-pressed=true] { border: 2px solid var(--accent); }
+  .views svg { width: 100%; height: auto; display: block; }
+  .views span { font-size: 11px; color: var(--muted); }
+  .controls { display: grid; gap: 12px; }
+  .field { display: grid; gap: 4px; }
+  .field label.t { font-size: 13px; color: var(--muted); }
+  select { font: inherit; padding: 6px 8px; border: 1px solid var(--line); border-radius: 8px; }
+  .swatches { display: flex; flex-wrap: wrap; gap: 5px; }
+  .sw { width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--line); padding: 0; }
+  .sw[aria-pressed=true] { box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--ink); }
+  .pat { width: 44px; height: 44px; padding: 0; border-radius: 8px; overflow: hidden; }
+  .pat svg { width: 100%; height: 100%; display: block; }
+  .pat[aria-pressed=true] { box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--ink); }
+  .accs { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+  .accgroup { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; width: 100%; }
+  .accgroup .muted { min-width: 78px; font-size: 12px; }
+  .accs label { display: flex; gap: 6px; align-items: center; font-size: 14px; }
+  .eval { border-left: 4px solid var(--line); padding: 6px 10px; margin: 6px 0; background: #fbf8f2; border-radius: 4px; }
+  .eval.ok { border-color: var(--ok); } .eval.consider { border-color: var(--consider); } .eval.risk { border-color: var(--risk); }
+  .score { font-size: 28px; font-weight: 600; color: var(--accent); }
+  .culture { background: #fbf8f2; border-radius: 8px; padding: 10px 12px; font-size: 14px; }
+  .missing { color: var(--consider); font-size: 12px; }
+  .bubble { background: #fbf8f2; border-radius: 10px; padding: 10px 12px; margin-top: 8px; }
+  .verdict { font-weight: 600; padding: 6px 12px; border-radius: 8px; display: inline-block; margin-top: 8px; color: #fff; }
+  .v-hop { background: var(--ok); } .v-nen_chinh { background: var(--consider); }
+  /* Kích thước co giãn theo màn hình: 1366px ≈ cỡ gốc, màn rộng 1920–2560px to dần, có trần để không quá khổ */
+  :root { --fs: clamp(15px, 0.75vw + 6px, 22px); --gap: clamp(12px, 1vw, 24px); }
+  body { font-size: var(--fs); }
+  header { padding: var(--gap) clamp(16px, 2vw, 40px); }
+  header h1 { font-size: clamp(20px, 1.2vw + 4px, 30px); }
+  .status { font-size: calc(var(--fs) * 0.85); }
+  main, .steps { max-width: min(1600px, 92vw); }
+  h2 { font-size: calc(var(--fs) * 1.25); }
+
+  /* Trang 1–2 căn giữa: khung ở giữa màn hình, nội dung và nút canh giữa */
+  section[data-page="quiz"] { width: 100%; max-width: clamp(920px, 58vw, 1200px); justify-self: center; text-align: center;
+    padding: clamp(20px, 2.2vw, 44px) clamp(20px, 2.6vw, 52px); border-radius: 18px; box-shadow: 0 10px 30px rgba(80, 50, 20, .06); }
+  section[data-page="quiz"] h2 { font-size: calc(var(--fs) * 1.45); margin-bottom: calc(var(--gap) * 1.2); }
+  section[data-page="quiz"] .quiz { max-width: none; gap: calc(var(--gap) * 1.1); }
+  section[data-page="quiz"] input[type=text] { font-size: var(--fs); padding: .8em 1em; border-radius: 10px; }
+  section[data-page="quiz"] button { font-size: var(--fs); padding: .7em 1.2em; border-radius: 10px; }
+  section[data-page="quiz"] button.chip { font-size: calc(var(--fs) * 0.88); padding: .5em 1em; border-radius: 999px; }
+  section[data-page="quiz"] button.primary { padding: .75em 2em; font-weight: 600; }
+  section[data-page="quiz"] .qtitle { font-size: calc(var(--fs) * 1.35); }
+  section[data-page="quiz"] .muted, section[data-page="quiz"] .tag { font-size: calc(var(--fs) * 0.85); }
+  section[data-page="quiz"] .progress { height: 8px; }
+  section[data-page="quiz"] .row { gap: calc(var(--gap) * 0.6); }
+  section[data-page="quiz"] .quiz { margin: 0 auto; }
+  section[data-page="quiz"] .row, section[data-page="quiz"] .summary { justify-content: center; }
+  section[data-page="quiz"] input[type=text] { text-align: left; }
+  section[data-page="goi-y"] h2, #result > p, #result > .bubble { text-align: center; }
+  #result > .summary, #result > .row { justify-content: center; }
+  #result .cards { grid-template-columns: repeat(auto-fit, minmax(300px, 375px)); justify-content: center; }
+  .steps { display: flex; gap: .5em; width: 100%; margin: 0 auto; padding: var(--gap) 16px 0; flex-wrap: wrap; }
+  .steps a { flex: 1 1 160px; text-decoration: none; color: var(--muted); border: 1px solid var(--line); background: #fff;
+             border-radius: 12px; padding: calc(var(--gap) * 0.7) var(--gap); font-size: calc(var(--fs) * 0.95); display: flex; gap: .6em; align-items: center; }
+  .steps a b { display: inline-grid; place-items: center; width: 1.6em; height: 1.6em; border-radius: 50%; background: var(--line); color: var(--ink); font-size: .8em; }
+  .steps a.done { color: var(--ink); }
+  .steps a.done b { background: #e9dcc6; }
+  .steps a.current { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+  .steps a.current b { background: var(--accent); color: #fff; }
+  .steps a.locked { pointer-events: none; opacity: .55; }
+  .pagebar { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line); }
+  .review { display: grid; grid-template-columns: minmax(260px, 420px) 1fr; gap: 20px; }
+  .fig4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
+  .fig4 div { text-align: center; } .fig4 svg { width: 100%; height: auto; background: #fff; border: 1px solid var(--line); border-radius: 8px; }
+  @media (max-width: 860px) { .review { grid-template-columns: 1fr; } }
+  @media (max-width: 860px) { .studio { grid-template-columns: 1fr; } .studio .figwrap { position: static; max-width: 340px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Nếp Áo – AI playground</h1>
+  <span class="status" id="status">Đang kết nối…</span>
+  <a class="status" href="/ai/docs" target="_blank">Tài liệu API</a>
+</header>
+<nav class="steps" id="steps">
+  <a href="#/quiz" data-step="quiz"><b>1</b> Bối cảnh</a>
+  <a href="#/goi-y" data-step="goi-y"><b>2</b> Gợi ý</a>
+  <a href="#/tuy-chinh" data-step="tuy-chinh"><b>3</b> Tuỳ chỉnh</a>
+  <a href="#/nhan-xet" data-step="nhan-xet"><b>4</b> Nhận xét</a>
+</nav>
+<main>
+  <!-- TRANG 1: QUIZ -->
+  <section data-page="quiz" hidden>
+    <h2>① Cho stylist biết bối cảnh</h2>
+    <div class="row" style="margin-bottom:12px">
+      <input type="text" id="shortcut" placeholder="Lối tắt: kể nhanh bằng một câu, ví dụ: chụp kỷ yếu ngoài trời tháng 12, nữ, thích nhẹ nhàng">
+      <button id="shortcutBtn">Gợi ý luôn</button>
+    </div>
+    <div class="quiz" id="quiz"></div>
+  </section>
+
+  <!-- TRANG 2: 3 BỘ GỢI Ý -->
+  <section data-page="goi-y" hidden>
+    <h2>② Stylist gợi ý 3 bộ</h2>
+    <div id="result"></div>
+    <div class="pagebar"><button id="toQuiz">← Sửa bối cảnh</button><span></span></div>
+  </section>
+
+  <!-- TRANG 3: TUỲ CHỈNH -->
+  <section data-page="tuy-chinh" hidden>
+    <h2>③ Tuỳ chỉnh bộ đồ</h2>
+    <div class="summary" id="ctxTags" style="margin-bottom:12px"></div>
+    <div class="studio">
+      <div class="figwrap">
+        <div class="big" id="bigFig"></div>
+        <div class="row" style="justify-content:space-between;margin-top:6px">
+          <button id="prevView">◀</button><span class="muted" id="viewName">Trước</span><button id="nextView">▶</button>
+        </div>
+        <div class="views" id="views"></div>
+        <div class="missing" id="missing"></div>
+      </div>
+      <div class="controls">
+        <div class="row">
+          <div class="field"><label class="t">Người mẫu</label><select id="gender"><option value="nu">Nữ</option><option value="nam">Nam</option></select></div>
+          <div class="field"><label class="t">Dịp</label><select id="occasion"></select></div>
+          <div class="field"><label class="t">Phong cách</label><select id="style"></select></div>
+          <div class="field"><label class="t">Trang phục</label><select id="garment"></select></div>
+        </div>
+        <div class="field"><label class="t">Màu chính</label><div class="swatches" data-slot="main"></div></div>
+        <div class="field"><label class="t">Hoạ tiết</label><div class="accs" id="patterns"></div></div>
+        <div class="field"><label class="t">Quần / váy</label><div class="swatches" data-slot="bottom"></div></div>
+        <div class="field"><label class="t">Lót / viền / yếm</label><div class="swatches" data-slot="lining"></div></div>
+        <div class="field"><label class="t">Khăn / thắt lưng / điểm nhấn</label><div class="swatches" data-slot="accent"></div></div>
+        <div class="field"><label class="t">Phụ kiện (mỗi vị trí 1 món)</label><div class="accs" id="accs"></div></div>
+        <div class="row"><span class="score" id="colorScore">–</span><span class="muted" id="colorNote"></span></div>
+        <div id="evals"></div>
+        <div class="culture" id="culture"></div>
+      </div>
+    </div>
+    <div class="pagebar">
+      <button id="toResult">← Chọn bộ khác</button>
+      <div class="row"><span class="muted" id="askHint"></span><button class="primary" id="ask">Hỏi stylist →</button></div>
+    </div>
+  </section>
+
+  <!-- TRANG 4: NHẬN XÉT -->
+  <section data-page="nhan-xet" hidden>
+    <h2>④ Stylist nhận xét</h2>
+    <div class="review">
+      <div><div class="fig4" id="reviewFig"></div><div class="summary" id="reviewCtx" style="margin-top:8px"></div></div>
+      <div id="reviewOut"></div>
+    </div>
+    <div class="pagebar"><button id="toStudio">← Tiếp tục chỉnh</button><button id="restart">Bắt đầu lại</button></div>
+  </section>
+</main>
+
+<script>
+const API = "/ai";
+const LEVEL = { ok: "Phù hợp", consider: "Nên cân nhắc", risk: "Dễ gây sai lệch" };
+const SLOT_ORDER = ["feet", "neck", "jewelry", "hand", "hair", "head"];      // thứ tự lớp: giày → cổ → trang sức → cầm tay → khăn/tóc → nón
+const SLOT_NAME = { head: "Nón", hair: "Khăn / tóc", feet: "Giày dép", hand: "Cầm tay", neck: "Cổ", jewelry: "Trang sức" };
+const VIEWS = [["truoc", "Trước"], ["phai", "Phải"], ["sau", "Sau"], ["trai", "Trái"]];   // ◀ ▶ đi theo vòng xoay
+const CTX_FIELDS = ["occasion", "weather", "setting", "timeOfDay", "role", "style", "gender"];
+let CAT = null, QUIZ = [], answers = {}, step = 0, context = null, state = null, view = "truoc";
+let stylistRes = null, lastReview = { key: null, res: null }, figSeq = 0;
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const byId = list => Object.fromEntries(list.map(x => [x.id, x]));
+
+async function api(path, body) {
+  const r = await fetch(API + path, body ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) } : {});
+  if (!r.ok) { const e = await r.json().catch(() => ({})); throw new Error(e.message || JSON.stringify(e.detail || r.status)); }
+  return r.json();
+}
+
+/* ======================= Người mẫu giấy: ghép lớp SVG + màu + hoạ tiết ======================= */
+const svgCache = {};
+async function layer(path) {
+  if (!(path in svgCache)) {
+    const r = await fetch(`${API}/figure/${path}.svg`);
+    svgCache[path] = r.ok ? (await r.text()).replace(/<!--[\s\S]*?-->/g, "").match(/<svg[^>]*>([\s\S]*)<\/svg>/)[1] : null;
+  }
+  return svgCache[path];
+}
+function layerPaths(s, v) {
+  const sfx = v === "truoc" ? "" : `_${v}`;
+  const acc = [...s.accessories].sort((a, b) => SLOT_ORDER.indexOf(CAT.acc[a]?.slot) - SLOT_ORDER.indexOf(CAT.acc[b]?.slot));
+  return [`body/body_${s.gender}`,
+    ["ao_tu_than", "nhat_binh"].includes(s.garment) ? "bottom/vay_nu" : `bottom/quan_${s.gender}`,
+    `garment/${s.garment}_${s.gender}`, ...acc.map(a => `accessory/${a}${CAT.acc[a]?.byGender ? "_" + s.gender : ""}`)].map(p => p + sfx);
+}
+function patternDef(patId, baseHex, id) {
+  const p = CAT.pattern[patId];
+  if (!p || !p.tile) return null;
+  return `<pattern id="${id}" patternUnits="userSpaceOnUse" width="${p.tile}" height="${p.tile}">` +
+         `<rect width="${p.tile}" height="${p.tile}" fill="${baseHex}"/>${p.motif.replace(/'/g, '"')}</pattern>`;
+}
+/* Hoạ tiết đặt vị trí (vẽ / thêu theo bố cục): cụm ở ngực và cụm ở tà, co theo khung thân áo, cắt gọn trong thân áo.
+   Chèn ngay sau mảng thân áo cuối cùng, nên cổ áo, khuy, tay áo và bàn tay vẫn nằm trên hoạ tiết. */
+const SVGNS = "http://www.w3.org/2000/svg", MOTIF_SPAN = 62, motifCache = {}, boxCache = {};
+const MOTIF_LIGHT = "#F3EDE4", MOTIF_ON_LIGHT = "#7A6E62";        // nét kem trên nền đậm → nâu xám trên nền sáng
+const lightBase = h => { const n = parseInt(h.slice(1), 16); return (0.299 * (n >> 16) + 0.587 * (n >> 8 & 255) + 0.114 * (n & 255)) / 255 > 0.72; };
+async function motif(id) {
+  if (!(id in motifCache)) {
+    const r = await fetch(`${API}/figure/motif/${id}.svg`);
+    const doc = new DOMParser().parseFromString(r.ok ? await r.text() : "<svg/>", "image/svg+xml");
+    const part = a => doc.querySelector(`[data-anchor="${a}"]`)?.innerHTML || "";
+    motifCache[id] = { top: part("top"), bottom: part("bottom") };
+  }
+  return motifCache[id];
+}
+const isSleeve = el => { for (let e = el; e && e.tagName !== "svg"; e = e.parentNode) if ((e.id || "").startsWith("tay")) return true; return false; };
+function torsoBox(key, mains) {             // khung bao thân áo (đo bằng trình duyệt), nhớ theo từng lớp
+  if (!boxCache[key]) {
+    const tmp = document.createElementNS(SVGNS, "svg");
+    tmp.setAttribute("style", "position:absolute;left:-9999px;width:400px;height:800px");
+    tmp.innerHTML = mains.map(m => m.outerHTML).join("");
+    document.body.appendChild(tmp); boxCache[key] = tmp.getBBox(); tmp.remove();
+  }
+  return boxCache[key];
+}
+async function withPlacement(markup, key, patId, v) {
+  const doc = new DOMParser().parseFromString(`<svg xmlns="${SVGNS}">${markup}</svg>`, "image/svg+xml");
+  const mains = [...doc.querySelectorAll('[fill="#FF0000"]')].filter(e => !isSleeve(e));
+  if (!mains.length) return markup;
+  // khung hoạ tiết rộng 100 phủ ~1,6 lần bề ngang thân áo, căn giữa; phần tràn ra mép bị cắt như vải vẽ thật
+  const box = torsoBox(key, mains), m = await motif(patId), k = box.width / MOTIF_SPAN, cid = `clip${++figSeq}`;
+  const cx = box.x + box.width / 2, flip = v === "sau";        // sau lưng: lật bố cục để không trùng hệt mặt trước
+  const short = box.height < 3 * box.width ? 0.6 : 1;          // áo ngắn (bà ba): thu cụm ở tà để không chồng lên cụm ở ngực
+  const tf = (y, z = 1) => flip ? `translate(${cx + 50 * k * z} ${y}) scale(${-k * z} ${k * z})` : `translate(${cx - 50 * k * z} ${y}) scale(${k * z})`;
+  const g = doc.createElementNS(SVGNS, "g");
+  g.setAttribute("id", "hoa_tiet_dat");
+  g.innerHTML = `<clipPath id="${cid}">${mains.map(e => { const c = e.cloneNode(); c.removeAttribute("id"); return c.outerHTML; }).join("")}</clipPath>
+    <g clip-path="url(#${cid})" stroke="none" stroke-opacity="1" stroke-width="1" stroke-linejoin="round"><g transform="${tf(box.y)}">${m.top}</g><g transform="${tf(box.y + box.height, short)}">${m.bottom}</g></g>`;
+  const last = mains[mains.length - 1];
+  last.parentNode.insertBefore(g, last.nextSibling);
+  return doc.documentElement.innerHTML;
+}
+async function figureSVG(s, v = "truoc") {
+  const hex = id => CAT.color[id]?.hex || "#cccccc";
+  const pid = `pat${++figSeq}`;
+  const pdef = CAT.pattern[s.pattern || "tron"];
+  const place = pdef?.kind === "placement" && (!pdef.garments || pdef.garments.includes(s.garment)) && (!pdef.genders || pdef.genders.includes(s.gender));
+  const pat = place ? null : patternDef(s.pattern || "tron", hex(s.colors.main), pid);
+  const map = { "#FF0000": pat ? `url(#${pid})` : hex(s.colors.main), "#00FF00": hex(s.colors.lining || "trang_nga"),
+                "#0000FF": hex(s.colors.bottom), "#FF00FF": hex(s.colors.accent || s.colors.main) };
+  let inner = "", missing = [];
+  for (const p of layerPaths(s, v)) {
+    let body = await layer(p);
+    if (body === null) { missing.push(p); continue; }
+    if (place && p.startsWith("garment/")) body = await withPlacement(body, p, s.pattern, v);
+    if (place && lightBase(hex(s.colors.main))) body = body.replaceAll(MOTIF_LIGHT, MOTIF_ON_LIGHT);
+    inner += body.replace(/#(FF0000|00FF00|0000FF|FF00FF)/gi, m => map[m.toUpperCase()]);
+  }
+  return { svg: `<svg viewBox="0 0 400 800" xmlns="http://www.w3.org/2000/svg">${pat ? `<defs>${pat}</defs>` : ""}${inner}</svg>`, missing };
+}
+
+/* ======================= ① QUIZ ======================= */
+function renderQuiz() {
+  const q = QUIZ[step];
+  const a = answers[q.id] || {};
+  const chosen = v => q.type === "multi" ? (a.value || []).includes(v) : a.value === v;
+  $("quiz").innerHTML = `
+    <div class="progress"><div style="width:${(step / QUIZ.length) * 100}%"></div></div>
+    <div class="muted">Câu ${step + 1}/${QUIZ.length}${q.required ? " · bắt buộc" : " · có thể bỏ qua"}</div>
+    <div class="qtitle">${esc(q.question)}</div>
+    <div class="row">${q.options.map(o => `<button class="chip" aria-pressed="${chosen(o.value)}" data-v="${esc(o.value)}"
+         ${o.hex ? `style="border-left:14px solid ${o.hex}"` : ""}>${esc(o.label)}</button>`).join("")}</div>
+    ${q.placeholder ? `<input type="text" id="qtext" placeholder="${esc(q.placeholder)}" value="${esc(a.text || "")}">` : ""}
+    <div class="row">
+      ${step > 0 ? `<button id="back">← Quay lại</button>` : ""}
+      ${q.required ? "" : `<button id="skip">Bỏ qua</button>`}
+      <button class="primary" id="next">${step === QUIZ.length - 1 ? "Xem 3 bộ gợi ý" : "Tiếp →"}</button>
+    </div>
+    <div class="summary">${Object.entries(answers).map(([id, v]) => summaryTag(id, v)).join("")}</div>`;
+  $("quiz").querySelectorAll("[data-v]").forEach(b => b.onclick = () => {
+    const cur = answers[q.id] || {};
+    if (q.type === "multi") {
+      const set = new Set(cur.value || []);
+      set.has(b.dataset.v) ? set.delete(b.dataset.v) : set.size < 3 && set.add(b.dataset.v);
+      answers[q.id] = { ...cur, value: [...set] };
+    } else answers[q.id] = { ...cur, value: cur.value === b.dataset.v ? null : b.dataset.v };
+    saveText(); save(); renderQuiz();
+  });
+  if ($("back")) $("back").onclick = () => { saveText(); step--; renderQuiz(); };
+  if ($("skip")) $("skip").onclick = () => { delete answers[q.id]; next(); };
+  $("next").onclick = () => {
+    saveText();
+    const cur = answers[q.id] || {};
+    if (q.required && !(cur.value && cur.value.length) && !(cur.text || "").trim()) { alert("Câu này cần chọn hoặc gõ câu trả lời."); return; }
+    next();
+  };
+}
+function saveText() {
+  const t = $("qtext")?.value?.trim();
+  const q = QUIZ[step];
+  if (t) answers[q.id] = { ...(answers[q.id] || {}), text: t };
+  else if (answers[q.id]) delete answers[q.id].text;
+}
+function next() { if (step < QUIZ.length - 1) { step++; save(); renderQuiz(); } else submitQuiz(); }
+function summaryTag(id, v) {
+  const q = QUIZ.find(x => x.id === id);
+  const labels = [].concat(v.value || []).map(val => q.options.find(o => o.value === val)?.label).filter(Boolean);
+  if (v.text) labels.push(`“${v.text}”`);
+  return labels.length ? `<span class="tag">${esc(labels.join(", "))}</span>` : "";
+}
+function submitQuiz() {
+  const list = Object.entries(answers).map(([questionId, v]) => ({ questionId, value: v.value || null, text: v.text || null }))
+    .filter(a => (a.value && a.value.length) || a.text);
+  ask({ answers: list });
+}
+
+/* ======================= ② 3 BỘ GỢI Ý ======================= */
+function badges(evals) {
+  if (!evals.length) return `<span class="badge b-ok">Phù hợp</span>`;
+  return evals.map(e => `<span class="badge b-${e.level}" title="${esc(e.reason)}">${LEVEL[e.level]}</span>`).join("");
+}
+async function outfitCard(o, extra = "", btn = "Chọn bộ này") {
+  const f = await figureSVG(o.state);
+  const s = o.state;
+  return `<div class="card">
+    <div class="fig">${f.svg}</div>
+    <div>
+      <h3>${esc(o.title)}</h3>
+      <div class="muted">${esc(CAT.garment[s.garment]?.name)} · ${esc(CAT.color[s.colors.main]?.name)}${s.pattern && s.pattern !== "tron" ? " · " + esc(CAT.pattern[s.pattern]?.name) : ""}
+        / ${esc(CAT.color[s.colors.bottom]?.name)}${s.accessories.length ? " · " + s.accessories.map(a => esc(CAT.acc[a]?.name)).join(", ") : ""}</div>
+      ${o.whyChosen ? `<div class="why">${esc(o.whyChosen)}</div>` : ""}
+      <div>${badges(o.evaluations)} <span class="muted">Màu ${o.color.score}/100</span></div>
+      <p style="margin:6px 0">${esc(o.comment)}</p>
+      <div class="muted">Mẹo: ${esc(o.tip)}</div>${extra}
+      <div class="row" style="margin-top:8px"><button class="primary" data-open='${esc(JSON.stringify(s))}'>${btn}</button></div>
+    </div></div>`;
+}
+async function ask(body) {
+  stylistRes = { loading: true }; save(); go("goi-y");
+  try {
+    const t0 = performance.now();
+    const r = await api("/stylist", body);
+    stylistRes = { ...r, ms: Math.round(performance.now() - t0), body };
+    context = r.intent;
+  } catch (e) { stylistRes = { error: e.message }; }
+  save(); if (page() === "goi-y") renderResult();
+}
+async function renderResult() {
+  const r = stylistRes;
+  if (!r || r.loading) { $("result").innerHTML = `<p class="muted">Stylist đang chọn đồ…</p>`; return; }
+  if (r.error) { $("result").innerHTML = `<p class="missing">Lỗi: ${esc(r.error)}</p>`; return; }
+  if (r.kind === "clarify") {
+    $("result").innerHTML = `<div class="bubble">${esc(r.question)}</div><div class="row" style="margin-top:8px">` +
+      r.options.map(o => `<button class="chip" data-occ="${esc(o.occasion || "")}">${esc(o.label)}</button>`).join("") + `</div>`;
+    $("result").querySelectorAll("[data-occ]").forEach(b => b.onclick = () => ask({ ...r.body, override: { occasion: b.dataset.occ || null } }));
+    return;
+  }
+  $("result").innerHTML = `<p class="muted">Nguồn: <b>${r.source}</b> · ${r.ms} ms</p><div class="summary">${ctxTags(context)}</div>
+    <div class="cards">${(await Promise.all(r.outfits.map(o => outfitCard(o)))).join("")}</div>`;
+  bindOpen($("result"));
+}
+function ctxTags(c) {
+  if (!c) return "";
+  const lab = (f, v) => f === "occasion" ? CAT.occasion[v]?.name : f === "style" ? CAT.style[v]?.name :
+    f === "gender" ? { nu: "Nữ", nam: "Nam" }[v] : QUIZ.find(q => q.field === f)?.options.find(o => o.value === v)?.label;
+  return CTX_FIELDS.map(f => c[f] && lab(f, c[f]) ? `<span class="tag">${esc(lab(f, c[f]))}</span>` : "").join("");
+}
+function bindOpen(root) {
+  root.querySelectorAll("[data-open]").forEach(b => b.onclick = () => {
+    state = JSON.parse(b.dataset.open); view = "truoc"; save(); go("tuy-chinh");
+  });
+}
+
+/* ======================= ③ STUDIO ======================= */
+function fillSelect(el, items, value) { el.innerHTML = items.map(i => `<option value="${i.id}">${esc(i.name)}</option>`).join(""); if (value) el.value = value; }
+function loadState(s) {
+  state = JSON.parse(JSON.stringify({ pattern: "tron", ...s }));
+  $("gender").value = state.gender;
+  fillSelect($("garment"), CAT.garments.filter(g => g.genders.includes(state.gender)).map(g => ({ ...g, name: g.name + (g.hasSvg ? "" : " (chưa có hình)") })), state.garment);
+  $("occasion").value = state.occasion; $("style").value = state.style;
+  $("ctxTags").innerHTML = `<span class="muted">Bối cảnh:</span>${ctxTags(fullContext())}`;
+  renderControls(); refresh();
+}
+function fullContext() { return { ...(context || {}), occasion: state.occasion, style: state.style, gender: state.gender }; }
+function renderControls() {
+  document.querySelectorAll(".swatches[data-slot]").forEach(box => {
+    const slot = box.dataset.slot;
+    box.innerHTML = CAT.colors.map(c => `<button class="sw" title="${esc(c.name)}" style="background:${c.hex}" aria-pressed="${state.colors[slot] === c.id}" data-c="${c.id}"></button>`).join("");
+    box.querySelectorAll(".sw").forEach(b => b.onclick = () => { state.colors[slot] = b.dataset.c; renderControls(); refresh(); });
+  });
+  const base = CAT.color[state.colors.main]?.hex || "#ccc";
+  const patOk = p => (!p.garments || p.garments.includes(state.garment)) && (!p.genders || p.genders.includes(state.gender));
+  if (!patOk(CAT.pattern[state.pattern] || {})) state.pattern = "tron";      // đổi áo / người mẫu thì bỏ hoạ tiết không hợp
+  const okPat = CAT.patterns.filter(patOk);
+  const groups = [...new Set(okPat.map(p => p.group || ""))];
+  $("patterns").innerHTML = groups.map(gr => `<div class="accgroup">${gr ? `<span class="muted">${esc(gr)}</span>` : ""}` + okPat.filter(p => (p.group || "") === gr).map(p => {
+    const i = CAT.patterns.indexOf(p);
+    const def = patternDef(p.id, base, `sw_pat_${i}`);
+    const art = p.kind === "placement" ? `<rect width="44" height="44" fill="${base}"/><g transform="translate(2 -2) scale(0.4)">${motifCache[p.id]?.top || ""}</g>`
+      : `${def ? `<defs>${def}</defs>` : ""}<rect width="44" height="44" fill="${def ? `url(#sw_pat_${i})` : base}"/>`;
+    return `<button class="pat" title="${esc(p.name + (p.note ? " – " + p.note : ""))}" aria-pressed="${state.pattern === p.id}" data-p="${p.id}">
+      <svg viewBox="0 0 44 44">${art}</svg></button>`;
+  }).join("") + "</div>").join("");
+  $("patterns").querySelectorAll("[data-p]").forEach(b => b.onclick = () => { state.pattern = b.dataset.p; renderControls(); refresh(); });
+  const accOk = CAT.accessories.filter(a => a.genders.includes(state.gender));
+  $("accs").innerHTML = [...SLOT_ORDER].reverse().filter(sl => accOk.some(a => a.slot === sl)).map(sl =>
+    `<div class="accgroup"><span class="muted">${SLOT_NAME[sl]}</span>` + accOk.filter(a => a.slot === sl).map(a =>
+    `<label><input type="checkbox" data-a="${a.id}" ${state.accessories.includes(a.id) ? "checked" : ""}> ${esc(a.name)}</label>`).join("") + "</div>").join("");
+  $("accs").querySelectorAll("input").forEach(cb => cb.onchange = () => {
+    const id = cb.dataset.a, slot = CAT.acc[id].slot;
+    state.accessories = state.accessories.filter(x => CAT.acc[x].slot !== slot);
+    if (cb.checked) state.accessories.push(id);
+    renderControls(); refresh();
+  });
+}
+let timer;
+async function refresh() {
+  // hình lớn + 4 góc thu nhỏ
+  const [big, ...thumbs] = await Promise.all([figureSVG(state, view), ...VIEWS.map(([v]) => figureSVG(state, v))]);
+  $("bigFig").innerHTML = big.svg;
+  $("viewName").textContent = VIEWS.find(x => x[0] === view)[1];
+  $("views").innerHTML = VIEWS.map(([v, name], i) => `<button aria-pressed="${v === view}" data-view="${v}">${thumbs[i].svg}<span>${name}</span></button>`).join("");
+  $("views").querySelectorAll("[data-view]").forEach(b => b.onclick = () => { view = b.dataset.view; refresh(); });
+  $("missing").textContent = big.missing.length ? "Chưa có hình: " + big.missing.join(", ") : "";
+  const card = CAT.cultureCards.find(c => c.garmentId === state.garment);
+  $("culture").innerHTML = card ? `<b>${esc(card.title)}</b> ${card.verified ? "" : '<span class="muted">(chưa kiểm chứng nguồn)</span>'}<br>${esc(card.body)}` : "";
+  updateAskButton(); save();
+  clearTimeout(timer);
+  timer = setTimeout(async () => {     // bộ luật chấm lại theo bối cảnh, không gọi Gemini
+    try {
+      const r = await api("/evaluate", { state, context: fullContext() });
+      $("colorScore").textContent = r.color.score; $("colorNote").textContent = r.color.note;
+      $("evals").innerHTML = r.evaluations.length ? r.evaluations.map((e, i) => `<div class="eval ${e.level}">
+          <span class="badge b-${e.level}">${LEVEL[e.level]}</span> ${esc(e.reason)}
+          <div class="muted">Gợi ý: ${esc(e.suggestion.text)} ${e.suggestion.patch ? `<button class="chip" data-p="${i}">Áp dụng</button>` : ""}</div></div>`).join("")
+        : `<div class="eval ok"><span class="badge b-ok">Phù hợp</span> Không có cảnh báo văn hóa nào cho bộ này.</div>`;
+      $("evals").querySelectorAll("[data-p]").forEach(b => b.onclick = () => applyPatch(r.evaluations[b.dataset.p].suggestion.patch));
+    } catch (e) { $("evals").innerHTML = `<p class="missing">${esc(e.message)}</p>`; }
+  }, 150);
+}
+function applyPatch(p) { for (const [k, v] of Object.entries(p)) { if (k === "colors") Object.assign(state.colors, v); else state[k] = v; } loadState(state); }
+function stepView(d) { const i = VIEWS.findIndex(x => x[0] === view); view = VIEWS[(i + d + 4) % 4][0]; refresh(); }
+$("prevView").onclick = () => stepView(-1); $("nextView").onclick = () => stepView(1);
+$("gender").onchange = () => {
+  state.gender = $("gender").value;
+  const ok = CAT.garments.filter(g => g.genders.includes(state.gender));
+  if (!ok.some(g => g.id === state.garment)) state.garment = ok[0].id;
+  state.accessories = state.accessories.filter(a => CAT.acc[a].genders.includes(state.gender));
+  loadState(state);
+};
+$("garment").onchange = () => {
+  state.garment = $("garment").value;
+  const p = CAT.pattern[state.pattern];
+  if (p?.garments && !p.garments.includes(state.garment)) state.pattern = "tron";   // hoạ tiết này không dùng cho áo mới
+  renderControls(); refresh();
+};
+$("occasion").onchange = () => { state.occasion = $("occasion").value; loadState(state); };
+$("style").onchange = () => { state.style = $("style").value; loadState(state); };
+
+/* ======================= ④ TRANG NHẬN XÉT ======================= */
+const reviewKey = () => JSON.stringify([state, fullContext()]);
+function updateAskButton() {
+  $("askHint").textContent = lastReview.key === reviewKey() ? "Bộ đồ chưa đổi kể từ lần hỏi trước, sẽ xem lại nhận xét cũ." : "";
+}
+$("ask").onclick = () => go("nhan-xet");
+async function renderReview() {
+  const figs = await Promise.all(VIEWS.map(([v]) => figureSVG(state, v)));
+  $("reviewFig").innerHTML = VIEWS.map(([, name], i) => `<div>${figs[i].svg}<span class="muted">${name}</span></div>`).join("");
+  $("reviewCtx").innerHTML = `<span class="muted">Bối cảnh:</span>${ctxTags(fullContext())}`;
+  const key = reviewKey();
+  if (lastReview.key !== key) {                 // bộ đồ đã đổi → hỏi lại; chưa đổi → dùng kết quả cũ, không gọi Gemini
+    $("reviewOut").innerHTML = `<p class="muted">Stylist đang xem bộ đồ…</p>`;
+    try { lastReview = { key, res: await api("/review", { state, context: fullContext() }) }; save(); }
+    catch (e) { $("reviewOut").innerHTML = `<p class="missing">${esc(e.message)}</p>`; return; }
+    if (page() !== "nhan-xet" || reviewKey() !== key) return;
+  }
+  const r = lastReview.res;
+  const alts = await Promise.all(r.alternatives.map(a => outfitCard(a, `<div class="muted">Thay đổi: ${a.changes.map(esc).join("; ")}</div>`, "Áp dụng phương án này")));
+  $("reviewOut").innerHTML = `<div class="verdict v-${r.verdict}">${esc(r.verdictText)}</div>
+    <p class="muted">Nguồn: <b>${r.source}</b></p>
+    <div class="bubble"><b>${esc(r.current.title)}</b><br>${esc(r.current.comment)}<div class="muted">Mẹo: ${esc(r.current.tip)}</div></div>
+    ${alts.length ? `<h3 style="margin-top:12px">Phương án nâng cấp</h3><div class="cards">${alts.join("")}</div>` : `<p class="muted">Bộ này đã ổn, chưa có phương án nâng cấp rõ rệt.</p>`}`;
+  bindOpen($("reviewOut"));
+}
+
+/* ======================= Điều hướng giữa 4 trang (#/quiz → #/goi-y → #/tuy-chinh → #/nhan-xet) ======================= */
+const PAGES = ["quiz", "goi-y", "tuy-chinh", "nhan-xet"];
+const page = () => (location.hash.match(/^#\/([\w-]+)/) || [])[1];
+const unlocked = p => p === "quiz" || (p === "goi-y" && !!stylistRes) || (["tuy-chinh", "nhan-xet"].includes(p) && !!state);
+function go(p) { if (location.hash !== "#/" + p) location.hash = "#/" + p; else route(); }
+function route() {
+  let p = page();
+  if (!PAGES.includes(p) || !unlocked(p)) { p = [...PAGES].reverse().find(unlocked); history.replaceState(null, "", "#/" + p); }
+  document.querySelectorAll("[data-page]").forEach(sec => sec.hidden = sec.dataset.page !== p);
+  const cur = PAGES.indexOf(p);
+  document.querySelectorAll("#steps a").forEach((a, i) => {
+    a.className = (i === cur ? "current" : i < cur ? "done" : "") + (unlocked(a.dataset.step) ? "" : " locked");
+  });
+  window.scrollTo(0, 0);
+  if (p === "quiz") renderQuiz();
+  if (p === "goi-y") renderResult();
+  if (p === "tuy-chinh") loadState(state);
+  if (p === "nhan-xet") renderReview();
+}
+window.addEventListener("hashchange", route);
+$("toQuiz").onclick = () => go("quiz");
+$("toResult").onclick = () => go("goi-y");
+$("toStudio").onclick = () => go("tuy-chinh");
+$("restart").onclick = () => {
+  answers = {}; step = 0; context = null; state = null; stylistRes = null; lastReview = { key: null, res: null };
+  $("shortcut").value = ""; save(); go("quiz");
+};
+
+/* Lưu tiến trình trong phiên (tải lại trang không mất); trình duyệt chặn lưu thì vẫn chạy bình thường */
+const STORE = "nepao_playground";
+function save() {
+  try { sessionStorage.setItem(STORE, JSON.stringify({ answers, step, context, state, view, stylistRes: stylistRes?.loading ? null : stylistRes, lastReview })); } catch {}
+}
+function restore() {
+  try {
+    const d = JSON.parse(sessionStorage.getItem(STORE) || "null");
+    if (d) ({ answers = {}, step = 0, context = null, state = null, view = "truoc", stylistRes = null, lastReview = { key: null, res: null } } = d);
+  } catch {}
+}
+
+/* ======================= khởi động ======================= */
+(async () => {
+  const [h, cat, quiz] = await Promise.all([api("/health"), api("/catalog"), api("/quiz")]);
+  CAT = { ...cat, color: byId(cat.colors), acc: byId(cat.accessories), garment: byId(cat.garments), pattern: byId(cat.patterns),
+          occasion: byId(cat.occasions), style: byId(cat.styles) };
+  QUIZ = quiz;
+  await Promise.all(cat.patterns.filter(p => p.kind === "placement").map(p => motif(p.id)));   // nạp sẵn để vẽ ô chọn
+  $("status").textContent = `Catalog: ${h.catalogSource} · Gemini: ${h.gemini === "enabled" ? "đang bật (" + h.model + ")" : h.gemini === "no_api_key" ? "chưa có API key → chạy dự phòng" : "đang giả lập lỗi → chạy dự phòng"}`;
+  fillSelect($("occasion"), cat.occasions); fillSelect($("style"), cat.styles);
+  $("shortcutBtn").onclick = () => $("shortcut").value.trim() && ask({ text: $("shortcut").value.trim() });
+  $("shortcut").onkeydown = e => { if (e.key === "Enter") $("shortcutBtn").click(); };
+  restore();
+  route();
+})();
+</script>
+</body>
+</html>

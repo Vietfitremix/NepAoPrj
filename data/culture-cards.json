@@ -1,0 +1,17 @@
+[
+  {"id": "CC_AO_DAI", "garmentId": "ao_dai", "title": "Áo dài",
+   "body": "Áo dài hiện đại phát triển từ áo ngũ thân và được cách tân trong thế kỷ 20 với dáng ôm, xẻ tà cao hai bên. Ngày nay áo dài xuất hiện trong lễ Tết, cưới hỏi, trường học và các sự kiện trang trọng.",
+   "sources": [], "verified": false},
+  {"id": "CC_NGU_THAN", "garmentId": "ao_ngu_than", "title": "Áo ngũ thân",
+   "body": "Áo ngũ thân may từ năm thân vải: bốn thân chính tượng trưng cho tứ thân phụ mẫu và một thân con phía trong. Áo có cổ đứng, cài khuy chéo sang một bên, phổ biến dưới thời Nguyễn và đang được nhiều bạn trẻ phục dựng.",
+   "sources": [], "verified": false},
+  {"id": "CC_TU_THAN", "garmentId": "ao_tu_than", "title": "Áo tứ thân",
+   "body": "Áo tứ thân gồm bốn vạt, hai vạt trước thường buộc lại, mặc cùng yếm, váy và thắt lưng. Trang phục gắn với hình ảnh người phụ nữ vùng Kinh Bắc và đồng bằng Bắc Bộ.",
+   "sources": [], "verified": false},
+  {"id": "CC_NHAT_BINH", "garmentId": "nhat_binh", "title": "Áo nhật bình",
+   "body": "Áo nhật bình là lễ phục của nữ giới trong cung đình triều Nguyễn, nổi bật với phần cổ áo bản rộng phủ qua vai. Vì vốn là lễ phục, áo hợp với lễ hội, sự kiện văn hóa hơn là mặc dạo phố thường ngày.",
+   "sources": [], "verified": false},
+  {"id": "CC_BA_BA", "garmentId": "ao_ba_ba", "title": "Áo bà ba",
+   "body": "Áo bà ba là áo ngắn, xẻ hai bên hông, thường mặc cùng quần ống rộng. Trang phục gắn với đời sống thường ngày của người dân Nam Bộ.",
+   "sources": [], "verified": false}
+]

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
+  <!-- Quạt giấy xoè cầm ở tay trái người mẫu, mặt quạt màu điểm nhấn, nan tre – hướng TRƯỚC. Sinh bằng tools/gen_accessories.py. -->
+  <g id="quat_giay_nam" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
+    <path id="nan_trong" d="M276.0 472.0 L333.1 490.5 M276.0 472.0 L328.8 500.6 M276.0 472.0 L322.7 509.7 M276.0 472.0 L315.1 517.5 M276.0 472.0 L306.2 523.8 M276.0 472.0 L296.3 528.5 M276.0 472.0 L285.7 531.2 M276.0 472.0 L274.8 532.0 M276.0 472.0 L264.0 530.8 M276.0 472.0 L253.5 527.6" fill="none" stroke="#8A5A32" stroke-opacity="1" stroke-width="1.6"/>
+    <path id="mat_quat" d="M298.8 479.4 L335.0 491.2 A62 62 0 0 1 252.8 529.5 L267.0 494.3 A24 24 0 0 0 298.8 479.4 Z" fill="#FF00FF"/>
+    <path id="nep_gap" d="M298.1 481.5 L333.0 496.4 M296.0 485.3 L327.6 506.4 M293.2 488.7 L320.5 515.2 M289.9 491.6 L312.0 522.5 M286.1 493.8 L302.2 528.2 M282.0 495.2 L291.6 532.0 M277.7 495.9 L280.4 533.8 M273.4 495.9 L269.2 533.6 M269.1 495.0 L258.1 531.4" fill="none" stroke="#000" stroke-opacity="0.16" stroke-width="1"/>
+    <path id="hoa_van" d="M323.5 493.2 A52 52 0 0 1 261.7 522.0" fill="none" stroke="#D9B44A" stroke-opacity="1" stroke-width="1.6"/>
+    <circle id="dinh_quat" cx="276.0" cy="472.0" r="2.6" fill="#8A5A32"/>
+  </g>
+</svg>

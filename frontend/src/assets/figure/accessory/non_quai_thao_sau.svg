@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
+  <!-- Nón quai thao (nón ba tầm): mặt bằng rộng, vành đứng; quai thao (màu điểm nhấn) vòng dưới cằm, tua thả trước ngực – hướng SAU. Sinh bằng tools/gen_accessories.py. -->
+  <g id="non_quai_thao_sau" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
+    <path id="thanh_non" d="M100.0 38.0 L95.0 55.0 A105 13 0 0 0 305.0 55.0 L300.0 38.0 A100 13 0 0 1 100.0 38.0 Z" fill="#E3C98A"/>
+    <path id="bong_thanh" d="M100.0 38.0 L95.0 55.0 A105 13 0 0 0 138.0 65.3 L140.0 48.3 A100 13 0 0 1 100.0 38.0 Z M300.0 38.0 L305.0 55.0 A105 13 0 0 1 262.0 65.3 L260.0 48.3 A100 13 0 0 0 300.0 38.0 Z" fill="#000" fill-opacity="0.14" stroke="none"/>
+    <path id="duong_khau_thanh" d="M97.5 46.5 A102.5 13 0 0 0 302.5 46.5" fill="none" stroke="#000" stroke-opacity="0.22" stroke-width="1.1" stroke-dasharray="3 3"/>
+    <ellipse id="mat_non" cx="200.0" cy="38" rx="100" ry="13" fill="#F0DDAA"/>
+    <g id="vong_khau" fill="none" stroke="#000" stroke-opacity="0.22" stroke-width="1.1"><ellipse cx="200.0" cy="38" rx="86.0" ry="11.2"/> <ellipse cx="200.0" cy="38" rx="72.0" ry="9.4"/></g>
+    <path id="vong_dinh" d="M145.0 38.0 Q150.0 25.0 200.0 25.0 Q250.0 25.0 255.0 38.0 A55.00000000000001 7.15 0 0 1 145.0 38.0 Z" fill="#F0DDAA"/>
+    <path id="sang_dinh" d="M166.0 32.0 Q200.0 28.0 226.0 31.0" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="2"/>
+    <path id="quai_thao" d="M161 66 C158 96 162 120 176 134 M239 66 C242 96 238 120 224 134" fill="none" stroke="#FF00FF" stroke-opacity="1" stroke-width="4"/>
+  </g>
+</svg>

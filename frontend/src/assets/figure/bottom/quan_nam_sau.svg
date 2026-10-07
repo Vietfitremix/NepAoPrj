@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
+  <!-- quan_nam – hướng SAU. Dựng từ bản hướng trước (cùng đường bao), bỏ chi tiết chỉ có ở mặt trước. Sinh bằng tools/gen_garment_views.py. -->
+  
+  <g id="quan_nam_sau" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round">
+    <path id="vai_quan" d="M163 316 L237 316 C242 350 247 385 247 414 L246 752 L202 752 L200 454 L198 752 L154 752 L153 414 C153 385 158 350 163 316 Z" fill="#0000FF"/>
+    <path id="bong" d="M200 454 L202 752 L214 752 L202 448 Z M153 414 L159 414 L160 752 L154 752 Z" fill="#000" fill-opacity="0.12" stroke="none"/>
+    <path id="nep" d="M175 470 L172 748 M225 470 L228 748 M166 330 L234 330" fill="none" stroke="#000" stroke-opacity="0.18" stroke-width="1.4"/>
+  </g>
+</svg>

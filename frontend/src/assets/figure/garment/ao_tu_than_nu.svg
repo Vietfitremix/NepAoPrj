@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
+  <!-- Áo tứ thân nữ (mặc cùng váy: bottom/vay_nu).
+       #FF0000 = áo ngoài (c-main), #00FF00 = yếm (c-lining), #FF00FF = thắt lưng (c-accent).
+       Tham khảo hiện vật Bảo tàng Dân tộc học: áo ngoài mở trước, nẹp viền dọc cổ xuống eo; hai vạt trước
+       không may liền mà buộc thắt ở eo, đuôi vạt thả xuống; thân sau (hai vạt may liền) dài gần mắt cá,
+       nhìn từ trước thấy ở hai bên; yếm lộ ra ở khoảng giữa hai nẹp; tay áo dài. -->
+  <g id="ao_tu_than_nu" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
+    <g id="tay_ao">
+      <path id="tay_ao_trai" d="M151 174 C138 180 132 198 132 222 C130 260 124 292 122 318 C120 352 117 394 116 430 L141 434 C142 398 144 354 147 318 C150 290 156 250 158 224 Z" fill="#FF0000"/>
+      <path id="tay_ao_phai" d="M249 174 C262 180 268 198 268 222 C270 260 276 292 278 318 C280 352 283 394 284 430 L259 434 C258 398 256 354 253 318 C250 290 244 250 242 224 Z" fill="#FF0000"/>
+      <path id="bong_tay" d="M158 224 L147 318 L141 434 L134 433 L140 318 L151 228 Z M242 224 L253 318 L259 434 L266 433 L260 318 L249 228 Z" fill="#000" fill-opacity="0.13" stroke="none"/>
+      <path id="nep_khuyu" d="M123 310 Q134 318 145 312 M277 310 Q266 318 255 312 M118 420 L141 424 M282 420 L259 424" fill="none" stroke="#000" stroke-opacity="0.28" stroke-width="1.2"/>
+    </g>
+
+    <path id="than_sau" d="M151 174 C168 167 186 164 200 164 C214 164 232 167 249 174 L242 224
+      C243 300 247 360 251 400 L257 702 L230 706 L228 338 L172 338 L170 706 L143 702 L149 400
+      C154 360 157 300 158 224 Z" fill="#FF0000"/>
+    <path id="bong_than_sau" d="M149 400 L160 400 L160 704 L143 702 Z M251 400 L240 400 L240 704 L257 702 Z" fill="#000" fill-opacity="0.16" stroke="none"/>
+
+    <path id="yem" d="M184 170 Q200 178 216 170 L228 246 L216 322 L184 322 L172 246 Z" fill="#00FF00"/>
+    <path id="that_lung" d="M170 314 L230 314 L230 330 L170 330 Z" fill="#FF00FF"/>
+
+    <path id="vat_truoc_trai" d="M151 174 C164 168 176 166 186 166 Q182 200 176 236 Q180 282 196 322 L168 336 C164 300 160 260 158 224 Z" fill="#FF0000"/>
+    <path id="vat_truoc_phai" d="M249 174 C236 168 224 166 214 166 Q218 200 224 236 Q220 282 204 322 L232 336 C236 300 240 260 242 224 Z" fill="#FF0000"/>
+    <path id="nep_co" d="M186 166 Q182 200 176 236 Q180 282 196 322 M214 166 Q218 200 224 236 Q220 282 204 322" fill="none" stroke="#000" stroke-opacity="0.16" stroke-width="7"/>
+    <path id="bong_vat" d="M158 224 L166 228 L168 334 L164 300 Z M242 224 L234 228 L232 334 L236 300 Z" fill="#000" fill-opacity="0.12" stroke="none"/>
+
+    <path id="duoi_vat_trai" d="M194 330 C187 400 179 480 171 560 L186 567 C191 480 196 400 202 333 Z" fill="#FF0000"/>
+    <path id="duoi_vat_phai" d="M206 330 C213 400 221 480 229 560 L214 567 C209 480 204 400 198 333 Z" fill="#FF0000"/>
+    <path id="bong_duoi_vat" d="M194 330 L186 420 L192 420 L199 334 Z M206 330 L214 420 L208 420 L201 334 Z" fill="#000" fill-opacity="0.14" stroke="none"/>
+    <path id="dai_that_lung" d="M197 334 L192 410 L198 412 L201 336 Z M203 334 L209 404 L203 406 L199 336 Z" fill="#FF00FF"/>
+    <ellipse id="nut_buoc" cx="200" cy="327" rx="9" ry="7" fill="#FF0000"/>
+    <path id="nep_nut" d="M193 325 Q200 331 207 325" fill="none" stroke="#000" stroke-opacity="0.3"/>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
+  <!-- Sneaker trắng: thân trắng, đế xám nhạt, đai gót màu điểm nhấn – hướng SAU. Sinh bằng tools/gen_accessories.py. -->
+  <g id="sneaker_sau" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M165.0 789.0 L165.0 764.0 Q180.0 752.0 195.0 764.0 L195.0 789.0 Z" fill="#F7F7F5"/>
+    <path d="M164.0 782.0 L196.0 782.0 L196.0 790.0 L164.0 790.0 Z" fill="#E2E2DC"/>
+    <path d="M176.0 756.0 L176.0 772.0 L184.0 772.0 L184.0 756.0" fill="#FF00FF"/>
+    <path d="M205.0 789.0 L205.0 764.0 Q220.0 752.0 235.0 764.0 L235.0 789.0 Z" fill="#F7F7F5"/>
+    <path d="M204.0 782.0 L236.0 782.0 L236.0 790.0 L204.0 790.0 Z" fill="#E2E2DC"/>
+    <path d="M216.0 756.0 L216.0 772.0 L224.0 772.0 L224.0 756.0" fill="#FF00FF"/>
+  </g>
+</svg>

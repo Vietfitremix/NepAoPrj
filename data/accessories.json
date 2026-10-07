@@ -1,0 +1,17 @@
+[
+  {"id": "non_la", "name": "Nón lá", "slot": "head", "genders": ["nu", "nam"], "usesAccent": true},
+  {"id": "non_quai_thao", "name": "Nón quai thao", "slot": "head", "genders": ["nu"], "usesAccent": true},
+  {"id": "khan_van", "name": "Khăn vấn", "slot": "hair", "genders": ["nu", "nam"], "usesAccent": true},
+  {"id": "khan_mo_qua", "name": "Khăn mỏ quạ", "slot": "hair", "genders": ["nu"], "usesAccent": false},
+  {"id": "khan_xep", "name": "Khăn xếp", "slot": "hair", "genders": ["nam"], "usesAccent": true},
+  {"id": "hoa_cai_toc", "name": "Hoa cài tóc", "slot": "hair", "genders": ["nu"], "usesAccent": true},
+  {"id": "guoc", "name": "Guốc", "slot": "feet", "genders": ["nu", "nam"], "usesAccent": false},
+  {"id": "hai_theu", "name": "Hài thêu", "slot": "feet", "genders": ["nu", "nam"], "usesAccent": true},
+  {"id": "giay_bup_be", "name": "Giày búp bê", "slot": "feet", "genders": ["nu"], "usesAccent": true},
+  {"id": "giay_ta", "name": "Giày ta (vải đen)", "slot": "feet", "genders": ["nam"], "usesAccent": false},
+  {"id": "sneaker", "name": "Sneaker", "slot": "feet", "genders": ["nu", "nam"], "usesAccent": false},
+  {"id": "tui", "name": "Túi cói", "slot": "hand", "genders": ["nu", "nam"], "byGender": true, "usesAccent": true},
+  {"id": "quat_giay", "name": "Quạt giấy", "slot": "hand", "genders": ["nu", "nam"], "byGender": true, "usesAccent": true},
+  {"id": "kieng_bac", "name": "Kiềng bạc", "slot": "neck", "genders": ["nu"], "usesAccent": false},
+  {"id": "trang_suc", "name": "Bông tai + vòng tay", "slot": "jewelry", "genders": ["nu"], "usesAccent": false}
+]

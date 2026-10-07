@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
+  <!-- Khăn xếp (khăn đóng) nam: vành khăn tròn cứng, nếp xếp chéo hình chữ nhân trước trán – hướng TRÁI (nhìn nghiêng, mặt quay sang trái). Sinh bằng tools/gen_accessories.py. -->
+  <g id="khan_xep_trai" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
+    <path id="vanh_khan" fill="#FF00FF" d="M158 78 C155 62 157 46 165 36 Q204 22 244 34 C252 46 254 64 252 82 Q206 70 158 78 Z"/>
+    <path id="dinh_khan" d="M165 36 Q204 22 244 34 Q204 30 165 36 Z" fill="#000" fill-opacity="0.15" stroke="none"/>
+    <path id="nep_ngang" d="M157 50 Q204 40 251 50 M157 63 Q204 54 253 66" fill="none" stroke="#000" stroke-opacity="0.25" stroke-width="1.4"/>
+    <path id="nep_chu_nhan" d="M166 42 L178 74 M176 38 L190 72 M186 36 L200 70" fill="none" stroke="#000" stroke-opacity="0.28" stroke-width="1.3"/>
+    <path id="sang_khan" d="M172 40 Q200 32 230 36" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="2.5"/>
+  </g>
+</svg>

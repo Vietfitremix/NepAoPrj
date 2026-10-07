@@ -1,0 +1,7 @@
+[
+  {"id": "ao_dai", "name": "Áo dài", "genders": ["nu", "nam"], "hasSvg": true, "occasions": ["tet", "ky_yeu", "dam_cuoi", "le_hoi_chua", "dao_pho"], "defaultColors": {"main": "trang_nga", "bottom": "trang_nga"}, "cultureCardId": "CC_AO_DAI"},
+  {"id": "ao_ngu_than", "name": "Áo ngũ thân", "genders": ["nu", "nam"], "hasSvg": true, "occasions": ["tet", "ky_yeu", "dam_cuoi", "le_hoi_chua", "dao_pho"], "defaultColors": {"main": "do_son", "bottom": "den_tuyen"}, "cultureCardId": "CC_NGU_THAN"},
+  {"id": "ao_tu_than", "name": "Áo tứ thân", "genders": ["nu"], "hasSvg": true, "occasions": ["tet", "ky_yeu", "le_hoi_chua", "dao_pho"], "defaultColors": {"main": "nau_dat", "lining": "do_son", "bottom": "den_tuyen", "accent": "xanh_ngoc"}, "cultureCardId": "CC_TU_THAN"},
+  {"id": "nhat_binh", "name": "Áo nhật bình", "genders": ["nu"], "hasSvg": true, "occasions": ["tet", "dam_cuoi", "le_hoi_chua"], "defaultColors": {"main": "vang_hoang", "lining": "do_son", "bottom": "trang_nga"}, "cultureCardId": "CC_NHAT_BINH"},
+  {"id": "ao_ba_ba", "name": "Áo bà ba", "genders": ["nu", "nam"], "hasSvg": true, "occasions": ["tet", "le_hoi_chua", "dao_pho"], "defaultColors": {"main": "be_kem", "bottom": "den_tuyen"}, "cultureCardId": "CC_BA_BA"}
+]

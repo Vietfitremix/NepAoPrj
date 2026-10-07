@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
+  <!-- Áo dài nam hiện đại, mặc cùng quần ống suông (bottom/quan_nam).
+       #FF0000 = màu chính (c-main), #00FF00 = cổ áo (c-lining).
+       Tham khảo: cổ cao kiểu tàu, thân ôm vừa (gọn hơn ngũ thân), cài khuy chéo bên phải người mặc rồi dọc sườn,
+       xẻ tà hai bên từ ngang hông (y~398), tà dài qua gối; tay áo dài vừa cánh tay. -->
+  <g id="ao_dai_nam" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
+    <g id="tay_ao">
+      <path id="tay_ao_trai" d="M140 173 C129 180 124 198 123.5 222 C122 262 116 292 114 318 C112 352 110 394 109 431 L134 434 C135 398 137.5 354 141 318 C144 292 150 252 153 226 Z" fill="#FF0000"/>
+      <path id="tay_ao_phai" d="M260 173 C271 180 276 198 276.5 222 C278 262 284 292 286 318 C288 352 290 394 291 431 L266 434 C265 398 262.5 354 259 318 C256 292 250 252 247 226 Z" fill="#FF0000"/>
+      <path id="bong_tay" d="M153 226 L141 318 L134 434 L127 433 L134 318 L146 230 Z M247 226 L259 318 L266 434 L273 433 L266 318 L254 230 Z" fill="#000" fill-opacity="0.12" stroke="none"/>
+      <path id="vien_co_tay" d="M109 426 L134 429 M291 426 L266 429" fill="none" stroke-opacity="0.35"/>
+    </g>
+
+    <path id="than_ao" d="M140 173 C160 165 182 162 200 162 C218 162 240 165 260 173 L247 226
+      C246 260 242 290 240 318 C242 350 247 375 249 398 L242 406 L243 612 Q200 620 157 612 L158 406 L151 398
+      C153 375 158 350 160 318 C158 290 154 260 153 226 Z" fill="#FF0000"/>
+    <path id="bong_than" d="M153 226 L161 230 L164 318 L160 318 Z M247 226 L239 230 L236 318 L240 318 Z
+      M197 330 L192 616 L206 616 Z M158 406 L166 406 L165 612 L157 612 Z M242 406 L234 406 L235 612 L243 612 Z" fill="#000" fill-opacity="0.11" stroke="none"/>
+    <path id="nep_ta" d="M178 420 Q176 520 174 610 M222 420 Q224 520 226 610" fill="none" stroke="#000" stroke-opacity="0.16" stroke-width="1.1"/>
+
+    <path id="duong_cai_khuy" d="M188 165 Q174 192 156 228 L160 318 L151 398" fill="none" stroke-opacity="0.35"/>
+    <path id="co_ao" d="M185 140 L215 140 L216 163 Q200 168 184 163 Z" fill="#00FF00"/>
+    <g id="khuy" fill="#D9B44A" stroke-width="0.8">
+      <circle cx="197" cy="148" r="2.2"/><circle cx="197" cy="156" r="2.2"/>
+      <circle cx="182" cy="178" r="2"/><circle cx="174" cy="196" r="2"/><circle cx="166" cy="214" r="2"/>
+    </g>
+  </g>
+</svg>

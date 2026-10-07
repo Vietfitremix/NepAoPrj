@@ -1,0 +1,59 @@
+"""Bộ đồ và kết quả đánh giá. Tên trường khớp hợp đồng JSON trong PLAN-DEV mục 6."""
+from typing import Literal, Optional
+
+from pydantic import BaseModel, Field
+
+Level = Literal["ok", "consider", "risk"]        # Phù hợp / Nên cân nhắc / Dễ gây sai lệch
+Gender = Literal["nu", "nam"]
+
+
+class Colors(BaseModel):
+    main: str
+    bottom: str
+    lining: Optional[str] = None
+    accent: Optional[str] = None       # màu khăn / phụ kiện đội đầu
+
+
+class OutfitState(BaseModel):
+    v: int = 1
+    garment: str
+    gender: Gender
+    occasion: str
+    style: str
+    colors: Colors
+    pattern: str = "tron"              # hoạ tiết phủ lên vùng màu chính (data/patterns.json)
+    accessories: list[str] = Field(default_factory=list)
+
+
+class Suggestion(BaseModel):
+    text: str
+    patch: Optional[dict] = None
+
+
+class Evaluation(BaseModel):
+    id: str
+    level: Level
+    reason: str
+    suggestion: Suggestion
+    sources: list[str] = Field(default_factory=list)
+
+
+class ColorScore(BaseModel):
+    score: int
+    noteKey: str
+    note: str
+
+
+class StylistOutfit(BaseModel):
+    outfitId: str
+    state: OutfitState
+    evaluations: list[Evaluation]
+    color: ColorScore
+    title: str = ""
+    comment: str = ""
+    tip: str = ""
+    whyChosen: str = ""                # lý do bộ này hợp bối cảnh (khi Gemini chọn 3 bộ)
+
+
+class ReviewAlternative(StylistOutfit):
+    changes: list[str] = Field(default_factory=list)   # mô tả ngắn những gì đã đổi so với bộ hiện tại

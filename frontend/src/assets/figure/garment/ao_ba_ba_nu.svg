@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
+  <!-- Áo bà ba nữ (Nam Bộ), mặc cùng quần ống rộng: bottom/quan_nu. #FF0000 = màu áo (c-main).
+       Tham khảo: cổ tròn khoét, không bâu; tay raglan dài; thân ôm vai ngực, phía dưới rộng thoải mái;
+       dài qua hông, xẻ hai bên eo tạo hai vạt; hai túi phía dưới; hàng khuy tròn chạy giữa thân trước. -->
+  <g id="ao_ba_ba_nu" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
+    <g id="tay_ao">
+      <path id="tay_ao_trai" d="M152 176 C141 183 135 199 134.5 222 C133 262 127 292 125 318 C123 352 120.5 394 119 431 L140.5 434 C141.5 398 144 354 147.5 318 C150.5 292 156 252 159.5 228 Z" fill="#FF0000"/>
+      <path id="tay_ao_phai" d="M248 176 C259 183 265 199 265.5 222 C267 262 273 292 275 318 C277 352 279.5 394 281 431 L259.5 434 C258.5 398 256 354 252.5 318 C249.5 292 244 252 240.5 228 Z" fill="#FF0000"/>
+      <path id="bong_tay" d="M159.5 228 L147.5 318 L140.5 434 L134 433 L141 318 L153 232 Z M240.5 228 L252.5 318 L259.5 434 L266 433 L259 318 L247 232 Z" fill="#000" fill-opacity="0.12" stroke="none"/>
+      <path id="nep_tay" d="M124 312 Q135 318 146 314 M276 312 Q265 318 254 314" fill="none" stroke="#000" stroke-opacity="0.25" stroke-width="1.2"/>
+    </g>
+
+    <path id="than_ao" d="M152 176 C160 172 170 170 180 169 Q200 186 220 169 C230 170 240 172 248 176 L240.5 228
+      C241 262 238 290 238 318 C241 350 249 372 252 392 L253 440 Q200 447 147 440 L148 392
+      C151 372 159 350 162 318 C162 290 159 262 159.5 228 Z" fill="#FF0000"/>
+    <path id="bong_than" d="M159.5 228 L167 232 L170 318 L164 318 Z M240.5 228 L233 232 L230 318 L236 318 Z M148 392 L157 394 L155 440 L147 440 Z M252 392 L243 394 L245 440 L253 440 Z" fill="#000" fill-opacity="0.11" stroke="none"/>
+    <path id="xe_ta" d="M148 392 L157 396 M252 392 L243 396" fill="none" stroke-opacity="0.45"/>
+    <path id="duong_raglan" d="M180 169 L159.5 228 M220 169 L240.5 228" fill="none" stroke-opacity="0.22"/>
+    <path id="nep_ao" d="M172 262 Q184 268 194 265 M228 262 Q216 268 206 265 M176 360 Q178 400 176 436 M224 360 Q222 400 224 436" fill="none" stroke="#000" stroke-opacity="0.18" stroke-width="1.1"/>
+
+    <path id="duong_cai" d="M200 186 L200 440" fill="none" stroke-opacity="0.35"/>
+    <g id="khuy" fill="#FFFFFF" fill-opacity="0.8" stroke-width="0.8">
+      <circle cx="200" cy="198" r="2.2"/><circle cx="200" cy="232" r="2.2"/><circle cx="200" cy="266" r="2.2"/>
+      <circle cx="200" cy="300" r="2.2"/><circle cx="200" cy="334" r="2.2"/><circle cx="200" cy="368" r="2.2"/>
+    </g>
+    <g id="tui" fill="none" stroke-opacity="0.4">
+      <path d="M164 388 L188 388 L188 418 Q176 422 164 418 Z M236 388 L212 388 L212 418 Q224 422 236 418 Z"/>
+      <path d="M164 392 L188 392 M236 392 L212 392" stroke-opacity="0.25"/>
+    </g>
+  </g>
+</svg>

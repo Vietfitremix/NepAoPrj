@@ -1,0 +1,14 @@
+[
+  {"id": "do_son", "name": "Đỏ son", "hex": "#B3261E"},
+  {"id": "vang_hoang", "name": "Vàng hoàng", "hex": "#D9A21B"},
+  {"id": "nau_dat", "name": "Nâu đất", "hex": "#7A4E2D"},
+  {"id": "hong_dao", "name": "Hồng đào", "hex": "#F2A7A0"},
+  {"id": "trang_nga", "name": "Trắng ngà", "hex": "#F5F0E1"},
+  {"id": "trang_tinh", "name": "Trắng tinh", "hex": "#FFFFFF"},
+  {"id": "xanh_ngoc", "name": "Xanh ngọc", "hex": "#4FB3A9"},
+  {"id": "xanh_lam", "name": "Xanh lam", "hex": "#2F5D8A"},
+  {"id": "xanh_reu", "name": "Xanh rêu", "hex": "#5B6B3A"},
+  {"id": "den_tuyen", "name": "Đen tuyền", "hex": "#1E1E1E"},
+  {"id": "be_kem", "name": "Be kem", "hex": "#E8D9BC"},
+  {"id": "tim_hue", "name": "Tím Huế", "hex": "#6B3E75"}
+]

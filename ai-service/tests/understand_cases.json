@@ -1,0 +1,22 @@
+[
+  {"text": "chụp kỷ yếu lớp 12, nhẹ nhàng", "expect": {"occasion": "ky_yeu", "style": "pastel", "gender": "khong_ro"}},
+  {"text": "tốt nghiệp đại học, muốn đơn giản thôi, nữ", "expect": {"occasion": "ky_yeu", "style": "toi_gian", "gender": "nu"}},
+  {"text": "đi chùa mùng 1 với mẹ", "expect": {"occasion": "le_hoi_chua"}},
+  {"text": "Tết này về quê chụp ảnh với ông bà", "expect": {"occasion": "tet"}},
+  {"text": "bê tráp đám hỏi chị gái", "expect": {"occasion": "dam_cuoi"}},
+  {"text": "đi đám cưới bạn, con trai, không thích khăn", "expect": {"occasion": "dam_cuoi", "gender": "nam", "avoidAccessories": ["khan_van"]}},
+  {"text": "hội làng Lim, muốn đội nón quai thao", "expect": {"occasion": "le_hoi_chua", "mustHave": ["non_quai_thao"]}},
+  {"text": "dạo phố cổ, cá tính, đi sneaker", "expect": {"occasion": "dao_pho", "style": "duong_pho", "mustHave": ["sneaker"]}},
+  {"text": "chụp ảnh cafe, màu xanh ngọc", "expect": {"occasion": "dao_pho", "preferredColors": ["xanh_ngoc"]}},
+  {"text": "sự kiện văn hóa ở trường", "expect": {"occasion": "le_hoi_chua"}},
+  {"text": "du xuân đầu năm, thích màu đỏ son", "expect": {"occasion": "tet", "preferredColors": ["do_son"], "gender": "khong_ro"}},
+  {"text": "muốn mặc gì đó cho đẹp", "expect": {"occasion": null, "needsClarification": true, "preferredColors": []}},
+  {"text": "mình là nam, thích phong cách xưa", "expect": {"occasion": null, "style": "truyen_thong", "gender": "nam", "needsClarification": true}},
+  {"text": "chụp kỷ yếu nhưng ghét màu hồng", "expect": {"occasion": "ky_yeu", "avoidColors": ["hong_dao"]}},
+  {"text": "ăn hỏi anh trai, mặc áo ngũ thân", "expect": {"occasion": "dam_cuoi", "preferredGarment": "ao_ngu_than"}},
+  {"text": "đi lễ hội mặc áo tứ thân", "expect": {"occasion": "le_hoi_chua", "preferredGarment": "ao_tu_than"}},
+  {"text": "Tết đi chơi với người yêu, tông pastel", "expect": {"occasion": "tet", "style": "pastel"}},
+  {"text": "graduation photoshoot, minimal", "expect": {"occasion": "ky_yeu", "style": "toi_gian"}},
+  {"text": "dạo phố, đi guốc, áo dài trắng", "expect": {"occasion": "dao_pho", "mustHave": ["guoc"], "preferredGarment": "ao_dai"}},
+  {"text": "đi đám tang ông bà", "expect": {"occasion": null, "needsClarification": true}}
+]

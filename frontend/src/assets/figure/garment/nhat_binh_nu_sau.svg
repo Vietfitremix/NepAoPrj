@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
+  <!-- nhat_binh_nu – hướng SAU. Dựng từ bản hướng trước (cùng đường bao), bỏ chi tiết chỉ có ở mặt trước. Sinh bằng tools/gen_garment_views.py. -->
+  
+  <g id="nhat_binh_nu_sau" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
+    <path id="co_ao_trong" d="M186 140 L214 140 L215 164 Q200 169 185 164 Z" fill="#F5F0E1"/>
+
+    <g id="tay_ao">
+      <path id="tay_ao_trai" d="M151 174 C137 180 130 198 128 224 C124 280 114 360 104 428 Q120 442 146 437 C148 400 151 330 154 290 C156 262 158 240 159 226 Z" fill="#FF0000"/>
+      <path id="tay_ao_phai" d="M249 174 C263 180 270 198 272 224 C276 280 286 360 296 428 Q280 442 254 437 C252 400 249 330 246 290 C244 262 242 240 241 226 Z" fill="#FF0000"/>
+      <path id="bong_tay" d="M159 226 L146 437 L136 438 L150 236 Z M241 226 L254 437 L264 438 L250 236 Z" fill="#000" fill-opacity="0.15" stroke="none"/>
+      <path id="nep_tay" d="M126 300 Q130 360 122 420 M274 300 Q270 360 278 420 M106 424 Q124 434 146 430 M294 424 Q276 434 254 430" fill="none" stroke="#000" stroke-opacity="0.22" stroke-width="1.2"/>
+    </g>
+
+    <path id="than_ao" d="M151 174 C168 167 186 164 200 164 C214 164 232 167 249 174 L241 226
+      C245 320 254 470 264 690 Q200 702 136 690 C146 470 155 320 159 226 Z" fill="#FF0000"/>
+    <path id="bong_than" d="M159 226 L170 230 L160 690 L137 690 Z M241 226 L230 230 L240 690 L263 690 Z M197 300 L192 696 L206 696 Z" fill="#000" fill-opacity="0.12" stroke="none"/>
+    <path id="nep_than" d="M178 340 Q174 520 170 690 M222 340 Q226 520 230 690" fill="none" stroke="#000" stroke-opacity="0.16" stroke-width="1.1"/>
+
+    <g id="hoa_van_tron" fill="#D9B44A" fill-opacity="0.75" stroke="#8A6A1E" stroke-opacity="0.5" stroke-width="0.8">
+      <circle cx="170" cy="360" r="6"/><circle cx="230" cy="360" r="6"/><circle cx="182" cy="450" r="6"/>
+      <circle cx="218" cy="450" r="6"/><circle cx="166" cy="540" r="6"/><circle cx="234" cy="540" r="6"/>
+      <circle cx="200" cy="610" r="6"/><circle cx="176" cy="640" r="6"/><circle cx="224" cy="640" r="6"/>
+      <circle cx="136" cy="300" r="5"/><circle cx="264" cy="300" r="5"/><circle cx="124" cy="390" r="5"/><circle cx="276" cy="390" r="5"/>
+    </g>
+
+    <path id="dai_co" fill="#00FF00" d="M163 176 C176 166 188 163 200 163 C212 163 224 166 237 176
+      L222 300 L178 300 Z"/>
+    <path id="vien_dai_co" d="M171 182 L185 294 M229 182 L215 294 M178 296 L222 296" fill="none" stroke="#000" stroke-opacity="0.22"/>
+    <g id="hoa_van_dai_co" fill="none" stroke="#D9B44A" stroke-opacity="0.9" stroke-width="1.4">
+      <path d="M170 196 q4 -4 8 0 q4 4 8 0 M172 216 q4 -4 8 0 q4 4 8 0 M174 236 q4 -4 8 0 q4 4 8 0 M176 256 q4 -4 8 0 q4 4 8 0"/>
+      <path d="M230 196 q-4 -4 -8 0 q-4 4 -8 0 M228 216 q-4 -4 -8 0 q-4 4 -8 0 M226 236 q-4 -4 -8 0 q-4 4 -8 0 M224 256 q-4 -4 -8 0 q-4 4 -8 0"/>
+      <path d="M186 288 q7 -6 14 0 q7 6 14 0"/>
+    </g>
+  </g>
+</svg>

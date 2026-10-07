@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
+  <!-- Áo ngũ thân nam dáng cổ điển (bản phác theo ảnh tham khảo người dùng gửi, mô phỏng lại thiết kế, không đồ nét vẽ).
+       #FF0000 = màu chính (c-main). Cổ đứng cùng màu áo; đường cài chéo từ cổ sang bên phải người mặc rồi chạy dọc sườn,
+       7 khuy đồng; thân suông hơi loe, dài qua gối (gấu y≈604); tay dài vừa; xẻ hai bên từ hông.
+       Bám số đo nam: vai 138–262, hông 156–244 (y=414). Mặc cùng quần ống suông (bottom/quan_nam). -->
+  <g id="ao_ngu_than_co_dien_nam" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
+    <g id="tay_ao">
+      <path id="tay_ao_trai" d="M140 172 C127 180 121 198 121 224 C119 262 113 292 111 318 C109 352 107 394 106 430 L135 434 C136 398 138 354 141 318 C144 290 151 252 154 226 Z" fill="#FF0000"/>
+      <path id="tay_ao_phai" d="M260 172 C273 180 279 198 279 224 C281 262 287 292 289 318 C291 352 293 394 294 430 L265 434 C264 398 262 354 259 318 C256 290 249 252 246 226 Z" fill="#FF0000"/>
+      <path id="bong_tay" d="M154 226 L141 318 L135 434 L127 433 L134 318 L147 230 Z M246 226 L259 318 L265 434 L273 433 L266 318 L253 230 Z" fill="#000" fill-opacity="0.13" stroke="none"/>
+      <path id="nep_tay" d="M112 310 Q124 318 139 312 M288 310 Q276 318 261 312 M106 424 L135 428 M294 424 L265 428" fill="none" stroke="#000" stroke-opacity="0.28" stroke-width="1.2"/>
+    </g>
+
+    <path id="than_ao" d="M140 172 C160 164 182 160 200 160 C218 160 240 164 260 172 L247 226
+      C248 300 250 370 252 420 L258 604 Q200 613 142 604 L148 420 C150 370 152 300 153 226 Z" fill="#FF0000"/>
+    <path id="bong_than" d="M153 226 L162 230 L156 604 L142 604 L148 420 Z M247 226 L238 230 L244 604 L258 604 L252 420 Z M197 330 L193 608 L206 608 Z" fill="#000" fill-opacity="0.12" stroke="none"/>
+    <path id="xe_ta" d="M148 424 L150 604 M252 424 L250 604" fill="none" stroke-opacity="0.35"/>
+    <path id="nep_than" d="M180 430 Q177 520 174 604 M222 430 Q225 520 228 604" fill="none" stroke="#000" stroke-opacity="0.16" stroke-width="1.1"/>
+
+    <path id="duong_cai" d="M199 163 Q184 168 172 182 Q162 196 160 228 L158 604" fill="none" stroke-opacity="0.45" stroke-width="1.5"/>
+    <path id="co_dung" d="M185 138 L215 138 L216 162 Q200 167 184 162 Z" fill="#FF0000"/>
+    <path id="vien_co" d="M185 138 L215 138" fill="none" stroke-opacity="0.45"/>
+    <g id="khuy" fill="#B8923A" stroke="#5A4418" stroke-opacity="0.7" stroke-width="0.8">
+      <circle cx="205" cy="150" r="3"/><circle cx="186" cy="170" r="3"/><circle cx="169" cy="190" r="3"/>
+      <circle cx="160" cy="240" r="3"/><circle cx="159" cy="290" r="3"/><circle cx="159" cy="340" r="3"/><circle cx="158" cy="390" r="3"/>
+    </g>
+  </g>
+</svg>

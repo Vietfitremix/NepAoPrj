@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
+  <!-- VE_TAY: Hoa cài tóc: cài bên trái người mẫu (phía có đường ngôi); nhìn từ bên phải thì bị đầu che – hướng PHẢI. Sinh bằng tools/gen_accessories.py. -->
+  <g id="hoa_cai_toc_phai" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
+
+  </g>
+</svg>
