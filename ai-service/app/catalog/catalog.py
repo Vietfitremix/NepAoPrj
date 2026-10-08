@@ -14,6 +14,7 @@ class Catalog:
     fallback: dict = field(default_factory=dict)   # {by_garment_occasion, by_garment, by_rule, default_tip}
     patterns: dict[str, dict] = field(default_factory=dict)
     quiz: list[dict] = field(default_factory=list)
+    scoring: dict = field(default_factory=dict)          # thang 5 tiêu chí (data/scoring.json)
     version: str = "json"
 
     # --- tra tên tiếng Việt -------------------------------------------------
@@ -63,4 +64,5 @@ class Catalog:
             "colors": list(self.colors.values()),
             "patterns": list(self.patterns.values()),
             "cultureCards": list(self.culture_cards.values()),
+            "scoring": {"criteria": self.scoring.get("criteria", []), "bands": self.scoring.get("bands", [])},
         }

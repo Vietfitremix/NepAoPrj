@@ -45,6 +45,10 @@ def outfit_payload(o: StylistOutfit, catalog) -> dict:
         "accessories": [catalog.name("accessories", a) for a in s.accessories],
         "colorScore": o.color.score,
         "colorNote": o.color.note,
+        **({"scoreCard": {
+            "total": o.scoreCard.total, "xepLoai": o.scoreCard.bandText,
+            "tieuChi": [{"ten": c.name, "diem": c.score, "trongSo": c.weight, "luat": c.ruleIds, "ghiChu": c.notes}
+                        for c in o.scoreCard.criteria]}} if o.scoreCard else {}),
         "rules": [{"ruleId": e.id, "level": LEVEL_LABEL[e.level], "reason": e.reason,
                    "suggestion": e.suggestion.text} for e in o.evaluations],
     }

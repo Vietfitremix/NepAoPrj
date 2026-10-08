@@ -65,6 +65,17 @@
   .eval { border-left: 4px solid var(--line); padding: 6px 10px; margin: 6px 0; background: #fbf8f2; border-radius: 4px; }
   .eval.ok { border-color: var(--ok); } .eval.consider { border-color: var(--consider); } .eval.risk { border-color: var(--risk); }
   .score { font-size: 28px; font-weight: 600; color: var(--accent); }
+  /* Thẻ điểm 5 tiêu chí (data/scoring.json) */
+  .sc-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .sc-total { font-size: 30px; font-weight: 700; color: var(--accent); }
+  .sc-band { font-weight: 600; padding: 2px 10px; border-radius: 999px; color: #fff; font-size: 13px; }
+  .sc-band.chuan_bo { background: var(--ok); } .sc-band.hop_dip { background: #b08a3e; } .sc-band.can_chinh { background: var(--risk); }
+  .sc-row { display: grid; grid-template-columns: minmax(110px, 9em) 1fr 2.6em; gap: 8px; align-items: center; margin: 5px 0; font-size: 14px; }
+  .sc-bar { height: 8px; background: #efe7da; border-radius: 4px; overflow: hidden; }
+  .sc-bar i { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
+  .sc-bar i.low { background: var(--consider); }
+  .sc-note { grid-column: 2 / 4; margin-top: -3px; font-size: 12px; }
+  .sc-mini b { color: var(--accent); }
   .culture { background: #fbf8f2; border-radius: 8px; padding: 10px 12px; font-size: 14px; }
   .missing { color: var(--consider); font-size: 12px; }
   .bubble { background: #fbf8f2; border-radius: 10px; padding: 10px 12px; margin-top: 8px; }
@@ -171,7 +182,8 @@
         <div class="field"><label class="t">Lót / viền / yếm</label><div class="swatches" data-slot="lining"></div></div>
         <div class="field"><label class="t">Khăn / thắt lưng / điểm nhấn</label><div class="swatches" data-slot="accent"></div></div>
         <div class="field"><label class="t">Phụ kiện (mỗi vị trí 1 món)</label><div class="accs" id="accs"></div></div>
-        <div class="row"><span class="score" id="colorScore">–</span><span class="muted" id="colorNote"></span></div>
+        <div id="scoreCard"></div>
+        <div class="muted" id="colorNote"></div>
         <div id="evals"></div>
         <div class="culture" id="culture"></div>
       </div>
@@ -350,6 +362,22 @@ function submitQuiz() {
 }
 
 /* ======================= ② 3 BỘ GỢI Ý ======================= */
+/* Thẻ điểm: tổng + xếp loại + 5 thanh tiêu chí (luật chấm, Gemini chỉ diễn giải) */
+function scoreMini(card) {
+  return card ? `<span class="sc-mini"><b>${card.total}</b>/100 · ${esc(card.bandText)}</span>` : "";
+}
+function scoreCardHTML(card) {
+  if (!card) return "";
+  const rows = card.criteria.map(c => {
+    const why = [...c.notes, ...c.ruleIds.map(id => "luật " + id)].join(" · ");
+    return `<div class="sc-row" title="${esc(c.en)}"><span>${esc(c.name)} <span class="muted">${c.weight}%</span></span>
+      <div class="sc-bar"><i class="${c.score < 60 ? "low" : ""}" style="width:${c.score}%"></i></div><b>${c.score}</b>
+      ${why ? `<div class="sc-note muted">${esc(why)}</div>` : ""}</div>`;
+  }).join("");
+  return `<div class="sc-head"><span class="sc-total">${card.total}</span><span class="muted">/100</span>
+      <span class="sc-band ${card.band}">${esc(card.bandText)}</span>
+      ${card.capped ? `<span class="muted">(chặn trần vì có điểm dễ gây sai lệch)</span>` : ""}</div>${rows}`;
+}
 function badges(evals) {
   if (!evals.length) return `<span class="badge b-ok">Phù hợp</span>`;
   return evals.map(e => `<span class="badge b-${e.level}" title="${esc(e.reason)}">${LEVEL[e.level]}</span>`).join("");
@@ -364,7 +392,7 @@ async function outfitCard(o, extra = "", btn = "Chọn bộ này") {
       <div class="muted">${esc(CAT.garment[s.garment]?.name)} · ${esc(CAT.color[s.colors.main]?.name)}${s.pattern && s.pattern !== "tron" ? " · " + esc(CAT.pattern[s.pattern]?.name) : ""}
         / ${esc(CAT.color[s.colors.bottom]?.name)}${s.accessories.length ? " · " + s.accessories.map(a => esc(CAT.acc[a]?.name)).join(", ") : ""}</div>
       ${o.whyChosen ? `<div class="why">${esc(o.whyChosen)}</div>` : ""}
-      <div>${badges(o.evaluations)} <span class="muted">Màu ${o.color.score}/100</span></div>
+      <div>${badges(o.evaluations)} ${scoreMini(o.scoreCard)}</div>
       <p style="margin:6px 0">${esc(o.comment)}</p>
       <div class="muted">Mẹo: ${esc(o.tip)}</div>${extra}
       <div class="row" style="margin-top:8px"><button class="primary" data-open='${esc(JSON.stringify(s))}'>${btn}</button></div>
@@ -464,7 +492,7 @@ async function refresh() {
   timer = setTimeout(async () => {     // bộ luật chấm lại theo bối cảnh, không gọi Gemini
     try {
       const r = await api("/evaluate", { state, context: fullContext() });
-      $("colorScore").textContent = r.color.score; $("colorNote").textContent = r.color.note;
+      $("scoreCard").innerHTML = scoreCardHTML(r.scoreCard); $("colorNote").textContent = "Màu: " + r.color.note;
       $("evals").innerHTML = r.evaluations.length ? r.evaluations.map((e, i) => `<div class="eval ${e.level}">
           <span class="badge b-${e.level}">${LEVEL[e.level]}</span> ${esc(e.reason)}
           <div class="muted">Gợi ý: ${esc(e.suggestion.text)} ${e.suggestion.patch ? `<button class="chip" data-p="${i}">Áp dụng</button>` : ""}</div></div>`).join("")
@@ -514,6 +542,7 @@ async function renderReview() {
   $("reviewOut").innerHTML = `<div class="verdict v-${r.verdict}">${esc(r.verdictText)}</div>
     <p class="muted">Nguồn: <b>${r.source}</b></p>
     <div class="bubble"><b>${esc(r.current.title)}</b><br>${esc(r.current.comment)}<div class="muted">Mẹo: ${esc(r.current.tip)}</div></div>
+    <div class="bubble">${scoreCardHTML(r.current.scoreCard)}</div>
     ${alts.length ? `<h3 style="margin-top:12px">Phương án nâng cấp</h3><div class="cards">${alts.join("")}</div>` : `<p class="muted">Bộ này đã ổn, chưa có phương án nâng cấp rõ rệt.</p>`}`;
   bindOpen($("reviewOut"));
 }

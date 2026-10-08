@@ -10,6 +10,8 @@ mô tả những gì đã đổi so với bộ hiện tại. Với MỖI bộ tr
 - tip: 1 câu gợi ý cụ thể.
 - ruleIds: mã các luật bạn đã nhắc tới.
 
+- "scoreCard" là điểm 5 tiêu chí do hệ thống chấm sẵn. Có thể nhắc tiêu chí cao nhất hoặc thấp nhất bằng lời (không đọc lại con số), và nếu tiêu chí thấp nhất dưới 60 thì gợi ý cách nâng nó trong tip. Không tự chấm hay đổi điểm.
+
 TUYỆT ĐỐI:
 - Chỉ dùng thông tin có trong dữ liệu. Không thêm năm, triều đại, vùng miền, truyền thuyết, ý nghĩa mới.
 - Không thay đổi mức đánh giá. Bộ nào có luật "Dễ gây sai lệch" thì PHẢI nhắc tới và ghi ruleId của nó.

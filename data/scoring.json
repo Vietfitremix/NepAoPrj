@@ -1,0 +1,28 @@
+{
+  "_ghi_chu": "Thang chấm 5 tiêu chí (0–100), dựng trên cách chấm cũ: điểm màu OKLCH góp vào 'dac_trung', mỗi luật trong rules.json thuộc một tiêu chí (trường criterion) và cộng/trừ điểm tiêu chí đó theo mức. Đổi trọng số ở đây, tổng phải bằng 100. Xem ai-service/app/engine/scoring.py.",
+  "criteria": [
+    {"id": "cau_truc",  "name": "Đúng bộ",          "en": "Structure/Form",          "weight": 20, "base": 80},
+    {"id": "dac_trung", "name": "Đặc trưng áo",     "en": "Garment Characteristics", "weight": 25, "base": 75, "colorShare": 0.6},
+    {"id": "phu_kien",  "name": "Phụ kiện",         "en": "Accessories",             "weight": 15, "base": 75, "baseNone": 70},
+    {"id": "boi_canh",  "name": "Bối cảnh",         "en": "Context",                 "weight": 30, "base": 75, "paletteBonus": 10},
+    {"id": "cach_tan",  "name": "Cách tân hợp gu",  "en": "Modern Remix",            "weight": 10}
+  ],
+  "levelPoints": {"ok": 10, "consider": -15, "risk": -40},
+  "riskCap": 50,
+  "remix": {
+    "modernAccessories": ["sneaker", "giay_bup_be"],
+    "modernPatterns": ["ke_soc", "cham_bi"],
+    "byStyle": {
+      "truyen_thong": {"base": 85, "perModern": -15},
+      "duong_pho":    {"base": 70, "perModern": 12, "softConsider": true},
+      "toi_gian":     {"base": 70, "perModern": 12, "softConsider": true},
+      "_khac":        {"base": 75, "perModern": 5}
+    }
+  },
+  "rankBonus": {"style": 15, "preferredColor": 10, "preferredGarment": 20},
+  "bands": [
+    {"min": 80, "id": "chuan_bo", "text": "Chuẩn bộ"},
+    {"min": 60, "id": "hop_dip",  "text": "Hợp dịp"},
+    {"min": 0,  "id": "can_chinh", "text": "Cần chỉnh"}
+  ]
+}

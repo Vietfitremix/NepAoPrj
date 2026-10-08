@@ -8,8 +8,9 @@ Mọi hàm đều chấm luật kèm bối cảnh (thời tiết, nơi, buổi, 
 from app.models import Colors, Intent, OutfitState
 
 from .color import score_colors
+from .scoring import rank_bonus, score_card
 from .outfit_check import apply_patch
-from .rules import count_levels, evaluate
+from .rules import evaluate
 
 NEUTRALS = ["trang_nga", "den_tuyen", "be_kem"]
 DEFAULT_STYLE = {"tet": "truyen_thong", "ky_yeu": "pastel", "dam_cuoi": "truyen_thong",
@@ -25,19 +26,14 @@ def _dedupe(seq):
 
 
 def score_outfit(o: OutfitState, catalog, intent: Intent | None = None):
-    """(điểm, đánh giá luật, điểm màu). Điểm = điểm màu − phạt luật + thưởng khớp mong muốn."""
+    """(điểm xếp hạng, đánh giá luật, điểm màu, thẻ điểm 5 tiêu chí).
+
+    Điểm xếp hạng = tổng 5 tiêu chí (engine/scoring.py, đã gồm điểm màu và mức luật) + thưởng khớp mong muốn
+    (phong cách, màu thích, kiểu áo — giữ từ cách chấm cũ)."""
     evals = evaluate(o, catalog.rules, intent)
     color = score_colors(o, catalog)
-    lv = count_levels(evals)
-    score = color.score - 40 * lv["risk"] - 8 * lv["consider"] + 4 * lv["ok"]
-    if intent:
-        if intent.style and intent.style == o.style:
-            score += 15
-        if o.colors.main in intent.preferredColors:
-            score += 10
-        if intent.preferredGarment == o.garment:
-            score += 20
-    return score, evals, color
+    card = score_card(o, evals, color.score, catalog)
+    return card.total + rank_bonus(o, intent, catalog), evals, color, card
 
 
 def _accessories(garment_id, occasion, gender, catalog, must=(), avoid=()):
@@ -114,7 +110,7 @@ def match_outfits(intent: Intent, catalog, n: int = 3) -> list[OutfitState]:
 def suggest_alternatives(o: OutfitState, catalog, ctx: Intent | None = None,
                          n: int = 2) -> list[tuple[OutfitState, list[str]]]:
     """Phương án nâng cấp quanh bộ đồ hiện tại: sửa theo luật nặng nhất, đổi màu chính, đổi hoạ tiết, đổi phụ kiện."""
-    base_score, evals, _ = score_outfit(o, catalog, ctx)
+    base_score, evals, _, _ = score_outfit(o, catalog, ctx)
     options: list[tuple[int, OutfitState, list[str]]] = []
 
     worst = next((e for e in evals if e.level != "ok" and e.suggestion.patch), None)

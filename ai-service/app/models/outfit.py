@@ -44,11 +44,30 @@ class ColorScore(BaseModel):
     note: str
 
 
+class Criterion(BaseModel):
+    id: str                            # cau_truc | dac_trung | phu_kien | boi_canh | cach_tan
+    name: str
+    en: str = ""
+    weight: int                        # trọng số % (data/scoring.json)
+    score: int                         # 0–100
+    ruleIds: list[str] = Field(default_factory=list)   # luật đã khớp thuộc tiêu chí này
+    notes: list[str] = Field(default_factory=list)     # lý do ngắn không đến từ luật (màu, bảng màu dịp...)
+
+
+class ScoreCard(BaseModel):
+    total: int                         # 0–100, trung bình có trọng số của 5 tiêu chí
+    band: str                          # chuan_bo | hop_dip | can_chinh
+    bandText: str
+    capped: bool = False               # bị chặn trần vì có luật "Dễ gây sai lệch"
+    criteria: list[Criterion]
+
+
 class StylistOutfit(BaseModel):
     outfitId: str
     state: OutfitState
     evaluations: list[Evaluation]
     color: ColorScore
+    scoreCard: Optional[ScoreCard] = None
     title: str = ""
     comment: str = ""
     tip: str = ""

@@ -4,7 +4,7 @@ from typing import Literal, Optional, Union
 from pydantic import BaseModel, Field, model_validator
 
 from .intent import ClarifyOption, Intent
-from .outfit import ColorScore, Evaluation, OutfitState, ReviewAlternative, StylistOutfit
+from .outfit import ColorScore, Evaluation, ScoreCard, OutfitState, ReviewAlternative, StylistOutfit
 
 Source = Literal["gemini", "fallback", "cache"]
 
@@ -77,6 +77,7 @@ class EvaluateRequest(BaseModel):
 class EvaluateResponse(BaseModel):
     evaluations: list[Evaluation]
     color: ColorScore
+    scoreCard: ScoreCard
 
 
 class ExplainRequest(BaseModel):
@@ -91,6 +92,7 @@ class ExplainResponse(BaseModel):
     tip: str
     evaluations: list[Evaluation]
     color: ColorScore
+    scoreCard: Optional[ScoreCard] = None
     source: Source
 
 

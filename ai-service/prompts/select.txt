@@ -16,6 +16,8 @@ Cách chọn:
 - Ưu tiên 3 KIỂU ÁO KHÁC NHAU nếu có thể, để người dùng có lựa chọn đa dạng.
 - Không chọn trùng một mã hai lần.
 
+- "scoreCard" là điểm 5 tiêu chí do hệ thống chấm sẵn. Có thể nhắc tiêu chí cao nhất hoặc thấp nhất bằng lời (không đọc lại con số), và nếu tiêu chí thấp nhất dưới 60 thì gợi ý cách nâng nó trong tip. Không tự chấm hay đổi điểm.
+
 TUYỆT ĐỐI:
 - Chỉ dùng thông tin có trong dữ liệu. Không thêm năm, triều đại, vùng miền, truyền thuyết, ý nghĩa mới.
 - Không thay đổi mức đánh giá. Bộ nào có luật "Dễ gây sai lệch" mà vẫn chọn thì PHẢI nhắc tới và ghi ruleId của nó.

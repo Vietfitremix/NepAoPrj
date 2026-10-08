@@ -66,8 +66,8 @@ class StylistService:
         return self.gemini
 
     def _build(self, outfit_id: str, state: OutfitState, ctx: Intent | None = None) -> StylistOutfit:
-        _, evals, color = score_outfit(state, self.catalog, ctx)
-        return StylistOutfit(outfitId=outfit_id, state=state, evaluations=evals, color=color)
+        _, evals, color, card = score_outfit(state, self.catalog, ctx)
+        return StylistOutfit(outfitId=outfit_id, state=state, evaluations=evals, color=color, scoreCard=card)
 
     # ------------------------------------------------------------------ /ai/quiz
     def quiz(self):
@@ -106,8 +106,8 @@ class StylistService:
     # ------------------------------------------------------------------ /ai/evaluate
     def evaluate(self, state: OutfitState, ctx: Intent | None = None) -> EvaluateResponse:
         validate_outfit(state, self.catalog)
-        _, evals, color = score_outfit(state, self.catalog, _ctx_for(state, ctx))
-        return EvaluateResponse(evaluations=evals, color=color)
+        _, evals, color, card = score_outfit(state, self.catalog, _ctx_for(state, ctx))
+        return EvaluateResponse(evaluations=evals, color=color, scoreCard=card)
 
     # ------------------------------------------------------------------ /ai/explain
     async def explain_one(self, state: OutfitState, ctx: Intent | None, user_request: str | None,
@@ -118,7 +118,7 @@ class StylistService:
         source = await explain([o], self.catalog, self._gemini_for(ip), user_request=user_request,
                                log=self.log, ctx=c)
         return ExplainResponse(title=o.title, comment=o.comment, tip=o.tip,
-                               evaluations=o.evaluations, color=o.color, source=source)
+                               evaluations=o.evaluations, color=o.color, scoreCard=o.scoreCard, source=source)
 
     # ------------------------------------------------------------------ /ai/review (nút "Hỏi stylist")
     async def review(self, state: OutfitState, ctx: Intent | None, user_request: str | None,
