@@ -1,0 +1,33 @@
+{
+  "_ghi_chu": "Gợi ý món tương đương ngoài đời cho checklist 'soi và mặc theo' (trang Tuỳ chỉnh / Nhận xét). Chỉ mô tả cách tìm đồ, không thêm thông tin lịch sử.",
+  "garments": {
+    "ao_dai": "Áo dài tay dài, cổ đứng, xẻ tà hai bên (truyền thống hoặc cách tân đều được)",
+    "ao_ngu_than": "Áo ngũ thân cổ đứng, thân suông rộng, cài khuy chéo bên phải",
+    "ao_tu_than": "Áo tứ thân mở vạt trước, mặc kèm yếm và thắt lưng buộc trước bụng",
+    "nhat_binh": "Áo nhật bình cổ vuông có dải cổ bản rộng, tay rộng (thường đi thuê tại tiệm cổ phục)",
+    "ao_ba_ba": "Áo bà ba cổ tròn, xẻ hai bên hông, tay dài (vải lụa hoặc cotton mềm)"
+  },
+  "bottoms": {
+    "quan": "Quần ống suông dài tới mắt cá (quần lụa, quần âu ống rộng màu trơn đều được)",
+    "vay": "Váy dài qua bắp chân, màu trơn (chân váy đụp, chân váy maxi suông)"
+  },
+  "accessories": {
+    "non_la": "Nón lá có quai vải buộc dưới cằm",
+    "non_quai_thao": "Nón quai thao (thường đi thuê cùng bộ tứ thân)",
+    "khan_van": "Khăn vấn quấn quanh đầu (có loại vấn sẵn, chỉ việc đội)",
+    "khan_mo_qua": "Khăn mỏ quạ màu đen, gấp nhọn trên trán",
+    "khan_xep": "Khăn xếp đội sẵn (mua hoặc thuê kèm áo dài, ngũ thân nam)",
+    "hoa_cai_toc": "Kẹp hoặc trâm hoa cài một bên tóc",
+    "guoc": "Guốc gỗ quai ngang",
+    "hai_theu": "Hài vải thêu mũi cong",
+    "giay_bup_be": "Giày búp bê mũi tròn, đế bệt",
+    "giay_ta": "Giày vải đen đế bệt",
+    "sneaker": "Sneaker trắng trơn, càng ít hoạ tiết càng hợp",
+    "tui": "Túi cói hoặc túi đan xách tay cỡ nhỏ",
+    "quat_giay": "Quạt giấy gấp",
+    "kieng_bac": "Kiềng bạc đeo cổ",
+    "trang_suc": "Bông tai nhỏ và vòng tay đơn giản"
+  },
+  "lining": "Viền cổ, viền tay hoặc yếm",
+  "accent": "Màu khăn, quai nón, thắt lưng, túi"
+}

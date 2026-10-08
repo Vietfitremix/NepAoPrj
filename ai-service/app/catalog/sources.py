@@ -32,7 +32,7 @@ def load_from_json(data_dir: Path) -> Catalog:
 
     rules = [r for r in read("rules.json") if r.get("active", True)]
     cards = read("culture-cards.json", [])
-    patterns, quiz, scoring = load_ui_data(data_dir)
+    patterns, quiz, scoring, checklist = load_ui_data(data_dir)
     return Catalog(
         occasions=_by_id(read("occasions.json")),
         styles=_by_id(read("styles.json")),
@@ -42,19 +42,19 @@ def load_from_json(data_dir: Path) -> Catalog:
         rules=rules,
         culture_cards={c["garmentId"]: c for c in cards},
         fallback=_fallback_from_json(read("fallback-comments.json", {})),
-        patterns=patterns, quiz=quiz, scoring=scoring,
+        patterns=patterns, quiz=quiz, scoring=scoring, checklist=checklist,
         version="json",
     )
 
 
-def load_ui_data(data_dir: Path) -> tuple[dict, list, dict]:
-    """Hoạ tiết, bộ câu hỏi quiz, thang điểm luôn đọc từ file JSON (cả khi catalog chính ở Postgres)."""
+def load_ui_data(data_dir: Path) -> tuple[dict, list, dict, dict]:
+    """Hoạ tiết, quiz, thang điểm, gợi ý checklist luôn đọc từ file JSON (cả khi catalog chính ở Postgres)."""
     def read(name, default):
         p = data_dir / name
         return json.loads(p.read_text(encoding="utf-8")) if p.exists() else default
 
     patterns = _by_id(read("patterns.json", [{"id": "tron", "name": "Trơn", "tile": 0, "motif": ""}]))
-    return patterns, read("quiz.json", []), read("scoring.json", {})
+    return patterns, read("quiz.json", []), read("scoring.json", {}), read("checklist.json", {})
 
 
 async def load_from_postgres(pool, data_dir: Path) -> Catalog:
@@ -102,7 +102,7 @@ async def load_from_postgres(pool, data_dir: Path) -> Catalog:
         else:
             fallback["by_garment_occasion"][k] = {"title": r["title"], "comment": r["comment"]}
 
-    patterns, quiz, scoring = load_ui_data(data_dir)
+    patterns, quiz, scoring, checklist = load_ui_data(data_dir)
     # bảng rules trên Postgres có thể chưa có cột criterion: lấy theo mã luật trong data/rules.json
     crit = {r["id"]: r.get("criterion") for r in json.loads((data_dir / "rules.json").read_text(encoding="utf-8"))}         if (data_dir / "rules.json").exists() else {}
     for r in rules:
@@ -111,6 +111,6 @@ async def load_from_postgres(pool, data_dir: Path) -> Catalog:
         occasions=_by_id(occasions), styles=_by_id(styles), garments=_by_id(garments),
         accessories=_by_id(accessories), colors=_by_id(colors), rules=rules,
         culture_cards={c["garmentId"]: c for c in cards}, fallback=fallback,
-        patterns=patterns, quiz=quiz, scoring=scoring,
+        patterns=patterns, quiz=quiz, scoring=scoring, checklist=checklist,
         version=meta.get("catalog_version", "db"),
     )

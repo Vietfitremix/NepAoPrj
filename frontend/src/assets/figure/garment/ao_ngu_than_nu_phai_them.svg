@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
-  <!-- Chi tiết riêng hướng PHẢI của ao_ngu_than_nu: đường cài khuy chéo bên phải người mặc. Toạ độ hướng phải. Sinh bằng tools/gen_side_views.py (đo trên người mẫu MakeHuman). -->
+  <!-- Chi tiết riêng hướng PHẢI của ao_ngu_than_nu: đường cài khuy chéo bên phải người mặc (phần không bị tay áo che). Toạ độ hướng phải. Sinh bằng tools/gen_side_views.py (đo trên người mẫu MakeHuman). -->
   <g id="ao_ngu_than_nu_khuy_phai" stroke="#000" stroke-linecap="round">
-    <path d="M 225.8 169.8 Q 223.8 196.4 234.2 221.1" fill="none" stroke-opacity="0.35" stroke-width="1.3"/>
-    <g fill="#D9B44A" stroke-opacity="0.3" stroke-width="0.8"><circle cx="225.8" cy="173.6" r="2.3"/><circle cx="229.2" cy="187.6" r="2.3"/><circle cx="232.1" cy="201.4" r="2.3"/><circle cx="234.2" cy="215.4" r="2.3"/></g>
+    <path d="M 225.8 170.3 L 225.7 171.6 L 225.6 172.9 L 225.5 174.3 L 225.5 175.6 L 225.4 176.9 L 225.4 178.2 L 225.4 179.5 L 225.4 180.8 L 225.5 182.1 L 225.5 183.5 L 225.6 184.7 L 225.7 186.0 L 225.8 187.3 L 225.9 188.7 L 226.0 189.9 L 226.2 191.2 L 226.3 192.5" fill="none" stroke-opacity="0.35" stroke-width="1.3"/>
+    <g fill="#D9B44A" stroke-opacity="0.3" stroke-width="0.8"><circle cx="225.8" cy="172.2" r="2.3"/><circle cx="226.3" cy="194.3" r="2.3"/></g>
   </g>
 </svg>

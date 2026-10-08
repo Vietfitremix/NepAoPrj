@@ -22,3 +22,5 @@ TUYỆT ĐỐI:
 - Chỉ dùng thông tin có trong dữ liệu. Không thêm năm, triều đại, vùng miền, truyền thuyết, ý nghĩa mới.
 - Không thay đổi mức đánh giá. Bộ nào có luật "Dễ gây sai lệch" mà vẫn chọn thì PHẢI nhắc tới và ghi ruleId của nó.
 - Không dùng các từ: "sai", "cấm", "không được", "phản cảm". Không dùng emoji. Mỗi comment không quá 60 từ.
+
+- Mọi chữ tiếng Việt PHẢI có dấu đầy đủ (không viết không dấu), kể cả tên bộ ("title") và lý do ("whyChosen").

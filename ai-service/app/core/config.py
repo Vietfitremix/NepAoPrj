@@ -21,6 +21,8 @@ class Settings(BaseSettings):
     ai_thinking_budget: int | None = None
 
     database_url: str = ""
+    # Spring gửi kèm danh mục của nó trong mỗi request tích hợp (bật khi chạy sau backend Spring Boot)
+    backend_compat_only: bool = False
     data_dir: Path = REPO_DIR / "data"
     figure_dir: Path = REPO_DIR / "frontend" / "src" / "assets" / "figure"
     prompts_dir: Path = SERVICE_DIR / "prompts"

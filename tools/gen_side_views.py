@@ -2,8 +2,8 @@
 
 Dùng lại các hàm dựng áo trong tools/gen_garment_views.py (ao_dai, ngu_than, ba_ba, tu_than, nhat_binh, quan, vay),
 chỉ thay lớp đo người mẫu:
-  - mép trước/sau thân   = .tools/render/<g>_trai_mask.png trừ lớp tay gần (<g>_trai_arm.png), nên thân áo không
-    phình theo bàn tay và lưng áo bám đúng lưng người mới;
+  - mép trước/sau thân   = .tools/render/<g>_trai_noarm.png (thân đã ẩn tay trong Blender), nên thân áo không
+    phình theo bàn tay, lưng áo bám đúng lưng người mới và đo được cả phần đùi nằm sau bàn tay;
   - mép trước/sau tay gần = <g>_trai_arm.png → tay áo bọc đúng cánh tay mới;
   - các mốc độ cao viết sẵn trong hàm dựng (vai 176, eo 316, hông 414, gấu ...) theo khung người mẫu cũ được quy đổi
     sang người mẫu mới bằng cùng phép nội suy mốc của tools/refit_to_body.py (đỉnh, cổ, đáy chậu, mắt cá, đáy chân).
@@ -75,9 +75,8 @@ class NewSide:
     def __init__(self, g: str, ym: YMap):
         self.g, self.ym = g, ym
         arm = load(RENDER / f"{g}_trai_arm.png")
-        body = load(RENDER / f"{g}_trai_mask.png")
         self.arm = arm
-        self.body = body & ~dilate(arm, 2 * RES)
+        self.body = load(RENDER / f"{g}_trai_noarm.png")      # thân không tay (render riêng): đo được cả đùi sau bàn tay
         svg = (FIG / f"body/body_{g}_trai.svg").read_text(encoding="utf-8")
         self.svg = svg
         self.skin = re.search(r'id="than_lien_khoi" fill="([^"]+)"', svg).group(1)
@@ -146,7 +145,66 @@ def vay(S, g="nu"):
                       "vẽ lại tay gần nằm trên váy.", body)
 
 
-gv.collar = collar                                         # các hàm dựng áo trong gen_garment_views gọi collar() qua module
+def quan(S, g):
+    """Như gv.quan, nhưng mép trước/sau ống đo theo chân tới gấu và chỉ được rộng ra khi xuống dưới
+    (đường thẳng từ đùi xuống gấu của bản cũ cắt vào bắp chân người mới)."""
+    waist = 316
+    run = gv.ys(waist, 752, 10)
+    ease = lambda y: 1.2 if y <= 414 else gv.lerp(1.2, 3.5, min(1, (y - 414) / 56))
+    fr, bk, xf, xb = [], [], 1e9, -1e9
+    for y in run:
+        f, b = S.f(y) - ease(y), S.b(y) + ease(y)
+        if y >= 380:                                      # từ hông xuống: chỉ rộng ra (không thụt theo lằn mông, gối)
+            xf, xb = min(xf, f), max(xb, b)
+            f, b = xf, xb
+        fr.append((f, y)); bk.append((b, y))
+    fr[-1], bk[-1] = (fr[-1][0] - 3, 752), (bk[-1][0] + 4, 752)
+    d = gv.shape(fr, bk[::-1])
+    i470 = next(i for i, y in enumerate(run) if y >= 470)
+    body = "\n".join([
+        gv.el("vai_quan", d, "#0000FF"),
+        f'    <path id="bong" d="{gv.shape([(x - 7, y) for x, y in bk[i470:]], bk[i470:][::-1])}" {gv.SHADE}/>',
+        f'    <path id="nep" d="M{fr[1][0] + 2:.1f} 330 L{bk[1][0] - 1:.1f} 330 M{S.f(540) + 6:.1f} 480 L{fr[-1][0] + 11:.1f} 748" '
+        'fill="none" stroke="#000" stroke-opacity="0.18" stroke-width="1.4"/>',
+        "    " + S.hand(waist - 2, f"quan_{g}"),
+    ])
+    return gv.svg_doc(f"quan_{g}_trai", f"Quần {'nữ' if g == 'nu' else 'nam'} ống suông – hướng TRÁI. Cạp ở eo y={waist}, "
+                      "ống thẳng phủ đùi, gối, bắp chân tới gấu ở mắt cá y=752; vẽ lại tay gần nằm trên quần.", body)
+
+
+def closure(S, name, y0, n, button):
+    """Như gv.closure, nhưng chỉ vẽ phần đường khuy nằm TRƯỚC mép tay áo (đoạn gần nách bị tay áo che), khuy rải trên
+    phần nhìn thấy. Bản cũ vẽ cả đường lên trên cùng nên khuy nằm đè giữa ống tay ở người mẫu mới (tay sát ngực)."""
+    x0, y_0 = S.f(y0 + 4) + 3, y0 + 2
+    x1, y1 = S.af(222) - 4, 222
+    cx, cy = x0 + 2, y0 + 30
+    curve = []
+    for i in range(41):
+        t = i / 40
+        x = (1 - t) ** 2 * x0 + 2 * (1 - t) * t * cx + t * t * x1
+        y = (1 - t) ** 2 * y_0 + 2 * (1 - t) * t * cy + t * t * y1
+        try:
+            hidden = x > S.af(y) - 4                         # mép trước tay áo ≈ mép trước cánh tay − 2,4…3,5
+        except ValueError:                                   # chưa tới vai: không có tay ở hàng này
+            hidden = False
+        if hidden and i > 2:
+            break
+        curve.append((x, y))
+    d = "M" + " L".join(f"{x:.1f} {y:.1f}" for x, y in curve)
+    frac = len(curve) / 41
+    k = max(1, min(n, round(n * frac + 0.3)))
+    idx = [round(j * (len(curve) - 1) / max(k - 1, 1)) for j in range(k)] if k > 1 else [min(2, len(curve) - 1)]
+    btn = "".join(f'<circle cx="{400 - curve[i][0]:.1f}" cy="{curve[i][1] + 2:.1f}" r="2.4"/>' for i in idx)
+    return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">\n'
+            f'  <!-- Chi tiết riêng hướng PHẢI của {name}: đường cài khuy chéo bên phải người mặc (phần không bị tay áo che). '
+            'Toạ độ hướng phải. Sinh bằng tools/gen_garment_views.py. -->\n'
+            f'  <g id="{name}_khuy_phai" stroke="#000" stroke-linecap="round">\n'
+            f'    <path d="{gv.mirror_d(d)}" fill="none" stroke-opacity="0.35" stroke-width="1.3"/>\n'
+            f'    <g fill="{button}" stroke-opacity="0.3" stroke-width="0.8">{btn}</g>\n  </g>\n</svg>\n')
+
+
+gv.collar = collar
+gv.closure = closure                                         # các hàm dựng áo trong gen_garment_views gọi collar() qua module
 
 
 def finish(svg: str, S: NewSide, warp: Warp) -> str:
@@ -168,7 +226,7 @@ def main():
             out[f"garment/{name}_trai"] = finish(svg, S, W)
             if extra:                                     # khuy hướng phải: toạ độ đã lật → chỉ đổi y
                 out[f"garment/{name}_phai_them"] = finish(extra, S, W)
-        out[f"bottom/quan_{g}_trai"] = finish(gv.quan(S, g), S, W)
+        out[f"bottom/quan_{g}_trai"] = finish(quan(S, g), S, W)
         if g == "nu":
             out["bottom/vay_nu_trai"] = finish(vay(S), S, W)
     for rel, svg in out.items():

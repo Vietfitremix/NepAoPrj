@@ -15,6 +15,7 @@ class Catalog:
     patterns: dict[str, dict] = field(default_factory=dict)
     quiz: list[dict] = field(default_factory=list)
     scoring: dict = field(default_factory=dict)          # thang 5 tiêu chí (data/scoring.json)
+    checklist: dict = field(default_factory=dict)        # gợi ý món tương đương ngoài đời (data/checklist.json)
     version: str = "json"
 
     # --- tra tên tiếng Việt -------------------------------------------------
@@ -65,4 +66,5 @@ class Catalog:
             "patterns": list(self.patterns.values()),
             "cultureCards": list(self.culture_cards.values()),
             "scoring": {"criteria": self.scoring.get("criteria", []), "bands": self.scoring.get("bands", [])},
+            "checklist": {k: v for k, v in self.checklist.items() if not k.startswith("_")},
         }

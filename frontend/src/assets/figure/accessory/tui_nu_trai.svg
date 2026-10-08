@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
   <!-- Túi cói xách tay (tay trái người mẫu), quai và viền miệng màu điểm nhấn – hướng TRÁI (nhìn nghiêng, mặt quay sang trái). Sinh bằng tools/gen_accessories.py. -->
   <g id="tui_nu_trai" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
-    <path id="quai_tui" d="M 160.3 473.4 C 161.0 447.2 204.7 447.2 202.7 473.4" fill="none" stroke="#FF00FF" stroke-opacity="1" stroke-width="3.5"/>
-    <path id="than_tui" d="M 147.7 473.4 L 215.6 473.5 L 229.3 538.2 Q 186.6 544.2 143.3 538.1 Z" fill="#E3C98A"/>
-    <path id="dan_coi" d="M 146.2 489.6 L 219.3 489.7 M 145.8 497.7 L 221.3 497.8 M 145.4 505.8 L 223.2 505.8 M 144.9 513.9 L 224.9 513.9 M 144.3 522.0 L 226.5 522.0 M 143.6 530.1 L 228.1 530.1" fill="none" stroke="#C4A15E" stroke-width="1.4" stroke-opacity="1"/>
-    <path id="vien_mieng" d="M 147.7 473.4 L 215.6 473.5 L 217.4 482.6 L 146.9 482.5 Z" fill="#FF00FF"/>
+    <path id="quai_tui" d="M 160.2 473.4 C 160.2 447.2 204.3 447.2 202.7 473.4" fill="none" stroke="#FF00FF" stroke-opacity="1" stroke-width="3.5"/>
+    <path id="than_tui" d="M 147.6 473.4 L 215.6 473.5 L 229.3 538.2 Q 186.6 544.2 143.3 538.1 Z" fill="#E3C98A"/>
+    <path id="dan_coi" d="M 146.3 489.6 L 219.4 489.7 M 145.8 497.7 L 221.4 497.8 M 145.4 505.8 L 223.3 505.8 M 144.9 513.9 L 225.0 513.9 M 144.3 522.0 L 226.6 522.0 M 143.6 530.1 L 228.2 530.1" fill="none" stroke="#C4A15E" stroke-width="1.4" stroke-opacity="1"/>
+    <path id="vien_mieng" d="M 147.6 473.4 L 215.6 473.5 L 217.5 482.6 L 147.0 482.5 Z" fill="#FF00FF"/>
   </g>
 </svg>

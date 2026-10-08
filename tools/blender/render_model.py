@@ -57,13 +57,14 @@ apply_face(human, Path(LocationService.get_mpfb_data("targets")), PRESETS[GENDER
 rig = HumanService.add_builtin_rig(human, "default")
 # Tư thế nghỉ của MakeHuman: tay chếch xuống ~48° (chữ A). Theo file t-pose.json của MPFB, nâng tay là xoay upperarm01 quanh Z
 # dấu dương (bên L). Ở đây xoay ngược lại để tay buông gần thẳng; duỗi cẳng tay (lowerarm01 quanh X âm) như t-pose.
-ARM_OUT = float(argv[2]) if len(argv) > 2 else 0.16       # độ tách tay khỏi thân (ngang/dọc)
+ARM_OUT = float(argv[2]) if len(argv) > 2 else {"nu": 0.24, "nam": 0.16}[GENDER]   # độ tách tay khỏi thân (ngang/dọc); nữ dang hơn để bàn tay không dính vào đùi
 LEG_IN = {"nu": 0.05, "nam": 0.08}[GENDER]                   # độ chếch vào trong của đùi (nữ ít hơn để đùi không chạm nhau)
 ELBOW = float(argv[3]) if len(argv) > 3 else 0.0          # độ duỗi khuỷu tay
+TWIST = float(argv[4]) if len(argv) > 4 else {"nu": -50.0, "nam": -30.0}[GENDER]   # xoay cẳng tay (độ, âm = ngón cái ra trước)
 if rig is not None:
     bpy.context.view_layer.objects.active = rig
     bpy.ops.object.mode_set(mode="POSE")
-    from mathutils import Vector
+    from mathutils import Quaternion, Vector
 
     def aim(pb, world_dir):
         """Xoay xương sao cho hướng đầu→đuôi (trong không gian thực) trùng world_dir.
@@ -80,6 +81,12 @@ if rig is not None:
     for side, sx in (("L", 1), ("R", -1)):              # L = bên trái người mẫu = +X; người mẫu nhìn về −Y
         aim(rig.pose.bones[f"upperarm01.{side}"], (sx * ARM_OUT, 0.03, -1.0))
         aim(rig.pose.bones[f"lowerarm01.{side}"], (sx * ARM_OUT * 0.5, -0.10, -1.0))
+        # xoay cẳng tay quanh trục của nó: lòng bàn tay úp vào đùi, ngón cái hướng ra trước (không chĩa vào hông)
+        for bn in (f"lowerarm02.{side}", f"wrist.{side}"):
+            pb = rig.pose.bones[bn]
+            pb.rotation_mode = "QUATERNION"
+            pb.rotation_quaternion = pb.rotation_quaternion @ Quaternion((0, 1, 0), sx * math.radians(TWIST / 2))
+        bpy.context.view_layer.update()
         # khép chân: đùi chếch vào trong, cẳng chân gần thẳng đứng → hai bàn chân cách nhau ~3 cm như người mẫu cũ
         aim(rig.pose.bones[f"upperleg02.{side}"], (-sx * LEG_IN, 0.0, -1.0))
         aim(rig.pose.bones[f"lowerleg01.{side}"], (-sx * LEG_IN * 0.6, 0.02, -1.0))
@@ -120,6 +127,11 @@ m = human.modifiers.new("chi_hai_tay", "MASK")
 m.vertex_group = "tay_LR"
 m.show_render = m.show_viewport = False
 arm_masks["LR"] = m
+m = human.modifiers.new("bo_hai_tay", "MASK")                  # thân không tay: đo mép thân/đùi thật, kể cả chỗ bị bàn tay che
+m.vertex_group = "tay_LR"
+m.invert_vertex_group = True
+m.show_render = m.show_viewport = False
+no_arm_mask = m
 m = human.modifiers.new("chi_moi", "MASK")                     # lớp môi riêng (nhóm điểm "lips" của MakeHuman)
 m.vertex_group = "lips"
 m.show_render = m.show_viewport = False
@@ -181,6 +193,10 @@ for view, (loc, rot) in VIEWS.items():
         scene.render.filepath = str(OUT / f"{GENDER}_{view}_arm.png")
         bpy.ops.render.render(write_still=True)
         m.show_render = m.show_viewport = False
+        no_arm_mask.show_render = no_arm_mask.show_viewport = True
+        scene.render.filepath = str(OUT / f"{GENDER}_{view}_noarm.png")
+        bpy.ops.render.render(write_still=True)
+        no_arm_mask.show_render = no_arm_mask.show_viewport = False
     if view != "sau":
         lip_mask.show_render = lip_mask.show_viewport = True
         scene.render.filepath = str(OUT / f"{GENDER}_{view}_lips.png")

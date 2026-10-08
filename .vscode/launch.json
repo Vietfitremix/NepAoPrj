@@ -1,0 +1,45 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Backend: Spring Boot (Local)",
+      "type": "java",
+      "request": "launch",
+      "mainClass": "com.vietphuc.remix.VietPhucRemixApplication",
+      "projectName": "backend",
+      "cwd": "${workspaceFolder}/backend",
+      "env": {
+        "DATABASE_URL": "jdbc:postgresql://localhost:5432/viet_fit",
+        "DATABASE_USERNAME": "viet_fit",
+        "DATABASE_PASSWORD": "change-me",
+        "WEATHER_API_KEY": "",
+        "AI_SERVICE_URL": "http://localhost:8000"
+      }
+    },
+    {
+      "name": "AI Service: FastAPI Uvicorn",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": [
+        "app.main:app",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8000",
+        "--reload"
+      ],
+      "cwd": "${workspaceFolder}/ai-service",
+      "python": "${workspaceFolder}/ai-service/.venv/Scripts/python.exe"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Launch AI & Backend",
+      "configurations": [
+        "AI Service: FastAPI Uvicorn",
+        "Backend: Spring Boot (Local)"
+      ]
+    }
+  ]
+}

@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
   <!-- Nón quai thao (nón ba tầm): mặt bằng rộng, vành đứng; quai thao (màu điểm nhấn) vòng dưới cằm, tua thả trước ngực – hướng TRƯỚC. Sinh bằng tools/gen_accessories.py. -->
   <g id="non_quai_thao" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
-    <path id="thanh_non" d="M 96.5 27.4 L 91.4 46.7 A 108.0 14.8 0.0 0 0 307.3 46.7 L 302.1 27.4 A 102.8 14.8 0.0 0 1 96.5 27.4 Z" fill="#E3C98A"/>
-    <path id="bong_thanh" d="M 96.5 27.4 L 91.4 46.7 A 108.0 14.8 0.0 0 0 135.6 58.4 L 137.6 39.1 A 102.8 14.8 0.0 0 1 96.5 27.4 Z M 302.1 27.4 L 307.3 46.7 A 108.0 14.8 0.0 0 1 263.1 58.4 L 261.0 39.1 A 102.8 14.8 0.0 0 0 302.1 27.4 Z" fill="#000" fill-opacity="0.14" stroke="none"/>
-    <path id="duong_khau_thanh" d="M 93.9 37.1 A 105.4 14.8 0.0 0 0 304.7 37.1" fill="none" stroke="#000" stroke-opacity="0.22" stroke-width="1.1" stroke-dasharray="3 3"/>
+    <path id="thanh_non" d="M 96.5 27.4 L 91.4 46.8 A 107.9 14.8 0.0 0 0 307.2 46.8 L 302.0 27.4 A 102.8 14.8 0.0 0 1 96.5 27.4 Z" fill="#E3C98A"/>
+    <path id="bong_thanh" d="M 96.5 27.4 L 91.4 46.8 A 107.9 14.8 0.0 0 0 135.6 58.6 L 137.6 39.2 A 102.8 14.8 0.0 0 1 96.5 27.4 Z M 302.0 27.4 L 307.2 46.8 A 107.9 14.8 0.0 0 1 263.1 58.6 L 261.0 39.2 A 102.8 14.8 0.0 0 0 302.0 27.4 Z" fill="#000" fill-opacity="0.14" stroke="none"/>
+    <path id="duong_khau_thanh" d="M 94.0 37.1 A 105.3 14.8 0.0 0 0 304.6 37.1" fill="none" stroke="#000" stroke-opacity="0.22" stroke-width="1.1" stroke-dasharray="3 3"/>
     <ellipse id="mat_non" cx="199.3" cy="27.4" rx="102.8" ry="14.8" fill="#F0DDAA"/>
-    <g id="vong_khau" fill="none" stroke="#000" stroke-opacity="0.22" stroke-width="1.1"><ellipse cx="199.3" cy="27.4" rx="88.4" ry="12.7"/> <ellipse cx="199.3" cy="27.4" rx="74.0" ry="10.7"/></g>
-    <path id="vong_dinh" d="M 142.7 27.4 Q 147.8 12.6 199.3 12.6 Q 250.7 12.6 255.8 27.4 A 56.6 8.1 0.0 0 1 142.7 27.4 Z" fill="#F0DDAA"/>
+    <g id="vong_khau" fill="none" stroke="#000" stroke-opacity="0.22" stroke-width="1.1"><ellipse cx="199.3" cy="27.4" rx="88.4" ry="12.8"/> <ellipse cx="199.3" cy="27.4" rx="74.0" ry="10.7"/></g>
+    <path id="vong_dinh" d="M 142.8 27.4 Q 147.9 12.6 199.2 12.6 Q 250.6 12.6 255.8 27.4 A 56.5 8.2 0.0 0 1 142.8 27.4 Z" fill="#F0DDAA"/>
     <path id="sang_dinh" d="M 164.3 20.6 Q 199.3 16.0 226.0 19.4" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="2"/>
-    <path id="quai_thao" d="M 159.2 59.2 C 156.2 93.4 160.4 120.7 176.9 138.9 Q 189.2 150.2 198.5 153.7 M 239.4 59.2 C 242.6 93.4 238.5 120.7 222.1 138.9 Q 209.8 150.2 200.6 153.7" fill="none" stroke="#FF00FF" stroke-opacity="1" stroke-width="4"/>
-    <path id="tua" d="M 197.5 155.9 C 194.5 200.3 191.5 234.4 189.5 257.2 M 201.6 155.9 C 204.8 200.3 207.9 234.4 210.0 257.2" fill="none" stroke="#FF00FF" stroke-opacity="1" stroke-width="3"/>
-    <g id="dau_tua" fill="#FF00FF" stroke-opacity="0.35"><path d="M 185.3 257.2 L 193.6 257.2 L 194.6 275.4 L 184.3 275.4 Z"/><path d="M 205.9 257.2 L 214.1 257.2 L 215.2 275.4 L 204.9 275.4 Z"/></g>
-    <g id="soi_tua" fill="none" stroke="#000" stroke-opacity="0.22" stroke-width="1.1"><path d="M 187.4 260.6 L 186.9 274.2 M 191.5 260.6 L 192.1 274.2"/><path d="M 208.0 260.6 L 207.5 274.2 M 212.1 260.6 L 212.6 274.2"/></g>
+    <path id="quai_thao" d="M 159.3 59.4 C 156.3 93.7 160.4 121.1 176.9 139.3 Q 189.3 150.8 198.5 154.2 M 239.4 59.4 C 242.6 93.7 238.5 121.1 222.1 139.3 Q 209.8 150.8 200.6 154.2" fill="none" stroke="#FF00FF" stroke-opacity="1" stroke-width="4"/>
+    <path id="tua" d="M 197.5 156.5 C 194.5 201.0 191.5 235.3 189.5 258.1 M 201.6 156.5 C 204.8 201.0 207.9 235.3 210.0 258.1" fill="none" stroke="#FF00FF" stroke-opacity="1" stroke-width="3"/>
+    <g id="dau_tua" fill="#FF00FF" stroke-opacity="0.35"><path d="M 185.4 258.1 L 193.6 258.1 L 194.7 276.4 L 184.4 276.4 Z"/><path d="M 205.9 258.1 L 214.1 258.1 L 215.2 276.4 L 204.9 276.4 Z"/></g>
+    <g id="soi_tua" fill="none" stroke="#000" stroke-opacity="0.22" stroke-width="1.1"><path d="M 187.4 261.5 L 186.9 275.2 M 191.5 261.5 L 192.1 275.2"/><path d="M 208.0 261.5 L 207.5 275.2 M 212.1 261.5 L 212.6 275.2"/></g>
   </g>
 </svg>

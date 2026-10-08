@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "VietFit: Start All Services",
+      "type": "shell",
+      "command": "powershell -ExecutionPolicy Bypass -File ./start-all.ps1",
+      "problemMatcher": [],
+      "group": "none"
+    },
+    {
+      "label": "VietFit: Stop All Services",
+      "type": "shell",
+      "command": "powershell -ExecutionPolicy Bypass -File ./stop-all.ps1",
+      "problemMatcher": [],
+      "group": "none"
+    },
+    {
+      "label": "VietFit: Run All Tests",
+      "type": "shell",
+      "command": "npm run test",
+      "problemMatcher": [],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "VietFit: Build Everything",
+      "type": "shell",
+      "command": "npm run build",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

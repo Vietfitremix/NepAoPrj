@@ -77,3 +77,12 @@ def test_gender_rule_accepts_list(catalog):
                     colors={"main": "xanh_lam", "bottom": "trang_nga"}, pattern="rong_may", accessories=["khan_xep"])
     ids = {r.id: r.level for r in evaluate(o, catalog.rules)}
     assert ids.get("R30") == "ok" and ids.get("R38") == "ok"
+
+
+def test_checklist_covers_catalog(catalog):
+    """Checklist 'soi và mặc theo': mọi áo, phụ kiện đều có gợi ý món tương đương ngoài đời."""
+    ck = catalog.checklist
+    assert set(catalog.garments) <= set(ck["garments"]), set(catalog.garments) - set(ck["garments"])
+    assert set(catalog.accessories) <= set(ck["accessories"]), set(catalog.accessories) - set(ck["accessories"])
+    assert {"quan", "vay"} <= set(ck["bottoms"])
+    assert "checklist" in catalog.public_view()

@@ -27,3 +27,19 @@ review-svg/
 
 # Công cụ tải về để dựng người mẫu (Blender, MakeHuman) — không đưa lên git
 /.tools/
+
+# Java & Gradle (backend)
+backend/.gradle/
+backend/build/
+backend/.gradle-local/
+backend/bin/
+*.class
+*.jar
+*.war
+
+# Node & Frontend (frontend)
+frontend/node_modules/
+frontend/dist/
+*.tsbuildinfo
+.DS_Store
+Thumbs.db

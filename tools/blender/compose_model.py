@@ -126,6 +126,32 @@ def id_regions(a: np.ndarray) -> dict:
                 lashes=al & (r > b + 60) & (g > b + 60) & (abs(r - g) < 60))
 
 
+def fill_holes(m: np.ndarray) -> np.ndarray:
+    """Lấp các lỗ kín bên trong vùng: loang từ viền khung bao qua phần nền; phần nền không loang tới là lỗ."""
+    from collections import deque
+    ys, xs = np.nonzero(m)
+    if not len(ys):
+        return m
+    y0, y1, x0, x1 = ys.min() - 1, ys.max() + 2, xs.min() - 1, xs.max() + 2
+    sub = m[max(y0, 0):y1, max(x0, 0):x1]
+    bg = ~sub
+    seen = np.zeros_like(bg)
+    h, w = bg.shape
+    q = deque((y, x) for y in range(h) for x in (0, w - 1) if bg[y, x])
+    q.extend((y, x) for x in range(w) for y in (0, h - 1) if bg[y, x])
+    for y, x in q:
+        seen[y, x] = True
+    while q:
+        y, x = q.popleft()
+        for ny, nx in ((y + 1, x), (y - 1, x), (y, x + 1), (y, x - 1)):
+            if 0 <= ny < h and 0 <= nx < w and bg[ny, nx] and not seen[ny, nx]:
+                seen[ny, nx] = True
+                q.append((ny, nx))
+    out = m.copy()
+    out[max(y0, 0):y1, max(x0, 0):x1] |= bg & ~seen
+    return out
+
+
 def face_hair(g: str, view: str, src: Path, flip: bool, body: np.ndarray) -> str:
     reg = id_regions(load_rgb(src / f"{g}_{view}_id.png", flip))
     tex = load_rgb(src / f"{g}_{view}_tex.png", flip)
@@ -151,21 +177,23 @@ def face_hair(g: str, view: str, src: Path, flip: bool, body: np.ndarray) -> str
         # môi: lớp riêng theo nhóm điểm "lips" (phần không bị tóc che), khe môi = nét tối nhất trong môi
         lips = load_alpha(src / f"{g}_{view}_lips.png", flip) & ~reg["hair"]
         lips = lips & ~dilate(~lips, 2 * RES)                    # nhóm "lips" ôm rộng hơn viền môi thật → thu vào ~1 đơn vị
+        lips = fill_holes(lips)                                   # lấp khe miệng (răng lộ thành chấm trắng)
         lip_col = '#D47F76" fill-opacity="0.85' if g == "nu" else '#C68C7C" fill-opacity="0.7'
         add("moi", lips, f'fill="{lip_col}" stroke="none"', speckle=20, blur=1.5)
-        if lips.sum() > 40 * RES * RES:                          # khe môi: một nét liền theo hàng tối nhất của từng cột
+        if lips.sum() > 40 * RES * RES:                          # khe môi: nét liền ở giữa bề dày môi, bỏ hai khoé
             cols = np.flatnonzero(lips.any(axis=0))
-            c0, c1 = cols[0] + RES, cols[-1] - RES
+            w = cols[-1] - cols[0]
+            c0, c1 = int(cols[0] + 0.12 * w), int(cols[-1] - 0.12 * w)
             pts = []
             for x in range(c0, c1 + 1, RES):
                 ys = np.flatnonzero(lips[:, x])
                 if len(ys) > 2 * RES:
-                    pts.append((x, ys[np.argmin(lum[ys, x])]))
-            if len(pts) > 2:
-                yy = np.convolve([p[1] for p in pts], np.ones(5) / 5, mode="same")
-                yy[:2], yy[-2:] = [p[1] for p in pts[:2]], [p[1] for p in pts[-2:]]
-                d = "M" + " L".join(f"{x / RES:.1f} {y / RES:.1f}" for (x, _), y in zip(pts, yy))
-                out.append(f'<path id="khe_moi" d="{d}" fill="none" stroke="#7A3E37" stroke-width="0.8" stroke-opacity="0.85"/>')
+                    pts.append((x, (ys[0] + ys[-1]) / 2))
+            if len(pts) > 3:
+                ys_ = np.array([p[1] for p in pts], float)
+                ys_ = np.convolve(np.pad(ys_, 3, mode="edge"), np.ones(7) / 7, mode="valid")
+                d = "M" + " L".join(f"{x / RES:.1f} {y / RES:.1f}" for (x, _), y in zip(pts, ys_))
+                out.append(f'<path id="khe_moi" d="{d}" fill="none" stroke="#7A3E37" stroke-width="0.8" stroke-opacity="0.8"/>')
         # cánh mũi, lỗ mũi: điểm tối nhất trên da, giữa đáy mắt và môi
         rows, lrows = np.flatnonzero(eyes.any(axis=1)), np.flatnonzero(lips.any(axis=1))
         if len(rows) and len(lrows):
@@ -261,7 +289,8 @@ def underwear_side(g, body, lm):
         back = [(B(y), y) for y in range(t + 24, t + 3, -4)]
         band = "M" + " L".join(P(x, y) for x, y in cup + back) + " Z"
         mid = (F(t + 6) + B(t + 6)) / 2
-        strap = f"M{P(mid, lm['shoulder'])} L{P(F(t) + 10, t)}"
+        ys0 = (lm["shoulder"] + t) / 2                            # đầu dây nằm dưới lớp tay gần (không thò ra ở xương đòn)
+        strap = f"M{P(mid, ys0)} L{P(F(t) + 10, t)}"
         out += [f'<path id="day_ao" d="{strap}" fill="none" stroke-width="5"/>',
                 f'<path id="day_ao_mau" d="{strap}" fill="none" stroke="#FFFFFF" stroke-opacity="1" stroke-width="3"/>',
                 f'<path id="ao_lot" d="{band}"/>']
@@ -316,11 +345,11 @@ def build(g: str, view: str, src: Path) -> str:
         parts.append(underwear_front(g, Spans(mask & ~dilate(arms_raw)), lm, back=view == "sau"))
     arm_xml = ""
     if side:
-        arm = smooth_mask(arm_mask_capped(arms_raw))
+        arm = smooth_mask(arm_mask_capped(arms_raw), 6.0)       # làm mượt mạnh: ranh giới nhóm điểm "tay" gần vai lởm chởm
         parts.append(underwear_side(g, Spans(mask & ~arm), lm))
         arm_d = " ".join(trace(arm, speckle=40))
         a_mid, a_dark = shade_layers(gray, arm)
-        cut = np.flatnonzero(arm.any(axis=1))[0] / RES + 9
+        cut = np.flatnonzero(arm.any(axis=1))[0] / RES + 26     # viền tay chỉ vẽ từ chỗ tay đã tách rõ khỏi vai
         arm_xml = (f'    <clipPath id="duoi_vai"><rect x="0" y="{cut:.1f}" width="400" height="{800 - cut:.1f}"/></clipPath>\n'
                    f'    <path id="tay_gan" fill="{skin}" stroke="none" d="{arm_d}"/>\n'
                    f'    <path id="bong_tay" fill="{shade}" fill-opacity="0.4" stroke="none" d="{" ".join(a_mid + a_dark)}"/>\n'

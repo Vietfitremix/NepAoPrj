@@ -1,0 +1,30 @@
+{
+  "name": "viet-fit-monorepo",
+  "version": "1.0.0",
+  "description": "VIỆT FIT — Dự án kết nối Văn hóa Việt phục, AI Stylist, Backend Spring Boot và Frontend React",
+  "private": true,
+  "scripts": {
+    "start": "powershell -ExecutionPolicy Bypass -File ./start-all.ps1",
+    "stop": "powershell -ExecutionPolicy Bypass -File ./stop-all.ps1",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "powershell -Command \"Set-Location backend; .\\gradlew.bat bootRun\"",
+    "dev:ai": "powershell -Command \"Set-Location ai-service; .\\.venv\\Scripts\\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload\"",
+    "test": "npm run test:frontend && npm run test:ai && npm run test:backend",
+    "test:frontend": "npm --prefix frontend run test",
+    "test:ai": "powershell -Command \"Set-Location ai-service; .\\.venv\\Scripts\\python.exe -m pytest\"",
+    "test:backend": "powershell -Command \"Set-Location backend; .\\gradlew.bat test\"",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "npm --prefix frontend run build",
+    "build:backend": "powershell -Command \"Set-Location backend; .\\gradlew.bat bootJar\""
+  },
+  "keywords": [
+    "viet-fit",
+    "viet-phuc",
+    "spring-boot",
+    "fastapi",
+    "react",
+    "gemini"
+  ],
+  "author": "",
+  "license": "ISC"
+}

@@ -12,8 +12,8 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
 from app.ai import GeminiClient
-from app.api.routers import admin, catalog, dev, stylist
-from app.catalog import CatalogStore
+from app.api.routers import admin, backend, catalog, dev, stylist
+from app.catalog import Catalog, CatalogStore
 from app.core.config import get_settings
 from app.engine import InvalidOutfit
 from app.services.stylist import StylistService
@@ -28,12 +28,15 @@ WEB_DIR = Path(__file__).parent / "web"
 async def lifespan(app: FastAPI):
     s = get_settings()
     pool = None
-    if s.use_postgres:
+    if s.use_postgres and not s.backend_compat_only:
         from app.storage.db import create_pool
         pool = await create_pool(s.database_url)
 
     catalogs = CatalogStore(s, pool)
-    await catalogs.reload()
+    if s.backend_compat_only:
+        catalogs._catalog = Catalog({}, {}, {}, {}, {}, [], {}, version="backend-request")
+    else:
+        await catalogs.reload()
     pinned = load_demo_cache(s.data_dir)
     cache = PostgresCache(pool, s.cache_ttl_s, pinned) if pool else MemoryCache(s.cache_ttl_s, pinned)
     call_log = PostgresCallLog(pool) if pool else MemoryCallLog()
@@ -55,8 +58,16 @@ def create_app() -> FastAPI:
     async def invalid_outfit(_: Request, exc: InvalidOutfit):
         return JSONResponse(status_code=422, content={"code": "INVALID_OUTFIT", "message": str(exc)})
 
+    app.include_router(backend.router, prefix="/ai")
     for r in (catalog.router, stylist.router, admin.router):
         app.include_router(r, prefix="/ai")
+
+    if s.backend_compat_only:
+        @app.middleware("http")
+        async def integration_mode(request: Request, call_next):
+            if request.url.path in ("/ai/quiz", "/ai/stylist", "/ai/evaluate", "/ai/review", "/ai/explain") or request.url.path.startswith(("/ai/admin/", "/ai/dev/")):
+                return JSONResponse(status_code=503, content={"detail": "Native catalog unavailable in BACKEND_COMPAT_ONLY mode; use /ai/recommendations and /ai/remix via Spring."})
+            return await call_next(request)
 
     if s.enable_dev_routes:
         app.include_router(dev.router, prefix="/ai")

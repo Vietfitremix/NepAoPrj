@@ -2,8 +2,8 @@
   <!-- Hướng PHẢI: sinh tự động bằng tools/mirror_views.py từ trang_suc_trai.svg. Không sửa tay file này. -->
   <g transform="matrix(-1 0 0 1 400 0)">
 <g id="trang_suc_trai_phai" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
-    <g id="bong_tai_phai"><circle cx="207.5" cy="107.9" r="2.2" fill="#D9B44A"/><path d="M 208.7 110.2 L 211.1 114.9" stroke="#D9B44A" stroke-opacity="1"/><circle cx="212.8" cy="118.3" r="3.2" fill="#F4EFE6"/></g>
-    <g id="vong_tay_phai"><path d="M 173.1 428.7 Q 186.3 433.5 201.9 428.7" fill="none" stroke="#D9B44A" stroke-opacity="1" stroke-width="3"/></g>
+    <g id="bong_tai_phai"><circle cx="208.2" cy="108.3" r="2.1" fill="#D9B44A"/><path d="M 209.4 110.6 L 211.8 115.3" stroke="#D9B44A" stroke-opacity="1"/><circle cx="213.4" cy="118.8" r="3.2" fill="#F4EFE6"/></g>
+    <g id="vong_tay_phai"><path d="M 170.2 428.7 Q 184.6 433.5 200.7 428.7" fill="none" stroke="#D9B44A" stroke-opacity="1" stroke-width="3"/></g>
   </g>
   </g>
 </svg>

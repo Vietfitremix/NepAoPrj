@@ -32,3 +32,5 @@ Câu: "mai đi đám cưới bạn thân buổi tối ở nhà hàng, mình là 
 → occasion=dam_cuoi, gender=nam, role=khach, timeOfDay=buoi_toi, setting=trong_nha, avoidAccessories=[khan_van]
 Câu: "muốn mặc gì đó cho đẹp"
 → occasion=null, needsClarification có câu hỏi và các lựa chọn dịp
+
+- Mọi chữ tiếng Việt PHẢI có dấu đầy đủ (không viết không dấu), kể cả tên bộ ("title") và lý do ("whyChosen").

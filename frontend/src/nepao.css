@@ -1,0 +1,117 @@
+/* Giao diện cho phần AI Nếp Áo (quiz, gợi ý, studio, nhận xét, checklist/lookbook) — dùng lại bảng màu và font của giao diện VIỆT FIT. */
+.page-container.wide{max-width:1400px}
+.muted{font-size:12px;color:#7e8873}
+.warn{color:#a43c30;font-size:12px;margin:8px 0}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.tags.ctx{justify-content:center;margin-bottom:18px}
+.tag,.tags span{font-size:11px}
+.nfigure svg{display:block;width:100%;height:auto}
+.badges{margin:8px 0}
+.badge{display:inline-block;font-size:11px;padding:2px 9px;border-radius:999px;color:#fff;margin:2px 4px 2px 0}
+.b-ok{background:#5f7a4f}.b-consider{background:#b38b48}.b-risk{background:#a43c30}
+.bubble{background:#f1ede2;border-radius:10px;padding:12px 14px;margin:10px 0;font-size:13px;line-height:1.7}
+.why{background:#f6efe0;border-left:3px solid #a43c30;padding:5px 10px;font-size:12px;margin:8px 0;line-height:1.6}
+
+/* Quiz */
+.quiz-wrap{max-width:860px;margin:0 auto;display:grid;gap:18px}
+.shortcut label{font-size:12px;font-weight:650;display:block;margin-bottom:10px}
+.shortcut .row input{flex:1 1 320px;width:auto}
+.quiz-panel{padding:32px}
+.progress{height:6px;background:#e4e5da;border-radius:99px;overflow:hidden;margin-bottom:14px}
+.progress>div{height:100%;background:#a43c30;transition:width .2s}
+.qtitle{font-family:var(--serif);font-size:27px;font-weight:400;margin:6px 0 20px;letter-spacing:-.4px}
+.quiz-panel .chip{font-size:13px;padding:10px 18px}
+.qtext{margin-top:18px;font-size:13px}
+.quiz-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;margin-top:26px}
+.quiz-actions .button{min-height:44px;padding:10px 20px}
+.quiz-panel .summary{margin-top:20px;border-top:1px solid #e9eadf;padding-top:14px}
+
+/* Gợi ý */
+.clarify .chips{margin-top:12px}
+.concept-image{display:flex;align-items:flex-end;justify-content:center;padding:34px 20px 14px;height:440px}
+.ocard-fig{height:100%;width:auto;aspect-ratio:1/2;max-height:100%}
+.ocard-fig svg{height:100%;width:100%}
+.match-badge{display:flex;gap:4px;align-items:center}
+.concept-details .full-width{margin-top:16px}
+.concept-details>p{min-height:0}
+.sc-mini b{color:#a43c30}
+
+/* Thẻ điểm 5 tiêu chí */
+.sc-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.sc-total{font-family:var(--serif);font-size:42px;color:#a43c30;line-height:1}
+.sc-band{font-weight:600;padding:2px 12px;border-radius:999px;color:#fff;font-size:12px}
+.sc-band.chuan_bo{background:#5f7a4f}.sc-band.hop_dip{background:#b08a3e}.sc-band.can_chinh{background:#a43c30}
+.sc-row{display:grid;grid-template-columns:minmax(110px,9em) 1fr 2.4em;gap:8px;align-items:center;margin:7px 0;font-size:13px}
+.sc-bar{height:7px;background:#e6e9dd;border-radius:4px;overflow:hidden}
+.sc-bar i{display:block;height:100%;background:#718763;border-radius:4px}
+.sc-bar i.low{background:#b38b48}
+.sc-note{grid-column:2/4;margin-top:-3px}
+
+/* Studio */
+.studio{display:grid;grid-template-columns:minmax(260px,330px) minmax(0,1fr) minmax(280px,340px);gap:18px;align-items:start}
+.figwrap{position:sticky;top:12px;padding:16px}
+.bigfig{background:#e9e5d8;border-radius:8px;padding:10px;border:1px solid #deded0}
+.viewnav{display:flex;align-items:center;justify-content:space-between;margin:8px 0}
+.views{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.views button{background:#fffef9;border:1px solid #e1e3d7;border-radius:7px;padding:3px;font-size:10px;color:#7e8873}
+.views button[aria-pressed=true]{border:2px solid #a43c30}
+.views .thumb{display:block}.views .thumb svg{width:100%;height:auto;display:block}
+.missing{color:#b38b48;font-size:11px;margin-top:8px}
+.controls{display:grid;gap:18px}
+.selects{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px}
+.field{display:grid;gap:6px}
+.field>.t{font-size:12px;font-weight:650}
+.field select{font-size:12px;padding:9px 10px}
+.swatches{display:flex;flex-wrap:wrap;gap:8px}
+.sw{width:28px;height:28px;border-radius:50%;border:1px solid #0002;padding:0}
+.sw[aria-pressed=true]{outline:2px solid #253d34;outline-offset:3px}
+.accs{display:grid;gap:8px}
+.accgroup{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.accgroup>.muted{min-width:80px}
+.accgroup label{display:flex;gap:6px;align-items:center;font-size:13px;cursor:pointer}
+.accgroup input{width:15px;height:15px;padding:0;accent-color:#526947}
+.pat{width:44px;height:44px;padding:0;border-radius:8px;overflow:hidden;border:1px solid #e1e3d7;background:none}
+.pat svg{width:100%;height:100%;display:block}
+.pat[aria-pressed=true]{outline:2px solid #253d34;outline-offset:2px}
+.cultural-panel{padding:20px}
+.cultural-panel .small-panel-heading h2{font-size:14px}
+.eval{border-left:4px solid #dedfd4;padding:8px 12px;margin:10px 0;background:#f8f6ee;border-radius:4px;font-size:12px;line-height:1.7}
+.eval.ok{border-color:#5f7a4f}.eval.consider{border-color:#b38b48}.eval.risk{border-color:#a43c30}
+.eval .chip{padding:3px 10px;font-size:11px;margin-left:6px}
+.culture{background:#f4f0e5;border-radius:8px;padding:12px 14px;font-size:12px;line-height:1.8;margin-top:14px}
+.pagebar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:24px;padding-top:18px;border-top:1px solid #dedfd3}
+.pagebar .button{min-height:42px;padding:9px 18px;font-size:12px}
+
+/* Nhận xét */
+.review{display:grid;grid-template-columns:minmax(280px,480px) 1fr;gap:32px;align-items:start}
+.fig4{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:12px}
+.fig4>div{text-align:center;background:#e9e5d8;border:1px solid #deded0;border-radius:8px;padding:4px}
+.verdict{display:inline-block;font-weight:600;padding:6px 14px;border-radius:8px;color:#fff;font-size:13px}
+.v-hop{background:#5f7a4f}.v-nen_chinh{background:#b38b48}
+.alt-title{font-family:var(--serif);font-weight:400;font-size:24px;margin:22px 0 12px}
+.alt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.alt-grid .concept-image{height:340px}
+.share-notice input{font-size:11px}
+
+/* Hộp thoại checklist + lookbook */
+.share-dlg{position:fixed;inset:0;margin:auto;height:fit-content;max-height:94vh;border:1px solid #dfdfd0;border-radius:12px;padding:0;width:min(1100px,94vw);background:#fffdf7;color:#253d34;box-shadow:0 25px 90px #15271f30;overflow:hidden}
+.share-dlg[open]{display:flex;flex-direction:column}
+.share-dlg::backdrop{background:#1c2c2366;backdrop-filter:blur(3px)}
+.share-dlg .share{overflow:auto;padding:28px 28px 8px;flex:1;min-height:0}
+.share-dlg .pagebar{margin:0;padding:12px 28px;border-top:1px solid #dedfd3;background:#fffdf7;flex-shrink:0}
+.share-x{position:absolute;right:12px;top:10px;z-index:2;width:36px;height:36px;border-radius:50%;background:#f2eee3;font-size:24px;line-height:1;display:flex;align-items:center;justify-content:center}
+.share-x:hover{background:#e6dfcd}
+.share{display:grid;grid-template-columns:1.1fr 1fr;gap:28px}
+.share h3{font-family:var(--serif);font-weight:400;font-size:24px;margin:0 0 12px;color:#a43c30}
+.ck{padding:0;list-style:none;margin:0 0 12px}
+.ck li{display:grid;grid-template-columns:7.5em 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #dedfd4;font-size:13px}
+.ck-g{font-size:11px;color:#7e8873;text-transform:uppercase;padding-top:2px}
+.ck-sw{display:inline-block;width:14px;height:14px;border-radius:50%;border:1px solid #0004;vertical-align:-2px}
+.lb-col{display:flex;flex-direction:column;align-items:center;text-align:center}
+.lb-col h3{align-self:flex-start}
+.lb{display:flex;justify-content:center;width:100%}
+.lb img{width:auto;max-width:100%;max-height:max(280px,calc(94vh - 230px));border-radius:8px;border:1px solid #dedfd4;display:block;margin:0 auto 14px;box-shadow:0 8px 28px #3a2a1a22}
+.share .row .button{min-height:38px;padding:8px 14px;font-size:12px}
+
+@media (max-width:1100px){.studio{grid-template-columns:minmax(240px,300px) 1fr}.cultural-panel{grid-column:1/-1}}
+@media (max-width:860px){.lb img{max-height:none;width:100%}.studio,.review,.share{grid-template-columns:1fr}.figwrap{position:static;max-width:340px;margin:auto}.concept-image{height:380px}}

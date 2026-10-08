@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
   <!-- Nón quai thao (nón ba tầm): mặt bằng rộng, vành đứng; quai thao (màu điểm nhấn) vòng dưới cằm, tua thả trước ngực – hướng SAU. Sinh bằng tools/gen_accessories.py. -->
   <g id="non_quai_thao_sau" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
-    <path id="thanh_non" d="M 98.5 27.4 L 93.3 46.7 A 107.3 14.8 0.0 0 0 307.9 46.7 L 302.8 27.4 A 102.2 14.8 0.0 0 1 98.5 27.4 Z" fill="#E3C98A"/>
-    <path id="bong_thanh" d="M 98.5 27.4 L 93.3 46.7 A 107.3 14.8 0.0 0 0 137.3 58.4 L 139.3 39.1 A 102.2 14.8 0.0 0 1 98.5 27.4 Z M 302.8 27.4 L 307.9 46.7 A 107.3 14.8 0.0 0 1 264.0 58.4 L 261.9 39.1 A 102.2 14.8 0.0 0 0 302.8 27.4 Z" fill="#000" fill-opacity="0.14" stroke="none"/>
-    <path id="duong_khau_thanh" d="M 95.9 37.1 A 104.7 14.8 0.0 0 0 305.4 37.1" fill="none" stroke="#000" stroke-opacity="0.22" stroke-width="1.1" stroke-dasharray="3 3"/>
-    <ellipse id="mat_non" cx="200.6" cy="27.4" rx="102.2" ry="14.8" fill="#F0DDAA"/>
-    <g id="vong_khau" fill="none" stroke="#000" stroke-opacity="0.22" stroke-width="1.1"><ellipse cx="200.6" cy="27.4" rx="87.9" ry="12.7"/> <ellipse cx="200.6" cy="27.4" rx="73.6" ry="10.7"/></g>
-    <path id="vong_dinh" d="M 144.4 27.4 Q 149.6 12.6 200.7 12.6 Q 251.7 12.6 256.8 27.4 A 56.2 8.1 0.0 0 1 144.4 27.4 Z" fill="#F0DDAA"/>
-    <path id="sang_dinh" d="M 165.9 20.6 Q 200.7 16.0 227.2 19.4" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="2"/>
-    <path id="quai_thao" d="M 160.8 59.2 C 157.6 93.4 161.7 120.7 176.0 136.6 M 240.5 59.2 C 243.5 93.4 239.4 120.7 225.0 136.6" fill="none" stroke="#FF00FF" stroke-opacity="1" stroke-width="4"/>
+    <path id="thanh_non" d="M 98.5 27.4 L 93.4 46.8 A 107.2 14.8 0.0 0 0 307.8 46.8 L 302.8 27.4 A 102.1 14.8 0.0 0 1 98.5 27.4 Z" fill="#E3C98A"/>
+    <path id="bong_thanh" d="M 98.5 27.4 L 93.4 46.8 A 107.2 14.8 0.0 0 0 137.3 58.6 L 139.3 39.2 A 102.1 14.8 0.0 0 1 98.5 27.4 Z M 302.8 27.4 L 307.8 46.8 A 107.2 14.8 0.0 0 1 263.9 58.6 L 261.9 39.2 A 102.1 14.8 0.0 0 0 302.8 27.4 Z" fill="#000" fill-opacity="0.14" stroke="none"/>
+    <path id="duong_khau_thanh" d="M 95.9 37.1 A 104.7 14.8 0.0 0 0 305.3 37.1" fill="none" stroke="#000" stroke-opacity="0.22" stroke-width="1.1" stroke-dasharray="3 3"/>
+    <ellipse id="mat_non" cx="200.6" cy="27.4" rx="102.1" ry="14.8" fill="#F0DDAA"/>
+    <g id="vong_khau" fill="none" stroke="#000" stroke-opacity="0.22" stroke-width="1.1"><ellipse cx="200.6" cy="27.4" rx="87.8" ry="12.8"/> <ellipse cx="200.6" cy="27.4" rx="73.5" ry="10.7"/></g>
+    <path id="vong_dinh" d="M 144.5 27.4 Q 149.6 12.6 200.6 12.6 Q 251.7 12.6 256.8 27.4 A 56.2 8.2 0.0 0 1 144.5 27.4 Z" fill="#F0DDAA"/>
+    <path id="sang_dinh" d="M 165.9 20.6 Q 200.6 16.0 227.2 19.4" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="2"/>
+    <path id="quai_thao" d="M 160.8 59.4 C 157.7 93.7 161.7 121.1 176.0 137.1 M 240.4 59.4 C 243.5 93.7 239.4 121.1 225.0 137.1" fill="none" stroke="#FF00FF" stroke-opacity="1" stroke-width="4"/>
   </g>
 </svg>

@@ -29,6 +29,17 @@ def edges(m: np.ndarray, y: float):
     return (xs[0] / RES, (xs[-1] + 1) / RES) if len(xs) else None
 
 
+def center_edges(m: np.ndarray, y: float):
+    """Mép trái/phải của đoạn thân chứa trục giữa x=200 (bỏ khuỷu tay, bàn tay nằm tách khỏi thân)."""
+    r = m[int(round(y * RES))].astype(int)
+    c = 200 * RES
+    if not r[c]:
+        return edges(m, y)
+    left = c - np.argmin(r[c::-1]) if not r[:c + 1].all() else 0
+    right = c + np.argmin(r[c:]) if not r[c:].all() else len(r)
+    return left / RES, right / RES
+
+
 def side_cover(ys, need, hip_x, hem_x, outward):
     """Mép thẳng từ (hip_x, ys[0]) tới gấu, đẩy ra ngoài đủ để phủ mọi điểm need(y). outward=-1: bên trái, +1: bên phải."""
     t = (ys - ys[0]) / (ys[-1] - ys[0])
@@ -41,14 +52,14 @@ def side_cover(ys, need, hip_x, hem_x, outward):
 def build(g: str, view: str, ym: YMap, crotch: float) -> str:
     body = load(RENDER / f"{g}_{view}_mask.png")
     arm = load(RENDER / f"{g}_{view}_arm.png") & body
-    torso = body & ~dilate(arm, RES)
+    torso = load(RENDER / f"{g}_{view}_noarm.png")        # thân không tay (render riêng trong Blender)
     yw, yhem = ym(316), ym(752)
     ease = 1.6 if g == "nu" else 2.0
 
     # --- eo → hông: theo mép thân, nới dần; không đè lên tay
     up = np.arange(yw, crotch + 0.1, 4.0)
-    L = np.array([edges(torso, y)[0] - ease for y in up])
-    R = np.array([edges(torso, y)[1] + ease for y in up])
+    L = np.array([center_edges(torso, y)[0] - ease for y in up])
+    R = np.array([center_edges(torso, y)[1] + ease for y in up])
     L, R = np.minimum.accumulate(L), np.maximum.accumulate(R)        # quần không thắt vào dưới hông
     hip_i = len(up) - 1
 
@@ -87,7 +98,8 @@ def build(g: str, view: str, ym: YMap, crotch: float) -> str:
     left = list(zip(L, up)) + list(zip(oL[1:], down[1:]))
     right = list(zip(R, up)) + list(zip(oR[1:], down[1:]))
     pts_out = left[::-1]                                            # gấu trái → cạp trái
-    d = gv.shape([(left[-1][0], yhem)] + pts_out[1:] + right[1:-1] + [(right[-1][0], yhem)],
+    # tách mép trái / mép phải thành hai đoạn để góc cạp là góc nhọn (đường cong mềm qua góc sẽ vọt ra thành gờ)
+    d = gv.shape([(left[-1][0], yhem)] + pts_out[1:], right[:-1] + [(right[-1][0], yhem)],
                  [(iR[-1], yhem)] + list(zip(iR[::-1], down[::-1]))[1:-1] + [(200, crotch)]
                  + list(zip(iL, down))[1:-1] + [(iL[-1], yhem)])
     cL, cR = (oL[-1] + iL[-1]) / 2, (oR[-1] + iR[-1]) / 2
