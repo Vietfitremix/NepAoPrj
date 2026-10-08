@@ -115,3 +115,6 @@
 
 @media (max-width:1100px){.studio{grid-template-columns:minmax(240px,300px) 1fr}.cultural-panel{grid-column:1/-1}}
 @media (max-width:860px){.lb img{max-height:none;width:100%}.studio,.review,.share{grid-template-columns:1fr}.figwrap{position:static;max-width:340px;margin:auto}.concept-image{height:380px}}
+
+.recommend{margin:12px 0 0;padding-top:10px;border-top:1px dashed #d9cfbb;font-style:italic;font-size:14px;line-height:1.7;color:#a43c30}
+.recommend b{font-weight:800}

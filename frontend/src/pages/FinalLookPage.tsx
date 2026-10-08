@@ -4,7 +4,7 @@ import { ArrowLeft, Share2 } from 'lucide-react';
 import { EmptyState, ErrorBox, Loading, PageHeading, Stepper } from '../components/common/UI';
 import { Figure } from '../components/ai/Figure';
 import OutfitCard from '../components/ai/OutfitCard';
-import { ScoreCardView } from '../components/ai/ScoreCardView';
+import { Recommend, ScoreCardView } from '../components/ai/ScoreCardView';
 import ShareDialog from '../components/ai/ShareDialog';
 import { fullContext, reviewKey, useActions } from '../ai/actions';
 import { aiApi, loadLook, saveLook } from '../ai/api';
@@ -54,7 +54,7 @@ export default function FinalLookPage() {
         {err && <ErrorBox message={err} />}
         {r && <>
           <div className={`verdict v-${r.verdict}`}>{r.verdictText}</div><p className="muted">Nguồn: <b>{r.source}</b></p>
-          <div className="bubble"><b>{r.current.title}</b><br />{r.current.comment}<div className="muted">Mẹo: {r.current.tip}</div></div>
+          <div className="bubble"><b>{r.current.title}</b><br />{r.current.comment}<Recommend tip={r.current.tip} card={r.current.scoreCard} /></div>
           <div className="bubble"><ScoreCardView card={r.current.scoreCard} /></div>
           {r.alternatives.length ? <><h3 className="alt-title">Phương án nâng cấp</h3><div className="alt-grid">{r.alternatives.map(a => <OutfitCard key={a.outfitId} o={a} label="Áp dụng phương án này" onPick={() => open(a)} />)}</div></>
             : <p className="muted">Bộ này đã ổn, chưa có phương án nâng cấp rõ rệt.</p>}</>}
@@ -82,7 +82,7 @@ export function SharedLookPage() {
   const s = look.state, note = { title: look.note?.title || '', comment: look.note?.comment || '', tip: look.note?.tip || '', card: look.scoreCard };
   return <main className="page-container wide"><PageHeading eyebrow="YOUR VIỆT LOOK" title={note.title || CAT.garment[s.garment]?.name || 'Việt look'} description="Một bản phối được chia sẻ từ Nếp Áo." />
     <div className="review"><div className="fig4">{VIEWS.map(([v, name]) => <div key={v}><Figure state={s} view={v} /><span className="muted">{name}</span></div>)}</div>
-      <div>{note.comment && <div className="bubble">{note.comment}<div className="muted">Mẹo: {note.tip}</div></div>}<div className="bubble"><ScoreCardView card={look.scoreCard} /></div></div></div>
+      <div>{note.comment && <div className="bubble">{note.comment}<Recommend tip={note.tip} card={look.scoreCard} /></div>}<div className="bubble"><ScoreCardView card={look.scoreCard} /></div></div></div>
     <div className="pagebar"><span />
       <div className="row"><button className="button outline" onClick={() => setShare(true)}><Share2 size={16} /> Checklist &amp; Lookbook</button>
         <button className="button primary" onClick={() => { set({ state: s, context: look.context ?? null, view: 'truoc', review: { key: null, res: null } }); navigate('/mix'); }}>Remix bộ này</button></div></div>
