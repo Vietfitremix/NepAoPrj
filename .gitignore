@@ -24,3 +24,6 @@ review-svg/
 /PLAN-*.md
 /BAO-CAO-*.md
 *.docx
+
+# Công cụ tải về để dựng người mẫu (Blender, MakeHuman) — không đưa lên git
+/.tools/

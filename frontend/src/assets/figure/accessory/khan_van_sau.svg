@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
-  <!-- Khăn vấn – hướng SAU: vành khăn phủ đỉnh và sau đầu, mép dưới ngang trên búi tóc. Sinh bằng tools/gen_garment_views.py. -->
-  <g id="khan_van_sau" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
-    <path id="vanh_khan" d="M158 88 C152 50 172 26 200 26 C228 26 248 50 242 88 C232 98 216 102 200 102 C184 102 168 98 158 88 Z" fill="#FF00FF"/>
-    <path id="lop_quan" d="M160 74 C180 86 220 86 240 74 M164 58 C184 70 216 70 236 58 M176 40 C190 50 210 50 224 40" fill="none" stroke="#000" stroke-opacity="0.25" stroke-width="1.6"/>
-    <path id="sang_khan" d="M178 38 C190 32 210 32 222 38" fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="3.5"/>
-  </g>
-</svg>

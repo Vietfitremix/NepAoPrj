@@ -2,9 +2,9 @@
   <!-- Hướng PHẢI: sinh tự động bằng tools/mirror_views.py từ giay_ta_trai.svg. Không sửa tay file này. -->
   <g transform="matrix(-1 0 0 1 400 0)">
 <g id="giay_ta_trai_phai" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
-    <path id="than_giay_phai" d="M145 782 C145 772 153 767 164 763 C175 759 183 755 189 753 L210 753 Q216 766 216 782 Z" fill="#26211F"/>
-    <path id="de_phai" d="M143 781 L218 781 L218 789 L143 789 Z" fill="#F2EEE3"/>
-    <path id="sang_phai" d="M152 772 Q164 764 182 758" fill="none" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1.5"/>
+    <path id="than_giay_phai" d="M 116.8 780.4 C 113.5 768.6 123.8 762.3 141.9 756.8 C 161.2 751.3 174.4 746.0 184.4 743.3 L 222.2 743.6 Q 228.7 760.4 218.0 780.1 Z" fill="#26211F"/>
+    <path id="de_phai" d="M 113.7 779.3 L 222.0 778.9 L 218.7 788.2 L 116.3 788.6 Z" fill="#F2EEE3"/>
+    <path id="sang_phai" d="M 123.0 768.3 Q 141.8 758.0 172.7 749.7" fill="none" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1.5"/>
   </g>
   </g>
 </svg>

@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
   <!-- Khăn xếp (khăn đóng) nam: vành khăn tròn cứng, nếp xếp chéo hình chữ nhân trước trán – hướng TRÁI (nhìn nghiêng, mặt quay sang trái). Sinh bằng tools/gen_accessories.py. -->
   <g id="khan_xep_trai" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
-    <path id="vanh_khan" fill="#FF00FF" d="M158 78 C155 62 157 46 165 36 Q204 22 244 34 C252 46 254 64 252 82 Q206 70 158 78 Z"/>
-    <path id="dinh_khan" d="M165 36 Q204 22 244 34 Q204 30 165 36 Z" fill="#000" fill-opacity="0.15" stroke="none"/>
-    <path id="nep_ngang" d="M157 50 Q204 40 251 50 M157 63 Q204 54 253 66" fill="none" stroke="#000" stroke-opacity="0.25" stroke-width="1.4"/>
-    <path id="nep_chu_nhan" d="M166 42 L178 74 M176 38 L190 72 M186 36 L200 70" fill="none" stroke="#000" stroke-opacity="0.28" stroke-width="1.3"/>
-    <path id="sang_khan" d="M172 40 Q200 32 230 36" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="2.5"/>
+    <path id="vanh_khan" fill="#FF00FF" d="M 131.9 79.1 C 127.1 64.6 127.5 50.2 134.8 41.2 Q 174.2 28.6 217.5 39.4 C 227.2 50.2 231.2 66.5 231.0 82.7 Q 181.5 71.9 131.9 79.1 Z"/>
+    <path id="dinh_khan" d="M 134.8 41.2 Q 174.2 28.6 217.5 39.4 Q 175.1 35.8 134.8 41.2 Z" fill="#000" fill-opacity="0.15" stroke="none"/>
+    <path id="nep_ngang" d="M 127.9 53.8 Q 176.2 44.8 226.6 53.9 M 129.3 65.5 Q 177.7 57.4 230.4 68.3" fill="none" stroke="#000" stroke-opacity="0.25" stroke-width="1.4"/>
+    <path id="nep_chu_nhan" d="M 136.5 46.6 L 152.5 75.5 M 146.6 43.0 L 164.9 73.7 M 156.8 41.2 L 175.2 71.9" fill="none" stroke="#000" stroke-opacity="0.28" stroke-width="1.3"/>
+    <path id="sang_khan" d="M 142.6 44.8 Q 171.1 37.6 203.0 41.2" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="2.5"/>
   </g>
 </svg>

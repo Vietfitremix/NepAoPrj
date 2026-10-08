@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
+  <!-- Hướng PHẢI: sinh tự động bằng tools/mirror_views.py từ non_la_nam_trai.svg. Không sửa tay file này. -->
+  <g transform="matrix(-1 0 0 1 400 0)">
+<g id="non_la_trai_phai" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
+    <path id="mat_duoi_vanh_phai" d="M 88.7 68.2 Q 181.7 91.7 269.2 68.3 Q 180.4 80.9 88.7 68.2 Z" fill="#C4A15E"/>
+    <path id="than_non_phai" d="M 171.9 8.7 L 269.2 68.3 Q 180.4 80.9 88.7 68.2 Z" fill="#E3C98A"/>
+    <path id="bong_non_phai" d="M 171.9 8.7 L 269.2 68.3 Q 222.0 77.3 186.5 79.1 Z" fill="#000" fill-opacity="0.1" stroke="none"/>
+    <path id="vong_nan_phai" d="M 146.9 26.6 Q 174.4 29.8 201.1 26.6 M 126.1 41.4 Q 176.5 47.4 225.4 41.5 M 105.3 56.3 Q 178.6 65.0 249.7 56.4" fill="none" stroke="#000" stroke-opacity="0.22" stroke-width="1.1"/>
+    <path id="gan_la_phai" d="M 172.1 10.5 L 120.4 70.3 M 172.1 10.5 L 149.9 71.1 M 172.1 10.5 L 179.4 71.9 M 172.1 10.5 L 208.7 71.2 M 172.1 10.5 L 238.0 70.4" fill="none" stroke="#000" stroke-opacity="0.1" stroke-width="1"/>
+    <path id="quai_phai" d="M 171.6 77.3 Q 169.0 108.0 157.5 135.0" fill="none" stroke="#FF00FF" stroke-opacity="1" stroke-width="3"/>
+  </g>
+  </g>
+</svg>

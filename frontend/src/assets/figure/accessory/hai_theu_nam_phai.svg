@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
+  <!-- Hướng PHẢI: sinh tự động bằng tools/mirror_views.py từ hai_theu_nam_trai.svg. Không sửa tay file này. -->
+  <g transform="matrix(-1 0 0 1 400 0)">
+<g id="hai_theu_trai_phai" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
+    <path id="than_hai_phai" d="M 116.7 770.9 Q 107.5 760.5 115.3 759.0 C 128.4 763.3 145.3 759.1 162.7 754.9 C 175.7 753.4 185.1 757.0 193.6 763.4 L 223.3 765.4 Q 224.9 776.5 214.6 784.7 L 128.5 784.9 Q 118.6 781.6 116.7 770.9 Z" fill="#FF00FF"/>
+    <path id="mui_cong_phai" d="M 118.2 763.7 Q 106.2 752.3 114.4 749.6" fill="none" stroke="#FF00FF" stroke-opacity="1" stroke-width="3"/>
+    <path id="hoa_van_theu_phai" d="M 130.5 773.0 Q 135.5 767.9 143.0 772.5 Q 150.0 777.2 155.6 772.2 Q 161.9 767.2 167.9 771.9" fill="none" stroke="#D9B44A" stroke-opacity="1" stroke-width="1.3"/>
+    <path id="de_phai" fill="#EFE6D2" d="M 121.9 782.7 L 217.0 782.4 L 215.8 787.0 L 123.2 787.4 Z"/>
+  </g>
+  </g>
+</svg>

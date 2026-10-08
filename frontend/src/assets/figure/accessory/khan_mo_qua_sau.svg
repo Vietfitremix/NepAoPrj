@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
   <!-- Khăn mỏ quạ: vuông vải nhung đen trùm đầu, túm trước trán thành mỏ nhọn, hai góc buộc dưới cằm – hướng SAU. Sinh bằng tools/gen_accessories.py. -->
   <g id="khan_mo_qua_sau" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
-    <path id="khan" fill="#26211F" d="M156 96 C152 54 174 26 200 26 C226 26 248 54 244 96 C244 118 236 136 220 142 L180 142 C164 136 156 118 156 96 Z"/>
-    <path id="nep_khan" d="M176 60 Q200 70 224 60 M168 96 Q200 108 232 96 M186 124 Q200 132 214 124" fill="none" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="2"/>
+    <path id="khan" fill="#26211F" d="M 155.6 93.4 C 151.6 45.6 174.1 13.7 200.7 13.7 C 227.2 13.7 249.7 45.6 245.5 93.4 C 245.5 118.4 237.3 138.9 220.9 145.7 L 180.1 145.7 C 163.7 138.9 155.6 118.4 155.6 93.4 Z"/>
+    <path id="nep_khan" d="M 176.1 52.4 Q 200.6 63.8 225.1 52.4 M 167.9 93.4 Q 200.5 107.0 233.3 93.4 M 186.2 125.2 Q 200.5 134.3 214.8 125.2" fill="none" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="2"/>
   </g>
 </svg>

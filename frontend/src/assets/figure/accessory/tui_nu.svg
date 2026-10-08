@@ -1,9 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
   <!-- Túi cói xách tay (tay trái người mẫu), quai và viền miệng màu điểm nhấn – hướng TRƯỚC. Sinh bằng tools/gen_accessories.py. -->
   <g id="tui_nu" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
-    <path id="quai_tui" d="M254.0 486.0 C254.0 460.0 284.0 460.0 284.0 486.0" fill="none" stroke="#FF00FF" stroke-opacity="1" stroke-width="3.5"/>
-    <path id="than_tui" d="M245.0 486.0 L293.0 486.0 L299.0 550.0 Q269.0 556.0 239.0 550.0 Z" fill="#E3C98A"/>
-    <path id="dan_coi" d="M243.4 502.0 L294.6 502.0 M242.6 510.0 L295.4 510.0 M241.8 518.0 L296.2 518.0 M241.0 526.0 L297.0 526.0 M240.2 534.0 L297.8 534.0 M239.4 542.0 L298.6 542.0" fill="none" stroke="#C4A15E" stroke-width="1.4" stroke-opacity="1"/>
-    <path id="vien_mieng" d="M245.0 486.0 L293.0 486.0 L293.8 495.0 L244.2 495.0 Z" fill="#FF00FF"/>
+    <path id="patch_khe" d="M 290.5 448.0 L 294.0 448.5 L 296.5 451.0 L 297.0 455.0 L 295.5 454.5 L 294.0 453.0 L 290.5 452.5 L 287.0 454.5 L 284.0 459.5 L 281.5 466.0 L 280.0 468.5 L 279.0 473.0 L 276.0 473.0 L 275.5 477.0 L 269.5 496.0 L 264.0 513.0 L 263.0 513.5 L 262.5 518.0 L 261.5 521.0 L 260.0 521.5 L 260.5 524.0 L 258.5 529.0 L 257.0 530.5 L 258.0 531.0 L 256.5 536.5 L 256.0 538.5 L 253.5 538.5 L 254.0 535.0 L 255.5 531.0 L 254.0 530.5 L 256.0 528.5 L 257.5 523.0 L 257.5 521.0 L 259.0 521.0 L 260.0 516.5 L 260.0 513.5 L 261.5 513.0 L 262.5 508.5 L 272.0 479.0 L 273.5 473.0 L 275.5 473.0 L 276.0 469.0 L 278.0 469.0 L 279.5 463.0 L 283.5 455.0 L 287.0 450.0 Z M 291.0 455.5 L 293.0 456.0 L 294.0 458.5 L 294.0 462.5 L 292.0 467.5 L 291.5 465.5 L 292.0 461.5 L 289.0 461.5 L 287.5 467.0 L 287.0 469.0 L 291.0 469.0 L 289.0 473.0 L 283.5 473.0 L 284.5 467.0 L 287.0 460.0 L 290.0 456.0 Z" fill="#FF0000" stroke="none"/>
+    <path id="quai_tui" d="M 281.6 473.5 C 285.3 447.2 300.3 447.3 295.0 473.5" fill="none" stroke="#FF00FF" stroke-opacity="1" stroke-width="3.5"/>
+    <path id="than_tui" d="M 276.7 473.5 L 303.4 473.5 L 323.6 538.0 Q 295.5 544.1 255.9 538.1 Z" fill="#E3C98A"/>
+    <path id="dan_coi" d="M 272.6 489.7 L 306.7 489.6 M 269.8 497.7 L 309.5 497.7 M 266.6 505.8 L 312.4 505.7 M 263.3 513.9 L 315.5 513.8 M 260.2 522.0 L 318.4 521.9 M 257.4 530.1 L 321.3 530.0" fill="none" stroke="#C4A15E" stroke-width="1.4" stroke-opacity="1"/>
+    <path id="vien_mieng" d="M 276.7 473.5 L 303.4 473.5 L 304.7 482.5 L 274.7 482.6 Z" fill="#FF00FF"/>
   </g>
 </svg>

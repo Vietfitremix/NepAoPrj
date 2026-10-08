@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
   <!-- Giày búp bê nữ: mũi tròn, cổ thấp, nơ nhỏ ở mũi (màu điểm nhấn) – hướng TRÁI (nhìn nghiêng, mặt quay sang trái). Sinh bằng tools/gen_accessories.py. -->
   <g id="giay_bup_be_trai" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
-    <path id="than_giay" d="M147 777 C147 770 153 768 161 768 C171 768 181 770 189 773 L213 772 Q218 780 214 787 L152 787 Q146 784 147 777 Z" fill="#FF00FF"/>
-    <path id="no" d="M154 766 L160 770 L154 774 Z M166 766 L160 770 L166 774 Z" fill="#FF00FF" stroke-opacity="0.45"/>
-    <rect id="de" x="148" y="785" width="68" height="3" rx="1.5" fill="#3A2E28"/>
+    <path id="than_giay" d="M 108.7 775.2 C 105.7 767.2 113.4 764.6 126.5 764.1 C 143.9 763.6 159.7 765.7 171.6 769.2 L 201.5 768.8 Q 208.8 778.4 206.2 786.3 L 121.5 786.4 Q 111.3 783.2 108.7 775.2 Z" fill="#FF00FF"/>
+    <path id="no" d="M 114.7 762.2 L 125.1 766.5 L 116.7 771.5 Z M 135.2 761.5 L 125.1 766.5 L 136.6 770.9 Z" fill="#FF00FF" stroke-opacity="0.45"/>
+    <path id="de" fill="#3A2E28" d="M 114.7 784.3 L 207.8 784.1 L 208.8 787.4 L 116.3 787.7 Z"/>
   </g>
 </svg>

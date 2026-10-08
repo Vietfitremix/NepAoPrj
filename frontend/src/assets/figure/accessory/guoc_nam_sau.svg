@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
   <!-- Guốc gỗ – hướng SAU: thấy gót hai đế, quai khuất phía trước bàn chân. Sinh bằng tools/gen_garment_views.py. -->
   <g id="guoc_sau" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
-    <rect id="de_trai" x="164" y="779" width="32" height="11" rx="4.5" fill="#9A6A3A"/>
-    <rect id="de_phai" x="204" y="779" width="32" height="11" rx="4.5" fill="#9A6A3A"/>
-    <path id="mep_quai" d="M166 776 L170 772 M234 776 L230 772" fill="none" stroke="#7A2E22" stroke-width="4"/>
+    <path id="de_trai" fill="#9A6A3A" d="M 152.6 776.7 L 191.5 777.0 L 192.9 790.8 L 153.2 790.3 Z"/>
+    <path id="de_phai" fill="#9A6A3A" d="M 208.4 777.0 L 248.0 776.9 L 248.1 790.5 L 207.4 790.8 Z"/>
+    <path id="mep_quai" d="M 154.2 773.0 L 157.3 767.9 M 246.2 773.1 L 243.1 768.0" fill="none" stroke="#7A2E22" stroke-width="4"/>
   </g>
 </svg>

@@ -2,11 +2,15 @@
 
 Mọi file SVG trong thư mục này vẽ trên **cùng khung `viewBox="0 0 400 800"`**, cùng tư thế đứng thẳng, trục giữa x = 200.
 
-## Người mẫu mặc định
+## Người mẫu mặc định (MakeHuman)
 
-- `body/body_nu.svg`: người mẫu nữ 2D, tỉ lệ khoảng 7,9 đầu (đầu nhỏ 5%, co quanh tầm mắt y=96), **đã mặc sẵn đồ lót trắng** (áo lót + quần lót). Sinh bằng `tools/gen_body_nu.py`.
-- `body/body_nam.svg`: người mẫu nam 2D, cùng khung và **cùng mốc đầu, cằm, mắt cá, bàn chân** với mẫu nữ, **đã mặc sẵn quần lót đùi trắng**. Sinh bằng `tools/gen_body_nam.py`.
-- Khăn, nón, giày dùng chung cho cả hai mẫu. **Áo và quần phải vẽ riêng cho từng mẫu** (vai, eo, hông nam khác nữ), đặt tên `..._nu.svg` / `..._nam.svg`.
+- `body/body_nu*.svg`, `body/body_nam*.svg` (4 hướng): dựng bằng MakeHuman (MPFB2, CC0) trong Blender rồi vector hoá. Thân, mặt, mắt, lông mày, tóc đều từ cùng một mô hình 3D; **đã mặc sẵn đồ lót trắng**.
+  - Render: `.tools/blender/blender.exe -b --factory-startup --python tools/blender/render_model.py -- nu <abs>/.tools/render` (tương tự `nam`).
+  - Ghép SVG: `python tools/blender/compose_model.py nu .tools/render <thư_mục_ra>`.
+  - Mặt, tóc, lông mày đã chốt nằm trong `tools/blender/face_presets.py` (nữ: tóc `elvs_reverse_french_braid_bun`, mặt "thanh tú"; nam: tóc `culturalibre_hair_05`, mặt "thư sinh").
+- **Đổi người mẫu thì chỉnh quần áo bằng phép uốn:** `python tools/refit_to_body.py <thư_mục_người_mẫu_cũ> <thư_mục_người_mẫu_mới>` uốn mọi áo, quần/váy, phụ kiện (trừ `*_phai.svg`) từ dáng cũ sang dáng mới, rồi chạy `python tools/mirror_views.py`. Đồ đội đầu dùng phép affine (không uốn cong); khe da lộ ra sau khi uốn được lót bằng mảng `patch_khe`; góc nghiêng thay lớp `ban_tay` bằng tay của người mẫu mới.
+- Các script sinh cũ (`gen_body_*.py`, `gen_garment_views.py`, `gen_accessories.py`, bảng số đo bên dưới) **vẫn theo người mẫu vẽ tay cũ**: chạy lại sẽ ghi đè bản đã uốn. Muốn dùng lại thì chạy script đó trước, rồi chạy `refit_to_body.py` với người mẫu cũ (`git show d943d4c:frontend/src/assets/figure/body/...`).
+- Nón lá, khăn vấn, guốc, hài thêu, sneaker có bản riêng `_nu` / `_nam` (đầu và bàn chân hai mẫu khác nhau; `byGender` trong `data/accessories.json`). **Áo và quần vẽ riêng cho từng mẫu**, đặt tên `..._nu.svg` / `..._nam.svg`.
 - Thứ tự lớp: người mẫu → quần/váy → áo → giày → kiềng (cổ) → trang sức → túi/quạt (cầm tay) → khăn/hoa cài (tóc) → nón.
 - Phụ kiện sinh bằng `python tools/gen_accessories.py`. Túi và quạt cầm ở tay trái người mẫu, vị trí tay nam/nữ khác nhau nên có file riêng `tui_nu.svg`, `tui_nam.svg` (đánh dấu `byGender` trong `data/accessories.json`).
 

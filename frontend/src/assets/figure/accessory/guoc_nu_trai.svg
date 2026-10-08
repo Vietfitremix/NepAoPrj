@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
+  <!-- Guốc gỗ – hướng TRÁI: một đế dưới bàn chân (mũi quay sang trái), quai vắt qua mu bàn chân. Sinh bằng tools/gen_garment_views.py. -->
+  <g id="guoc_trai" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
+    <path id="de" fill="#9A6A3A" d="M 109.9 777.5 L 207.3 777.2 L 210.7 789.7 L 115.8 789.9 Z"/>
+    <path id="quai" d="M 134.1 778.0 C 130.6 767.5 138.5 759.1 154.2 753.9" fill="none" stroke="#7A2E22" stroke-width="5"/>
+  </g>
+</svg>
