@@ -110,8 +110,11 @@ def import_assets():
         total_bytes = 0
         for index, path in enumerate(paths, 1):
             relative = path.relative_to(ROOT).as_posix()
-            with path.open("rb") as source:
-                digest = hashlib.file_digest(source, "sha256").hexdigest()
+            if hasattr(hashlib, "file_digest"):
+                with path.open("rb") as source:
+                    digest = hashlib.file_digest(source, "sha256").hexdigest()
+            else:
+                digest = hashlib.sha256(path.read_bytes()).hexdigest()
             total_bytes += path.stat().st_size
             if existing.get(relative) != digest:
                 content = path.read_bytes()
