@@ -1,0 +1,41 @@
+/* Phần AI Nếp Áo trong giao diện VIỆT FIT: thẻ điểm 5 tiêu chí, Recommend, nhận xét của stylist, Checklist & Lookbook. */
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.bubble{background:#f1ede2;border-radius:10px;padding:14px 16px;margin:12px 0;font-size:13px;line-height:1.75}
+.verdict{display:inline-block;font-weight:600;padding:6px 14px;border-radius:8px;color:#fff;font-size:13px}
+.v-hop{background:#5f7a4f}.v-nen_chinh{background:#b38b48}
+.sc-mini b{color:#a43c30}
+.sc-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.sc-total{font-family:var(--serif);font-size:42px;color:#a43c30;line-height:1}
+.sc-band{font-weight:600;padding:2px 12px;border-radius:999px;color:#fff;font-size:12px}
+.sc-band.chuan_bo{background:#5f7a4f}.sc-band.hop_dip{background:#b08a3e}.sc-band.can_chinh{background:#a43c30}
+.sc-row{display:grid;grid-template-columns:minmax(110px,9em) 1fr 2.4em;gap:8px;align-items:center;margin:7px 0;font-size:13px}
+.sc-bar{height:7px;background:#e6e9dd;border-radius:4px;overflow:hidden}
+.sc-bar i{display:block;height:100%;background:#718763;border-radius:4px}
+.sc-bar i.low{background:#b38b48}
+.sc-note{grid-column:2/4;margin-top:-3px}
+.recommend{margin:12px 0 0;padding-top:10px;border-top:1px dashed #d9cfbb;font-style:italic;font-size:14px;line-height:1.7;color:#a43c30}
+.recommend b{font-weight:800}
+.review-section{display:grid;grid-template-columns:1fr 2fr;gap:60px;margin:50px auto 30px;max-width:975px;border-top:1px solid #d9decc;padding-top:36px}
+.review-section h2{font-family:var(--serif);font-size:34px;font-weight:400;margin:17px 0}
+.review-section>div>p{font-size:13px;line-height:1.8;color:#7d876e}
+.final-actions{flex-wrap:wrap}
+/* Hộp thoại Checklist + Lookbook */
+.share-dlg{position:fixed;inset:0;margin:auto;height:fit-content;max-height:94vh;border:1px solid #dfdfd0;border-radius:12px;padding:0;width:min(1100px,94vw);background:#fffdf7;color:#253d34;box-shadow:0 25px 90px #15271f30;overflow:hidden}
+.share-dlg[open]{display:flex;flex-direction:column}
+.share-dlg::backdrop{background:#1c2c2366;backdrop-filter:blur(3px)}
+.share-dlg .share{overflow:auto;padding:28px 28px 8px;flex:1;min-height:0}
+.share-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 28px;border-top:1px solid #dedfd3;background:#fffdf7;flex-shrink:0}
+.share-foot .button,.share .row .button{min-height:38px;padding:8px 14px;font-size:12px}
+.share-x{position:absolute;right:12px;top:10px;z-index:2;width:36px;height:36px;border-radius:50%;background:#f2eee3;display:flex;align-items:center;justify-content:center}
+.share-x:hover{background:#e6dfcd}
+.share{display:grid;grid-template-columns:1.1fr 1fr;gap:28px}
+.share h3{font-family:var(--serif);font-weight:400;font-size:24px;margin:0 0 12px;color:#a43c30}
+.ck{padding:0;list-style:none;margin:0 0 12px}
+.ck li{display:grid;grid-template-columns:7.5em 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #dedfd4;font-size:13px}
+.ck-g{font-size:11px;color:#7e8873;text-transform:uppercase;padding-top:2px}
+.ck-sw{display:inline-block;width:14px;height:14px;border-radius:50%;border:1px solid #0004;vertical-align:-2px}
+.lb-col{display:flex;flex-direction:column;align-items:center;text-align:center}
+.lb-col h3{align-self:flex-start}
+.lb{display:flex;justify-content:center;width:100%}
+.lb img{width:auto;max-width:100%;max-height:max(280px,calc(94vh - 230px));border-radius:8px;border:1px solid #dedfd4;display:block;margin:0 auto 14px;box-shadow:0 8px 28px #3a2a1a22}
+@media (max-width:860px){.share,.review-section{grid-template-columns:1fr}.lb img{max-height:none;width:100%}}

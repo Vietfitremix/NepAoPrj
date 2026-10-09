@@ -13,7 +13,7 @@ def health(svc: StylistService = Depends(get_service)):
     return {
         "ok": True,
         "catalogVersion": svc.catalog.version,
-        "catalogSource": "backend-request" if s.backend_compat_only else ("postgres" if s.use_postgres else "json"),
+        "catalogSource": "postgres" if s.catalog_database_url else ("backend-request" if s.backend_compat_only else ("postgres" if s.use_postgres else "json")),
         "model": s.gemini_model,
         "gemini": "enabled" if s.gemini_enabled else ("forced_fallback" if s.ai_force_fallback else "no_api_key"),
     }

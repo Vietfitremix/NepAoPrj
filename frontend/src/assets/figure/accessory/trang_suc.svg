@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
-  <!-- Trang sức: bông tai ngọc trai và vòng tay vàng ở cổ tay – hướng TRƯỚC. Sinh bằng tools/gen_accessories.py. -->
-  <g id="trang_suc" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
-    <g id="bong_tai"><circle cx="157.1" cy="105.4" r="2.2" fill="#D9B44A"/><path d="M 156.6 107.6 L 155.2 112.2" stroke="#D9B44A" stroke-opacity="1"/><circle cx="153.9" cy="115.6" r="3.7" fill="#F4EFE6"/><circle cx="241.4" cy="105.3" r="2.2" fill="#D9B44A"/><path d="M 242.2 107.6 L 243.9 112.2" stroke="#D9B44A" stroke-opacity="1"/><circle cx="245.3" cy="115.6" r="3.6" fill="#F4EFE6"/></g>
-    <g id="vong_tay"><path d="M 82.5 428.8 Q 93.8 433.6 105.7 428.8" fill="none" stroke="#D9B44A" stroke-opacity="1" stroke-width="3"/><path d="M 294.4 428.8 Q 306.2 433.6 317.6 428.8" fill="none" stroke="#D9B44A" stroke-opacity="1" stroke-width="3"/></g>
-  </g>
-</svg>

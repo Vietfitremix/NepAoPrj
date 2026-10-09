@@ -1,0 +1,2880 @@
+{
+  "width": 1024,
+  "height": 1536,
+  "base": "body/front.png",
+  "pants": [
+    {
+      "id": "ivory",
+      "name": "Quần trắng ngà",
+      "detail": "Lụa · Dáng suông",
+      "file": "pants/ivory/front.png",
+      "x": 0,
+      "y": 483,
+      "sx": 0.88,
+      "sy": 0.64,
+      "thumbnail": "pants/ivory/thumbnail.png",
+      "category": "pants",
+      "reference": "assets/wardrobe/male/pants/ivory/source/reference.png"
+    },
+    {
+      "id": "long-navy",
+      "name": "Quần dài",
+      "detail": "Xanh navy · Ống đứng",
+      "file": "pants/long-navy/front.png",
+      "thumbnail": "pants/long-navy/thumbnail.png",
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "sourcePrepared": true,
+      "category": "pants",
+      "reference": "assets/wardrobe/male/pants/long-navy/source/reference.png"
+    },
+    {
+      "id": "shorts-khaki",
+      "name": "Quần đùi",
+      "detail": "Kaki be · Trên gối",
+      "file": "pants/shorts-khaki/front.png",
+      "thumbnail": "pants/shorts-khaki/thumbnail.png",
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "sourcePrepared": true,
+      "category": "pants",
+      "reference": "assets/wardrobe/male/pants/shorts-khaki/source/reference.png"
+    },
+    {
+      "id": "cropped-olive",
+      "name": "Quần lửng",
+      "detail": "Xanh olive · Giữa bắp chân",
+      "file": "pants/cropped-olive/front.png",
+      "thumbnail": "pants/cropped-olive/thumbnail.png",
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "sourcePrepared": true,
+      "category": "pants",
+      "reference": "assets/wardrobe/male/pants/cropped-olive/source/reference.png"
+    },
+    {
+      "id": "slim-black",
+      "name": "Quần ống bó",
+      "detail": "Đen · Ôm chân",
+      "file": "pants/slim-black/front.png",
+      "thumbnail": "pants/slim-black/thumbnail.png",
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "sourcePrepared": true,
+      "category": "pants",
+      "reference": "assets/wardrobe/male/pants/slim-black/source/reference.png"
+    },
+    {
+      "id": "wide-charcoal",
+      "name": "Quần ống rộng",
+      "detail": "Xám than · Ống rộng",
+      "file": "pants/wide-charcoal/front.png",
+      "thumbnail": "pants/wide-charcoal/thumbnail.png",
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "sourcePrepared": true,
+      "category": "pants",
+      "reference": "assets/wardrobe/male/pants/wide-charcoal/source/reference.png"
+    }
+  ],
+  "shoes": [
+    {
+      "id": "loafers",
+      "name": "Giày da đen",
+      "detail": "Loafer nam",
+      "file": "shoes/loafers/front.png",
+      "crops": [
+        [
+          43,
+          423,
+          390,
+          723
+        ],
+        [
+          593,
+          423,
+          390,
+          723
+        ]
+      ],
+      "thumbnail": "shoes/loafers/thumbnail.png",
+      "category": "shoes",
+      "reference": "assets/wardrobe/male/shoes/loafers/source/reference.png"
+    },
+    {
+      "id": "sneakers",
+      "name": "Sneaker trắng",
+      "detail": "Giày nam",
+      "file": "shoes/sneakers/front.png",
+      "crops": [
+        [
+          55,
+          476,
+          377,
+          672
+        ],
+        [
+          592,
+          476,
+          377,
+          671
+        ]
+      ],
+      "thumbnail": "shoes/sneakers/thumbnail.png",
+      "category": "shoes",
+      "reference": "assets/wardrobe/male/shoes/sneakers/source/reference.png"
+    },
+    {
+      "id": "guoc",
+      "name": "Guốc",
+      "detail": "Guốc gỗ, quai vải nhung",
+      "category": "shoes",
+      "file": "shoes/guoc/front.png",
+      "thumbnail": "shoes/guoc/thumbnail.png",
+      "reference": "assets/wardrobe/male/shoes/guoc/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "crops": [],
+      "coversFeet": false
+    },
+    {
+      "id": "hai-theu",
+      "name": "Hài thêu",
+      "detail": "Hài đỏ thêu hoa vàng",
+      "category": "shoes",
+      "file": "shoes/hai-theu/front.png",
+      "thumbnail": "shoes/hai-theu/thumbnail.png",
+      "reference": "assets/wardrobe/male/shoes/hai-theu/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "crops": [],
+      "coversFeet": true
+    },
+    {
+      "id": "giay-bup-be",
+      "name": "Giày búp bê",
+      "detail": "Giày bệt đen, nơ nhỏ",
+      "category": "shoes",
+      "file": "shoes/giay-bup-be/front.png",
+      "thumbnail": "shoes/giay-bup-be/thumbnail.png",
+      "reference": "assets/wardrobe/male/shoes/giay-bup-be/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "crops": [],
+      "coversFeet": true
+    },
+    {
+      "id": "giay-ta",
+      "name": "Giày ta",
+      "detail": "Giày vải đen kiểu truyền thống",
+      "category": "shoes",
+      "file": "shoes/giay-ta/front.png",
+      "thumbnail": "shoes/giay-ta/thumbnail.png",
+      "reference": "assets/wardrobe/male/shoes/giay-ta/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "crops": [],
+      "coversFeet": true
+    },
+    {
+      "id": "giay-the-thao",
+      "name": "Giày thể thao",
+      "detail": "Sneaker trắng, đế cao su",
+      "category": "shoes",
+      "file": "shoes/giay-the-thao/front.png",
+      "thumbnail": "shoes/giay-the-thao/thumbnail.png",
+      "reference": "assets/wardrobe/male/shoes/giay-the-thao/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "crops": [],
+      "coversFeet": true
+    },
+    {
+      "id": "dep-crocs",
+      "footbedClipY": 1400,
+      "name": "Dép Crocs",
+      "detail": "Dép nhựa xanh nhạt, quai hậu",
+      "category": "shoes",
+      "file": "shoes/dep-crocs/front.png",
+      "thumbnail": "shoes/dep-crocs/thumbnail.png",
+      "reference": "assets/wardrobe/male/shoes/dep-crocs/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "crops": [],
+      "coversFeet": false
+    },
+    {
+      "id": "dep-le",
+      "footbedClipY": 1400,
+      "name": "Dép lê",
+      "detail": "Dép quai ngang đen, đế mềm",
+      "category": "shoes",
+      "file": "shoes/dep-le/front.png",
+      "thumbnail": "shoes/dep-le/thumbnail.png",
+      "reference": "assets/wardrobe/male/shoes/dep-le/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "crops": [],
+      "coversFeet": false
+    }
+  ],
+  "outfits": [
+    {
+      "id": "navy",
+      "name": "Áo dài xanh navy",
+      "detail": "Lụa · Rồng vàng",
+      "file": "shirts/navy/front.png",
+      "x": 0,
+      "y": 117,
+      "sx": 0.86,
+      "sy": 0.75,
+      "thumbnail": "shirts/navy/thumbnail.png",
+      "category": "shirts",
+      "reference": "assets/wardrobe/male/shirts/navy/source/reference.png"
+    },
+    {
+      "id": "burgundy",
+      "name": "Áo dài đỏ",
+      "detail": "Lụa · Rồng vàng",
+      "file": "shirts/burgundy/front.png",
+      "x": 0,
+      "y": 190,
+      "sx": 0.77,
+      "sy": 0.68,
+      "thumbnail": "shirts/burgundy/thumbnail.png",
+      "category": "shirts",
+      "reference": "assets/wardrobe/male/shirts/burgundy/source/reference.png"
+    },
+    {
+      "id": "teal",
+      "name": "Áo dài xanh ngọc",
+      "detail": "Lụa · Sen vàng",
+      "file": "shirts/teal/front.png",
+      "x": 0,
+      "y": 160,
+      "sx": 0.8,
+      "sy": 0.72,
+      "thumbnail": "shirts/teal/thumbnail.png",
+      "category": "shirts",
+      "reference": "assets/wardrobe/male/shirts/teal/source/reference.png"
+    },
+    {
+      "id": "tu-than",
+      "name": "Áo tứ thân",
+      "detail": "Phối nam",
+      "file": "shirts/tu-than/front.png",
+      "x": 0,
+      "y": 0,
+      "sx": 0.88,
+      "sy": 1,
+      "mapY": [
+        [
+          0,
+          0
+        ],
+        [
+          136,
+          250
+        ],
+        [
+          220,
+          295
+        ],
+        [
+          760,
+          735
+        ],
+        [
+          1400,
+          1220
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "sleeveX": 150,
+      "sleeveDx": 95,
+      "fitRows": [
+        {
+          "y": 240,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 270,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              360,
+              397
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 280,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              337,
+              378.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 290,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              326,
+              357
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 300,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              318,
+              332
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 310,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              313,
+              319
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 320,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              309.5,
+              311
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 340,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              303,
+              300
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 360,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              299,
+              294
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 380,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              295,
+              292.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 400,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              291.5,
+              293
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 425,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              286.5,
+              284
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 450,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              280.5,
+              278.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 475,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              275,
+              275.5
+            ],
+            [
+              376,
+              367.5
+            ],
+            [
+              388,
+              375.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 500,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              269,
+              268.5
+            ],
+            [
+              367,
+              366.5
+            ],
+            [
+              394,
+              382
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 525,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              262,
+              255.5
+            ],
+            [
+              360,
+              356
+            ],
+            [
+              397,
+              387
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 550,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              256,
+              246
+            ],
+            [
+              355,
+              350.5
+            ],
+            [
+              403.5,
+              387
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 575,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              249,
+              239
+            ],
+            [
+              348.5,
+              343.5
+            ],
+            [
+              404.5,
+              384
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 600,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              242,
+              233.5
+            ],
+            [
+              342.5,
+              334.5
+            ],
+            [
+              399,
+              382
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 625,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              235,
+              230
+            ],
+            [
+              336,
+              320
+            ],
+            [
+              393,
+              377
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 650,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              227,
+              225.5
+            ],
+            [
+              329.5,
+              304
+            ],
+            [
+              388.5,
+              372.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 675,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              220,
+              220.5
+            ],
+            [
+              324,
+              289
+            ],
+            [
+              383,
+              367.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 700,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              212,
+              210.5
+            ],
+            [
+              318.5,
+              276
+            ],
+            [
+              378.5,
+              364
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 725,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              224,
+              208.5
+            ],
+            [
+              312.5,
+              275.5
+            ],
+            [
+              373.5,
+              358
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 930,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        }
+      ],
+      "thumbnail": "shirts/tu-than/thumbnail.png",
+      "category": "shirts",
+      "reference": "assets/wardrobe/male/shirts/tu-than/source/reference.png"
+    },
+    {
+      "id": "ngu-than",
+      "name": "Áo ngũ thân",
+      "detail": "Phối nam",
+      "file": "shirts/ngu-than/front.png",
+      "x": 0,
+      "y": 0,
+      "sx": 0.9,
+      "sy": 1,
+      "mapY": [
+        [
+          0,
+          0
+        ],
+        [
+          83,
+          250
+        ],
+        [
+          175,
+          295
+        ],
+        [
+          780,
+          735
+        ],
+        [
+          1460,
+          1220
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "sleeveX": 130,
+      "sleeveDx": 115,
+      "fitRows": [
+        {
+          "y": 240,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 270,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              337.5,
+              401
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 280,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              320.5,
+              382.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 290,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              307.5,
+              361
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 300,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              299.5,
+              336
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 310,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              294,
+              323
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 320,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              289.5,
+              315
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 340,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              284,
+              304
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 360,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              280,
+              298
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 380,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              276,
+              296.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 400,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              272.5,
+              297
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 425,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              268.5,
+              288
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 450,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              264.5,
+              282.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 475,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              260.5,
+              279.5
+            ],
+            [
+              364,
+              367.5
+            ],
+            [
+              376,
+              375.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 500,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              256.5,
+              272.5
+            ],
+            [
+              356,
+              362.5
+            ],
+            [
+              384.5,
+              382
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 525,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              252.5,
+              259.5
+            ],
+            [
+              347,
+              352
+            ],
+            [
+              389.5,
+              387
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 550,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              247.5,
+              250
+            ],
+            [
+              340.5,
+              346.5
+            ],
+            [
+              392,
+              387
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 575,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              244,
+              243
+            ],
+            [
+              335,
+              339.5
+            ],
+            [
+              389.5,
+              384
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 600,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              239,
+              237.5
+            ],
+            [
+              329,
+              330.5
+            ],
+            [
+              386.5,
+              382
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 625,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              234.5,
+              234
+            ],
+            [
+              323,
+              316
+            ],
+            [
+              382,
+              377
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 650,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              229,
+              229.5
+            ],
+            [
+              317,
+              300
+            ],
+            [
+              377,
+              372.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 675,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              223,
+              224.5
+            ],
+            [
+              311,
+              285
+            ],
+            [
+              372,
+              367.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 700,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              216,
+              214.5
+            ],
+            [
+              306,
+              272
+            ],
+            [
+              368,
+              364
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 725,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              210,
+              212.5
+            ],
+            [
+              301,
+              271.5
+            ],
+            [
+              364,
+              358
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 930,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        }
+      ],
+      "thumbnail": "shirts/ngu-than/thumbnail.png",
+      "category": "shirts",
+      "reference": "assets/wardrobe/male/shirts/ngu-than/source/reference.png"
+    },
+    {
+      "id": "nhat-binh",
+      "name": "Nhật bình",
+      "detail": "Phối nam",
+      "file": "shirts/nhat-binh/front.png",
+      "x": 0,
+      "y": 0,
+      "sx": 0.88,
+      "sy": 1,
+      "mapY": [
+        [
+          0,
+          0
+        ],
+        [
+          108,
+          250
+        ],
+        [
+          210,
+          295
+        ],
+        [
+          830,
+          735
+        ],
+        [
+          1450,
+          1220
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "sleeveX": 120,
+      "sleeveDx": 115,
+      "fitRows": [
+        {
+          "y": 240,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 270,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              336,
+              401
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 280,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              324.5,
+              382.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 290,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              319,
+              361
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 300,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              314,
+              336
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 310,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              310,
+              323
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 320,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              306.5,
+              315
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 340,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              299.5,
+              304
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 360,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              294.5,
+              298
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 380,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              289.5,
+              296.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 400,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              284.5,
+              297
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 425,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              278.5,
+              284.7
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 450,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              271.5,
+              276
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 475,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              265.5,
+              269.7
+            ],
+            [
+              377,
+              367.5
+            ],
+            [
+              394,
+              375.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 500,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              258.5,
+              259.4
+            ],
+            [
+              369,
+              374
+            ],
+            [
+              397.5,
+              382
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 525,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              250.5,
+              243.1
+            ],
+            [
+              362.5,
+              368.4
+            ],
+            [
+              398.5,
+              387
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 550,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              243.5,
+              230.4
+            ],
+            [
+              356.5,
+              366.1
+            ],
+            [
+              397,
+              387
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 575,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              234,
+              220.1
+            ],
+            [
+              351.5,
+              362.4
+            ],
+            [
+              392.5,
+              384
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 600,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              223.5,
+              211.3
+            ],
+            [
+              347.5,
+              356.7
+            ],
+            [
+              386.5,
+              382
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 625,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              211.5,
+              204.5
+            ],
+            [
+              343.5,
+              345.5
+            ],
+            [
+              381.5,
+              377
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 650,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              197.5,
+              196.8
+            ],
+            [
+              338.5,
+              332.7
+            ],
+            [
+              377.5,
+              372.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 675,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              182.5,
+              188.5
+            ],
+            [
+              334.5,
+              321
+            ],
+            [
+              372.5,
+              367.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 700,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              184,
+              178.5
+            ],
+            [
+              330,
+              308
+            ],
+            [
+              367.5,
+              364
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 725,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              222,
+              176.5
+            ],
+            [
+              325,
+              307.5
+            ],
+            [
+              362.5,
+              358
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 930,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        }
+      ],
+      "thumbnail": "shirts/nhat-binh/thumbnail.png",
+      "category": "shirts",
+      "reference": "assets/wardrobe/male/shirts/nhat-binh/source/reference.png"
+    },
+    {
+      "id": "ba-ba",
+      "name": "Áo bà ba",
+      "detail": "Phối nam",
+      "file": "shirts/ba-ba/front.png",
+      "x": 0,
+      "y": 0,
+      "sx": 0.87,
+      "sy": 1,
+      "mapY": [
+        [
+          0,
+          0
+        ],
+        [
+          280,
+          258
+        ],
+        [
+          365,
+          322
+        ],
+        [
+          1005,
+          735
+        ],
+        [
+          1130,
+          850
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "sleeveX": 120,
+      "sleeveDx": 120,
+      "fitRows": [
+        {
+          "y": 240,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 270,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              346.5,
+              401
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 280,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              326.5,
+              382.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 290,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              310.5,
+              361
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 300,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              296.5,
+              336
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 310,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              286,
+              323
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 320,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              277.5,
+              315
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 340,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              264.5,
+              304
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 360,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              256.5,
+              298
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 380,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              252.5,
+              296.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 400,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              251.5,
+              297
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 425,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              248,
+              288
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 450,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              243.5,
+              282.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 475,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              239.5,
+              279.5
+            ],
+            [
+              350,
+              367.5
+            ],
+            [
+              353,
+              375.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 500,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              236,
+              272.5
+            ],
+            [
+              341.5,
+              362.5
+            ],
+            [
+              360.5,
+              382
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 525,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              228,
+              259.5
+            ],
+            [
+              332.5,
+              352
+            ],
+            [
+              366.5,
+              387
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 550,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              220,
+              250
+            ],
+            [
+              326,
+              346.5
+            ],
+            [
+              371,
+              387
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 575,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              214.5,
+              243
+            ],
+            [
+              321,
+              339.5
+            ],
+            [
+              370.5,
+              384
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 600,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              211.5,
+              237.5
+            ],
+            [
+              315.5,
+              330.5
+            ],
+            [
+              368.5,
+              382
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 625,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              209.5,
+              234
+            ],
+            [
+              308.5,
+              316
+            ],
+            [
+              365.5,
+              377
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 650,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              207,
+              229.5
+            ],
+            [
+              301,
+              300
+            ],
+            [
+              361.5,
+              372.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 675,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              204.5,
+              224.5
+            ],
+            [
+              293.5,
+              285
+            ],
+            [
+              356.5,
+              367.5
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 700,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              201,
+              214.5
+            ],
+            [
+              286,
+              272
+            ],
+            [
+              353.5,
+              364
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 725,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              197,
+              212.5
+            ],
+            [
+              279,
+              271.5
+            ],
+            [
+              350.5,
+              358
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        },
+        {
+          "y": 930,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              512,
+              512
+            ]
+          ]
+        }
+      ],
+      "thumbnail": "shirts/ba-ba/thumbnail.png",
+      "category": "shirts",
+      "reference": "assets/wardrobe/male/shirts/ba-ba/source/reference.png"
+    }
+  ],
+  "accessories": [
+    {
+      "id": "non-la",
+      "name": "Nón lá",
+      "detail": "Nón lá tre đan, quai lụa",
+      "category": "headwear",
+      "file": "headwear/non-la/front.png",
+      "thumbnail": "headwear/non-la/thumbnail.png",
+      "reference": "assets/wardrobe/male/headwear/non-la/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "headwear",
+      "offsetY": -200,
+      "rearViews": []
+    },
+    {
+      "id": "non-quai-thao",
+      "name": "Nón quai thao",
+      "detail": "Nón vành rộng, quai thao lụa",
+      "category": "headwear",
+      "file": "headwear/non-quai-thao/front.png",
+      "thumbnail": "headwear/non-quai-thao/thumbnail.png",
+      "reference": "assets/wardrobe/male/headwear/non-quai-thao/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "headwear",
+      "offsetY": -200,
+      "rearViews": []
+    },
+    {
+      "id": "khan-van",
+      "name": "Khăn vấn",
+      "detail": "Khăn lụa vấn vòng màu đỏ",
+      "category": "headwear",
+      "file": "headwear/khan-van/front.png",
+      "thumbnail": "headwear/khan-van/thumbnail.png",
+      "reference": "assets/wardrobe/male/headwear/khan-van/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "headwear",
+      "offsetY": -200,
+      "rearViews": []
+    },
+    {
+      "id": "khan-mo-qua",
+      "name": "Khăn mỏ quạ",
+      "detail": "Khăn đen chít đầu, mỏ nhọn trước trán",
+      "category": "headwear",
+      "file": "headwear/khan-mo-qua/front.png",
+      "thumbnail": "headwear/khan-mo-qua/thumbnail.png",
+      "reference": "assets/wardrobe/male/headwear/khan-mo-qua/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "headwear",
+      "offsetY": -200,
+      "rearViews": []
+    },
+    {
+      "id": "khan-xep",
+      "name": "Khăn xếp",
+      "detail": "Khăn xếp đen, nhiều lớp nếp",
+      "category": "headwear",
+      "file": "headwear/khan-xep/front.png",
+      "thumbnail": "headwear/khan-xep/thumbnail.png",
+      "reference": "assets/wardrobe/male/headwear/khan-xep/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "headwear",
+      "offsetY": -200,
+      "rearViews": []
+    },
+    {
+      "id": "hoa-cai-toc",
+      "name": "Hoa cài tóc",
+      "detail": "Hoa trắng cài bên tóc",
+      "category": "hair-accessories",
+      "file": "hair-accessories/hoa-cai-toc/front.png",
+      "thumbnail": "hair-accessories/hoa-cai-toc/thumbnail.png",
+      "reference": "assets/wardrobe/male/hair-accessories/hoa-cai-toc/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "hairAccessory",
+      "offsetY": 0,
+      "rearViews": [
+        "left"
+      ]
+    },
+    {
+      "id": "tui-coi",
+      "name": "Túi cói",
+      "detail": "Túi cói đan, quai xách tròn",
+      "category": "bags",
+      "file": "bags/tui-coi/front.png",
+      "thumbnail": "bags/tui-coi/thumbnail.png",
+      "reference": "assets/wardrobe/male/bags/tui-coi/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "bag",
+      "offsetY": 0,
+      "rearViews": [
+        "left"
+      ]
+    },
+    {
+      "id": "quat-giay",
+      "name": "Quạt giấy",
+      "detail": "Quạt giấy mở, nan tre",
+      "category": "handheld",
+      "file": "handheld/quat-giay/front.png",
+      "thumbnail": "handheld/quat-giay/thumbnail.png",
+      "reference": "assets/wardrobe/male/handheld/quat-giay/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "fan",
+      "offsetY": 0,
+      "rearViews": [
+        "right"
+      ]
+    },
+    {
+      "id": "kieng-bac",
+      "name": "Kiềng bạc",
+      "detail": "Kiềng cổ bạc, nét chạm tinh tế",
+      "category": "jewelry/necklaces",
+      "file": "jewelry/necklaces/kieng-bac/front.png",
+      "thumbnail": "jewelry/necklaces/kieng-bac/thumbnail.png",
+      "reference": "assets/wardrobe/male/jewelry/necklaces/kieng-bac/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "necklace",
+      "offsetY": 0,
+      "rearViews": []
+    },
+    {
+      "id": "bong-tai",
+      "name": "Bông tai",
+      "detail": "Bông tai bạc, mặt hoa nhỏ",
+      "category": "jewelry/earrings",
+      "file": "jewelry/earrings/bong-tai/front.png",
+      "thumbnail": "jewelry/earrings/bong-tai/thumbnail.png",
+      "reference": "assets/wardrobe/male/jewelry/earrings/bong-tai/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "earrings",
+      "offsetY": 0,
+      "rearViews": []
+    },
+    {
+      "id": "vong-tay",
+      "name": "Vòng tay",
+      "detail": "Vòng bạc đeo cổ tay",
+      "category": "jewelry/bracelets",
+      "file": "jewelry/bracelets/vong-tay/front.png",
+      "thumbnail": "jewelry/bracelets/vong-tay/thumbnail.png",
+      "reference": "assets/wardrobe/male/jewelry/bracelets/vong-tay/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "bracelet",
+      "offsetY": 0,
+      "rearViews": [
+        "left"
+      ]
+    },
+    {
+      "id": "tai-nghe",
+      "name": "Tai nghe",
+      "detail": "Tai nghe chụp tai màu đen",
+      "category": "headphones",
+      "file": "headphones/tai-nghe/front.png",
+      "thumbnail": "headphones/tai-nghe/thumbnail.png",
+      "reference": "assets/wardrobe/male/headphones/tai-nghe/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "headphones",
+      "offsetY": 0,
+      "rearViews": []
+    },
+    {
+      "id": "mu-luoi-trai",
+      "name": "Mũ lưỡi trai",
+      "detail": "Mũ vải xanh navy, lưỡi trai cong",
+      "category": "headwear",
+      "file": "headwear/mu-luoi-trai/front.png",
+      "thumbnail": "headwear/mu-luoi-trai/thumbnail.png",
+      "reference": "assets/wardrobe/male/headwear/mu-luoi-trai/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "headwear",
+      "offsetY": -200,
+      "rearViews": []
+    },
+    {
+      "id": "moc-khoa-bong",
+      "name": "Móc khóa bông",
+      "detail": "Móc bông gấu nhỏ, khoen bạc",
+      "category": "bag-charms",
+      "file": "bag-charms/moc-khoa-bong/front.png",
+      "thumbnail": "bag-charms/moc-khoa-bong/thumbnail.png",
+      "reference": "assets/wardrobe/male/bag-charms/moc-khoa-bong/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "bagCharm",
+      "offsetY": 0,
+      "rearViews": []
+    },
+    {
+      "id": "ba-lo",
+      "name": "Ba lô",
+      "detail": "Ba lô vải xanh rêu, hai quai đeo",
+      "category": "backpacks",
+      "file": "backpacks/ba-lo/front.png",
+      "thumbnail": "backpacks/ba-lo/thumbnail.png",
+      "reference": "assets/wardrobe/male/backpacks/ba-lo/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "backpack",
+      "offsetY": 0,
+      "rearViews": [
+        "left",
+        "right"
+      ]
+    },
+    {
+      "id": "tui-tote",
+      "name": "Túi tote",
+      "detail": "Túi tote canvas kem, quai dài",
+      "category": "bags",
+      "file": "bags/tui-tote/front.png",
+      "thumbnail": "bags/tui-tote/thumbnail.png",
+      "reference": "assets/wardrobe/male/bags/tui-tote/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "bag",
+      "offsetY": 0,
+      "rearViews": [
+        "left"
+      ]
+    },
+    {
+      "id": "tui-deo-cheo",
+      "name": "Túi đeo chéo",
+      "detail": "Túi da nâu, dây đeo chéo vai",
+      "category": "bags",
+      "file": "bags/tui-deo-cheo/front.png",
+      "thumbnail": "bags/tui-deo-cheo/thumbnail.png",
+      "reference": "assets/wardrobe/male/bags/tui-deo-cheo/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "bag",
+      "offsetY": 0,
+      "rearViews": [
+        "left"
+      ]
+    },
+    {
+      "id": "kinh-ram",
+      "name": "Kính râm",
+      "detail": "Kính đen, gọng mảnh",
+      "category": "eyewear",
+      "file": "eyewear/kinh-ram/front.png",
+      "thumbnail": "eyewear/kinh-ram/thumbnail.png",
+      "reference": "assets/wardrobe/male/eyewear/kinh-ram/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "glasses",
+      "offsetY": 0,
+      "rearViews": [
+        "back"
+      ]
+    },
+    {
+      "id": "day-xich-hong",
+      "name": "Dây xích đeo hông",
+      "detail": "Dây xích bạc, móc bên hông",
+      "category": "waist-accessories",
+      "file": "waist-accessories/day-xich-hong/front.png",
+      "thumbnail": "waist-accessories/day-xich-hong/thumbnail.png",
+      "reference": "assets/wardrobe/male/waist-accessories/day-xich-hong/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "hipChain",
+      "offsetY": 0,
+      "rearViews": []
+    },
+    {
+      "id": "gang-tay-ho-ngon",
+      "name": "Găng tay hở ngón",
+      "detail": "Găng da đen hở ngón, ôm bàn tay",
+      "category": "gloves",
+      "file": "gloves/gang-tay-ho-ngon/front.png",
+      "thumbnail": "gloves/gang-tay-ho-ngon/thumbnail.png",
+      "reference": "assets/wardrobe/male/gloves/gang-tay-ho-ngon/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "gloves",
+      "offsetY": 0,
+      "rearViews": []
+    },
+    {
+      "id": "mu-cao-boi",
+      "name": "Mũ cao bồi",
+      "detail": "Mũ nâu, vành cong hai bên",
+      "category": "headwear",
+      "file": "headwear/mu-cao-boi/front.png",
+      "thumbnail": "headwear/mu-cao-boi/thumbnail.png",
+      "reference": "assets/wardrobe/male/headwear/mu-cao-boi/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "headwear",
+      "offsetY": -200,
+      "rearViews": []
+    },
+    {
+      "id": "tui-xach-thoi-trang",
+      "name": "Túi xách thời trang",
+      "detail": "Túi da đen, quai xách và khóa vàng",
+      "category": "bags",
+      "file": "bags/tui-xach-thoi-trang/front.png",
+      "thumbnail": "bags/tui-xach-thoi-trang/thumbnail.png",
+      "reference": "assets/wardrobe/male/bags/tui-xach-thoi-trang/source/reference.png",
+      "sourcePrepared": true,
+      "x": 0,
+      "y": 0,
+      "sx": 1,
+      "sy": 1,
+      "slot": "bag",
+      "offsetY": 0,
+      "rearViews": [
+        "left"
+      ]
+    }
+  ]
+}

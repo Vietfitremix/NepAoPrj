@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="vi">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VIỆT FIT · Studio nam 3D</title>
+<style>body{font:16px system-ui;color:#253d34;background:#f8f5ee;margin:60px auto;max-width:600px;padding:24px}a{color:#a43c30}</style>
+<h1>Studio nam 3D</h1>
+<p>Chọn áo để tự ghép trang phục vào nhân vật theo vị trí cố định.</p>
+<p><a id="studio" href="http://127.0.0.1:5173/male-studio">Mở Studio nam 3D</a></p>
+<p>Khi chạy frontend, truy cập đường dẫn <code>/male-studio</code>.</p>
+<script>
+if (location.protocol === 'http:' || location.protocol === 'https:') {
+  document.getElementById('studio').href = '/male-studio';
+  location.replace('/male-studio');
+}
+</script>
+</html>

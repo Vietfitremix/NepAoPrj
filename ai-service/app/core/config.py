@@ -11,21 +11,24 @@ REPO_DIR = SERVICE_DIR.parent
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
         env_file=SERVICE_DIR / ".env", env_file_encoding="utf-8",
-        env_ignore_empty=True, extra="ignore",
+        env_ignore_empty=False, extra="ignore",
     )
 
     gemini_api_key: str = ""
-    gemini_model: str = "gemini-flash-latest"
-    ai_timeout_s: float = 6.0
+    gemini_model: str = "gemini-3.5-flash"
+    ai_timeout_s: float = 30.0
     ai_force_fallback: bool = False
     ai_thinking_budget: int | None = None
 
     database_url: str = ""
-    # Spring gửi kèm danh mục của nó trong mỗi request tích hợp (bật khi chạy sau backend Spring Boot)
+    # Read catalog tables in the Spring database; cache/log storage remains separately configured.
+    catalog_database_url: str = ""
+    # Spring sends its own catalog with every integration request.
     backend_compat_only: bool = False
-    data_dir: Path = REPO_DIR / "data"
-    figure_dir: Path = REPO_DIR / "frontend" / "src" / "assets" / "figure"
+    data_dir: Path = SERVICE_DIR / "data"
+    figure_dir: Path = REPO_DIR / "frontend" / "public" / "figure"
     prompts_dir: Path = SERVICE_DIR / "prompts"
+    prompt_templates: dict[str, str] = {}
 
     admin_token: str = "dev-admin-token"
     enable_dev_routes: bool = True

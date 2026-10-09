@@ -1,26 +1,50 @@
-"""Mọi món trong catalog đều có đủ hình SVG ở 4 hướng nhìn (trước, trái, phải, sau)."""
+"""Validate the existing raster wardrobes without restoring retired SVG assets."""
 from pathlib import Path
+import json
 
 from app.ai.fallback import parse_by_keywords
 from app.engine.rules import evaluate
 from app.models.outfit import OutfitState
 
-FIG = Path(__file__).resolve().parents[2] / "frontend/src/assets/figure"
-VIEWS = ["", "_trai", "_phai", "_sau"]
+FIG = Path(__file__).resolve().parents[2] / "frontend/public/figure"
+VIEWS = ["front", "left", "right", "back"]
+CHARACTERS = {"nu": "female", "nam": "male"}
+
+
+def wardrobe(gender):
+    root = FIG / f"{CHARACTERS[gender]}-layers"
+    return root, json.loads((root / "catalog.json").read_text(encoding="utf-8"))
+
+
+def assert_views(root, item):
+    folder = Path(item["file"]).parent
+    assert (root / item["thumbnail"]).is_file(), item["id"]
+    for view in VIEWS:
+        assert (root / folder / f"{view}.png").is_file(), (item["id"], view)
 
 
 def test_accessories_have_4_views(catalog):
-    missing = []
+    ids = {"tui": ["tui-coi"], "quat_giay": ["quat-giay"],
+           "trang_suc": ["bong-tai", "vong-tay"], "sneaker": ["sneakers"]}
     for a in catalog.accessories.values():
-        names = [f"{a['id']}_{g}" for g in a["genders"]] if a.get("byGender") else [a["id"]]
-        missing += [f"{n}{v}" for n in names for v in VIEWS if not (FIG / f"accessory/{n}{v}.svg").exists()]
-    assert not missing, missing
+        for gender in a["genders"]:
+            root, data = wardrobe(gender)
+            items = {item["id"]: item for item in data["accessories"] + data["shoes"]}
+            for name in ids.get(a["id"], [a["id"].replace("_", "-")]):
+                assert name in items, (gender, name)
+                assert_views(root, items[name])
 
 
 def test_garments_have_4_views(catalog):
-    missing = [f"{g['id']}_{s}{v}" for g in catalog.garments.values() if g.get("hasSvg")
-               for s in g["genders"] for v in VIEWS if not (FIG / f"garment/{g['id']}_{s}{v}.svg").exists()]
-    assert not missing, missing
+    ids = {"ao_tu_than": "tu-than", "ao_ngu_than": "ngu-than", "nhat_binh": "nhat-binh", "ao_ba_ba": "ba-ba"}
+    for garment in catalog.wearable_garments.values():
+        for gender in garment["genders"]:
+            root, data = wardrobe(gender)
+            for view in VIEWS:
+                assert (root / "body" / f"{view}.png").is_file()
+            name = ("jade" if gender == "nu" else "navy") if garment["id"] == "ao_dai" else ids[garment["id"]]
+            item = next(item for item in data["outfits"] if item["id"] == name)
+            assert_views(root, item)
 
 
 def test_hat_and_headwrap_can_be_worn_together(catalog):
@@ -41,11 +65,16 @@ def test_new_accessory_keywords(catalog):
     assert "quat_giay" in it.avoidAccessories
 
 
-def test_placement_patterns_have_motif_and_garments(catalog):
+def test_current_pattern_assets_and_native_pattern_constraints(catalog):
+    patterns = json.loads((FIG / "patterns/catalog.json").read_text(encoding="utf-8"))
+    assert patterns
+    for pattern in patterns:
+        assert (FIG / pattern["file"]).is_file(), pattern["id"]
+        assert (FIG / pattern["thumbnail"]).is_file(), pattern["id"]
     for p in catalog.patterns.values():
         if p.get("kind") == "placement":
-            assert (FIG / f"motif/{p['id']}.svg").exists(), p["id"]
             assert p.get("garments"), p["id"]
+            assert set(p["garments"]) <= set(catalog.garments), p["id"]
 
 
 def test_placement_pattern_rejected_on_wrong_garment(catalog):

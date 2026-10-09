@@ -1,0 +1,110 @@
+[
+  {
+    "id": "canh-dao-xuan",
+    "name": "Cành đào xuân",
+    "file": "patterns/canh-dao-xuan/tile.png",
+    "thumbnail": "patterns/canh-dao-xuan/thumbnail.png"
+  },
+  {
+    "id": "phuong-hoang",
+    "name": "Phượng hoàng",
+    "file": "patterns/phuong-hoang/tile.png",
+    "thumbnail": "patterns/phuong-hoang/thumbnail.png"
+  },
+  {
+    "id": "hac-va-mai",
+    "name": "Hạc và mai",
+    "file": "patterns/hac-va-mai/tile.png",
+    "thumbnail": "patterns/hac-va-mai/thumbnail.png"
+  },
+  {
+    "id": "hoi-van-trong-dong",
+    "name": "Hồi văn & trống đồng",
+    "file": "patterns/hoi-van-trong-dong/tile.png",
+    "thumbnail": "patterns/hoi-van-trong-dong/thumbnail.png"
+  },
+  {
+    "id": "rong-may",
+    "name": "Rồng mây",
+    "file": "patterns/rong-may/tile.png",
+    "thumbnail": "patterns/rong-may/thumbnail.png"
+  },
+  {
+    "id": "truc-quan-tu",
+    "name": "Trúc quân tử",
+    "file": "patterns/truc-quan-tu/tile.png",
+    "thumbnail": "patterns/truc-quan-tu/thumbnail.png"
+  },
+  {
+    "id": "may-cat-tuong",
+    "name": "Mây cát tường",
+    "file": "patterns/may-cat-tuong/tile.png",
+    "thumbnail": "patterns/may-cat-tuong/thumbnail.png"
+  },
+  {
+    "id": "tung",
+    "name": "Tùng",
+    "file": "patterns/tung/tile.png",
+    "thumbnail": "patterns/tung/thumbnail.png"
+  },
+  {
+    "id": "song-nuoc",
+    "name": "Sóng nước",
+    "file": "patterns/song-nuoc/tile.png",
+    "thumbnail": "patterns/song-nuoc/thumbnail.png"
+  },
+  {
+    "id": "hoa-cuc",
+    "name": "Hoa cúc",
+    "file": "patterns/hoa-cuc/tile.png",
+    "thumbnail": "patterns/hoa-cuc/thumbnail.png"
+  },
+  {
+    "id": "mai-vang",
+    "name": "Mai vàng",
+    "file": "patterns/mai-vang/tile.png",
+    "thumbnail": "patterns/mai-vang/thumbnail.png"
+  },
+  {
+    "id": "chim-lac",
+    "name": "Chim Lạc",
+    "file": "patterns/chim-lac/tile.png",
+    "thumbnail": "patterns/chim-lac/thumbnail.png"
+  },
+  {
+    "id": "buom-va-hoa",
+    "name": "Bướm và hoa",
+    "file": "patterns/buom-va-hoa/tile.png",
+    "thumbnail": "patterns/buom-va-hoa/thumbnail.png"
+  },
+  {
+    "id": "gam-tho-may",
+    "name": "Gấm chữ Thọ & mây",
+    "file": "patterns/gam-tho-may/tile.png",
+    "thumbnail": "patterns/gam-tho-may/thumbnail.png"
+  },
+  {
+    "id": "hoa-van-tron",
+    "name": "Hoa văn tròn",
+    "file": "patterns/hoa-van-tron/tile.png",
+    "thumbnail": "patterns/hoa-van-tron/thumbnail.png"
+  },
+  {
+    "id": "hoa-dao-nho",
+    "name": "Hoa đào nhỏ",
+    "file": "patterns/hoa-dao-nho/tile.png",
+    "thumbnail": "patterns/hoa-dao-nho/thumbnail.png"
+  },
+  {
+    "id": "ke-soc",
+    "name": "Kẻ sọc",
+    "file": "patterns/ke-soc/tile.png",
+    "thumbnail": "patterns/ke-soc/thumbnail.png"
+  },
+  {
+    "id": "cham-bi",
+    "name": "Chấm bi",
+    "file": "patterns/cham-bi/tile.png",
+    "thumbnail": "patterns/cham-bi/thumbnail.png"
+  }
+]

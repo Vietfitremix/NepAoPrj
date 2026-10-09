@@ -1,10 +1,13 @@
+
 import os
 
 # Test luôn chạy không cần Gemini và Postgres
 os.environ["AI_FORCE_FALLBACK"] = "true"
 os.environ["DATABASE_URL"] = ""
+os.environ["CATALOG_DATABASE_URL"] = ""
 os.environ["ENABLE_DEV_ROUTES"] = "true"
 os.environ["RATE_LIMIT_PER_MIN"] = "1000"      # test gọi nhiều lần từ cùng một IP
+os.environ["BACKEND_COMPAT_ONLY"] = "false"
 
 import pytest  # noqa: E402
 

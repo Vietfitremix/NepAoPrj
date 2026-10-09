@@ -5,6 +5,22 @@ Java 21, Spring Boot 3, Gradle Groovy DSL, PostgreSQL, Flyway, Spring Data JPA,
 Bean Validation và Lombok. Có đủ các API outfit, knowledge, weather, recommendation,
 remix, cultural-score và save/read look. [Contract và ví dụ request](docs/API.md).
 
+## Phần ghép từ NepAoPrj
+
+- `GET/POST /ai/**` chuyển tiếp các API catalog, quiz, stylist, evaluate, review,
+  recommendations và remix tới AI service qua `AI_SERVICE_URL`. Các route admin/dev
+  không mở qua proxy này.
+- `POST /api/shared-looks` nhận một object có `state` và trả `{ "id": "UUID" }`.
+  `GET /api/shared-looks/{id}` trả lại JSON đã lưu, gồm bối cảnh, thẻ điểm và lời stylist.
+  Payload giới hạn 64 KiB UTF-8; migration `V6__shared_looks.sql` tạo bảng JSONB riêng.
+  API `/api/looks` hiện có tiếp tục dùng định dạng lựa chọn của frontend PROMPTxPTIT.
+- Đặt `WEB_ROOT` tới bản build `frontend/dist` để Spring phục vụ React và các route SPA.
+  Ví dụ từ `backend`: `$env:WEB_ROOT = (Resolve-Path ../frontend/dist).Path` trước khi
+  chạy `./gradlew.bat bootRun`. API và asset không tồn tại vẫn trả 404.
+
+Code vẫn nằm trong `src/main/java`, migration trong `src/main/resources/db/migration`;
+AI và dữ liệu của nó nằm ở `../ai-service`, không có backend/AI service lồng nhau.
+
 ## Chạy bằng Docker
 
 Cần Docker Compose, mạng để tải image/dependency và khóa OpenWeather/Gemini.
@@ -73,6 +89,37 @@ offline trong môi trường hiện tại. Chưa kiểm chứng nâng cấp lên
 [Thông tin tương thích chính thức](https://docs.spring.io/spring-boot/3.5/system-requirements.html).
 
 ## Dữ liệu và giới hạn hiện tại
+
+### Dữ liệu tập trung trong PostgreSQL
+
+Flyway V7–V11 lưu đủ catalog nam/nữ (86 món), 8 câu hỏi, cấu hình chấm điểm,
+checklist, luật AI, thẻ văn hóa và 4 prompt vào các bảng backend. `asset_files`
+lưu cả metadata và byte gốc của toàn bộ `frontend/public` và `assets` (1.848 file
+ở bộ dữ liệu hiện tại). Import không chỉnh sửa file nguồn và chạy lại không tạo bản trùng.
+
+Từ thư mục gốc, chạy `start-all.ps1`: backend chạy migration, import asset,
+rồi AI kết nối cùng PostgreSQL và frontend tải `/api/data/bootstrap`.
+`/figure/**` phục vụ byte từ database; `/api/assets/**` dùng đường dẫn tương đối
+để lấy cả file nguồn. `/api/data/assets` trả manifest, không trả byte ảnh trong JSON.
+
+```powershell
+& ai-service/.venv/Scripts/python.exe -X utf8 backend/import_data.py --assets
+& ai-service/.venv/Scripts/python.exe -X utf8 backend/import_data.py --audit
+```
+
+Audit chỉ đọc, đếm mọi bảng ngoài schema hệ thống, đối chiếu SHA-256 của byte
+trong DB với metadata và file nguồn; báo cáo ở `.tools/database-audit.json`.
+Bảng giao dịch như `looks` có thể trống trên database mới, audit sẽ báo đúng
+tình trạng đó và không tạo bản phối giả để lấp bảng.
+
+V11 thay các URL 404 hoặc dẫn sai bài bằng 7 nguồn bài viết được kiểm tra ngày
+09/10/2026; danh mục ở `/api/data/documents/cultural.sources`. Nội dung giới thiệu
+được đối chiếu theo nguồn. URL và nội dung cũ được giữ trong các cột `original_*`
+để tra cứu. Nguồn bối cảnh trang phục không xác nhận toàn bộ gợi ý phối đồ:
+API warning có `sourceVerified` và `sourceNote` để biểu đạt giới hạn này.
+
+Các ghi chú về seed V1/V2 bên dưới mô tả dữ liệu ban đầu; bộ hiện tại đã được
+bổ sung bằng các migration sau. Không sửa checksum của migration đã chạy.
 
 Flyway V1 tạo 11 bảng, ràng buộc khóa ngoại/unique/check và index.
 V2 seed 5 trang phục, 7 màu, 5 phong cách, 5 sự kiện và 4 phụ kiện.

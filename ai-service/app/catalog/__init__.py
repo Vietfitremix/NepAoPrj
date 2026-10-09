@@ -1,6 +1,6 @@
 """Giữ catalog đang dùng và cho phép nạp lại khi Spring Boot cập nhật dữ liệu."""
 from .catalog import Catalog
-from .sources import load_from_json, load_from_postgres
+from .sources import load_from_json, load_from_postgres, load_centralized_postgres
 
 
 class CatalogStore:
@@ -10,7 +10,12 @@ class CatalogStore:
         self._catalog: Catalog | None = None
 
     async def reload(self) -> Catalog:
-        if self._pool is not None:
+        if self._pool is not None and self._settings.catalog_database_url:
+            self._catalog = await load_centralized_postgres(self._pool)
+            self._settings.prompt_templates = self._catalog.prompt_templates
+            from app.ai.prompts import load_prompt
+            load_prompt.cache_clear()
+        elif self._pool is not None:
             self._catalog = await load_from_postgres(self._pool, self._settings.data_dir)
         else:
             self._catalog = load_from_json(self._settings.data_dir)

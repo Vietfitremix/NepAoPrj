@@ -51,7 +51,8 @@ def evaluate(o: OutfitState, rules: list[dict], ctx: Intent | None = None) -> li
     hits = [r for r in rules if matches(r["when"], o, ctx)]
     evals = [
         Evaluation(id=r["id"], level=r["level"], reason=r["reason"],
-                   suggestion=Suggestion(**r["suggestion"]), sources=r.get("sources", []))
+                   suggestion=Suggestion(**r["suggestion"]), sources=r.get("sources", []),
+                   sourceVerified=bool(r.get("verified", False)), sourceNote=r.get("sourceNote", ""))
         for r in hits
     ]
     return sorted(evals, key=lambda e: LEVEL_ORDER[e.level])

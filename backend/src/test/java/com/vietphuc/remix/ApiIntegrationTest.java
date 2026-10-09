@@ -58,7 +58,7 @@ class ApiIntegrationTest {
         mvc.perform(get("/api/reference-data")).andExpect(status().isOk())
             .andExpect(jsonPath("$.styles",hasSize(5))).andExpect(jsonPath("$.events",hasSize(5)));
         mvc.perform(get("/api/outfits/AO_DAI/cultural-knowledge")).andExpect(status().isOk())
-            .andExpect(jsonPath("$",hasSize(3)));
+            .andExpect(jsonPath("$",hasSize(6)));
     }
     @Test void unknownResourcesAndBadRequests() throws Exception {
         mvc.perform(get("/api/outfits/NOPE")).andExpect(status().isNotFound());
@@ -79,6 +79,27 @@ class ApiIntegrationTest {
             .andExpect(status().isOk()).andExpect(jsonPath("$.score").value(nullValue()))
             .andExpect(jsonPath("$.level").value("INSUFFICIENT_DATA"))
             .andExpect(jsonPath("$.missingCategories",hasSize(5)));
+    }
+    @Test void fullWardrobeIsCheckedAndSameScoreIsPersisted() throws Exception {
+        var request=(com.fasterxml.jackson.databind.node.ObjectNode)mapper.readTree(SELECTION);
+        request.set("wardrobe",mapper.readTree("""
+            {"character":"female","selection":{"shirt":"jade","pants":"ivory","shoes":"dep-crocs",
+            "accessories":{"headphones":"tai-nghe"},"styles":{"shirt":{"color":"#765a94"}}}}
+            """));
+        when(ai.culturalScore(any())).thenReturn(mapper.readTree("""
+            {"score":72,"level":"WARNING","breakdown":{"structure":80,"garmentCharacteristics":65,
+            "accessories":70,"context":75,"modernRemix":60},"warnings":[],"missingCategories":[],
+            "explanation":"Checked full wardrobe"}
+            """));
+        mvc.perform(post("/api/cultural-score").contentType("application/json").content(request.toString()))
+            .andExpect(status().isOk()).andExpect(jsonPath("$.score").value(72));
+        var saved=mvc.perform(post("/api/looks").contentType("application/json").content(request.toString()))
+            .andExpect(status().isCreated()).andExpect(jsonPath("$.culturalScore").value(72)).andReturn();
+        long id=mapper.readTree(saved.getResponse().getContentAsString()).path("id").asLong();
+        mvc.perform(get("/api/looks/"+id)).andExpect(jsonPath("$.culturalScore").value(72));
+        verify(ai,times(2)).culturalScore(argThat(value -> value instanceof com.vietphuc.remix.dto.request.LookSelection l
+            && l.wardrobe().path("selection").path("styles").path("shirt").path("color").asText().equals("#765a94")
+            && l.wardrobe().path("selection").path("accessories").path("headphones").asText().equals("tai-nghe")));
     }
     private void rule(ScoreCategory category,TargetType target,String code,int modifier,RuleType type) {
         CulturalRule r=new CulturalRule();
