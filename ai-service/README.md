@@ -11,6 +11,8 @@ Mặc định AI đọc catalog, quiz, thang điểm, checklist, luật, thẻ v
 `GET /ai/health` trả `catalogSource: json`. Tuỳ chọn: đặt `AI_CATALOG_SOURCE=postgres` khi chạy
 `start-all.ps1` (hoặc đặt URI PostgreSQL vào `CATALOG_DATABASE_URL` trong `.env`, không dùng URL `jdbc:`)
 để AI đọc cùng dữ liệu từ database của backend; khi đó phải giữ JSON và SQL đồng bộ.
+Sau merge, chạy backend để Flyway áp dụng V16 rồi khởi động lại AI: V16 bổ sung
+R40–R50, điểm thưởng màu yêu thích và 4 prompt mới, giữ nguồn tham khảo từ V11.
 Cache và nhật ký runtime dùng bộ nhớ.
 
 Windows với psycopg async cần SelectorEventLoop:

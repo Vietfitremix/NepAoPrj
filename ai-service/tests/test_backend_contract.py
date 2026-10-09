@@ -164,10 +164,10 @@ def test_wardrobe_review_returns_comment_tip_and_score_card(backend_client):
 import pytest
 
 
-def score_of(client, character='female', shirt='jade', pants='ivory', shoes=None, event='TET', style='TRADITIONAL', acc=None):
+def score_of(client, character='female', shirt='jade', pants='ivory', shoes=None, event='TET', style='TRADITIONAL', acc=None, styles=None):
     payload = dict(outfitCode='AO_DAI', colorCode='RED', styleCode=style, eventCode=event, accessories=[],
                    wardrobe=dict(character=character, selection=dict(shirt=shirt, pants=pants, shoes=shoes,
-                                 accessories=acc or {}, styles={})))
+                                 accessories=acc or {}, styles=styles or {})))
     res = client.post('/ai/wardrobe-score', json=payload)
     assert res.status_code == 200, res.text
     return res.json()
@@ -188,7 +188,11 @@ def test_missing_bottom_is_scored_low(backend_client):
 def test_wide_or_straight_trousers_stay_suitable(backend_client):
     assert score_of(backend_client, pants='ivory')['score'] >= 70
     assert score_of(backend_client, 'male', 'teal', 'wide-charcoal')['score'] >= 70
-    assert score_of(backend_client, 'male', 'teal', 'slim-black')['score'] < score_of(backend_client, 'male', 'teal', 'wide-charcoal')['score']
+    # Compare shape at the same color so harmony cannot mask the slim-trouser penalty.
+    styles = {'pants': {'color': '#4c4b4e'}}
+    wide = score_of(backend_client, 'male', 'teal', 'wide-charcoal', styles=styles)
+    slim = score_of(backend_client, 'male', 'teal', 'slim-black', styles=styles)
+    assert slim['score'] < wide['score']
 
 
 def test_sandals_are_penalised_by_occasion(backend_client):
@@ -238,3 +242,35 @@ def test_review_accepts_modern_items_missing_from_catalog(backend_client):
     assert res.status_code == 200, res.text
     assert res.json()['verdict'] == 'chua_hop' and res.json()['current']['scoreCard']['total'] <= 45
 
+
+
+@pytest.mark.parametrize('pants,expected_hex', [
+    ('wide-charcoal', '#4c4b4e'),
+    ('slim-black', '#202021'),
+    ('cropped-olive', '#6a6851'),
+    ('shorts-khaki', '#c3ae97'),
+])
+def test_male_trouser_harmony_uses_original_artwork_color(backend_client, pants, expected_hex):
+    from app.engine.color import score_pair
+
+    result = score_of(backend_client, 'male', 'teal', pants)
+    expected_harmony = score_pair('#397c78', expected_hex).score
+    assert f'màu quần/váy {expected_hex}' in result['explanation']
+    assert f'Hài hòa màu {expected_harmony}/100' in result['explanation']
+
+
+def test_custom_trouser_color_overrides_original_color(backend_client):
+    from app.engine.color import score_pair
+
+    payload = wardrobe_payload()
+    payload['wardrobe']['character'] = 'male'
+    payload['wardrobe']['selection'].update(shirt='teal', pants='wide-charcoal', styles={})
+    original = backend_client.post('/ai/wardrobe-score', json=payload)
+    assert original.status_code == 200, original.text
+    payload['wardrobe']['selection']['styles'] = {'pants': {'color': '#765a94'}}
+    recolored = backend_client.post('/ai/wardrobe-score', json=payload)
+    assert recolored.status_code == 200, recolored.text
+    assert 'màu quần/váy #765a94' in recolored.json()['explanation']
+    expected_harmony = score_pair('#397c78', '#765a94').score
+    assert f'Hài hòa màu {expected_harmony}/100' in recolored.json()['explanation']
+    assert recolored.json()['explanation'] != original.json()['explanation']

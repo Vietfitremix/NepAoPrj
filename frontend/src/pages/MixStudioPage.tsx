@@ -48,7 +48,14 @@ export default function MixStudioPage() {
     return()=>controller.abort();
   },[retry]);
   useEffect(()=>{
-    if(!config)return;
+    if(!config?.wardrobe || !outfits)return;
+    const normalized=configureWardrobe(config,config.wardrobe.selection,config.wardrobe.character,outfits);
+    if(JSON.stringify(normalized)!==key)update({mix:normalized});
+  },[key,outfits]);
+  useEffect(()=>{
+    if(!config || !outfits)return;
+    // Restore old selections before asking the API to validate or score them.
+    if(config.wardrobe && JSON.stringify(configureWardrobe(config,config.wardrobe.selection,config.wardrobe.character,outfits))!==key)return;
     const controller=new AbortController();setChecking(true);setScoreError('');
     const timer=setTimeout(()=>{
       getCulturalScore(config,controller.signal).then(value=>{if(!controller.signal.aborted)setScore({key,value});})
@@ -56,7 +63,7 @@ export default function MixStudioPage() {
         .finally(()=>{if(!controller.signal.aborted)setChecking(false);});
     },450);
     return()=>{clearTimeout(timer);controller.abort();};
-  },[key,scoreRetry]);
+  },[key,scoreRetry,outfits]);
   if(!config)return <main className="page-container nepao-page"><EmptyState title="Chọn một concept để bắt đầu mix">Bản phối chưa có trong phiên này. Hãy tạo concept để khám phá Mix Studio.</EmptyState></main>;
   const outfit=outfits?.find(item=>item.code===config.outfitCode);
   const wardrobe=config.wardrobe || initialWardrobe(config,session.preferences?.character || 'female');

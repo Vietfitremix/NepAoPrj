@@ -14,7 +14,8 @@
       "sy": 0.64,
       "thumbnail": "pants/ivory/thumbnail.png",
       "category": "pants",
-      "reference": "assets/wardrobe/male/pants/ivory/source/reference.png"
+      "reference": "assets/wardrobe/male/pants/ivory/source/reference.png",
+      "gender": "unisex"
     },
     {
       "id": "long-navy",
@@ -28,7 +29,8 @@
       "sy": 1,
       "sourcePrepared": true,
       "category": "pants",
-      "reference": "assets/wardrobe/male/pants/long-navy/source/reference.png"
+      "reference": "assets/wardrobe/male/pants/long-navy/source/reference.png",
+      "gender": "male"
     },
     {
       "id": "shorts-khaki",
@@ -42,7 +44,8 @@
       "sy": 1,
       "sourcePrepared": true,
       "category": "pants",
-      "reference": "assets/wardrobe/male/pants/shorts-khaki/source/reference.png"
+      "reference": "assets/wardrobe/male/pants/shorts-khaki/source/reference.png",
+      "gender": "male"
     },
     {
       "id": "cropped-olive",
@@ -56,7 +59,8 @@
       "sy": 1,
       "sourcePrepared": true,
       "category": "pants",
-      "reference": "assets/wardrobe/male/pants/cropped-olive/source/reference.png"
+      "reference": "assets/wardrobe/male/pants/cropped-olive/source/reference.png",
+      "gender": "male"
     },
     {
       "id": "slim-black",
@@ -70,7 +74,8 @@
       "sy": 1,
       "sourcePrepared": true,
       "category": "pants",
-      "reference": "assets/wardrobe/male/pants/slim-black/source/reference.png"
+      "reference": "assets/wardrobe/male/pants/slim-black/source/reference.png",
+      "gender": "male"
     },
     {
       "id": "wide-charcoal",
@@ -84,7 +89,8 @@
       "sy": 1,
       "sourcePrepared": true,
       "category": "pants",
-      "reference": "assets/wardrobe/male/pants/wide-charcoal/source/reference.png"
+      "reference": "assets/wardrobe/male/pants/wide-charcoal/source/reference.png",
+      "gender": "male"
     }
   ],
   "shoes": [
@@ -109,7 +115,8 @@
       ],
       "thumbnail": "shoes/loafers/thumbnail.png",
       "category": "shoes",
-      "reference": "assets/wardrobe/male/shoes/loafers/source/reference.png"
+      "reference": "assets/wardrobe/male/shoes/loafers/source/reference.png",
+      "gender": "male"
     },
     {
       "id": "sneakers",
@@ -132,7 +139,8 @@
       ],
       "thumbnail": "shoes/sneakers/thumbnail.png",
       "category": "shoes",
-      "reference": "assets/wardrobe/male/shoes/sneakers/source/reference.png"
+      "reference": "assets/wardrobe/male/shoes/sneakers/source/reference.png",
+      "gender": "unisex"
     },
     {
       "id": "guoc",
@@ -148,7 +156,8 @@
       "sx": 1,
       "sy": 1,
       "crops": [],
-      "coversFeet": false
+      "coversFeet": false,
+      "gender": "unisex"
     },
     {
       "id": "hai-theu",
@@ -164,7 +173,8 @@
       "sx": 1,
       "sy": 1,
       "crops": [],
-      "coversFeet": true
+      "coversFeet": true,
+      "gender": "unisex"
     },
     {
       "id": "giay-bup-be",
@@ -180,7 +190,8 @@
       "sx": 1,
       "sy": 1,
       "crops": [],
-      "coversFeet": true
+      "coversFeet": true,
+      "gender": "female"
     },
     {
       "id": "giay-ta",
@@ -196,7 +207,8 @@
       "sx": 1,
       "sy": 1,
       "crops": [],
-      "coversFeet": true
+      "coversFeet": true,
+      "gender": "male"
     },
     {
       "id": "giay-the-thao",
@@ -212,7 +224,8 @@
       "sx": 1,
       "sy": 1,
       "crops": [],
-      "coversFeet": true
+      "coversFeet": true,
+      "gender": "unisex"
     },
     {
       "id": "dep-crocs",
@@ -229,7 +242,8 @@
       "sx": 1,
       "sy": 1,
       "crops": [],
-      "coversFeet": false
+      "coversFeet": false,
+      "gender": "unisex"
     },
     {
       "id": "dep-le",
@@ -246,7 +260,8 @@
       "sx": 1,
       "sy": 1,
       "crops": [],
-      "coversFeet": false
+      "coversFeet": false,
+      "gender": "unisex"
     }
   ],
   "outfits": [
@@ -261,7 +276,8 @@
       "sy": 0.75,
       "thumbnail": "shirts/navy/thumbnail.png",
       "category": "shirts",
-      "reference": "assets/wardrobe/male/shirts/navy/source/reference.png"
+      "reference": "assets/wardrobe/male/shirts/navy/source/reference.png",
+      "gender": "unisex"
     },
     {
       "id": "burgundy",
@@ -274,7 +290,8 @@
       "sy": 0.68,
       "thumbnail": "shirts/burgundy/thumbnail.png",
       "category": "shirts",
-      "reference": "assets/wardrobe/male/shirts/burgundy/source/reference.png"
+      "reference": "assets/wardrobe/male/shirts/burgundy/source/reference.png",
+      "gender": "unisex"
     },
     {
       "id": "teal",
@@ -287,7 +304,8 @@
       "sy": 0.72,
       "thumbnail": "shirts/teal/thumbnail.png",
       "category": "shirts",
-      "reference": "assets/wardrobe/male/shirts/teal/source/reference.png"
+      "reference": "assets/wardrobe/male/shirts/teal/source/reference.png",
+      "gender": "unisex"
     },
     {
       "id": "tu-than",
@@ -835,7 +853,8 @@
       ],
       "thumbnail": "shirts/tu-than/thumbnail.png",
       "category": "shirts",
-      "reference": "assets/wardrobe/male/shirts/tu-than/source/reference.png"
+      "reference": "assets/wardrobe/male/shirts/tu-than/source/reference.png",
+      "gender": "female"
     },
     {
       "id": "ngu-than",
@@ -1383,7 +1402,8 @@
       ],
       "thumbnail": "shirts/ngu-than/thumbnail.png",
       "category": "shirts",
-      "reference": "assets/wardrobe/male/shirts/ngu-than/source/reference.png"
+      "reference": "assets/wardrobe/male/shirts/ngu-than/source/reference.png",
+      "gender": "unisex"
     },
     {
       "id": "nhat-binh",
@@ -1931,7 +1951,8 @@
       ],
       "thumbnail": "shirts/nhat-binh/thumbnail.png",
       "category": "shirts",
-      "reference": "assets/wardrobe/male/shirts/nhat-binh/source/reference.png"
+      "reference": "assets/wardrobe/male/shirts/nhat-binh/source/reference.png",
+      "gender": "female"
     },
     {
       "id": "ba-ba",
@@ -2479,7 +2500,8 @@
       ],
       "thumbnail": "shirts/ba-ba/thumbnail.png",
       "category": "shirts",
-      "reference": "assets/wardrobe/male/shirts/ba-ba/source/reference.png"
+      "reference": "assets/wardrobe/male/shirts/ba-ba/source/reference.png",
+      "gender": "unisex"
     }
   ],
   "accessories": [
@@ -2498,7 +2520,8 @@
       "sy": 1,
       "slot": "headwear",
       "offsetY": -200,
-      "rearViews": []
+      "rearViews": [],
+      "gender": "unisex"
     },
     {
       "id": "non-quai-thao",
@@ -2515,7 +2538,8 @@
       "sy": 1,
       "slot": "headwear",
       "offsetY": -200,
-      "rearViews": []
+      "rearViews": [],
+      "gender": "female"
     },
     {
       "id": "khan-van",
@@ -2532,7 +2556,8 @@
       "sy": 1,
       "slot": "headwear",
       "offsetY": -200,
-      "rearViews": []
+      "rearViews": [],
+      "gender": "unisex"
     },
     {
       "id": "khan-mo-qua",
@@ -2549,7 +2574,8 @@
       "sy": 1,
       "slot": "headwear",
       "offsetY": -200,
-      "rearViews": []
+      "rearViews": [],
+      "gender": "female"
     },
     {
       "id": "khan-xep",
@@ -2566,7 +2592,8 @@
       "sy": 1,
       "slot": "headwear",
       "offsetY": -200,
-      "rearViews": []
+      "rearViews": [],
+      "gender": "male"
     },
     {
       "id": "hoa-cai-toc",
@@ -2585,7 +2612,8 @@
       "offsetY": 0,
       "rearViews": [
         "left"
-      ]
+      ],
+      "gender": "female"
     },
     {
       "id": "tui-coi",
@@ -2604,7 +2632,8 @@
       "offsetY": 0,
       "rearViews": [
         "left"
-      ]
+      ],
+      "gender": "unisex"
     },
     {
       "id": "quat-giay",
@@ -2623,7 +2652,8 @@
       "offsetY": 0,
       "rearViews": [
         "right"
-      ]
+      ],
+      "gender": "unisex"
     },
     {
       "id": "kieng-bac",
@@ -2640,7 +2670,8 @@
       "sy": 1,
       "slot": "necklace",
       "offsetY": 0,
-      "rearViews": []
+      "rearViews": [],
+      "gender": "female"
     },
     {
       "id": "bong-tai",
@@ -2657,7 +2688,8 @@
       "sy": 1,
       "slot": "earrings",
       "offsetY": 0,
-      "rearViews": []
+      "rearViews": [],
+      "gender": "female"
     },
     {
       "id": "vong-tay",
@@ -2676,7 +2708,8 @@
       "offsetY": 0,
       "rearViews": [
         "left"
-      ]
+      ],
+      "gender": "female"
     },
     {
       "id": "tai-nghe",
@@ -2693,7 +2726,8 @@
       "sy": 1,
       "slot": "headphones",
       "offsetY": 0,
-      "rearViews": []
+      "rearViews": [],
+      "gender": "unisex"
     },
     {
       "id": "mu-luoi-trai",
@@ -2710,7 +2744,8 @@
       "sy": 1,
       "slot": "headwear",
       "offsetY": -200,
-      "rearViews": []
+      "rearViews": [],
+      "gender": "unisex"
     },
     {
       "id": "moc-khoa-bong",
@@ -2727,7 +2762,8 @@
       "sy": 1,
       "slot": "bagCharm",
       "offsetY": 0,
-      "rearViews": []
+      "rearViews": [],
+      "gender": "unisex"
     },
     {
       "id": "ba-lo",
@@ -2747,7 +2783,8 @@
       "rearViews": [
         "left",
         "right"
-      ]
+      ],
+      "gender": "unisex"
     },
     {
       "id": "tui-tote",
@@ -2766,7 +2803,8 @@
       "offsetY": 0,
       "rearViews": [
         "left"
-      ]
+      ],
+      "gender": "unisex"
     },
     {
       "id": "tui-deo-cheo",
@@ -2785,7 +2823,8 @@
       "offsetY": 0,
       "rearViews": [
         "left"
-      ]
+      ],
+      "gender": "unisex"
     },
     {
       "id": "kinh-ram",
@@ -2804,7 +2843,8 @@
       "offsetY": 0,
       "rearViews": [
         "back"
-      ]
+      ],
+      "gender": "unisex"
     },
     {
       "id": "day-xich-hong",
@@ -2821,7 +2861,8 @@
       "sy": 1,
       "slot": "hipChain",
       "offsetY": 0,
-      "rearViews": []
+      "rearViews": [],
+      "gender": "unisex"
     },
     {
       "id": "gang-tay-ho-ngon",
@@ -2838,7 +2879,8 @@
       "sy": 1,
       "slot": "gloves",
       "offsetY": 0,
-      "rearViews": []
+      "rearViews": [],
+      "gender": "unisex"
     },
     {
       "id": "mu-cao-boi",
@@ -2855,7 +2897,8 @@
       "sy": 1,
       "slot": "headwear",
       "offsetY": -200,
-      "rearViews": []
+      "rearViews": [],
+      "gender": "unisex"
     },
     {
       "id": "tui-xach-thoi-trang",
@@ -2874,7 +2917,8 @@
       "offsetY": 0,
       "rearViews": [
         "left"
-      ]
+      ],
+      "gender": "unisex"
     }
   ]
 }

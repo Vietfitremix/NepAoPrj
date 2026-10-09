@@ -7,13 +7,13 @@ import {colorizePixels,normalizeGarmentStyles,wardrobePatterns} from '../src/uti
 
 test('accessories, colours and patterns survive storage and rotation while clothes change',()=>{
  for(const gender of ['male','female']){
-  const c=getWardrobe(gender),accessories=Object.fromEntries(accessorySlots.map(({id})=>[id,c.accessories.find(item=>item.slot===id).id]));
+  const c=getWardrobe(gender),accessories=Object.fromEntries(accessorySlots.map(({id})=>[id,c.accessories.find(item=>item.slot===id)?.id??null]));
   const selection={shirt:c.outfits[0].id,pants:c.pants[0].id,shoes:'giay-the-thao',accessories,styles:{shirt:{color:'#B52838',pattern:'canh-dao-xuan'},pants:{color:'#24242a',pattern:null},shoes:{color:'#32679e',pattern:null}}};
   const normalized=readMaleSelection(JSON.stringify(selection),gender);
   assert.equal(normalized.styles.shirt.color,'#b52838');assert.deepEqual(normalized.accessories,accessories);
   const replaced=normalizeMaleSelection({...normalized,shirt:c.outfits[1].id},gender);
   assert.deepEqual(replaced.styles,normalized.styles);assert.deepEqual(replaced.accessories,accessories);
-  assert.equal(selectedAccessories(replaced,gender).length,accessorySlots.length);
+  assert.equal(selectedAccessories(replaced,gender).length,Object.values(accessories).filter(Boolean).length);
   for(const view of ['front','left','right','back']){
    const files=selectedWardrobeItems(replaced,gender).map(item=>directionalGarmentFile(item.file,view));
    // Test layer order with original texture; style pixels are checked separately.

@@ -92,6 +92,13 @@ offline trong môi trường hiện tại. Chưa kiểm chứng nâng cấp lên
 
 ### Dữ liệu tập trung trong PostgreSQL
 
+Migration `V16__sync_merged_ai_catalog.sql` bổ sung các luật R40–R50 sau merge,
+đồng bộ điểm thưởng màu yêu thích và 4 prompt với bản AI hiện tại. Các nguồn và
+ghi chú phạm vi kiểm chứng của V11 được giữ nguyên. Sau khi backend chạy migration,
+khởi động lại AI nếu dùng `AI_CATALOG_SOURCE=postgres` để nạp luật và prompt mới.
+V13/V14 bổ sung màu và quần cho stylist; V15 giữ phạm vi giới tính của tủ đồ.
+Không sửa checksum hay xóa lịch sử migration để nhận cập nhật này.
+
 Flyway V7–V11 lưu đủ catalog nam/nữ (86 món), 8 câu hỏi, cấu hình chấm điểm,
 checklist, luật AI, thẻ văn hóa và 4 prompt vào các bảng backend. `asset_files`
 lưu cả metadata và byte gốc của toàn bộ `frontend/public` và `assets` (1.848 file

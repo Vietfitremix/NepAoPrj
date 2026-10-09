@@ -9,6 +9,7 @@ export default function WardrobeControls({ character, selection, onChange, disab
   onChange: (selection: MaleSelection, character: WardrobeCharacter) => void; disabled?: boolean;
 }) {
   const catalog=getWardrobe(character);
+  const bottomLabel=character==='female'?'quần / váy':'quần';
   const choose=(patch:Partial<MaleSelection>)=>onChange({...selection,...patch},character);
   const style=(slot:GarmentStyleSlot,patch:GarmentStyle)=>choose({styles:{...selection.styles,[slot]:{...selection.styles?.[slot],...patch}}});
   function itemCard(item:WardrobeItem,group:string,selected:boolean,pick:()=>void) {
@@ -36,24 +37,24 @@ export default function WardrobeControls({ character, selection, onChange, disab
   }
   const groups:{slot:GarmentStyleSlot;label:string;items:WardrobeItem[];empty?:string}[]=[
     {slot:'shirt',label:'Áo / Trang phục',items:catalog.outfits},
-    {slot:'pants',label:'Quần / Váy',items:catalog.pants,empty:'Không phối quần / váy'},
+    {slot:'pants',label:character==='female'?'Quần / Váy':'Quần',items:catalog.pants,empty:character==='female'?'Không phối quần / váy':'Không phối quần'},
     {slot:'shoes',label:'Giày / Dép',items:catalog.shoes,empty:'Đi chân trần'},
   ];
   const slots=accessorySlots.filter(slot=>catalog.accessories.some(item=>item.slot===slot.id));
   return <div className="mix-wardrobe">
-    <ChoiceGroup label="Người mẫu" options={[{code:'female',label:'Nữ'},{code:'male',label:'Nam'}]} value={character}
+    <ChoiceGroup label="Tủ đồ theo giới tính" options={[{code:'female',label:'Nữ'},{code:'male',label:'Nam'}]} value={character}
       disabled={disabled} onChange={value=>{
         const next=value as WardrobeCharacter;
         onChange(normalizeMaleSelection(selection,next),next);
       }}/>
-    <p className="form-note">Tủ đồ {character==='male'?'nam':'nữ'}: {catalog.outfits.length} áo, {catalog.pants.length} quần/váy, {catalog.shoes.length} giày/dép và {catalog.accessories.length} phụ kiện. Mỗi vị trí phối một món.</p>
+    <p className="form-note">Tủ đồ {character==='male'?'nam':'nữ'}: {catalog.outfits.length} áo, {catalog.pants.length} {bottomLabel}, {catalog.shoes.length} giày/dép và {catalog.accessories.length} phụ kiện. Mỗi vị trí phối một món.</p>
     {groups.map(group=><details className="wardrobe-catalog-group" key={group.slot} open>
       <summary>{group.label}<span>{group.items.length} món</span></summary>
       <div className="wardrobe-item-grid" role="group" aria-label={`Chọn ${group.label.toLowerCase()}`}>
         {group.items.map(item=>itemCard(item,group.slot,selection[group.slot]===item.id,()=>choose({[group.slot]:item.id})))}
       </div>
       {group.empty&&<button type="button" className="text-button wardrobe-clear" disabled={disabled} aria-pressed={!selection[group.slot]} onClick={()=>choose({[group.slot]:null})}>{group.empty}</button>}
-      {styles(group.slot,group.slot==='shirt'?'áo':group.slot==='pants'?'quần / váy':'giày')}
+      {styles(group.slot,group.slot==='shirt'?'áo':group.slot==='pants'?bottomLabel:'giày')}
     </details>)}
     <h3 className="wardrobe-accessory-heading">Phụ kiện</h3>
     {slots.map(slot=><details className="wardrobe-catalog-group" key={slot.id}>

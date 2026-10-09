@@ -10,7 +10,7 @@ const anchors={
   hands:[{x:253,y:728,width:63,height:135},{x:710,y:728,width:60,height:135}],
   wrists:[{x:260,y:728,width:42,height:16},{x:720,y:728,width:32,height:16}],
 };
-const item=id=>getWardrobe('female').accessories.find(item=>item.id===id);
+const item=id=>getWardrobe(id==='khan-xep'?'male':'female').accessories.find(item=>item.id===id);
 test('every accessory has finite geometry for both characters in all four views',()=>{
   for(const gender of ['male','female'])for(const accessory of getWardrobe(gender).accessories)
     for(const view of ['front','left','right','back']){

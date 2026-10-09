@@ -4,10 +4,11 @@ import {existsSync} from 'node:fs';
 import {getWardrobe, maleLayers, normalizeMaleSelection, readMaleSelection, selectionKey} from '../src/utils/maleWardrobe.ts';
 import {fittedShirtMesh,fitBodyPoint} from '../src/utils/renderMaleCharacter.ts';
 
-test('both wardrobes contain all five garment families and separate asset roots',()=>{
+test('wardrobes contain gender-appropriate garment families and separate asset roots',()=>{
  for(const gender of ['male','female']){
   const c=getWardrobe(gender);
-  for(const id of ['tu-than','ngu-than','nhat-binh','ba-ba'])assert.ok(c.outfits.some(x=>x.id===id));
+  for(const id of ['ngu-than','ba-ba',...(gender==='female'?['tu-than','nhat-binh']:[])])assert.ok(c.outfits.some(x=>x.id===id));
+  if(gender==='male')assert.ok(!c.outfits.some(x=>['tu-than','nhat-binh'].includes(x.id)));
   assert.ok(c.outfits.some(x=>['navy','jade'].includes(x.id)));
   for(const file of [c.base,...c.outfits.map(x=>x.file),...c.pants.map(x=>x.file),...c.shoes.map(x=>x.file)])
    assert.ok(existsSync(new URL('../public/figure/'+gender+'-layers/'+file,import.meta.url)),file);

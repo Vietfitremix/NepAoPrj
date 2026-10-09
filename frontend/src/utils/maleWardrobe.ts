@@ -21,6 +21,7 @@ export const accessorySlots = [
 export type AccessorySlot = typeof accessorySlots[number]['id'];
 export interface WardrobeItem {
  id:string; name:string; detail:string; file:string; thumbnail:string; category:string; reference:string;
+ gender?:WardrobeCharacter | 'unisex';
  x?:number; y?:number; sx?:number; sy?:number; sourcePrepared?:boolean; offsetY?:number;
  mapY?:number[][]; sleeveX?:number; sleeveDx?:number;
  fitRows?:{y:number;points:number[][]}[]; slot?:AccessorySlot; rearViews?:string[]; coversFeet?:boolean; footbedClipY?:number;
@@ -29,9 +30,14 @@ export interface WardrobeCatalog {
  width:number; height:number; base:string; outfits:WardrobeItem[]; pants:WardrobeItem[];
  shoes:(WardrobeItem & {crops:number[][]})[]; accessories:WardrobeItem[];
 }
+function genderWardrobe(catalog:WardrobeCatalog,character:WardrobeCharacter):WardrobeCatalog {
+ const allowed=(item:WardrobeItem)=>!item.gender || item.gender==='unisex' || item.gender===character;
+ return {...catalog,outfits:catalog.outfits.filter(allowed),pants:catalog.pants.filter(allowed),
+  shoes:catalog.shoes.filter(allowed),accessories:catalog.accessories.filter(allowed)};
+}
 const wardrobes:Record<WardrobeCharacter,WardrobeCatalog> = {
- male:male as WardrobeCatalog,
- female:female as WardrobeCatalog,
+ male:genderWardrobe(male as WardrobeCatalog,'male'),
+ female:genderWardrobe(female as WardrobeCatalog,'female'),
 };
 export let maleWardrobe = wardrobes.male;
 export function setWardrobeCatalogs(value:Record<WardrobeCharacter,WardrobeCatalog>) {
@@ -41,7 +47,7 @@ export function setWardrobeCatalogs(value:Record<WardrobeCharacter,WardrobeCatal
     !['outfits','pants','shoes','accessories'].every(key=>Array.isArray(catalog[key as keyof WardrobeCatalog])))
    throw new Error('Dữ liệu tủ đồ trên máy chủ chưa đầy đủ.');
  }
- wardrobes.male=value.male;wardrobes.female=value.female;maleWardrobe=wardrobes.male;
+ wardrobes.male=genderWardrobe(value.male,'male');wardrobes.female=genderWardrobe(value.female,'female');maleWardrobe=wardrobes.male;
 }
 export const maleAssetRoot = '/figure/male-layers/';
 export const maleSelectionKey = 'viet-fit-male-outfit';

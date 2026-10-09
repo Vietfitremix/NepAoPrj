@@ -202,7 +202,7 @@ export default function MaleStudioPage({ initialCharacter }: { initialCharacter?
         {showingBase&&<div className="character-view-note">Bạn đang xem dáng nhân vật nền ở 4 hướng. Chọn áo, quần hoặc giày để mặc trang phục ở mọi góc nhìn 3D.
           <button type="button" className="text-button" disabled={exporting} onClick={()=>{setSelection(initialSelection(character));setBaseViewMode(false);}}>Mặc lại bộ đồ</button>
         </div>}
-        <h3 className="male-wardrobe-category">Nhân vật</h3>
+        <h3 className="male-wardrobe-category">Tủ đồ theo giới tính</h3>
         <div className="chips character-options" role="group" aria-label="Chọn nhân vật">
           {characters.map(item => <button key={item.id} className={`chip ${character === item.id ? 'selected' : ''}`} aria-pressed={character === item.id} disabled={!images || exporting} onClick={() => chooseCharacter(normalizeCharacter(item.id))}>{item.name}</button>)}
         </div>
@@ -245,7 +245,7 @@ export default function MaleStudioPage({ initialCharacter }: { initialCharacter?
         {styleControls('shoes','giày',!!selection.shoes)}
         </div>
         <div hidden={tab!=='acc'}>
-        {accessorySlots.map(slot=>{const chosen=maleWardrobe.accessories.find(x=>x.id===selection.accessories?.[slot.id]);return <details key={slot.id} className="acc-slot" open={!!chosen||undefined}>
+        {accessorySlots.filter(slot=>maleWardrobe.accessories.some(item=>item.slot===slot.id)).map(slot=>{const chosen=maleWardrobe.accessories.find(x=>x.id===selection.accessories?.[slot.id]);return <details key={slot.id} className="acc-slot" open={!!chosen||undefined}>
           <summary><span>{slot.name}</span><small>{chosen?chosen.name:'Chưa chọn'}</small></summary>
           <div className="male-outfit-options" role="group" aria-label={`Chọn ${slot.name.toLowerCase()}`}>
             {maleWardrobe.accessories.filter(item=>item.slot===slot.id).map(item=><button key={item.id} type="button" className={`male-outfit-card ${selection.accessories?.[slot.id]===item.id?'selected':''}`} aria-pressed={selection.accessories?.[slot.id]===item.id} disabled={!images || exporting} onClick={()=>chooseAccessory(slot.id,item.id)}>

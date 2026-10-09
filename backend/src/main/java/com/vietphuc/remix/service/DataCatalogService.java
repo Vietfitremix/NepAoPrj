@@ -34,8 +34,8 @@ public class DataCatalogService {
             ObjectNode catalog=(ObjectNode)document("wardrobe."+character).deepCopy();
             for(String category:List.of("outfits","pants","shoes","accessories")) {
                 Map<String,JsonNode> items=new LinkedHashMap<>();
-                jdbc.query("SELECT item_key,metadata::text FROM wardrobe_items WHERE character=? AND category=? ORDER BY item_key",
-                    rs->{items.put(rs.getString(1),parse(rs.getString(2)));},character,category);
+                jdbc.query("SELECT item_key,metadata::text,gender_scope FROM wardrobe_items WHERE character=? AND category=? AND (gender_scope='unisex' OR gender_scope=?) ORDER BY item_key",
+                    rs->{items.put(rs.getString(1),((ObjectNode)parse(rs.getString(2))).put("gender",rs.getString(3)));},character,category,character);
                 ArrayNode ordered=mapper.createArrayNode();
                 for(JsonNode original:catalog.path(category)) {
                     JsonNode item=items.remove(original.path("id").asText());

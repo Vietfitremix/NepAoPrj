@@ -24,15 +24,62 @@ class DataCatalogIntegrationTest {
 
     @Test void fullWardrobesAndEightQuestionsComeFromDatabase() throws Exception {
         mvc.perform(get("/api/data/bootstrap")).andExpect(status().isOk())
-            .andExpect(jsonPath("$.wardrobes.male.outfits",hasSize(7)))
+            .andExpect(jsonPath("$.wardrobes.male.outfits",hasSize(5)))
             .andExpect(jsonPath("$.wardrobes.female.outfits",hasSize(6)))
-            .andExpect(jsonPath("$.wardrobes.male.accessories",hasSize(22)))
+            .andExpect(jsonPath("$.wardrobes.male.accessories",hasSize(16)))
+            .andExpect(jsonPath("$.wardrobes.female.accessories",hasSize(21)))
+            .andExpect(jsonPath("$.wardrobes.male.shoes",hasSize(8)))
+            .andExpect(jsonPath("$.wardrobes.female.shoes",hasSize(8)))
             .andExpect(jsonPath("$.quiz",hasSize(8)))
             .andExpect(jsonPath("$.quiz[7].options",hasSize(9)));
         mvc.perform(get("/api/data/documents/ai.scoring")).andExpect(status().isOk())
             .andExpect(jsonPath("$.criteria",hasSize(5)));
         mvc.perform(get("/api/data/documents/ai.rules")).andExpect(status().isOk())
-            .andExpect(jsonPath("$",hasSize(23)));
+            .andExpect(jsonPath("$",hasSize(34)));
+    }
+    @Test void mergedAiRulesScoringAndPromptsAreAvailableFromDatabase() throws Exception {
+        var mapper=new com.fasterxml.jackson.databind.ObjectMapper();
+        var rules=mapper.readTree(mvc.perform(get("/api/data/documents/ai.rules"))
+            .andExpect(status().isOk()).andReturn().getResponse().getContentAsString(StandardCharsets.UTF_8));
+        for(var rule:rules) {
+            String metadata=jdbc.queryForObject("SELECT metadata::text FROM ai_cultural_rules WHERE rule_key=? AND active=TRUE",String.class,rule.path("id").asText());
+            assertEquals(rule,parseStoredJson(metadata),rule.path("id").asText());
+        }
+        for(var entry:java.util.Map.of("R40",35,"R41",35,"R42",40,"R45",45).entrySet()) {
+            var rule=parseStoredJson(jdbc.queryForObject("SELECT metadata::text FROM ai_cultural_rules WHERE rule_key=?",String.class,entry.getKey()));
+            assertEquals(entry.getValue().intValue(),rule.path("cap").asInt());
+            assertFalse(rule.path("verified").asBoolean());
+            assertFalse(rule.path("sourceNote").asText().isBlank());
+        }
+        var existing=parseStoredJson(jdbc.queryForObject("SELECT metadata::text FROM ai_cultural_rules WHERE rule_key='R01'",String.class));
+        assertTrue(existing.path("sources").get(0).asText().startsWith("https://dsvh.gov.vn/"));
+        mvc.perform(get("/api/data/documents/ai.scoring")).andExpect(status().isOk())
+            .andExpect(jsonPath("$.rankBonus.preferredColor").value(20));
+        String select=parseStoredJson(jdbc.queryForObject("SELECT payload::text FROM data_documents WHERE data_key='prompt.select'",String.class)).path("template").asText();
+        String review=parseStoredJson(jdbc.queryForObject("SELECT payload::text FROM data_documents WHERE data_key='prompt.review'",String.class)).path("template").asText();
+        assertTrue(select.contains("3 KIỂU ÁO KHÁC NHAU"));
+        assertTrue(review.contains("KHÔNG khen vòng vo"));
+    }
+    private com.fasterxml.jackson.databind.JsonNode parseStoredJson(String raw) throws Exception {
+        var mapper=new com.fasterxml.jackson.databind.ObjectMapper();
+        var value=mapper.readTree(raw);
+        // H2's PostgreSQL mode returns a JSON string around the stored document.
+        return value.isTextual()?mapper.readTree(value.asText()):value;
+    }
+    @Test void genderSpecificItemsAreFilteredAndSharedItemsRemainAvailable() throws Exception {
+        var json=new com.fasterxml.jackson.databind.ObjectMapper().readTree(
+            mvc.perform(get("/api/data/bootstrap")).andReturn().getResponse().getContentAsString(StandardCharsets.UTF_8));
+        for(String character:List.of("male","female")) {
+            for(String category:List.of("outfits","pants","shoes","accessories")) {
+                for(var item:json.path("wardrobes").path(character).path(category))
+                    assertTrue(List.of("unisex",character).contains(item.path("gender").asText()),character+"/"+item.path("id"));
+            }
+            var accessories=json.path("wardrobes").path(character).path("accessories");
+            assertTrue(java.util.stream.StreamSupport.stream(accessories.spliterator(),false)
+                .anyMatch(item->item.path("id").asText().equals("tai-nghe")));
+        }
+        // Filtering does not delete the source items or their metadata.
+        assertEquals(86L,jdbc.queryForObject("SELECT COUNT(*) FROM wardrobe_items",Long.class));
     }
     @Test void everyNewCatalogTableHasItsSeedData() {
         for(String table:List.of("data_documents","wardrobe_items","ai_catalog_entries","ai_cultural_rules",

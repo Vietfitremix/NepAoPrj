@@ -52,6 +52,8 @@ Log khởi động được lưu trong `.tools/ai.*.log`, `.tools/backend.*.log`
 `.tools/frontend.*.log`. Script import asset sau migration (ảnh người mẫu nằm trong PostgreSQL). AI mặc định đọc luật, 8 câu hỏi,
 thang điểm, checklist và prompt từ tệp `ai-service/data/*.json` và `ai-service/prompts/`; muốn AI đọc từ database
 thì đặt `AI_CATALOG_SOURCE=postgres` trong `.env`. Chi tiết import/audit: [backend/README.md](backend/README.md).
+Sau merge, Flyway V16 đồng bộ 34 luật AI, thang điểm và prompt mới vào PostgreSQL.
+Khởi động lại backend trước rồi AI để AI nạp dữ liệu mới; không sửa migration đã chạy.
 `CORS_ALLOWED_ORIGINS` mặc định cho phép giao diện ở `http://localhost:5173`
 và bản preview ở `http://localhost:5176`; nếu dùng URL khác, thêm URL đó vào `.env`.
 Để dừng toàn bộ các tiến trình:

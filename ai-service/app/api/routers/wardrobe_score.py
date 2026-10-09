@@ -41,7 +41,10 @@ SHIRTS = {'navy': 'ao_dai', 'burgundy': 'ao_dai', 'teal': 'ao_dai', 'jade': 'ao_
           'tu-than': 'ao_tu_than', 'ngu-than': 'ao_ngu_than', 'nhat-binh': 'nhat_binh', 'ba-ba': 'ao_ba_ba'}
 ORIGINAL = {'navy': '#23415b', 'burgundy': '#8b2635', 'teal': '#397c78', 'jade': '#39705b', 'rose': '#de91aa',
             'ivory': '#eee9dc', 'skirt-long-ivory': '#eee9dc', 'long-black': '#24242a',
-            'long-navy': '#23415b', 'skirt-short-navy': '#23415b', 'shorts-denim': '#32679e'}
+            'long-navy': '#23415b', 'skirt-short-navy': '#23415b', 'shorts-denim': '#32679e',
+            # Mean RGB of opaque pixels (alpha >= 230) in the original front sprites.
+            'wide-charcoal': '#4c4b4e', 'slim-black': '#202021',
+            'cropped-olive': '#6a6851', 'shorts-khaki': '#c3ae97'}
 ITEMS = {'sneakers': 'sneaker', 'flats': 'giay_bup_be', 'tui-coi': 'tui', 'quat-giay': 'quat_giay',
          'bong-tai': 'trang_suc', 'vong-tay': 'trang_suc'}
 CATEGORIES = {'cau_truc': 'STRUCTURE', 'dac_trung': 'GARMENT_CHARACTERISTICS', 'phu_kien': 'ACCESSORIES',
