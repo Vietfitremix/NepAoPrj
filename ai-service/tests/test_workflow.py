@@ -100,8 +100,9 @@ def test_gemini_selects_three(client, fake_gemini):
 def test_weather_rules_apply_only_with_context(client):
     with_rain = client.post("/ai/evaluate", json={"state": STATE, "context": RAIN}).json()
     without = client.post("/ai/evaluate", json={"state": STATE}).json()
-    assert {"R20", "R24"} <= ids(with_rain["evaluations"])
-    assert not ({"R20", "R24"} & ids(without["evaluations"]))
+    assert {"R61", "R24"} <= ids(with_rain["evaluations"])
+    assert "R20" not in ids(with_rain["evaluations"])
+    assert not ({"R20", "R61", "R24"} & ids(without["evaluations"]))
 
 
 def test_pattern_validation_and_rule(client):
@@ -123,8 +124,12 @@ def test_role_rule(client):
 def test_review_verdict_changes_with_context(client):
     rain = client.post("/ai/review", json={"state": STATE, "context": RAIN}).json()
     mild = client.post("/ai/review", json={"state": STATE, "context": MILD}).json()
-    assert rain["verdict"] == "nen_chinh" and rain["verdictText"] == "Nên chỉnh 2 điểm"
-    assert mild["verdict"] == "hop" and mild["verdictText"] == "Hợp bối cảnh"
+    assert rain["verdict"] == "nen_chinh"
+    rain_issues = [e for e in rain['current']['evaluations'] if e['level'] != 'ok']
+    mild_issues = [e for e in mild['current']['evaluations'] if e['level'] != 'ok']
+    assert len(rain_issues) > len(mild_issues)
+    assert {"R61", "R24"} <= ids(rain['current']['evaluations'])
+    assert not {"R61", "R24"} & ids(mild['current']['evaluations'])
     assert rain["current"]["comment"] != mild["current"]["comment"]
 
 

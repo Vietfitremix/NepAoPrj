@@ -3,9 +3,11 @@ import type { MixConfig, QuizAnswer } from '../types';
 import type { ChecklistTips, CultureCardData, ReviewNote, ScoreCardData } from '../utils/lookbook';
 import { getWardrobe, normalizeMaleSelection, selectedWardrobeItems } from '../utils/maleWardrobe';
 import type { MaleSelection, WardrobeCharacter } from '../utils/maleWardrobe';
+import { reviewContext } from '../utils/outfitContext';
+export { reviewContext } from '../utils/outfitContext';
 
 export interface WardrobeReview {
-  verdict: 'hop' | 'nen_chinh'; verdictText: string; source: string;
+  verdict: 'hop' | 'nen_chinh' | 'chua_hop'; verdictText: string; source: string;
   current: { title: string; comment: string; tip: string; scoreCard?: ScoreCardData | null; color?: { score: number; note: string } };
 }
 async function aiFetch<T>(path: string, body?: unknown, signal?: AbortSignal): Promise<T> {
@@ -14,10 +16,6 @@ async function aiFetch<T>(path: string, body?: unknown, signal?: AbortSignal): P
   return r.json() as Promise<T>;
 }
 /** Bối cảnh từ bộ câu hỏi (thời tiết, nơi mặc, buổi, vai trò) để lời nhận xét bám đúng hoàn cảnh. */
-export function reviewContext(answers?: Record<string, QuizAnswer>) {
-  const pick = (id: string) => { const v = answers?.[id]?.value; return typeof v === 'string' ? v : undefined; };
-  return Object.fromEntries(Object.entries({ weather: pick('weather'), setting: pick('setting'), timeOfDay: pick('timeOfDay'), role: pick('role') }).filter(([, v]) => v));
-}
 export function wardrobeReview(config: MixConfig, answers?: Record<string, QuizAnswer>, signal?: AbortSignal) {
   const w = config.wardrobe;
   const names = w ? Object.fromEntries(selectedWardrobeItems(normalizeMaleSelection(w.selection, w.character), w.character).map(i => [i.id, i.name])) : {};

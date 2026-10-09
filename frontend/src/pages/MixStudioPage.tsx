@@ -19,6 +19,7 @@ import CulturalScore from '../components/cultural/CulturalScore';
 import { configureWardrobe, initialWardrobe } from '../utils/mixWardrobe';
 import type { MaleSelection, WardrobeCharacter } from '../utils/maleWardrobe';
 import { events } from './StylistPage';
+import { reviewContext } from '../utils/outfitContext';
 
 export default function MixStudioPage() {
   const {conceptId}=useParams();
@@ -38,6 +39,8 @@ export default function MixStudioPage() {
   const [error,setError]=useState('');
   const [remixResult,setRemixResult]=useState<WardrobeRemix>();
   const key=JSON.stringify(config);
+  const contextKey=JSON.stringify(reviewContext(session.preferences?.answers));
+  const scoreKey=key+contextKey;
   const latestKey=useRef(key);latestKey.current=key;
   const active=useRef(true);
   useEffect(()=>{active.current=true;return()=>{active.current=false;};},[]);
@@ -58,12 +61,12 @@ export default function MixStudioPage() {
     if(config.wardrobe && JSON.stringify(configureWardrobe(config,config.wardrobe.selection,config.wardrobe.character,outfits))!==key)return;
     const controller=new AbortController();setChecking(true);setScoreError('');
     const timer=setTimeout(()=>{
-      getCulturalScore(config,controller.signal).then(value=>{if(!controller.signal.aborted)setScore({key,value});})
+      getCulturalScore(config,controller.signal,session.preferences?.answers).then(value=>{if(!controller.signal.aborted)setScore({key:scoreKey,value});})
         .catch(err=>{if(!controller.signal.aborted)setScoreError(errorMessage(err));})
         .finally(()=>{if(!controller.signal.aborted)setChecking(false);});
     },450);
     return()=>{clearTimeout(timer);controller.abort();};
-  },[key,scoreRetry,outfits]);
+  },[key,contextKey,scoreRetry,outfits]);
   if(!config)return <main className="page-container nepao-page"><EmptyState title="Chọn một concept để bắt đầu mix">Bản phối chưa có trong phiên này. Hãy tạo concept để khám phá Mix Studio.</EmptyState></main>;
   const outfit=outfits?.find(item=>item.code===config.outfitCode);
   const wardrobe=config.wardrobe || initialWardrobe(config,session.preferences?.character || 'female');
@@ -91,10 +94,10 @@ export default function MixStudioPage() {
     finally{if(active.current)setBusy('');}
   }
   async function generate(){
-    if(!config || busy || checking || score?.key!==key)return;
+    if(!config || busy || checking || score?.key!==scoreKey)return;
     setBusy('generate');setError('');
     try{
-      const look=await createLook(config);
+      const look=await createLook(config,session.preferences?.answers);
       if(!look.id)throw new Error('Máy chủ chưa trả về mã look. Vui lòng thử lại.');
       if(active.current)navigate(`/look/${encodeURIComponent(look.id)}`);
     }catch(err){if(active.current)setError(errorMessage(err));}
@@ -116,7 +119,7 @@ export default function MixStudioPage() {
           <ChoiceGroup label="Bối cảnh" options={events} value={config.eventCode} onChange={eventCode=>change({eventCode})} disabled={!!busy}/>
           <p className="form-note">Cultural Check tự cập nhật theo bản phối: áo, màu tự chọn, quần/váy, giày, phụ kiện, họa tiết và bối cảnh. Các món hiện đại được xét theo phong cách bạn chọn.</p>
         </section>
-        <CulturalScore result={score?.key===key?score.value:undefined} busy={checking || (!scoreError && score?.key!==key)} error={scoreError}
+        <CulturalScore result={score?.key===scoreKey?score.value:undefined} busy={checking || (!scoreError && score?.key!==scoreKey)} error={scoreError}
           retry={()=>setScoreRetry(value=>value+1)} apply={changes=>{update({mix:applyChanges(config,changes)});setRemixResult(undefined);setError('');}} disabled={!!busy}/>
       </div>
       <form className="remix-bar" onSubmit={doRemix}><Sparkles size={22}/><label className="sr-only" htmlFor="remix">Yêu cầu AI remix</label>
@@ -126,7 +129,7 @@ export default function MixStudioPage() {
       {remixResult&&<RemixPanel result={remixResult} disabled={!!busy} onPick={option=>{chooseWardrobe(option.selection,wardrobe.character);setRemixResult(undefined);}}/>}
       {error&&<ErrorBox message={error}/>}
       <div className="generate-row"><p>Bản phối đã đúng chất bạn?<br/><span>Tạo look để lưu lại và chia sẻ câu chuyện của mình.</span></p>
-        <button className="button primary" onClick={generate} disabled={!!busy || checking || !!scoreError || score?.key!==key}>{busy==='generate'?'Đang tạo look…':'Generate look'}<ArrowRight size={19}/></button>
+        <button className="button primary" onClick={generate} disabled={!!busy || checking || !!scoreError || score?.key!==scoreKey}>{busy==='generate'?'Đang tạo look…':'Generate look'}<ArrowRight size={19}/></button>
       </div>
     </>}
   </main>;

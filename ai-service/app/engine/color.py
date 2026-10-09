@@ -76,5 +76,19 @@ def score_colors(o: OutfitState, catalog) -> ColorScore:
     # màu điểm nhấn chỉ tính khi có phụ kiện dùng màu này (khăn, quai nón, hài, túi...)
     head_acc = any(catalog.accessories.get(a, {}).get("usesAccent", catalog.accessories.get(a, {}).get("slot") in ("head", "hair"))
                    for a in o.accessories)
-    accent = catalog.color_hex(o.colors.accent) if (o.colors.accent and head_acc) else None
-    return score_pair(catalog.color_hex(o.colors.main), catalog.color_hex(o.colors.bottom), accent)
+    accent = o.colorHex.get("accent") or (catalog.color_hex(o.colors.accent) if (o.colors.accent and head_acc) else None)
+    return score_pair(o.colorHex.get("main") or catalog.color_hex(o.colors.main),
+                      o.colorHex.get("bottom") or catalog.color_hex(o.colors.bottom), accent)
+
+
+def color_metrics(o: OutfitState, catalog, score: int) -> dict:
+    """Measured color properties; clothing material and fit cannot be inferred from these."""
+    if o.bottom == "khong":
+        return {}
+    main = hex_to_oklch(o.colorHex.get("main") or catalog.color_hex(o.colors.main))
+    bottom = hex_to_oklch(o.colorHex.get("bottom") or catalog.color_hex(o.colors.bottom))
+    return {"colorHarmony": score, "lightnessContrast": abs(main[0] - bottom[0]),
+            "mainLightness": main[0], "bottomLightness": bottom[0],
+            "mainChroma": main[1], "bottomChroma": bottom[1],
+            "saturatedCount": sum(c[1] > .18 for c in (main, bottom)),
+            "neutralCount": sum(c[1] < NEUTRAL_CHROMA for c in (main, bottom))}

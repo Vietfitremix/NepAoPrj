@@ -24,6 +24,7 @@ def _clamp(v: float) -> int:
 def score_card(o: OutfitState, evals: list[Evaluation], color_score: int, catalog) -> ScoreCard:
     cfg = catalog.scoring
     pts = cfg["levelPoints"]
+    rule_by_id = {r["id"]: r for r in catalog.rules}
     crit_of = {r["id"]: r.get("criterion", DEFAULT_CRITERION) for r in catalog.rules}
     by_crit: dict[str, list[Evaluation]] = {}
     for e in evals:
@@ -40,7 +41,7 @@ def score_card(o: OutfitState, evals: list[Evaluation], color_score: int, catalo
         cid, hits = c["id"], by_crit.get(c["id"], [])
         adj = 0
         for e in hits:
-            p = pts[e.level]
+            p = rule_by_id.get(e.id, {}).get("points", pts[e.level])
             if cid == "cach_tan" and e.level == "consider" and rs.get("softConsider"):
                 p = round(p / 3)                       # người chọn gu hiện đại: cách tân chỉ trừ nhẹ
             adj += p

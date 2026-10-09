@@ -5,7 +5,7 @@ from pydantic import BaseModel, ConfigDict, Field
 
 from app.api.deps import client_ip, get_service
 from app.catalog.backend_bridge import EVENTS, STYLES, native_catalog, nearest_color
-from app.engine.color import score_pair
+from app.engine.color import color_metrics, score_colors
 from app.engine.rules import evaluate
 from app.engine.scoring import score_card
 from app.models import Colors, Intent, OutfitState
@@ -36,6 +36,7 @@ class ScoreRequest(BaseModel):
     eventCode: str
     accessories: list[str] = Field(max_length=10)
     wardrobe: Wardrobe
+    context: Intent | None = None
 
 SHIRTS = {'navy': 'ao_dai', 'burgundy': 'ao_dai', 'teal': 'ao_dai', 'jade': 'ao_dai', 'rose': 'ao_dai',
           'tu-than': 'ao_tu_than', 'ngu-than': 'ao_ngu_than', 'nhat-binh': 'nhat_binh', 'ba-ba': 'ao_ba_ba'}
@@ -46,7 +47,7 @@ ORIGINAL = {'navy': '#23415b', 'burgundy': '#8b2635', 'teal': '#397c78', 'jade':
             'wide-charcoal': '#4c4b4e', 'slim-black': '#202021',
             'cropped-olive': '#6a6851', 'shorts-khaki': '#c3ae97'}
 ITEMS = {'sneakers': 'sneaker', 'flats': 'giay_bup_be', 'tui-coi': 'tui', 'quat-giay': 'quat_giay',
-         'bong-tai': 'trang_suc', 'vong-tay': 'trang_suc'}
+         'bong-tai': 'bong_tai', 'vong-tay': 'vong_tay'}
 CATEGORIES = {'cau_truc': 'STRUCTURE', 'dac_trung': 'GARMENT_CHARACTERISTICS', 'phu_kien': 'ACCESSORIES',
               'boi_canh': 'CONTEXT', 'cach_tan': 'MODERN_REMIX'}
 
@@ -93,8 +94,20 @@ def build_state(body: ScoreRequest, svc) -> Built | None:
     state = OutfitState(garment=garment, gender='nam' if body.wardrobe.character == 'male' else 'nu',
                         occasion=event, style=style, pattern=pattern.replace('-', '_'), accessories=accessories,
                         colors=Colors(main=nearest_color(main_hex, cat.colors), bottom=nearest_color(bottom_hex, cat.colors)),
+                        colorHex={'main': main_hex, 'bottom': bottom_hex, **({'accent': selection.styles['shoes'].color} if selection.shoes and selection.styles.get('shoes') and selection.styles['shoes'].color else {})},
                         bottom=BOTTOM_KIND.get(selection.pants) if selection.pants else 'khong',
                         shoes=SHOE_KIND.get(selection.shoes) if selection.shoes else 'khong')
+    # Register actual selected wardrobe items locally so review keeps all evidence.
+    # Slots are distinct for earrings/bracelets; never modify the shared catalog.
+    for item in [selection.shoes, *selection.accessories.values()]:
+        if not item:
+            continue
+        key = ITEMS.get(item, item.replace('-', '_'))
+        if key not in cat.accessories:
+            slot = 'feet' if item == selection.shoes else next((slot for slot, value in selection.accessories.items() if value == item), key)
+            cat.accessories[key] = {'id': key, 'name': item.replace('-', ' '), 'slot': slot, 'usesAccent': False}
+        else:
+            cat.accessories[key]['slot'] = 'feet' if item == selection.shoes else next((slot for slot, value in selection.accessories.items() if value == item), cat.accessories[key]['slot'])
     return Built(cat, selection, garment, event, style, main_hex, bottom_hex, accessories, pattern, state)
 
 
@@ -106,9 +119,9 @@ def wardrobe_score(body: ScoreRequest, svc=Depends(get_service)):
                     missingCategories=['STRUCTURE'], explanation='Chọn áo để kiểm tra đầy đủ bản phối.')
     cat, selection, garment, style = b.cat, b.selection, b.garment, b.style
     main_hex, bottom_hex, accessories, pattern, state = b.main_hex, b.bottom_hex, b.accessories, b.pattern, b.state
-    evaluations = evaluate(state, cat.rules)
-    shoe_color = selection.styles.get('shoes', Style()).color if selection.shoes else None
-    harmony = score_pair(main_hex, bottom_hex, shoe_color)
+    harmony = score_colors(state, cat)
+    metrics = color_metrics(state, cat, harmony.score)
+    evaluations = evaluate(state, cat.rules, body.context, metrics)
     card = score_card(state, evaluations, harmony.score, cat)
     breakdown_keys = ['structure', 'garmentCharacteristics', 'accessories', 'context', 'modernRemix']
     values = {c.id: c.score for c in card.criteria}
@@ -136,6 +149,14 @@ def wardrobe_score(body: ScoreRequest, svc=Depends(get_service)):
     level = 'WELL_PRESERVED' if card.total >= 90 else 'SUITABLE' if card.total >= 75 else 'WARNING' if card.total >= 60 else 'HIGH_RISK'
     return dict(score=card.total, level=level, breakdown=dict(zip(breakdown_keys, (values[c] for c in CATEGORIES))),
                 warnings=warnings, missingCategories=[],
+                checks=[dict(ruleId=e.id, title=by_id[e.id].get('title', e.reason), category=CATEGORIES[by_id[e.id]['criterion']],
+                             level=e.level, points=by_id[e.id].get('points', cat.scoring['levelPoints'][e.level]),
+                             reason=e.reason, suggestion=e.suggestion.text, sourceUrl=e.sources[0] if e.sources else None,
+                             sourceVerified=e.sourceVerified, sourceNote=e.sourceNote) for e in evaluations],
+                assessment=dict(ruleCount=len(cat.rules), matchedRuleCount=len(evaluations),
+                                contextUsed={k: getattr(body.context, k) for k in ('weather', 'setting', 'timeOfDay', 'role') if body.context and getattr(body.context, k)},
+                                missingContext=[k for k in ('weather', 'setting', 'timeOfDay', 'role') if not body.context or not getattr(body.context, k)],
+                                colorMetrics={k: round(v, 4) for k, v in metrics.items()}),
                 explanation=f"Đã kiểm tra {cat.name('garments', garment)}; phụ kiện: {', '.join(cat.name('accessories', a).replace('_', ' ') for a in accessories) or 'không có'}; màu áo {main_hex}, màu quần/váy {bottom_hex}. Hài hòa màu {harmony.score}/100. {harmony.note} Điểm theo quy tắc phối đồ tham khảo.")
 
 
@@ -151,15 +172,14 @@ async def wardrobe_review(body: ReviewBody, request: Request, svc=Depends(get_se
     b = build_state(body, svc)
     if b is None:
         raise HTTPException(422, 'Chọn áo để stylist nhận xét.')
-    if not svc.catalog.garments:                      # chế độ BACKEND_COMPAT_ONLY: catalog gốc để trống → dùng bản JSON của AI
-        class _Fixed:
-            def get(self, _cat=native_catalog(svc.catalog)):
-                return _cat
-        svc = copy(svc); svc.catalogs = _Fixed()
-    # Món hiện đại chưa có trong catalog (dép Crocs, tai nghe, ba lô…) không đưa vào state để khỏi bị từ chối, nhưng vẫn báo cho stylist biết
-    wardrobe_ids = [i for i in [b.selection.shoes, *b.selection.accessories.values()] if i]
-    unknown = [body.names.get(i, i) for i in wardrobe_ids if ITEMS.get(i, i.replace('-', '_')) not in b.cat.accessories]
-    state = b.state.model_copy(update={'accessories': [a for a in b.state.accessories if a in b.cat.accessories]})
-    extra = f"Bạn còn mặc/đeo: {', '.join(unknown)}." if unknown else None
-    res = await svc.review(state, body.context, extra, ip=client_ip(request))
+    class _Fixed:
+        def get(self):
+            return b.cat
+    svc = copy(svc)
+    svc.catalogs = _Fixed()
+    for item, name in body.names.items():
+        key = ITEMS.get(item, item.replace('-', '_'))
+        if key in b.cat.accessories:
+            b.cat.accessories[key]['name'] = name
+    res = await svc.review(b.state, body.context, None, ip=client_ip(request))
     return dict(verdict=res['verdict'], verdictText=res['verdictText'], source=res['source'], current=res['current'])

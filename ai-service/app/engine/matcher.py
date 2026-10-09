@@ -7,7 +7,7 @@ Mọi hàm đều chấm luật kèm bối cảnh (thời tiết, nơi, buổi, 
 """
 from app.models import Colors, Intent, OutfitState
 
-from .color import score_colors
+from .color import color_metrics, score_colors
 from .scoring import rank_bonus, score_card
 from .outfit_check import apply_patch
 from .rules import evaluate
@@ -30,8 +30,8 @@ def score_outfit(o: OutfitState, catalog, intent: Intent | None = None):
 
     Điểm xếp hạng = tổng 5 tiêu chí (engine/scoring.py, đã gồm điểm màu và mức luật) + thưởng khớp mong muốn
     (phong cách, màu thích, kiểu áo — giữ từ cách chấm cũ)."""
-    evals = evaluate(o, catalog.rules, intent)
     color = score_colors(o, catalog)
+    evals = evaluate(o, catalog.rules, intent, color_metrics(o, catalog, color.score))
     card = score_card(o, evals, color.score, catalog)
     return card.total + rank_bonus(o, intent, catalog), evals, color, card
 
@@ -124,8 +124,10 @@ def suggest_alternatives(o: OutfitState, catalog, ctx: Intent | None = None,
             continue
         alt = o.model_copy(deep=True)
         alt.colors.main = c
+        alt.colorHex.pop("main", None)
         if alt.colors.bottom == c:
             alt.colors.bottom = "trang_nga" if c != "trang_nga" else "den_tuyen"
+            alt.colorHex.pop("bottom", None)
         s = score_outfit(alt, catalog, ctx)[0]
         if s > base_score:
             options.append((s, alt, [f"Đổi màu chính sang {catalog.name('colors', c)}"]))

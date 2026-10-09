@@ -56,7 +56,8 @@ def test_tu_than_with_quan_ho_accessories_is_ok(catalog):
     o = OutfitState(garment="ao_tu_than", gender="nu", occasion="le_hoi_chua", style="truyen_thong",
                     colors={"main": "nau_dat", "bottom": "den_tuyen"}, accessories=["non_quai_thao", "khan_mo_qua"])
     ids = {r.id: r.level for r in evaluate(o, catalog.rules)}
-    assert ids.get("R34") == "ok" and ids.get("R01") == "ok"
+    assert ids.get("R96") == "ok"
+    assert "R34" not in ids and "R01" not in ids  # full set contributes once
 
 
 def test_new_accessory_keywords(catalog):

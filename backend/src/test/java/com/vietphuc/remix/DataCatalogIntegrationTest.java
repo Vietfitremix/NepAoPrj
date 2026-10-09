@@ -35,7 +35,7 @@ class DataCatalogIntegrationTest {
         mvc.perform(get("/api/data/documents/ai.scoring")).andExpect(status().isOk())
             .andExpect(jsonPath("$.criteria",hasSize(5)));
         mvc.perform(get("/api/data/documents/ai.rules")).andExpect(status().isOk())
-            .andExpect(jsonPath("$",hasSize(34)));
+            .andExpect(jsonPath("$",hasSize(80)));
     }
     @Test void mergedAiRulesScoringAndPromptsAreAvailableFromDatabase() throws Exception {
         var mapper=new com.fasterxml.jackson.databind.ObjectMapper();

@@ -1,146 +1,2981 @@
 [
-  {"id": "R01", "level": "ok", "criterion": "cau_truc",
-   "when": {"all": [{"garment": ["ao_tu_than"]}, {"hasAccessory": "non_quai_thao"}]},
-   "reason": "Bộ trang phục gắn với vùng Kinh Bắc",
-   "suggestion": {"text": "Đội thêm khăn mỏ quạ bên dưới nón, đeo kiềng bạc để trọn bộ quan họ"}, "sources": ["SRC01"], "verified": false},
-  {"id": "R07", "level": "consider", "criterion": "cach_tan",
-   "when": {"all": [{"garment": ["ao_ngu_than"]}, {"hasAccessory": "sneaker"}]},
-   "reason": "Cách tân chấp nhận được, nên giữ cổ đứng và 5 khuy",
-   "suggestion": {"text": "Chọn sneaker trắng trơn, giữ cổ đứng và đủ 5 khuy"}, "sources": ["SRC02"], "verified": false},
-  {"id": "R12", "level": "risk", "criterion": "boi_canh",
-   "when": {"all": [{"occasion": ["dam_cuoi", "tet"]}, {"allColorsIn": ["trang_nga", "trang_tinh"]}, {"hasAccessory": "khan_van"}]},
-   "reason": "Toàn màu trắng kèm khăn trắng gợi liên tưởng tang phục",
-   "suggestion": {"text": "Đổi màu chính sang đỏ son hoặc hồng đào",
-                  "patch": {"colors": {"main": "do_son", "bottom": "trang_nga"}}},
-   "sources": ["SRC03"], "verified": false},
-  {"id": "R15", "level": "consider", "criterion": "boi_canh",
-   "when": {"all": [{"garment": ["nhat_binh"]}, {"occasion": ["dao_pho"]}]},
-   "reason": "Vốn là lễ phục cung đình triều Nguyễn",
-   "suggestion": {"text": "Dạo phố nên chọn áo dài hoặc áo ngũ thân"}, "sources": ["SRC04"], "verified": false},
-
-  {"id": "R20", "level": "consider", "criterion": "boi_canh",
-   "when": {"all": [{"weather": ["mua"]}, {"hasAccessory": "guoc"}]},
-   "reason": "Trời mưa, guốc gỗ dễ trơn trượt và thấm nước",
-   "suggestion": {"text": "Đi giày kín mũi hoặc dép có đế bám thay cho guốc gỗ"}, "sources": [], "verified": false},
-  {"id": "R21", "level": "consider", "criterion": "boi_canh",
-   "when": {"all": [{"weather": ["nang_nong"]}, {"setting": ["ngoai_troi", "ca_hai"]}, {"garment": ["nhat_binh", "ao_tu_than", "ao_ngu_than"]}]},
-   "reason": "Áo nhiều lớp, mặc lâu ngoài trời nắng nóng dễ bí và ra mồ hôi",
-   "suggestion": {"text": "Chọn áo dài hoặc áo bà ba vải mỏng, hoặc hẹn chụp lúc sáng sớm, chiều muộn"}, "sources": [], "verified": false},
-  {"id": "R22", "level": "consider", "criterion": "boi_canh",
-   "when": {"all": [{"weather": ["nang_nong"]}, {"setting": ["ngoai_troi", "ca_hai"]}, {"mainColorIn": ["den_tuyen", "xanh_lam", "nau_dat", "tim_hue"]}]},
-   "reason": "Màu tối hấp nắng, mặc ngoài trời lúc nắng nóng sẽ nóng hơn",
-   "suggestion": {"text": "Đổi màu chính sang màu sáng như trắng ngà hoặc be kem",
-                  "patch": {"colors": {"main": "be_kem"}}}, "sources": [], "verified": false},
-  {"id": "R23", "level": "ok", "criterion": "boi_canh",
-   "when": {"all": [{"weather": ["lanh"]}, {"garment": ["ao_ngu_than", "nhat_binh", "ao_tu_than"]}]},
-   "reason": "Áo nhiều lớp, may dày, hợp với tiết trời se lạnh",
-   "suggestion": {"text": "Có thể mặc thêm áo lót giữ nhiệt bên trong"}, "sources": [], "verified": false},
-  {"id": "R24", "level": "consider", "criterion": "boi_canh",
-   "when": {"all": [{"weather": ["mua"]}, {"mainColorIn": ["trang_nga", "trang_tinh"]}]},
-   "reason": "Áo màu trắng gặp mưa dễ ướt, lộ và bám bẩn",
-   "suggestion": {"text": "Chọn màu đậm hơn như hồng đào hoặc xanh lam",
-                  "patch": {"colors": {"main": "hong_dao"}}}, "sources": [], "verified": false},
-  {"id": "R25", "level": "consider", "criterion": "boi_canh",
-   "when": {"all": [{"role": ["khach"]}, {"occasion": ["dam_cuoi"]}, {"garment": ["nhat_binh"]}]},
-   "reason": "Nhật bình là lễ phục rất trang trọng, khách dự cưới mặc dễ nổi bật hơn cô dâu",
-   "suggestion": {"text": "Khách nên chọn áo dài hoặc áo ngũ thân"}, "sources": [], "verified": false},
-  {"id": "R26", "level": "consider", "criterion": "boi_canh",
-   "when": {"all": [{"role": ["khach"]}, {"occasion": ["dam_cuoi"]}, {"mainColorIn": ["do_son"]}]},
-   "reason": "Màu đỏ thường dành cho cô dâu, khách mặc đỏ dễ trùng với nhân vật chính",
-   "suggestion": {"text": "Đổi sang hồng đào hoặc xanh lam",
-                  "patch": {"colors": {"main": "hong_dao"}}}, "sources": [], "verified": false},
-  {"id": "R27", "level": "ok", "criterion": "boi_canh",
-   "when": {"all": [{"role": ["nhan_vat_chinh"]}, {"occasion": ["dam_cuoi"]}, {"mainColorIn": ["do_son", "vang_hoang"]}]},
-   "reason": "Đỏ và vàng là sắc màu quen thuộc của lễ cưới truyền thống",
-   "suggestion": {"text": "Có thể thêm khăn vấn cùng tông để trọn bộ"}, "sources": [], "verified": false},
-  {"id": "R28", "level": "consider", "criterion": "cach_tan",
-   "when": {"all": [{"occasion": ["dam_cuoi", "le_hoi_chua"]}, {"pattern": ["cham_bi", "ke_soc"]}, {"style": ["truyen_thong"]}]},
-   "reason": "Hoạ tiết chấm bi, kẻ sọc mang nét hiện đại, khác tinh thần truyền thống bạn chọn",
-   "suggestion": {"text": "Đổi sang vải trơn hoặc hoa văn tròn",
-                  "patch": {"pattern": "hoa_van_tron"}}, "sources": [], "verified": false},
-  {"id": "R30", "level": "ok", "criterion": "cau_truc",
-   "when": {"all": [{"gender": ["nam"]}, {"garment": ["ao_ngu_than", "ao_dai"]}, {"hasAccessory": "khan_xep"}]},
-   "reason": "Khăn xếp đi cùng áo dài, áo ngũ thân là bộ lễ phục quen thuộc của nam giới",
-   "suggestion": {"text": "Chọn khăn cùng tông màu sẫm (đen, xanh lam) để tổng thể trang nhã"}, "sources": ["SRC05"], "verified": false},
-  {"id": "R31", "level": "consider", "criterion": "phu_kien",
-   "when": {"all": [{"garment": ["nhat_binh"]}, {"any": [{"hasAccessory": "sneaker"}, {"hasAccessory": "giay_bup_be"}]}]},
-   "reason": "Nhật bình là lễ phục, giày hiện đại làm giảm vẻ trang trọng",
-   "suggestion": {"text": "Đổi sang hài thêu hoặc guốc gỗ"}, "sources": ["SRC04"], "verified": false},
-  {"id": "R32", "level": "ok", "criterion": "phu_kien",
-   "when": {"all": [{"hasAccessory": "hai_theu"}, {"any": [{"garment": ["nhat_binh", "ao_ngu_than"]}, {"occasion": ["dam_cuoi"]}]}]},
-   "reason": "Hài thêu hợp với lễ phục và không khí lễ cưới",
-   "suggestion": {"text": "Chọn màu hài trùng màu điểm nhấn của khăn để đồng bộ"}, "sources": [], "verified": false},
-  {"id": "R33", "level": "consider", "criterion": "phu_kien",
-   "when": {"all": [{"hasAccessory": "non_quai_thao"}, {"garment": ["ao_dai", "ao_ba_ba"]}]},
-   "reason": "Nón quai thao gắn với áo tứ thân của liền chị quan họ, đi với áo dài hay bà ba dễ lệch tinh thần",
-   "suggestion": {"text": "Đổi sang nón lá, hoặc đổi áo sang áo tứ thân"}, "sources": ["SRC01"], "verified": false},
-  {"id": "R34", "level": "ok", "criterion": "phu_kien",
-   "when": {"all": [{"garment": ["ao_tu_than"]}, {"any": [{"hasAccessory": "khan_mo_qua"}, {"hasAccessory": "kieng_bac"}]}]},
-   "reason": "Khăn mỏ quạ, kiềng bạc là phụ kiện quen thuộc đi cùng áo tứ thân",
-   "suggestion": {"text": "Đi lễ hội có thể thêm nón quai thao; chụp ảnh trong nhà thì khăn mỏ quạ là đủ"}, "sources": ["SRC01"], "verified": false},
-  {"id": "R35", "level": "consider", "criterion": "boi_canh",
-   "when": {"all": [{"weather": ["mua"]}, {"hasAccessory": "quat_giay"}]},
-   "reason": "Quạt giấy gặp mưa dễ ướt, rách",
-   "suggestion": {"text": "Thay bằng túi cói hoặc để quạt cho buổi chụp trong nhà"}, "sources": [], "verified": false},
-  {"id": "R36", "level": "consider", "criterion": "boi_canh",
-   "when": {"all": [{"role": ["khach"]}, {"occasion": ["dam_cuoi"]}, {"pattern": ["phuong_hoang"]}]},
-   "reason": "Phượng hoàng thường là hoạ tiết áo cưới của cô dâu, khách mặc dễ trùng nhân vật chính",
-   "suggestion": {"text": "Khách dự cưới nên chọn cành đào, sen hoặc hạc và mai",
-                  "patch": {"pattern": "canh_dao"}}, "sources": [], "verified": false},
-  {"id": "R37", "level": "ok", "criterion": "dac_trung",
-   "when": {"all": [{"pattern": ["sen", "hoi_van", "hac_mai"]}, {"occasion": ["le_hoi_chua", "tet"]}]},
-   "reason": "Sen, hồi văn, hạc và mai là hoạ tiết truyền thống, hợp không khí lễ hội, ngày Tết",
-   "suggestion": {"text": "Giữ nền trơn một màu để hoạ tiết nổi bật"}, "sources": [], "verified": false},
-  {"id": "R38", "level": "ok", "criterion": "dac_trung",
-   "when": {"all": [{"gender": ["nam"]}, {"pattern": ["tung", "truc", "rong_may", "song_nuoc"]}]},
-   "reason": "Tùng, trúc, rồng, sóng nước là hoạ tiết quen thuộc trên áo nam, gợi khí chất vững vàng",
-   "suggestion": {"text": "Chọn nền xanh lam hoặc nâu đất để hoạ tiết vàng nổi bật"}, "sources": [], "verified": false},
-  {"id": "R39", "level": "ok", "criterion": "dac_trung",
-   "when": {"all": [{"pattern": ["mai_vang", "canh_dao"]}, {"occasion": ["tet"]}]},
-   "reason": "Mai vàng, hoa đào là hoa ngày Tết, hợp không khí du xuân",
-   "suggestion": {"text": "Kết hợp khăn vấn hoặc khăn xếp cùng tông với hoa"}, "sources": [], "verified": false},
-  {"id": "R40", "level": "risk", "criterion": "cau_truc", "cap": 35,
-   "when": {"all": [{"garment": ["ao_dai", "ao_ngu_than", "ao_tu_than", "nhat_binh", "ao_ba_ba"]}, {"bottom": ["quan_ngan"]}]},
-   "reason": "Quần đùi / quần ngắn không đi cùng áo truyền thống: tà áo dài phủ lên quần ngắn làm mất cấu trúc và dáng của bộ đồ",
-   "suggestion": {"text": "Đổi sang quần ống suông hoặc ống rộng, hoặc váy dài"}, "sources": [], "verified": false, "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc."},
-  {"id": "R41", "level": "risk", "criterion": "cau_truc", "cap": 35,
-   "when": {"all": [{"garment": ["ao_dai", "ao_ngu_than", "ao_tu_than", "nhat_binh", "ao_ba_ba"]}, {"bottom": ["vay_ngan"]}]},
-   "reason": "Váy ngắn không hợp với áo truyền thống: áo cần đi với quần hoặc váy dài tới mắt cá",
-   "suggestion": {"text": "Đổi sang quần ống suông / ống rộng hoặc váy dài"}, "sources": [], "verified": false, "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc."},
-  {"id": "R42", "level": "risk", "criterion": "cau_truc", "cap": 40,
-   "when": {"all": [{"garment": ["ao_dai", "ao_ngu_than", "ao_tu_than", "nhat_binh", "ao_ba_ba"]}, {"bottom": ["khong"]}]},
-   "reason": "Chưa phối quần hoặc váy: bộ trang phục truyền thống chưa hoàn chỉnh",
-   "suggestion": {"text": "Chọn quần ống suông, ống rộng hoặc váy dài cho bộ đồ"}, "sources": [], "verified": false, "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc."},
-  {"id": "R43", "level": "consider", "criterion": "cau_truc",
-   "when": {"all": [{"garment": ["ao_dai", "ao_ngu_than", "ao_tu_than", "nhat_binh"]}, {"bottom": ["quan_bo", "quan_lung"]}]},
-   "reason": "Quần ống bó hoặc quần lửng làm mất độ buông của tà áo; áo dài hợp quần ống suông hoặc ống rộng hơn",
-   "suggestion": {"text": "Đổi sang quần ống suông hoặc ống rộng"}, "sources": [], "verified": false, "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc."},
-  {"id": "R44", "level": "consider", "criterion": "cau_truc",
-   "when": {"all": [{"garment": ["ao_ba_ba"]}, {"bottom": ["quan_bo"]}]},
-   "reason": "Áo bà ba hợp quần ống rộng hoặc quần lửng thoải mái hơn là quần ống bó",
-   "suggestion": {"text": "Đổi sang quần ống rộng hoặc quần lửng"}, "sources": [], "verified": false, "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc."},
-  {"id": "R45", "level": "risk", "criterion": "boi_canh", "cap": 45,
-   "when": {"all": [{"garment": ["ao_dai", "ao_ngu_than", "ao_tu_than", "nhat_binh", "ao_ba_ba"]}, {"shoes": ["dep"]}, {"occasion": ["tet", "ky_yeu", "dam_cuoi", "le_hoi_chua"]}]},
-   "reason": "Dép lê / dép Crocs quá xuề xoà cho dịp trang trọng khi mặc áo truyền thống",
-   "suggestion": {"text": "Đổi sang hài thêu, giày búp bê hoặc guốc"}, "sources": [], "verified": false, "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc."},
-  {"id": "R46", "level": "consider", "criterion": "boi_canh",
-   "when": {"all": [{"garment": ["ao_dai", "ao_ngu_than", "ao_tu_than", "nhat_binh", "ao_ba_ba"]}, {"shoes": ["dep"]}, {"occasion": ["dao_pho"]}]},
-   "reason": "Dép lê / dép Crocs làm bộ áo truyền thống trông xuề xoà, mất sự chỉn chu",
-   "suggestion": {"text": "Đổi sang giày búp bê hoặc sneaker trắng trơn"}, "sources": [], "verified": false, "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc."},
-  {"id": "R47", "level": "consider", "criterion": "boi_canh",
-   "when": {"all": [{"garment": ["ao_dai", "ao_ngu_than", "ao_tu_than", "nhat_binh", "ao_ba_ba"]}, {"shoes": ["giay_the_thao"]}, {"occasion": ["dam_cuoi", "le_hoi_chua"]}]},
-   "reason": "Giày thể thao chưa hợp dịp trang trọng như cưới hỏi, đi chùa",
-   "suggestion": {"text": "Đổi sang hài thêu, giày búp bê hoặc giày da"}, "sources": [], "verified": false, "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc."},
-  {"id": "R48", "level": "consider", "criterion": "boi_canh",
-   "when": {"all": [{"garment": ["ao_dai", "ao_ngu_than", "ao_tu_than", "nhat_binh", "ao_ba_ba"]}, {"shoes": ["khong"]}, {"occasion": ["dam_cuoi", "le_hoi_chua"]}]},
-   "reason": "Đi chân trần chưa phù hợp dịp trang trọng",
-   "suggestion": {"text": "Thêm hài thêu hoặc giày búp bê"}, "sources": [], "verified": false, "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc."},
-  {"id": "R49", "level": "consider", "criterion": "boi_canh",
-   "when": {"all": [{"garment": ["ao_dai", "ao_ngu_than", "ao_tu_than", "nhat_binh", "ao_ba_ba"]}, {"occasion": ["dam_cuoi", "le_hoi_chua"]}, {"any": [{"hasAccessory": "mu_cao_boi"}, {"hasAccessory": "mu_luoi_trai"}, {"hasAccessory": "tai_nghe"}, {"hasAccessory": "ba_lo"}, {"hasAccessory": "gang_tay_ho_ngon"}, {"hasAccessory": "day_xich_hong"}]}]},
-   "reason": "Phụ kiện đường phố (mũ lưỡi trai / cao bồi, tai nghe, ba lô, găng tay, dây xích) lệch tinh thần dịp trang trọng",
-   "suggestion": {"text": "Bỏ phụ kiện đường phố, chọn nón lá, khăn vấn hoặc túi cói"}, "sources": [], "verified": false, "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc."},
-  {"id": "R50", "level": "consider", "criterion": "cau_truc",
-   "when": {"all": [{"garment": ["ao_dai", "ao_ngu_than", "ao_tu_than", "nhat_binh"]}, {"bottom": ["quan_ngan", "vay_ngan"]}, {"style": ["duong_pho"]}]},
-   "reason": "Dù chọn phong cách đường phố, quần/váy ngắn vẫn làm tà áo dài mất dáng",
-   "suggestion": {"text": "Giữ quần ống rộng cho cá tính mà vẫn hợp áo dài"}, "sources": [], "verified": false, "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc."}
+  {
+    "id": "R01",
+    "level": "ok",
+    "criterion": "cau_truc",
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "ao_tu_than"
+          ]
+        },
+        {
+          "hasAccessory": "non_quai_thao"
+        }
+      ]
+    },
+    "reason": "Bộ trang phục gắn với vùng Kinh Bắc",
+    "suggestion": {
+      "text": "Đội thêm khăn mỏ quạ bên dưới nón, đeo kiềng bạc để trọn bộ quan họ"
+    },
+    "sources": [
+      "https://dsvh.gov.vn/dan-ca-quan-ho-bac-ninh-482"
+    ],
+    "verified": false,
+    "sourceNote": "Nguồn giới thiệu lịch sử và đặc trưng trang phục. Gợi ý phối đồ và điểm số là quy tắc tham khảo của ứng dụng, chưa được nguồn này xác nhận toàn bộ.",
+    "title": "Bộ trang phục gắn với vùng Kinh Bắc",
+    "group": "cultural_accessory_set",
+    "priority": 1,
+    "points": 8,
+    "scope": "structure"
+  },
+  {
+    "id": "R07",
+    "level": "consider",
+    "criterion": "cach_tan",
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "ao_ngu_than"
+          ]
+        },
+        {
+          "hasAccessory": "sneaker"
+        }
+      ]
+    },
+    "reason": "Cách tân chấp nhận được, nên giữ cổ đứng và 5 khuy",
+    "suggestion": {
+      "text": "Chọn sneaker trắng trơn, giữ cổ đứng và đủ 5 khuy"
+    },
+    "sources": [
+      "https://visithue.vn/Tinh-te-ao-dai-ngu-than.html/?pid=MjA1MjR8Y3NkbGRs0"
+    ],
+    "verified": false,
+    "sourceNote": "Nguồn giới thiệu lịch sử và đặc trưng trang phục. Gợi ý phối đồ và điểm số là quy tắc tham khảo của ứng dụng, chưa được nguồn này xác nhận toàn bộ.",
+    "title": "Cách tân chấp nhận được, nên giữ cổ đứng và 5 khuy",
+    "group": "sneaker_style",
+    "priority": 1,
+    "points": -10,
+    "scope": "styling"
+  },
+  {
+    "id": "R12",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "when": {
+      "all": [
+        {
+          "occasion": [
+            "dam_cuoi",
+            "tet"
+          ]
+        },
+        {
+          "allColorsIn": [
+            "trang_nga",
+            "trang_tinh"
+          ]
+        },
+        {
+          "hasAccessory": "khan_van"
+        }
+      ]
+    },
+    "reason": "Áo và lớp dưới cùng thuộc nhóm trắng, kèm khăn vấn, tạo một hướng phối đơn sắc trong dịp Tết hoặc cưới; nên đối chiếu dress code cụ thể.",
+    "suggestion": {
+      "text": "Nếu muốn tổng thể có điểm nhấn vui tươi, thêm màu ở áo hoặc phụ kiện. Không thể kết luận tang phục chỉ từ cặp màu và loại khăn."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Gợi ý phối đồ hoặc sử dụng của ứng dụng; chưa có nguồn đối chiếu cho nhận định này.",
+    "title": "Phối đơn sắc trắng trong dịp Tết hoặc cưới",
+    "group": "R12",
+    "priority": 1,
+    "points": -10,
+    "scope": "styling"
+  },
+  {
+    "id": "R15",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "when": {
+      "all": [
+        {
+          "all": [
+            {
+              "garment": [
+                "nhat_binh"
+              ]
+            },
+            {
+              "occasion": [
+                "dao_pho"
+              ]
+            }
+          ]
+        },
+        {
+          "style": [
+            "truyen_thong"
+          ]
+        },
+        {
+          "role": [
+            "khach",
+            "nhan_vat_chinh",
+            "be_trap",
+            "nhom"
+          ]
+        }
+      ]
+    },
+    "reason": "Nhật Bình có dáng lễ phục rõ nét; khi đi dạo với mục tiêu phối truyền thống, tổng thể có thể trang trọng hơn hoạt động đã chọn.",
+    "suggestion": {
+      "text": "Giữ Nhật Bình nếu mục đích là chụp ảnh cổ phục; nếu cần di chuyển gọn, cân nhắc áo dài hoặc bà ba. Đây là lựa chọn theo mục đích mặc."
+    },
+    "sources": [
+      "https://khamphahue.com.vn/Hue-24h/Thong-bao/tid/Ao-Nhat-Binh-Mot-di-san-van-hoa-quy-cua-Co-do-Hue.html/pid/11533/cid/28"
+    ],
+    "verified": false,
+    "sourceNote": "Nguồn giới thiệu lịch sử và đặc trưng trang phục. Gợi ý phối đồ và điểm số là quy tắc tham khảo của ứng dụng, chưa được nguồn này xác nhận toàn bộ.",
+    "title": "Nhật Bình khi đi dạo theo hướng truyền thống",
+    "group": "R15",
+    "priority": 1,
+    "points": -10,
+    "scope": "styling"
+  },
+  {
+    "id": "R20",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "when": {
+      "all": [
+        {
+          "weather": [
+            "mua"
+          ]
+        },
+        {
+          "hasAccessory": "guoc"
+        }
+      ]
+    },
+    "reason": "Trời mưa, guốc gỗ dễ trơn trượt và thấm nước",
+    "suggestion": {
+      "text": "Đi giày kín mũi hoặc dép có đế bám thay cho guốc gỗ"
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Gợi ý phối đồ hoặc sử dụng của ứng dụng; chưa có nguồn đối chiếu cho nhận định này.",
+    "title": "Trời mưa, guốc gỗ dễ trơn trượt và thấm nước",
+    "group": "wet_footwear",
+    "priority": 1,
+    "points": -10,
+    "scope": "styling"
+  },
+  {
+    "id": "R21",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "when": {
+      "all": [
+        {
+          "weather": [
+            "nang_nong"
+          ]
+        },
+        {
+          "setting": [
+            "ngoai_troi",
+            "ca_hai"
+          ]
+        },
+        {
+          "garment": [
+            "nhat_binh",
+            "ao_tu_than",
+            "ao_ngu_than"
+          ]
+        }
+      ]
+    },
+    "reason": "Áo nhiều lớp, mặc lâu ngoài trời nắng nóng dễ bí và ra mồ hôi",
+    "suggestion": {
+      "text": "Chọn áo dài hoặc áo bà ba vải mỏng, hoặc hẹn chụp lúc sáng sớm, chiều muộn"
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Gợi ý phối đồ hoặc sử dụng của ứng dụng; chưa có nguồn đối chiếu cho nhận định này.",
+    "title": "Áo nhiều lớp, mặc lâu ngoài trời nắng nóng dễ bí và ra mồ hôi",
+    "group": "R21",
+    "priority": 1,
+    "points": -10,
+    "scope": "styling"
+  },
+  {
+    "id": "R22",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "when": {
+      "all": [
+        {
+          "weather": [
+            "nang_nong"
+          ]
+        },
+        {
+          "setting": [
+            "ngoai_troi",
+            "ca_hai"
+          ]
+        },
+        {
+          "mainColorIn": [
+            "den_tuyen",
+            "xanh_lam",
+            "nau_dat",
+            "tim_hue"
+          ]
+        }
+      ]
+    },
+    "reason": "Màu tối hấp nắng, mặc ngoài trời lúc nắng nóng sẽ nóng hơn",
+    "suggestion": {
+      "text": "Đổi màu chính sang màu sáng như trắng ngà hoặc be kem",
+      "patch": {
+        "colors": {
+          "main": "be_kem"
+        }
+      }
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Gợi ý phối đồ hoặc sử dụng của ứng dụng; chưa có nguồn đối chiếu cho nhận định này.",
+    "title": "Màu tối hấp nắng, mặc ngoài trời lúc nắng nóng sẽ nóng hơn",
+    "group": "R22",
+    "priority": 1,
+    "points": -10,
+    "scope": "styling"
+  },
+  {
+    "id": "R23",
+    "level": "ok",
+    "criterion": "boi_canh",
+    "when": {
+      "all": [
+        {
+          "weather": [
+            "lanh"
+          ]
+        },
+        {
+          "garment": [
+            "ao_ngu_than",
+            "nhat_binh",
+            "ao_tu_than"
+          ]
+        }
+      ]
+    },
+    "reason": "Áo nhiều lớp, may dày, hợp với tiết trời se lạnh",
+    "suggestion": {
+      "text": "Có thể mặc thêm áo lót giữ nhiệt bên trong"
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Gợi ý phối đồ hoặc sử dụng của ứng dụng; chưa có nguồn đối chiếu cho nhận định này.",
+    "title": "Áo nhiều lớp, may dày, hợp với tiết trời se lạnh",
+    "group": "R23",
+    "priority": 1,
+    "points": 8,
+    "scope": "styling"
+  },
+  {
+    "id": "R24",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "when": {
+      "all": [
+        {
+          "weather": [
+            "mua"
+          ]
+        },
+        {
+          "mainColorIn": [
+            "trang_nga",
+            "trang_tinh"
+          ]
+        }
+      ]
+    },
+    "reason": "Áo màu trắng gặp mưa dễ ướt, lộ và bám bẩn",
+    "suggestion": {
+      "text": "Chọn màu đậm hơn như hồng đào hoặc xanh lam",
+      "patch": {
+        "colors": {
+          "main": "hong_dao"
+        }
+      }
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Gợi ý phối đồ hoặc sử dụng của ứng dụng; chưa có nguồn đối chiếu cho nhận định này.",
+    "title": "Áo màu trắng gặp mưa dễ ướt, lộ và bám bẩn",
+    "group": "R24",
+    "priority": 1,
+    "points": -10,
+    "scope": "styling"
+  },
+  {
+    "id": "R25",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "when": {
+      "all": [
+        {
+          "role": [
+            "khach"
+          ]
+        },
+        {
+          "occasion": [
+            "dam_cuoi"
+          ]
+        },
+        {
+          "garment": [
+            "nhat_binh"
+          ]
+        }
+      ]
+    },
+    "reason": "Nhật bình là lễ phục rất trang trọng, khách dự cưới mặc dễ nổi bật hơn cô dâu",
+    "suggestion": {
+      "text": "Khách nên chọn áo dài hoặc áo ngũ thân"
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Gợi ý phối đồ hoặc sử dụng của ứng dụng; chưa có nguồn đối chiếu cho nhận định này.",
+    "title": "Nhật bình là lễ phục rất trang trọng, khách dự cưới mặc dễ nổi bật hơn cô dâu",
+    "group": "wedding_role_attention",
+    "priority": 1,
+    "points": -10,
+    "scope": "styling"
+  },
+  {
+    "id": "R26",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "when": {
+      "all": [
+        {
+          "role": [
+            "khach"
+          ]
+        },
+        {
+          "occasion": [
+            "dam_cuoi"
+          ]
+        },
+        {
+          "mainColorIn": [
+            "do_son"
+          ]
+        }
+      ]
+    },
+    "reason": "Màu đỏ thường dành cho cô dâu, khách mặc đỏ dễ trùng với nhân vật chính",
+    "suggestion": {
+      "text": "Đổi sang hồng đào hoặc xanh lam",
+      "patch": {
+        "colors": {
+          "main": "hong_dao"
+        }
+      }
+    },
+    "sources": [
+      "https://vietnam.travel/things-to-do/ao-dai-vietnam"
+    ],
+    "verified": false,
+    "sourceNote": "Nguồn giới thiệu lịch sử và đặc trưng trang phục. Gợi ý phối đồ và điểm số là quy tắc tham khảo của ứng dụng, chưa được nguồn này xác nhận toàn bộ.",
+    "title": "Màu đỏ thường dành cho cô dâu, khách mặc đỏ dễ trùng với nhân vật chính",
+    "group": "wedding_role_attention",
+    "priority": 1,
+    "points": -10,
+    "scope": "styling"
+  },
+  {
+    "id": "R27",
+    "level": "ok",
+    "criterion": "boi_canh",
+    "when": {
+      "all": [
+        {
+          "role": [
+            "nhan_vat_chinh"
+          ]
+        },
+        {
+          "occasion": [
+            "dam_cuoi"
+          ]
+        },
+        {
+          "mainColorIn": [
+            "do_son",
+            "vang_hoang"
+          ]
+        }
+      ]
+    },
+    "reason": "Đỏ và vàng là sắc màu quen thuộc của lễ cưới truyền thống",
+    "suggestion": {
+      "text": "Có thể thêm khăn vấn cùng tông để trọn bộ"
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Gợi ý phối đồ hoặc sử dụng của ứng dụng; chưa có nguồn đối chiếu cho nhận định này.",
+    "title": "Đỏ và vàng là sắc màu quen thuộc của lễ cưới truyền thống",
+    "group": "R27",
+    "priority": 1,
+    "points": 8,
+    "scope": "styling"
+  },
+  {
+    "id": "R28",
+    "level": "consider",
+    "criterion": "cach_tan",
+    "when": {
+      "all": [
+        {
+          "occasion": [
+            "dam_cuoi",
+            "le_hoi_chua"
+          ]
+        },
+        {
+          "pattern": [
+            "cham_bi",
+            "ke_soc"
+          ]
+        },
+        {
+          "style": [
+            "truyen_thong"
+          ]
+        }
+      ]
+    },
+    "reason": "Hoạ tiết chấm bi, kẻ sọc mang nét hiện đại, khác tinh thần truyền thống bạn chọn",
+    "suggestion": {
+      "text": "Đổi sang vải trơn hoặc hoa văn tròn",
+      "patch": {
+        "pattern": "hoa_van_tron"
+      }
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Gợi ý phối đồ hoặc sử dụng của ứng dụng; chưa có nguồn đối chiếu cho nhận định này.",
+    "title": "Hoạ tiết chấm bi, kẻ sọc mang nét hiện đại, khác tinh thần truyền thống bạn chọn",
+    "group": "pattern_style",
+    "priority": 3,
+    "points": -10,
+    "scope": "styling"
+  },
+  {
+    "id": "R30",
+    "level": "ok",
+    "criterion": "cau_truc",
+    "when": {
+      "all": [
+        {
+          "gender": [
+            "nam"
+          ]
+        },
+        {
+          "garment": [
+            "ao_ngu_than",
+            "ao_dai"
+          ]
+        },
+        {
+          "hasAccessory": "khan_xep"
+        }
+      ]
+    },
+    "reason": "Khăn xếp đi cùng áo dài, áo ngũ thân là bộ lễ phục quen thuộc của nam giới",
+    "suggestion": {
+      "text": "Chọn khăn cùng tông màu sẫm (đen, xanh lam) để tổng thể trang nhã"
+    },
+    "sources": [
+      "https://visithue.vn/Tinh-te-ao-dai-ngu-than.html/?pid=MjA1MjR8Y3NkbGRs0"
+    ],
+    "verified": false,
+    "sourceNote": "Nguồn giới thiệu lịch sử và đặc trưng trang phục. Gợi ý phối đồ và điểm số là quy tắc tham khảo của ứng dụng, chưa được nguồn này xác nhận toàn bộ.",
+    "title": "Khăn xếp đi cùng áo dài, áo ngũ thân là bộ lễ phục quen thuộc của nam giới",
+    "group": "cultural_accessory_set",
+    "priority": 1,
+    "points": 8,
+    "scope": "structure"
+  },
+  {
+    "id": "R31",
+    "level": "consider",
+    "criterion": "phu_kien",
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "nhat_binh"
+          ]
+        },
+        {
+          "any": [
+            {
+              "hasAccessory": "sneaker"
+            },
+            {
+              "hasAccessory": "giay_bup_be"
+            }
+          ]
+        }
+      ]
+    },
+    "reason": "Nhật bình là lễ phục, giày hiện đại làm giảm vẻ trang trọng",
+    "suggestion": {
+      "text": "Đổi sang hài thêu hoặc guốc gỗ"
+    },
+    "sources": [
+      "https://khamphahue.com.vn/Du-lich/Chi-tiet/tid/Giu-ao-dai-Nhat-Binh-cho-Hue.html/pid/10926/cid/28"
+    ],
+    "verified": false,
+    "sourceNote": "Nguồn giới thiệu lịch sử và đặc trưng trang phục. Gợi ý phối đồ và điểm số là quy tắc tham khảo của ứng dụng, chưa được nguồn này xác nhận toàn bộ.",
+    "title": "Nhật bình là lễ phục, giày hiện đại làm giảm vẻ trang trọng",
+    "group": "sneaker_style",
+    "priority": 1,
+    "points": -10,
+    "scope": "styling"
+  },
+  {
+    "id": "R32",
+    "level": "ok",
+    "criterion": "phu_kien",
+    "when": {
+      "all": [
+        {
+          "hasAccessory": "hai_theu"
+        },
+        {
+          "any": [
+            {
+              "garment": [
+                "nhat_binh",
+                "ao_ngu_than"
+              ]
+            },
+            {
+              "occasion": [
+                "dam_cuoi"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "reason": "Hài thêu hợp với lễ phục và không khí lễ cưới",
+    "suggestion": {
+      "text": "Chọn màu hài trùng màu điểm nhấn của khăn để đồng bộ"
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Gợi ý phối đồ hoặc sử dụng của ứng dụng; chưa có nguồn đối chiếu cho nhận định này.",
+    "title": "Hài thêu hợp với lễ phục và không khí lễ cưới",
+    "group": "cultural_accessory_set",
+    "priority": 1,
+    "points": 8,
+    "scope": "styling"
+  },
+  {
+    "id": "R33",
+    "level": "consider",
+    "criterion": "phu_kien",
+    "when": {
+      "all": [
+        {
+          "hasAccessory": "non_quai_thao"
+        },
+        {
+          "garment": [
+            "ao_dai",
+            "ao_ba_ba"
+          ]
+        }
+      ]
+    },
+    "reason": "Nón quai thao gắn với áo tứ thân của liền chị quan họ, đi với áo dài hay bà ba dễ lệch tinh thần",
+    "suggestion": {
+      "text": "Đổi sang nón lá, hoặc đổi áo sang áo tứ thân"
+    },
+    "sources": [
+      "https://dsvh.gov.vn/dan-ca-quan-ho-bac-ninh-482"
+    ],
+    "verified": false,
+    "sourceNote": "Nguồn giới thiệu lịch sử và đặc trưng trang phục. Gợi ý phối đồ và điểm số là quy tắc tham khảo của ứng dụng, chưa được nguồn này xác nhận toàn bộ.",
+    "title": "Nón quai thao gắn với áo tứ thân của liền chị quan họ, đi với áo dài hay bà ba dễ lệch tinh thần",
+    "group": "R33",
+    "priority": 1,
+    "points": -10,
+    "scope": "styling"
+  },
+  {
+    "id": "R34",
+    "level": "ok",
+    "criterion": "phu_kien",
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "ao_tu_than"
+          ]
+        },
+        {
+          "any": [
+            {
+              "hasAccessory": "khan_mo_qua"
+            },
+            {
+              "hasAccessory": "kieng_bac"
+            }
+          ]
+        }
+      ]
+    },
+    "reason": "Khăn mỏ quạ, kiềng bạc là phụ kiện quen thuộc đi cùng áo tứ thân",
+    "suggestion": {
+      "text": "Đi lễ hội có thể thêm nón quai thao; chụp ảnh trong nhà thì khăn mỏ quạ là đủ"
+    },
+    "sources": [
+      "https://dsvh.gov.vn/dan-ca-quan-ho-bac-ninh-482"
+    ],
+    "verified": false,
+    "sourceNote": "Nguồn giới thiệu lịch sử và đặc trưng trang phục. Gợi ý phối đồ và điểm số là quy tắc tham khảo của ứng dụng, chưa được nguồn này xác nhận toàn bộ.",
+    "title": "Khăn mỏ quạ, kiềng bạc là phụ kiện quen thuộc đi cùng áo tứ thân",
+    "group": "cultural_accessory_set",
+    "priority": 1,
+    "points": 8,
+    "scope": "styling"
+  },
+  {
+    "id": "R35",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "when": {
+      "all": [
+        {
+          "weather": [
+            "mua"
+          ]
+        },
+        {
+          "hasAccessory": "quat_giay"
+        }
+      ]
+    },
+    "reason": "Quạt giấy gặp mưa dễ ướt, rách",
+    "suggestion": {
+      "text": "Thay bằng túi cói hoặc để quạt cho buổi chụp trong nhà"
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Gợi ý phối đồ hoặc sử dụng của ứng dụng; chưa có nguồn đối chiếu cho nhận định này.",
+    "title": "Quạt giấy gặp mưa dễ ướt, rách",
+    "group": "fan_weather",
+    "priority": 1,
+    "points": -10,
+    "scope": "styling"
+  },
+  {
+    "id": "R36",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "when": {
+      "all": [
+        {
+          "role": [
+            "khach"
+          ]
+        },
+        {
+          "occasion": [
+            "dam_cuoi"
+          ]
+        },
+        {
+          "pattern": [
+            "phuong_hoang"
+          ]
+        }
+      ]
+    },
+    "reason": "Phượng hoàng thường là hoạ tiết áo cưới của cô dâu, khách mặc dễ trùng nhân vật chính",
+    "suggestion": {
+      "text": "Khách dự cưới nên chọn cành đào, sen hoặc hạc và mai",
+      "patch": {
+        "pattern": "canh_dao"
+      }
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Gợi ý phối đồ hoặc sử dụng của ứng dụng; chưa có nguồn đối chiếu cho nhận định này.",
+    "title": "Phượng hoàng thường là hoạ tiết áo cưới của cô dâu, khách mặc dễ trùng nhân vật chính",
+    "group": "wedding_role_attention",
+    "priority": 1,
+    "points": -10,
+    "scope": "styling"
+  },
+  {
+    "id": "R37",
+    "level": "ok",
+    "criterion": "dac_trung",
+    "when": {
+      "all": [
+        {
+          "pattern": [
+            "sen",
+            "hoi_van",
+            "hac_mai"
+          ]
+        },
+        {
+          "occasion": [
+            "le_hoi_chua",
+            "tet"
+          ]
+        }
+      ]
+    },
+    "reason": "Sen, hồi văn, hạc và mai là hoạ tiết truyền thống, hợp không khí lễ hội, ngày Tết",
+    "suggestion": {
+      "text": "Giữ nền trơn một màu để hoạ tiết nổi bật"
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Gợi ý phối đồ hoặc sử dụng của ứng dụng; chưa có nguồn đối chiếu cho nhận định này.",
+    "title": "Sen, hồi văn, hạc và mai là hoạ tiết truyền thống, hợp không khí lễ hội, ngày Tết",
+    "group": "garment_pattern",
+    "priority": 1,
+    "points": 8,
+    "scope": "styling"
+  },
+  {
+    "id": "R38",
+    "level": "ok",
+    "criterion": "dac_trung",
+    "when": {
+      "all": [
+        {
+          "gender": [
+            "nam"
+          ]
+        },
+        {
+          "pattern": [
+            "tung",
+            "truc",
+            "rong_may",
+            "song_nuoc"
+          ]
+        }
+      ]
+    },
+    "reason": "Tùng, trúc, rồng, sóng nước là hoạ tiết quen thuộc trên áo nam, gợi khí chất vững vàng",
+    "suggestion": {
+      "text": "Chọn nền xanh lam hoặc nâu đất để hoạ tiết vàng nổi bật"
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Gợi ý phối đồ hoặc sử dụng của ứng dụng; chưa có nguồn đối chiếu cho nhận định này.",
+    "title": "Tùng, trúc, rồng, sóng nước là hoạ tiết quen thuộc trên áo nam, gợi khí chất vững vàng",
+    "group": "garment_pattern",
+    "priority": 1,
+    "points": 8,
+    "scope": "styling"
+  },
+  {
+    "id": "R39",
+    "level": "ok",
+    "criterion": "dac_trung",
+    "when": {
+      "all": [
+        {
+          "pattern": [
+            "mai_vang",
+            "canh_dao"
+          ]
+        },
+        {
+          "occasion": [
+            "tet"
+          ]
+        }
+      ]
+    },
+    "reason": "Mai vàng, hoa đào là hoa ngày Tết, hợp không khí du xuân",
+    "suggestion": {
+      "text": "Kết hợp khăn vấn hoặc khăn xếp cùng tông với hoa"
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Gợi ý phối đồ hoặc sử dụng của ứng dụng; chưa có nguồn đối chiếu cho nhận định này.",
+    "title": "Mai vàng, hoa đào là hoa ngày Tết, hợp không khí du xuân",
+    "group": "garment_pattern",
+    "priority": 1,
+    "points": 8,
+    "scope": "styling"
+  },
+  {
+    "id": "R40",
+    "level": "risk",
+    "criterion": "cau_truc",
+    "cap": 35,
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "ao_dai",
+            "ao_ngu_than",
+            "ao_tu_than",
+            "nhat_binh",
+            "ao_ba_ba"
+          ]
+        },
+        {
+          "bottom": [
+            "quan_ngan"
+          ]
+        }
+      ]
+    },
+    "reason": "Quần đùi / quần ngắn không đi cùng áo truyền thống: tà áo dài phủ lên quần ngắn làm mất cấu trúc và dáng của bộ đồ",
+    "suggestion": {
+      "text": "Đổi sang quần ống suông hoặc ống rộng, hoặc váy dài"
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc.",
+    "title": "Lớp quần ngắn dưới áo truyền thống",
+    "group": "bottom_length",
+    "priority": 1,
+    "points": -40,
+    "scope": "structure"
+  },
+  {
+    "id": "R41",
+    "level": "risk",
+    "criterion": "cau_truc",
+    "cap": 35,
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "ao_dai",
+            "ao_ngu_than",
+            "ao_tu_than",
+            "nhat_binh",
+            "ao_ba_ba"
+          ]
+        },
+        {
+          "bottom": [
+            "vay_ngan"
+          ]
+        }
+      ]
+    },
+    "reason": "Váy ngắn không hợp với áo truyền thống: áo cần đi với quần hoặc váy dài tới mắt cá",
+    "suggestion": {
+      "text": "Đổi sang quần ống suông / ống rộng hoặc váy dài"
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc.",
+    "title": "Lớp váy ngắn dưới áo truyền thống",
+    "group": "bottom_length",
+    "priority": 1,
+    "points": -40,
+    "scope": "structure"
+  },
+  {
+    "id": "R42",
+    "level": "risk",
+    "criterion": "cau_truc",
+    "cap": 40,
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "ao_dai",
+            "ao_ngu_than",
+            "ao_tu_than",
+            "nhat_binh",
+            "ao_ba_ba"
+          ]
+        },
+        {
+          "bottom": [
+            "khong"
+          ]
+        }
+      ]
+    },
+    "reason": "Chưa phối quần hoặc váy: bộ trang phục truyền thống chưa hoàn chỉnh",
+    "suggestion": {
+      "text": "Chọn quần ống suông, ống rộng hoặc váy dài cho bộ đồ"
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc.",
+    "title": "Chưa phối quần hoặc váy: bộ trang phục truyền thống chưa hoàn chỉnh",
+    "group": "bottom_length",
+    "priority": 1,
+    "points": -40,
+    "scope": "structure"
+  },
+  {
+    "id": "R43",
+    "level": "consider",
+    "criterion": "cau_truc",
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "ao_dai",
+            "ao_ngu_than",
+            "ao_tu_than",
+            "nhat_binh"
+          ]
+        },
+        {
+          "bottom": [
+            "quan_bo",
+            "quan_lung"
+          ]
+        }
+      ]
+    },
+    "reason": "Quần ống bó hoặc quần lửng làm mất độ buông của tà áo; áo dài hợp quần ống suông hoặc ống rộng hơn",
+    "suggestion": {
+      "text": "Đổi sang quần ống suông hoặc ống rộng"
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc.",
+    "title": "Quần ống bó hoặc quần lửng làm mất độ buông của tà áo; áo dài hợp quần ống suông hoặc ống rộng hơn",
+    "group": "bottom_shape",
+    "priority": 1,
+    "points": -10,
+    "scope": "structure"
+  },
+  {
+    "id": "R44",
+    "level": "consider",
+    "criterion": "cau_truc",
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "ao_ba_ba"
+          ]
+        },
+        {
+          "bottom": [
+            "quan_bo"
+          ]
+        }
+      ]
+    },
+    "reason": "Áo bà ba hợp quần ống rộng hoặc quần lửng thoải mái hơn là quần ống bó",
+    "suggestion": {
+      "text": "Đổi sang quần ống rộng hoặc quần lửng"
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc.",
+    "title": "Áo bà ba hợp quần ống rộng hoặc quần lửng thoải mái hơn là quần ống bó",
+    "group": "bottom_shape",
+    "priority": 1,
+    "points": -10,
+    "scope": "structure"
+  },
+  {
+    "id": "R45",
+    "level": "risk",
+    "criterion": "boi_canh",
+    "cap": 45,
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "ao_dai",
+            "ao_ngu_than",
+            "ao_tu_than",
+            "nhat_binh",
+            "ao_ba_ba"
+          ]
+        },
+        {
+          "shoes": [
+            "dep"
+          ]
+        },
+        {
+          "occasion": [
+            "tet",
+            "ky_yeu",
+            "dam_cuoi",
+            "le_hoi_chua"
+          ]
+        }
+      ]
+    },
+    "reason": "Dép lê / dép Crocs quá xuề xoà cho dịp trang trọng khi mặc áo truyền thống",
+    "suggestion": {
+      "text": "Đổi sang hài thêu, giày búp bê hoặc guốc"
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc.",
+    "title": "Dép lê / dép Crocs quá xuề xoà cho dịp trang trọng khi mặc áo truyền thống",
+    "group": "shoe_formality",
+    "priority": 1,
+    "points": -40,
+    "scope": "styling"
+  },
+  {
+    "id": "R46",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "ao_dai",
+            "ao_ngu_than",
+            "ao_tu_than",
+            "nhat_binh",
+            "ao_ba_ba"
+          ]
+        },
+        {
+          "shoes": [
+            "dep"
+          ]
+        },
+        {
+          "occasion": [
+            "dao_pho"
+          ]
+        }
+      ]
+    },
+    "reason": "Dép lê / dép Crocs làm bộ áo truyền thống trông xuề xoà, mất sự chỉn chu",
+    "suggestion": {
+      "text": "Đổi sang giày búp bê hoặc sneaker trắng trơn"
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc.",
+    "title": "Dép lê / dép Crocs làm bộ áo truyền thống trông xuề xoà, mất sự chỉn chu",
+    "group": "shoe_formality",
+    "priority": 1,
+    "points": -10,
+    "scope": "styling"
+  },
+  {
+    "id": "R47",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "ao_dai",
+            "ao_ngu_than",
+            "ao_tu_than",
+            "nhat_binh",
+            "ao_ba_ba"
+          ]
+        },
+        {
+          "shoes": [
+            "giay_the_thao"
+          ]
+        },
+        {
+          "occasion": [
+            "dam_cuoi",
+            "le_hoi_chua"
+          ]
+        }
+      ]
+    },
+    "reason": "Giày thể thao chưa hợp dịp trang trọng như cưới hỏi, đi chùa",
+    "suggestion": {
+      "text": "Đổi sang hài thêu, giày búp bê hoặc giày da"
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc.",
+    "title": "Giày thể thao chưa hợp dịp trang trọng như cưới hỏi, đi chùa",
+    "group": "shoe_formality",
+    "priority": 1,
+    "points": -10,
+    "scope": "styling"
+  },
+  {
+    "id": "R48",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "ao_dai",
+            "ao_ngu_than",
+            "ao_tu_than",
+            "nhat_binh",
+            "ao_ba_ba"
+          ]
+        },
+        {
+          "shoes": [
+            "khong"
+          ]
+        },
+        {
+          "occasion": [
+            "dam_cuoi",
+            "le_hoi_chua"
+          ]
+        }
+      ]
+    },
+    "reason": "Đi chân trần chưa phù hợp dịp trang trọng",
+    "suggestion": {
+      "text": "Thêm hài thêu hoặc giày búp bê"
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc.",
+    "title": "Đi chân trần chưa phù hợp dịp trang trọng",
+    "group": "shoe_formality",
+    "priority": 1,
+    "points": -10,
+    "scope": "styling"
+  },
+  {
+    "id": "R49",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "ao_dai",
+            "ao_ngu_than",
+            "ao_tu_than",
+            "nhat_binh",
+            "ao_ba_ba"
+          ]
+        },
+        {
+          "occasion": [
+            "dam_cuoi",
+            "le_hoi_chua"
+          ]
+        },
+        {
+          "any": [
+            {
+              "hasAccessory": "mu_cao_boi"
+            },
+            {
+              "hasAccessory": "mu_luoi_trai"
+            },
+            {
+              "hasAccessory": "tai_nghe"
+            },
+            {
+              "hasAccessory": "ba_lo"
+            },
+            {
+              "hasAccessory": "gang_tay_ho_ngon"
+            },
+            {
+              "hasAccessory": "day_xich_hong"
+            }
+          ]
+        }
+      ]
+    },
+    "reason": "Phụ kiện đường phố (mũ lưỡi trai / cao bồi, tai nghe, ba lô, găng tay, dây xích) lệch tinh thần dịp trang trọng",
+    "suggestion": {
+      "text": "Bỏ phụ kiện đường phố, chọn nón lá, khăn vấn hoặc túi cói"
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc.",
+    "title": "Phụ kiện đường phố (mũ lưỡi trai / cao bồi, tai nghe, ba lô, găng tay, dây xích) lệch tinh thần dịp trang trọng",
+    "group": "street_formality",
+    "priority": 1,
+    "points": -10,
+    "scope": "styling"
+  },
+  {
+    "id": "R50",
+    "level": "consider",
+    "criterion": "cau_truc",
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "ao_dai",
+            "ao_ngu_than",
+            "ao_tu_than",
+            "nhat_binh"
+          ]
+        },
+        {
+          "bottom": [
+            "quan_ngan",
+            "vay_ngan"
+          ]
+        },
+        {
+          "style": [
+            "duong_pho"
+          ]
+        }
+      ]
+    },
+    "reason": "Dù chọn phong cách đường phố, quần/váy ngắn vẫn làm tà áo dài mất dáng",
+    "suggestion": {
+      "text": "Giữ quần ống rộng cho cá tính mà vẫn hợp áo dài"
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy ước phối đồ của ứng dụng (tổng hợp từ cách mặc phổ biến), chưa phải quy định văn hoá bắt buộc.",
+    "title": "Dù chọn phong cách đường phố, quần/váy ngắn vẫn làm tà áo dài mất dáng",
+    "group": "bottom_length",
+    "priority": 1,
+    "points": -10,
+    "scope": "structure"
+  },
+  {
+    "id": "R51",
+    "title": "Áo dài với quần dài",
+    "level": "ok",
+    "criterion": "cau_truc",
+    "group": "bottom_shape",
+    "priority": 2,
+    "points": 8,
+    "scope": "styling",
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "ao_dai"
+          ]
+        },
+        {
+          "bottom": [
+            "quan_dai_suong",
+            "quan_ong_rong",
+            "quan_dai"
+          ]
+        }
+      ]
+    },
+    "reason": "Quần dài tạo lớp nền liền mạch dưới hai tà áo dài và giữ cấu trúc áo mặc ngoài quần.",
+    "suggestion": {
+      "text": "Giữ quần dài; cân nhắc độ rộng thực tế để bước đi thoải mái."
+    },
+    "sources": [
+      "https://vietnam.travel/things-to-do/ao-dai-vietnam"
+    ],
+    "verified": false,
+    "sourceNote": "Nguồn mô tả trang phục và bối cảnh lịch sử. Điều kiện phối đồ, mức cộng/trừ điểm là quy tắc tham khảo của ứng dụng, không phải điều cấm được nguồn xác nhận."
+  },
+  {
+    "id": "R52",
+    "title": "Tứ thân với váy dài",
+    "level": "ok",
+    "criterion": "cau_truc",
+    "group": "bottom_shape",
+    "priority": 2,
+    "points": 8,
+    "scope": "styling",
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "ao_tu_than"
+          ]
+        },
+        {
+          "bottom": [
+            "vay_dai"
+          ]
+        }
+      ]
+    },
+    "reason": "Váy dài tạo tổng thể nhiều lớp phù hợp hướng phối tứ thân dân gian của ứng dụng.",
+    "suggestion": {
+      "text": "Phối khăn mỏ quạ hoặc nón quai thao nếu muốn nhấn mạnh liên hệ Quan họ. Nguồn không quy định mọi kiểu váy."
+    },
+    "sources": [
+      "https://dsvh.gov.vn/dan-ca-quan-ho-bac-ninh-482"
+    ],
+    "verified": false,
+    "sourceNote": "Nguồn mô tả trang phục và bối cảnh lịch sử. Điều kiện phối đồ, mức cộng/trừ điểm là quy tắc tham khảo của ứng dụng, không phải điều cấm được nguồn xác nhận."
+  },
+  {
+    "id": "R53",
+    "title": "Ngũ thân với quần dài",
+    "level": "ok",
+    "criterion": "cau_truc",
+    "group": "bottom_shape",
+    "priority": 2,
+    "points": 8,
+    "scope": "styling",
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "ao_ngu_than"
+          ]
+        },
+        {
+          "bottom": [
+            "quan_dai_suong",
+            "quan_ong_rong",
+            "quan_dai"
+          ]
+        }
+      ]
+    },
+    "reason": "Quần dài giúp phần tà áo ngũ thân và lớp dưới có đường nét thống nhất.",
+    "suggestion": {
+      "text": "Giữ chiều dài quần, điều chỉnh độ rộng theo nhu cầu vận động."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R54",
+    "title": "Lớp dưới dài cho Nhật Bình",
+    "level": "ok",
+    "criterion": "cau_truc",
+    "group": "bottom_shape",
+    "priority": 2,
+    "points": 8,
+    "scope": "styling",
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "nhat_binh"
+          ]
+        },
+        {
+          "any": [
+            {
+              "bottom": [
+                "quan_dai_suong",
+                "quan_ong_rong",
+                "quan_dai"
+              ]
+            },
+            {
+              "bottom": [
+                "vay_dai"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "reason": "Quần dài hoặc váy dài giữ dáng nhiều lớp của bản phối Nhật Bình. Tư liệu Huế ghi nhận xiêm và quần trong các giai đoạn khác nhau.",
+    "suggestion": {
+      "text": "Nếu muốn tái hiện một giai đoạn cụ thể, đối chiếu kiểu xiêm/quần và khăn; bản phối hiện đại có thể linh hoạt."
+    },
+    "sources": [
+      "https://khamphahue.com.vn/Hue-24h/Thong-bao/tid/Ao-Nhat-Binh-Mot-di-san-van-hoa-quy-cua-Co-do-Hue.html/pid/11533/cid/28"
+    ],
+    "verified": false,
+    "sourceNote": "Nguồn mô tả trang phục và bối cảnh lịch sử. Điều kiện phối đồ, mức cộng/trừ điểm là quy tắc tham khảo của ứng dụng, không phải điều cấm được nguồn xác nhận."
+  },
+  {
+    "id": "R55",
+    "title": "Bà ba với quần thoải mái",
+    "level": "ok",
+    "criterion": "cau_truc",
+    "group": "bottom_shape",
+    "priority": 2,
+    "points": 6,
+    "scope": "styling",
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "ao_ba_ba"
+          ]
+        },
+        {
+          "bottom": [
+            "quan_dai_suong",
+            "quan_ong_rong",
+            "quan_dai",
+            "quan_lung"
+          ]
+        }
+      ]
+    },
+    "reason": "Phom quần suông hoặc lửng tạo hướng phối bà ba gọn, thiên về sinh hoạt.",
+    "suggestion": {
+      "text": "Trong dịp lễ hoặc trời lạnh, ưu tiên quần dài thay cho quần lửng."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R56",
+    "title": "Váy dài với áo dài hoặc ngũ thân",
+    "level": "consider",
+    "criterion": "cau_truc",
+    "group": "bottom_shape",
+    "priority": 2,
+    "points": -8,
+    "scope": "styling",
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "ao_dai",
+            "ao_ngu_than"
+          ]
+        },
+        {
+          "bottom": [
+            "vay_dai"
+          ]
+        }
+      ]
+    },
+    "reason": "Váy dài thay lớp quần tạo một biến thể cách tân; tổng thể khác cấu trúc áo mặc ngoài quần thường gặp.",
+    "suggestion": {
+      "text": "Giữ váy nếu chủ đích là cách tân; chọn quần dài để trở về hướng phối truyền thống. Không coi mọi biến thể là sai."
+    },
+    "sources": [
+      "https://vietnam.travel/things-to-do/ao-dai-vietnam"
+    ],
+    "verified": false,
+    "sourceNote": "Nguồn mô tả trang phục và bối cảnh lịch sử. Điều kiện phối đồ, mức cộng/trừ điểm là quy tắc tham khảo của ứng dụng, không phải điều cấm được nguồn xác nhận."
+  },
+  {
+    "id": "R57",
+    "title": "Chưa chọn giày cho dịp lễ",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "group": "shoe_formality",
+    "priority": 2,
+    "points": -8,
+    "scope": "context",
+    "when": {
+      "all": [
+        {
+          "occasion": [
+            "tet",
+            "ky_yeu"
+          ]
+        },
+        {
+          "shoes": [
+            "khong"
+          ]
+        }
+      ]
+    },
+    "reason": "Bản phối cho Tết hoặc kỷ yếu chưa có giày dép; phần đánh giá mới phản ánh lựa chọn trên màn hình.",
+    "suggestion": {
+      "text": "Chọn giày bệt, hài hoặc giày kín phù hợp hoạt động thực tế."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R58",
+    "title": "Nón lá trong không gian trong nhà",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "group": "head_setting",
+    "priority": 2,
+    "points": -6,
+    "scope": "context",
+    "when": {
+      "all": [
+        {
+          "setting": [
+            "trong_nha"
+          ]
+        },
+        {
+          "hasAccessory": "non_la"
+        }
+      ]
+    },
+    "reason": "Nón lá có thể chiếm diện tích trong chỗ ngồi hoặc khung hình trong nhà.",
+    "suggestion": {
+      "text": "Giữ nón khi chụp ảnh; cầm hoặc tháo nón khi ngồi, tùy quy định của địa điểm."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R59",
+    "title": "Nón lá trong bản phối ngoài trời",
+    "level": "ok",
+    "criterion": "boi_canh",
+    "group": "head_setting",
+    "priority": 2,
+    "points": 4,
+    "scope": "context",
+    "when": {
+      "all": [
+        {
+          "setting": [
+            "ngoai_troi",
+            "ca_hai"
+          ]
+        },
+        {
+          "hasAccessory": "non_la"
+        },
+        {
+          "any": [
+            {
+              "occasion": [
+                "tet",
+                "dao_pho"
+              ]
+            },
+            {
+              "role": [
+                "chup_anh"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "reason": "Nón lá tạo điểm nhận diện trong bản phối ngoài trời và ảnh lưu niệm.",
+    "suggestion": {
+      "text": "Kiểm tra độ vừa và cách giữ nón khi di chuyển; ứng dụng không suy ra khả năng chống nắng từ hình ảnh."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R60",
+    "title": "Quạt giấy khi trời nóng trong nhà",
+    "level": "ok",
+    "criterion": "boi_canh",
+    "group": "fan_weather",
+    "priority": 2,
+    "points": 4,
+    "scope": "context",
+    "when": {
+      "all": [
+        {
+          "weather": [
+            "nang_nong"
+          ]
+        },
+        {
+          "setting": [
+            "trong_nha"
+          ]
+        },
+        {
+          "hasAccessory": "quat_giay"
+        }
+      ]
+    },
+    "reason": "Quạt giấy là phụ kiện cầm tay phù hợp mục đích tạo dáng hoặc quạt nhẹ trong bối cảnh nóng đã khai báo.",
+    "suggestion": {
+      "text": "Cầm quạt khi cần và cất khi phải sử dụng hai tay."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R61",
+    "title": "Guốc trong hoạt động ngoài trời mưa",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "group": "wet_footwear",
+    "priority": 2,
+    "points": -12,
+    "scope": "context",
+    "when": {
+      "all": [
+        {
+          "weather": [
+            "mua"
+          ]
+        },
+        {
+          "setting": [
+            "ngoai_troi",
+            "ca_hai"
+          ]
+        },
+        {
+          "hasAccessory": "guoc"
+        }
+      ]
+    },
+    "reason": "Guốc đang được chọn cho hoạt động ngoài trời có mưa; cần kiểm tra đế và mặt đường thực tế.",
+    "suggestion": {
+      "text": "Cân nhắc giày kín dễ di chuyển. Không thể kết luận độ bám của đế chỉ từ ảnh tủ đồ."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R62",
+    "title": "Dép trong hoạt động ngoài trời mưa",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "group": "wet_footwear",
+    "priority": 2,
+    "points": -10,
+    "scope": "context",
+    "when": {
+      "all": [
+        {
+          "weather": [
+            "mua"
+          ]
+        },
+        {
+          "setting": [
+            "ngoai_troi",
+            "ca_hai"
+          ]
+        },
+        {
+          "shoes": [
+            "dep"
+          ]
+        }
+      ]
+    },
+    "reason": "Dép có phần chân hở trong bối cảnh mưa ngoài trời, dễ làm bản phối bất tiện khi di chuyển.",
+    "suggestion": {
+      "text": "Chọn giày phù hợp nền đường thực tế và chuẩn bị cách giữ tà áo khỏi ướt."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R63",
+    "title": "Quần lửng khi trời lạnh ngoài trời",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "group": "cold_coverage",
+    "priority": 2,
+    "points": -8,
+    "scope": "context",
+    "when": {
+      "all": [
+        {
+          "weather": [
+            "lanh"
+          ]
+        },
+        {
+          "setting": [
+            "ngoai_troi",
+            "ca_hai"
+          ]
+        },
+        {
+          "bottom": [
+            "quan_lung"
+          ]
+        }
+      ]
+    },
+    "reason": "Quần lửng để hở một phần chân trong bối cảnh lạnh ngoài trời đã chọn.",
+    "suggestion": {
+      "text": "Cân nhắc quần dài hoặc lớp giữ ấm phù hợp; ứng dụng chưa biết nhiệt độ và chất liệu thực tế."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R64",
+    "title": "Lớp dưới ngắn khi trời lạnh",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "group": "cold_coverage",
+    "priority": 2,
+    "points": -12,
+    "scope": "context",
+    "when": {
+      "all": [
+        {
+          "weather": [
+            "lanh"
+          ]
+        },
+        {
+          "setting": [
+            "ngoai_troi",
+            "ca_hai"
+          ]
+        },
+        {
+          "bottom": [
+            "quan_ngan",
+            "vay_ngan"
+          ]
+        }
+      ]
+    },
+    "reason": "Quần hoặc váy ngắn có độ che phủ thấp trong bối cảnh lạnh ngoài trời.",
+    "suggestion": {
+      "text": "Ưu tiên lớp dưới dài hơn nếu cần giữ ấm và di chuyển lâu."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R65",
+    "title": "Tai nghe trong hoạt động nghi lễ",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "group": "street_formality",
+    "priority": 2,
+    "points": -12,
+    "scope": "context",
+    "when": {
+      "all": [
+        {
+          "occasion": [
+            "dam_cuoi",
+            "le_hoi_chua"
+          ]
+        },
+        {
+          "hasAccessory": "tai_nghe"
+        }
+      ]
+    },
+    "reason": "Tai nghe tạo điểm nhấn sinh hoạt hiện đại trong bản phối cho cưới hoặc lễ chùa.",
+    "suggestion": {
+      "text": "Cất tai nghe trong phần nghi lễ nếu muốn tổng thể trang trọng và dễ tương tác."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R66",
+    "title": "Túi lớn khi bê tráp",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "group": "carried_bag_load",
+    "priority": 2,
+    "points": -10,
+    "scope": "context",
+    "when": {
+      "all": [
+        {
+          "role": [
+            "be_trap"
+          ]
+        },
+        {
+          "accessoryCount": {
+            "items": [
+              "ba_lo",
+              "tui_tote"
+            ],
+            "min": 1
+          }
+        }
+      ]
+    },
+    "reason": "Ba lô hoặc túi tote tạo thêm phần đồ mang theo khi vai trò đã chọn là bê tráp.",
+    "suggestion": {
+      "text": "Gửi túi hoặc chọn túi nhỏ; kiểm tra khả năng vận động thực tế trước buổi lễ."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R67",
+    "title": "Nhiều phụ kiện cầm tay khi bê tráp",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "group": "free_hands",
+    "priority": 2,
+    "points": -10,
+    "scope": "context",
+    "when": {
+      "all": [
+        {
+          "role": [
+            "be_trap"
+          ]
+        },
+        {
+          "accessoryCount": {
+            "items": [
+              "tui",
+              "quat_giay",
+              "tui_tote",
+              "tui_deo_cheo",
+              "tui_xach_thoi_trang"
+            ],
+            "min": 2
+          }
+        }
+      ]
+    },
+    "reason": "Ít nhất hai phụ kiện túi/quạt đang được chọn trong vai trò cần cầm tráp.",
+    "suggestion": {
+      "text": "Giảm phụ kiện cầm tay trong phần bê tráp, dùng lại khi chụp ảnh."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R68",
+    "title": "Nhiều trang sức trong ảnh nhóm",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "group": "jewelry_density",
+    "priority": 3,
+    "points": -6,
+    "scope": "context",
+    "when": {
+      "all": [
+        {
+          "occasion": [
+            "ky_yeu"
+          ]
+        },
+        {
+          "role": [
+            "nhom"
+          ]
+        },
+        {
+          "accessoryCount": {
+            "items": [
+              "trang_suc",
+              "bong_tai",
+              "vong_tay",
+              "kieng_bac",
+              "day_xich_hong"
+            ],
+            "min": 3
+          }
+        }
+      ]
+    },
+    "reason": "Từ ba loại trang sức trở lên có thể làm điểm nhấn cá nhân nổi hơn tổng thể ảnh nhóm.",
+    "suggestion": {
+      "text": "Thống nhất một hoặc hai điểm nhấn với nhóm nếu muốn ảnh đồng đều."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R69",
+    "title": "Khách cưới phối nhiều điểm nhấn",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "group": "wedding_role_attention",
+    "priority": 3,
+    "points": -12,
+    "scope": "context",
+    "when": {
+      "all": [
+        {
+          "occasion": [
+            "dam_cuoi"
+          ]
+        },
+        {
+          "role": [
+            "khach"
+          ]
+        },
+        {
+          "garment": [
+            "nhat_binh"
+          ]
+        },
+        {
+          "accessoryCount": {
+            "items": [
+              "trang_suc",
+              "bong_tai",
+              "vong_tay",
+              "kieng_bac",
+              "day_xich_hong"
+            ],
+            "min": 2
+          }
+        }
+      ]
+    },
+    "reason": "Nhật Bình cùng nhiều loại trang sức tạo tổng thể nổi bật cho vai trò khách dự cưới.",
+    "suggestion": {
+      "text": "Đối chiếu dress code, giảm trang sức nếu buổi lễ muốn dành điểm nhấn cho nhân vật chính."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R70",
+    "title": "Nhật Bình cho nhân vật chính lễ cưới",
+    "level": "ok",
+    "criterion": "boi_canh",
+    "group": "dress_occasion",
+    "priority": 2,
+    "points": 5,
+    "scope": "context",
+    "when": {
+      "all": [
+        {
+          "occasion": [
+            "dam_cuoi"
+          ]
+        },
+        {
+          "role": [
+            "nhan_vat_chinh"
+          ]
+        },
+        {
+          "garment": [
+            "nhat_binh"
+          ]
+        }
+      ]
+    },
+    "reason": "Vai trò nhân vật chính phù hợp mục đích chọn Nhật Bình làm điểm nhấn lễ phục hiện đại.",
+    "suggestion": {
+      "text": "Phối lớp dưới dài và chọn phụ kiện theo mức trang trọng của buổi lễ."
+    },
+    "sources": [
+      "https://khamphahue.com.vn/Hue-24h/Thong-bao/tid/Ao-Nhat-Binh-Mot-di-san-van-hoa-quy-cua-Co-do-Hue.html/pid/11533/cid/28"
+    ],
+    "verified": false,
+    "sourceNote": "Nguồn mô tả trang phục và bối cảnh lịch sử. Điều kiện phối đồ, mức cộng/trừ điểm là quy tắc tham khảo của ứng dụng, không phải điều cấm được nguồn xác nhận."
+  },
+  {
+    "id": "R71",
+    "title": "Nhật Bình cho mục đích chụp ảnh",
+    "level": "ok",
+    "criterion": "boi_canh",
+    "group": "dress_occasion",
+    "priority": 2,
+    "points": 5,
+    "scope": "context",
+    "when": {
+      "all": [
+        {
+          "role": [
+            "chup_anh"
+          ]
+        },
+        {
+          "garment": [
+            "nhat_binh"
+          ]
+        }
+      ]
+    },
+    "reason": "Nhật Bình có thể được chọn có chủ đích cho ảnh cổ phục; tư liệu Huế cũng mô tả việc mặc chụp ảnh tham quan hiện nay.",
+    "suggestion": {
+      "text": "Ưu tiên phụ kiện hỗ trợ bố cục ảnh và thuận tiện di chuyển giữa các điểm chụp."
+    },
+    "sources": [
+      "https://khamphahue.com.vn/Hue-24h/Thong-bao/tid/Ao-Nhat-Binh-Mot-di-san-van-hoa-quy-cua-Co-do-Hue.html/pid/11533/cid/28"
+    ],
+    "verified": false,
+    "sourceNote": "Nguồn mô tả trang phục và bối cảnh lịch sử. Điều kiện phối đồ, mức cộng/trừ điểm là quy tắc tham khảo của ứng dụng, không phải điều cấm được nguồn xác nhận."
+  },
+  {
+    "id": "R72",
+    "title": "Giày và lớp dưới gọn khi bê tráp",
+    "level": "ok",
+    "criterion": "boi_canh",
+    "group": "role_footwear",
+    "priority": 2,
+    "points": 6,
+    "scope": "context",
+    "when": {
+      "all": [
+        {
+          "role": [
+            "be_trap"
+          ]
+        },
+        {
+          "bottom": [
+            "quan_dai_suong",
+            "quan_ong_rong",
+            "quan_dai"
+          ]
+        },
+        {
+          "shoes": [
+            "giay_bet",
+            "giay_truyen_thong"
+          ]
+        }
+      ]
+    },
+    "reason": "Quần dài và giày bệt/truyền thống tạo hướng phối gọn cho vai trò bê tráp.",
+    "suggestion": {
+      "text": "Kiểm tra kích cỡ, độ dài gấu quần và độ bám đế ngoài thực tế; hình ảnh không xác nhận được các đặc tính này."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R73",
+    "title": "Bản phối kỷ yếu ít điểm nhấn",
+    "level": "ok",
+    "criterion": "boi_canh",
+    "group": "dress_occasion",
+    "priority": 2,
+    "points": 5,
+    "scope": "context",
+    "when": {
+      "all": [
+        {
+          "occasion": [
+            "ky_yeu"
+          ]
+        },
+        {
+          "pattern": [
+            "tron",
+            "hoa_sen",
+            "hoi_van"
+          ]
+        },
+        {
+          "shoes": [
+            "giay_bet",
+            "giay_truyen_thong"
+          ]
+        },
+        {
+          "metric": {
+            "name": "bottomChroma",
+            "max": 0.04
+          }
+        }
+      ]
+    },
+    "reason": "Họa tiết ít hoặc theo mô típ nhẹ cùng quần màu trung tính tạo nền rõ cho ảnh kỷ yếu.",
+    "suggestion": {
+      "text": "Giữ một phụ kiện nổi bật để bản phối dễ hòa vào bố cục ảnh lớp."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R74",
+    "title": "Áo và lớp dưới gần nhau về độ sáng",
+    "level": "consider",
+    "criterion": "dac_trung",
+    "group": "color_contrast",
+    "priority": 2,
+    "points": -8,
+    "scope": "color-and-pattern",
+    "when": {
+      "metric": {
+        "name": "lightnessContrast",
+        "max": 0.1
+      }
+    },
+    "reason": "Độ sáng OKLCH của áo và quần/váy chênh không quá 0,10; đường phân lớp có thể ít rõ trên ảnh.",
+    "suggestion": {
+      "text": "Tăng chênh lệch sáng tối nếu muốn rõ hai lớp; phối đồng màu vẫn có thể là chủ đích."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R75",
+    "title": "Phân lớp sáng tối rõ",
+    "level": "ok",
+    "criterion": "dac_trung",
+    "group": "color_contrast",
+    "priority": 2,
+    "points": 5,
+    "scope": "color-and-pattern",
+    "when": {
+      "metric": {
+        "name": "lightnessContrast",
+        "min": 0.25,
+        "max": 0.65
+      }
+    },
+    "reason": "Độ sáng áo và quần/váy chênh 0,25–0,65, giúp phân lớp màu rõ trong mô hình đánh giá.",
+    "suggestion": {
+      "text": "Giữ cặp màu nếu phù hợp mục đích ảnh và ánh sáng thực tế."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R76",
+    "title": "Hai mảng màu cùng đậm",
+    "level": "consider",
+    "criterion": "dac_trung",
+    "group": "color_saturation",
+    "priority": 2,
+    "points": -10,
+    "scope": "color-and-pattern",
+    "when": {
+      "metric": {
+        "name": "saturatedCount",
+        "min": 2
+      }
+    },
+    "reason": "Cả áo và quần/váy đều có độ chroma OKLCH trên 0,18; hai mảng cùng cạnh tranh điểm nhấn.",
+    "suggestion": {
+      "text": "Giảm độ đậm của một mảng hoặc dùng quần/váy trung tính nếu muốn tổng thể dịu hơn."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R77",
+    "title": "Màu áo nổi trên nền trung tính",
+    "level": "ok",
+    "criterion": "dac_trung",
+    "group": "color_saturation",
+    "priority": 2,
+    "points": 5,
+    "scope": "color-and-pattern",
+    "when": {
+      "all": [
+        {
+          "metric": {
+            "name": "mainChroma",
+            "min": 0.18
+          }
+        },
+        {
+          "metric": {
+            "name": "bottomChroma",
+            "max": 0.04
+          }
+        }
+      ]
+    },
+    "reason": "Áo có độ chroma cao, trong khi lớp dưới gần trung tính, tạo một trọng tâm màu.",
+    "suggestion": {
+      "text": "Giữ phụ kiện đơn giản để tập trung vào áo."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R78",
+    "title": "Cặp màu đạt hài hòa cao",
+    "level": "ok",
+    "criterion": "dac_trung",
+    "group": "color_harmony",
+    "priority": 2,
+    "points": 4,
+    "scope": "color-and-pattern",
+    "when": {
+      "metric": {
+        "name": "colorHarmony",
+        "min": 80
+      }
+    },
+    "reason": "Cặp màu đạt ít nhất 80/100 theo mô hình tương phản và sắc độ của ứng dụng.",
+    "suggestion": {
+      "text": "Có thể giữ cặp màu; điểm màu không xác nhận cấu trúc hay xuất xứ trang phục."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R79",
+    "title": "Cặp màu cần cân nhắc",
+    "level": "consider",
+    "criterion": "dac_trung",
+    "group": "color_harmony",
+    "priority": 2,
+    "points": -8,
+    "scope": "color-and-pattern",
+    "when": {
+      "metric": {
+        "name": "colorHarmony",
+        "max": 45
+      }
+    },
+    "reason": "Cặp màu đạt không quá 45/100 theo mô hình màu hiện tại; cần xem cùng mục đích phối.",
+    "suggestion": {
+      "text": "Thử một lớp dưới trung tính hoặc thay đổi độ sáng trước khi đổi cả áo."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R80",
+    "title": "Hai mảng tối cho ảnh ngoài trời buổi tối",
+    "level": "consider",
+    "criterion": "boi_canh",
+    "group": "color_night",
+    "priority": 2,
+    "points": -5,
+    "scope": "context",
+    "when": {
+      "all": [
+        {
+          "setting": [
+            "ngoai_troi",
+            "ca_hai"
+          ]
+        },
+        {
+          "timeOfDay": [
+            "buoi_toi"
+          ]
+        },
+        {
+          "metric": {
+            "name": "mainLightness",
+            "max": 0.34
+          }
+        },
+        {
+          "metric": {
+            "name": "bottomLightness",
+            "max": 0.34
+          }
+        }
+      ]
+    },
+    "reason": "Cả hai mảng có độ sáng OKLCH thấp trong bối cảnh ảnh ngoài trời buổi tối; chi tiết có thể khó tách nếu thiếu ánh sáng.",
+    "suggestion": {
+      "text": "Tăng sáng một mảng hoặc kiểm tra ánh sáng tại điểm chụp; ứng dụng không đo ánh sáng môi trường."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R81",
+    "title": "Màu áo nhẹ theo phong cách pastel",
+    "level": "ok",
+    "criterion": "cach_tan",
+    "group": "style_color",
+    "priority": 2,
+    "points": 4,
+    "scope": "styling",
+    "when": {
+      "all": [
+        {
+          "style": [
+            "pastel"
+          ]
+        },
+        {
+          "metric": {
+            "name": "mainLightness",
+            "min": 0.7
+          }
+        },
+        {
+          "metric": {
+            "name": "mainChroma",
+            "max": 0.12
+          }
+        }
+      ]
+    },
+    "reason": "Màu áo sáng và chroma thấp phù hợp hướng pastel đã chọn.",
+    "suggestion": {
+      "text": "Duy trì phụ kiện ít tương phản mạnh nếu muốn giữ cảm giác nhẹ."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R82",
+    "title": "Nhiều loại trang sức cùng lúc",
+    "level": "consider",
+    "criterion": "phu_kien",
+    "group": "jewelry_density",
+    "priority": 2,
+    "points": -10,
+    "scope": "styling",
+    "when": {
+      "accessoryCount": {
+        "items": [
+          "trang_suc",
+          "bong_tai",
+          "vong_tay",
+          "kieng_bac",
+          "day_xich_hong"
+        ],
+        "min": 3
+      }
+    },
+    "reason": "Ít nhất ba loại trang sức đang được chọn; nhiều điểm phản chiếu có thể làm tổng thể khó có trọng tâm.",
+    "suggestion": {
+      "text": "Chọn một điểm nhấn chính, cân nhắc bỏ bớt vòng tay, bông tai hoặc kiềng."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R83",
+    "title": "Nhiều phụ kiện quanh đầu",
+    "level": "consider",
+    "criterion": "phu_kien",
+    "group": "head_density",
+    "priority": 2,
+    "points": -8,
+    "scope": "styling",
+    "when": {
+      "accessoryCount": {
+        "items": [
+          "non_la",
+          "non_quai_thao",
+          "khan_van",
+          "khan_mo_qua",
+          "khan_xep",
+          "hoa_cai_toc",
+          "mu_luoi_trai",
+          "mu_cao_boi"
+        ],
+        "min": 3
+      }
+    },
+    "reason": "Ít nhất ba loại nón, khăn hoặc hoa cài đang được chọn cùng lúc.",
+    "suggestion": {
+      "text": "Giữ bộ khăn và nón có chủ đích; giảm món còn lại nếu che mặt hoặc chồng lớp khó nhìn."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R84",
+    "title": "Nhiều túi trong một bản phối",
+    "level": "consider",
+    "criterion": "phu_kien",
+    "group": "carried_bag_load",
+    "priority": 2,
+    "points": -8,
+    "scope": "styling",
+    "when": {
+      "accessoryCount": {
+        "items": [
+          "tui",
+          "ba_lo",
+          "tui_tote",
+          "tui_deo_cheo",
+          "tui_xach_thoi_trang"
+        ],
+        "min": 2
+      }
+    },
+    "reason": "Từ hai loại túi hoặc ba lô trở lên tạo nhiều lớp phụ kiện mang theo.",
+    "suggestion": {
+      "text": "Giữ một túi theo hoạt động chính, kiểm tra cách mang thực tế."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R85",
+    "title": "Móc khóa chưa có túi đi kèm",
+    "level": "consider",
+    "criterion": "phu_kien",
+    "group": "bag_charm",
+    "priority": 2,
+    "points": -6,
+    "scope": "styling",
+    "when": {
+      "all": [
+        {
+          "hasAccessory": "moc_khoa_bong"
+        },
+        {
+          "not": {
+            "accessoryCount": {
+              "items": [
+                "tui",
+                "ba_lo",
+                "tui_tote",
+                "tui_deo_cheo",
+                "tui_xach_thoi_trang"
+              ],
+              "min": 1
+            }
+          }
+        }
+      ]
+    },
+    "reason": "Móc khóa bông được chọn nhưng không có túi hoặc ba lô trong bộ đồ để thể hiện điểm gắn.",
+    "suggestion": {
+      "text": "Chọn túi phù hợp hoặc bỏ móc khóa; ứng dụng chưa biết bạn có gắn vào vị trí khác hay không."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R86",
+    "title": "Họa tiết nổi cùng nhiều trang sức",
+    "level": "consider",
+    "criterion": "phu_kien",
+    "group": "pattern_density",
+    "priority": 2,
+    "points": -10,
+    "scope": "styling",
+    "when": {
+      "all": [
+        {
+          "pattern": [
+            "rong_may",
+            "phuong",
+            "ke_soc",
+            "cham_bi"
+          ]
+        },
+        {
+          "accessoryCount": {
+            "items": [
+              "trang_suc",
+              "bong_tai",
+              "vong_tay",
+              "kieng_bac",
+              "day_xich_hong"
+            ],
+            "min": 2
+          }
+        }
+      ]
+    },
+    "reason": "Họa tiết nổi và ít nhất hai loại trang sức tạo nhiều điểm hút mắt.",
+    "suggestion": {
+      "text": "Giảm một loại trang sức hoặc đổi họa tiết đơn giản để tạo trọng tâm."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R87",
+    "title": "Phụ kiện dày với phong cách tối giản",
+    "level": "consider",
+    "criterion": "phu_kien",
+    "group": "accessory_density",
+    "priority": 2,
+    "points": -8,
+    "scope": "styling",
+    "when": {
+      "all": [
+        {
+          "style": [
+            "toi_gian"
+          ]
+        },
+        {
+          "accessoryCount": {
+            "items": [
+              "trang_suc",
+              "bong_tai",
+              "vong_tay",
+              "kieng_bac",
+              "day_xich_hong",
+              "tui",
+              "ba_lo",
+              "tui_tote",
+              "tui_deo_cheo",
+              "tui_xach_thoi_trang",
+              "non_la",
+              "non_quai_thao",
+              "khan_van",
+              "khan_mo_qua",
+              "khan_xep",
+              "hoa_cai_toc",
+              "mu_luoi_trai",
+              "mu_cao_boi",
+              "quat_giay",
+              "tai_nghe",
+              "kinh_ram",
+              "moc_khoa_bong",
+              "gang_tay_ho_ngon"
+            ],
+            "min": 5
+          }
+        }
+      ]
+    },
+    "reason": "Từ năm loại phụ kiện ngoài giày trở lên khác mục tiêu ít chi tiết của phong cách tối giản.",
+    "suggestion": {
+      "text": "Giữ hai hoặc ba món cần thiết, chọn một món tạo điểm nhấn."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R88",
+    "title": "Nhiều món hiện đại trong hướng truyền thống",
+    "level": "consider",
+    "criterion": "cach_tan",
+    "group": "modern_density",
+    "priority": 2,
+    "points": -10,
+    "scope": "styling",
+    "when": {
+      "all": [
+        {
+          "style": [
+            "truyen_thong"
+          ]
+        },
+        {
+          "accessoryCount": {
+            "items": [
+              "sneaker",
+              "giay_bup_be",
+              "giay_the_thao",
+              "dep_crocs",
+              "dep_le",
+              "tai_nghe",
+              "mu_luoi_trai",
+              "moc_khoa_bong",
+              "ba_lo",
+              "tui_tote",
+              "tui_deo_cheo",
+              "kinh_ram",
+              "day_xich_hong",
+              "gang_tay_ho_ngon",
+              "mu_cao_boi",
+              "tui_xach_thoi_trang"
+            ],
+            "min": 3
+          }
+        }
+      ]
+    },
+    "reason": "Ít nhất ba loại phụ kiện hiện đại cùng xuất hiện khi hướng phối đã chọn là truyền thống.",
+    "suggestion": {
+      "text": "Giảm phụ kiện hiện đại hoặc đổi phong cách sang đường phố nếu đây là chủ đích."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R89",
+    "title": "Một đến hai điểm nhấn đường phố",
+    "level": "ok",
+    "criterion": "cach_tan",
+    "group": "modern_density",
+    "priority": 2,
+    "points": 6,
+    "scope": "styling",
+    "when": {
+      "all": [
+        {
+          "style": [
+            "duong_pho"
+          ]
+        },
+        {
+          "occasion": [
+            "dao_pho"
+          ]
+        },
+        {
+          "accessoryCount": {
+            "items": [
+              "sneaker",
+              "giay_bup_be",
+              "giay_the_thao",
+              "dep_crocs",
+              "dep_le",
+              "tai_nghe",
+              "mu_luoi_trai",
+              "moc_khoa_bong",
+              "ba_lo",
+              "tui_tote",
+              "tui_deo_cheo",
+              "kinh_ram",
+              "day_xich_hong",
+              "gang_tay_ho_ngon",
+              "mu_cao_boi",
+              "tui_xach_thoi_trang"
+            ],
+            "min": 1,
+            "max": 2
+          }
+        }
+      ]
+    },
+    "reason": "Một đến hai điểm nhấn hiện đại phù hợp mục tiêu cách tân cho hoạt động dạo phố.",
+    "suggestion": {
+      "text": "Giữ cấu trúc áo và lớp dưới rõ, tránh tăng nhiều điểm nhấn cùng lúc."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R90",
+    "title": "Bản phối tối giản ít chi tiết",
+    "level": "ok",
+    "criterion": "cach_tan",
+    "group": "minimalist_balance",
+    "priority": 2,
+    "points": 5,
+    "scope": "styling",
+    "when": {
+      "all": [
+        {
+          "style": [
+            "toi_gian"
+          ]
+        },
+        {
+          "pattern": [
+            "tron"
+          ]
+        },
+        {
+          "accessoryCount": {
+            "items": [
+              "trang_suc",
+              "bong_tai",
+              "vong_tay",
+              "kieng_bac",
+              "day_xich_hong",
+              "tui",
+              "ba_lo",
+              "tui_tote",
+              "tui_deo_cheo",
+              "tui_xach_thoi_trang",
+              "non_la",
+              "non_quai_thao",
+              "khan_van",
+              "khan_mo_qua",
+              "khan_xep",
+              "hoa_cai_toc",
+              "mu_luoi_trai",
+              "mu_cao_boi",
+              "quat_giay",
+              "tai_nghe",
+              "kinh_ram",
+              "moc_khoa_bong",
+              "gang_tay_ho_ngon"
+            ],
+            "max": 2
+          }
+        }
+      ]
+    },
+    "reason": "Áo trơn cùng không quá hai loại phụ kiện ngoài giày phù hợp hướng tối giản.",
+    "suggestion": {
+      "text": "Giữ đường nét và cặp màu làm trọng tâm."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R91",
+    "title": "Họa tiết hiện đại trong hướng truyền thống",
+    "level": "consider",
+    "criterion": "cach_tan",
+    "group": "pattern_style",
+    "priority": 2,
+    "points": -8,
+    "scope": "styling",
+    "when": {
+      "all": [
+        {
+          "style": [
+            "truyen_thong"
+          ]
+        },
+        {
+          "pattern": [
+            "ke_soc",
+            "cham_bi"
+          ]
+        }
+      ]
+    },
+    "reason": "Kẻ sọc hoặc chấm bi tạo hướng đồ họa hiện đại trong bản phối đã chọn truyền thống.",
+    "suggestion": {
+      "text": "Chọn áo trơn hoặc mô típ truyền thống nếu muốn sát hướng phối; họa tiết hiện đại có thể giữ trong cách tân."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R92",
+    "title": "Màu áo đậm trong hướng pastel",
+    "level": "consider",
+    "criterion": "cach_tan",
+    "group": "style_color",
+    "priority": 2,
+    "points": -8,
+    "scope": "styling",
+    "when": {
+      "all": [
+        {
+          "style": [
+            "pastel"
+          ]
+        },
+        {
+          "metric": {
+            "name": "mainChroma",
+            "min": 0.18
+          }
+        }
+      ]
+    },
+    "reason": "Độ chroma áo từ 0,18 trở lên khác hướng màu nhẹ thường dùng cho pastel.",
+    "suggestion": {
+      "text": "Giảm độ đậm, tăng độ sáng hoặc chọn phong cách khác phù hợp màu đang thích."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R93",
+    "title": "Ngũ thân trơn trong dịp trang trọng",
+    "level": "ok",
+    "criterion": "dac_trung",
+    "group": "garment_pattern",
+    "priority": 2,
+    "points": 5,
+    "scope": "color-and-pattern",
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "ao_ngu_than"
+          ]
+        },
+        {
+          "pattern": [
+            "tron"
+          ]
+        },
+        {
+          "occasion": [
+            "tet",
+            "ky_yeu",
+            "dam_cuoi",
+            "le_hoi_chua"
+          ]
+        }
+      ]
+    },
+    "reason": "Áo ngũ thân trơn giữ đường nét áo làm điểm nhấn trong hướng phối trang trọng của ứng dụng.",
+    "suggestion": {
+      "text": "Có thể thêm khăn xếp hoặc một món trang sức; ứng dụng chưa kiểm tra cổ áo, số khuy hay chất liệu."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R94",
+    "title": "Nhật Bình với họa tiết đồ họa hiện đại",
+    "level": "consider",
+    "criterion": "cach_tan",
+    "group": "pattern_style",
+    "priority": 2,
+    "points": -8,
+    "scope": "styling",
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "nhat_binh"
+          ]
+        },
+        {
+          "pattern": [
+            "ke_soc",
+            "cham_bi"
+          ]
+        },
+        {
+          "style": [
+            "truyen_thong"
+          ]
+        }
+      ]
+    },
+    "reason": "Kẻ sọc hoặc chấm bi phủ trên Nhật Bình tạo cách tân rõ khi mục tiêu đã chọn là truyền thống.",
+    "suggestion": {
+      "text": "Đổi họa tiết nếu muốn nhấn mạnh dáng cổ phục; không áp dụng quy định phẩm cấp lịch sử cho người mặc hiện nay."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R95",
+    "title": "Nhiều điểm nhấn trong bản phối đường phố",
+    "level": "consider",
+    "criterion": "cach_tan",
+    "group": "visual_focus",
+    "priority": 2,
+    "points": -6,
+    "scope": "styling",
+    "when": {
+      "all": [
+        {
+          "style": [
+            "duong_pho"
+          ]
+        },
+        {
+          "pattern": [
+            "rong_may",
+            "phuong",
+            "ke_soc",
+            "cham_bi"
+          ]
+        },
+        {
+          "accessoryCount": {
+            "items": [
+              "sneaker",
+              "giay_bup_be",
+              "giay_the_thao",
+              "dep_crocs",
+              "dep_le",
+              "tai_nghe",
+              "mu_luoi_trai",
+              "moc_khoa_bong",
+              "ba_lo",
+              "tui_tote",
+              "tui_deo_cheo",
+              "kinh_ram",
+              "day_xich_hong",
+              "gang_tay_ho_ngon",
+              "mu_cao_boi",
+              "tui_xach_thoi_trang"
+            ],
+            "min": 2
+          }
+        }
+      ]
+    },
+    "reason": "Họa tiết nổi kết hợp nhiều món hiện đại có thể làm bản phối đường phố thiếu trọng tâm.",
+    "suggestion": {
+      "text": "Giữ một mảng họa tiết hoặc một phụ kiện hiện đại làm điểm nhấn chính."
+    },
+    "sources": [],
+    "verified": false,
+    "sourceNote": "Quy tắc phối đồ của ứng dụng, dựa trên các món đã chọn và bối cảnh đã cung cấp; không phải quy định văn hóa bắt buộc."
+  },
+  {
+    "id": "R96",
+    "title": "Tứ thân với khăn và nón quai thao",
+    "level": "ok",
+    "criterion": "phu_kien",
+    "group": "cultural_accessory_set",
+    "priority": 2,
+    "points": 10,
+    "scope": "styling",
+    "when": {
+      "all": [
+        {
+          "garment": [
+            "ao_tu_than"
+          ]
+        },
+        {
+          "hasAccessory": "non_quai_thao"
+        },
+        {
+          "hasAccessory": "khan_mo_qua"
+        }
+      ]
+    },
+    "reason": "Khăn mỏ quạ và nón quai thao tạo hướng phối tứ thân gắn với hình ảnh Quan họ của ứng dụng.",
+    "suggestion": {
+      "text": "Giữ tổng thể nhiều lớp gọn; tham khảo tư liệu địa phương nếu cần phục dựng đúng một hình thức trình diễn."
+    },
+    "sources": [
+      "https://dsvh.gov.vn/dan-ca-quan-ho-bac-ninh-482"
+    ],
+    "verified": false,
+    "sourceNote": "Nguồn mô tả trang phục và bối cảnh lịch sử. Điều kiện phối đồ, mức cộng/trừ điểm là quy tắc tham khảo của ứng dụng, không phải điều cấm được nguồn xác nhận."
+  }
 ]

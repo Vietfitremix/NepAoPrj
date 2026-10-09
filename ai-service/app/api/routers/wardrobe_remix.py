@@ -18,7 +18,7 @@ from app.ai import AIError
 from app.ai.fallback import norm
 from app.api.deps import client_ip, get_service
 from app.api.routers.wardrobe_score import Built, ScoreRequest, Style, WardrobeSelection, build_state
-from app.engine.color import score_pair
+from app.engine.color import color_metrics, score_colors
 from app.engine.kinds import BOTTOM_LABEL, SHOES_LABEL
 from app.engine.rules import evaluate
 from app.engine.scoring import score_card
@@ -56,9 +56,8 @@ def _score(body: RemixBody, selection: WardrobeSelection, svc):
     b = build_state(probe, svc)
     if b is None:
         return None
-    evaluations = evaluate(b.state, b.cat.rules, body.context)
-    shoe_color = b.selection.styles.get('shoes', Style()).color if b.selection.shoes else None
-    harmony = score_pair(b.main_hex, b.bottom_hex, shoe_color)
+    harmony = score_colors(b.state, b.cat)
+    evaluations = evaluate(b.state, b.cat.rules, body.context, color_metrics(b.state, b.cat, harmony.score))
     return b, score_card(b.state, evaluations, harmony.score, b.cat), evaluations, harmony
 
 

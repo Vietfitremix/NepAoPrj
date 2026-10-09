@@ -1,7 +1,8 @@
 import { api } from './api';
 import { selection, lookView } from './backendContract';
 import type { SavedLook, ReferenceData } from './backendContract';
-import type { MixConfig } from '../types';
+import type { MixConfig, QuizAnswer } from '../types';
+import { reviewContext } from '../utils/outfitContext';
 import { normalizeMaleSelection } from '../utils/maleWardrobe';
 import type { WardrobeCharacter } from '../utils/maleWardrobe';
 interface SharedWardrobeLook { state: { lookId: number; wardrobe: NonNullable<MixConfig['wardrobe']> } }
@@ -11,9 +12,9 @@ function restoreWardrobe(look: ReturnType<typeof lookView>, id: string, wardrobe
   return {...look,id,config:{...look.config,conceptId:'saved-'+id,
     wardrobe:{character,selection:normalizeMaleSelection(wardrobe.selection,character)}}};
 }
-export async function createLook(config: MixConfig) {
+export async function createLook(config: MixConfig, answers?: Record<string, QuizAnswer>) {
   const refs = (await api.get<ReferenceData>('/reference-data')).data;
-  const data = (await api.post<SavedLook>('/looks', selection(config))).data;
+  const data = (await api.post<SavedLook>('/looks', { ...selection(config), ...(config.wardrobe ? { context: reviewContext(answers) } : {}) })).data;
   const look=lookView(data, refs);
   if (!config.wardrobe) return look;
   const shared=(await api.post<{id:string}>('/shared-looks', {state:{lookId:data.id,wardrobe:config.wardrobe}})).data;

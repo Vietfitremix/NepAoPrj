@@ -109,16 +109,25 @@ Chạy bằng Docker trong `deploy/docker-compose.yml` (PLAN-DEV mục 9). Đặ
 
 ## Chấm điểm phối đồ trong tủ đồ (quy định chung)
 
-Bộ luật (`data/rules.json`, R40–R50) xét **từng món** của tủ đồ, không chỉ áo và màu:
+Bộ luật (`data/rules.json`, tổng 80 luật) xét **từng món** của tủ đồ, không chỉ áo và màu:
 - **Quần/váy** (`bottom`): áo truyền thống (áo dài, ngũ thân, tứ thân, nhật bình, bà ba) đi với quần đùi/quần ngắn hoặc váy ngắn là
   luật nặng (trần điểm 35); chưa phối quần/váy là luật nặng (trần 40); quần ống bó hoặc quần lửng với áo dài bị trừ nhẹ.
-  Quần ống suông, ống rộng, quần dài, váy dài đều hợp.
+  Quần suông/rộng/dài có luật cộng điểm theo loại áo; váy dài được xét riêng cho tứ thân, Nhật Bình và biến thể cách tân áo dài/ngũ thân.
 - **Giày dép** (`shoes`): dép lê / dép Crocs với áo truyền thống ở dịp trang trọng (Tết, kỷ yếu, cưới hỏi, lễ chùa) là luật nặng
   (trần 45), ở dịp dạo phố chỉ bị trừ; giày thể thao hoặc đi chân trần ở cưới hỏi, đi chùa bị trừ.
 - **Phụ kiện đường phố** (mũ lưỡi trai / cao bồi, tai nghe, ba lô, găng tay, dây xích) ở dịp trang trọng bị trừ; yếu tố hiện đại
   được tính tới 4 món trong tiêu chí "Cách tân".
 - Bộ nào có luật nặng thì tổng điểm bị chặn ở mức thấp (dưới 60, xếp loại "Cần chỉnh") và nhận xét của stylist nói thẳng là chưa phù hợp.
-- Các luật chỉ áp dụng khi biết loại quần/váy và giày; bộ gợi ý gốc của AI (không có hai trường này) không bị ảnh hưởng.
+- Luật về loại quần/váy và giày chỉ áp dụng khi biết hai trường này. Các luật màu, phụ kiện và ngữ cảnh vẫn dùng cho bộ gợi ý gốc của AI.
+
+`context` nhận `weather`, `setting`, `timeOfDay`, `role` từ quiz, dùng chung cho chấm nhanh, nhận xét,
+Remix và điểm khi lưu look. Không có câu trả lời thì luật phụ thuộc thông tin đó chưa áp dụng,
+kể cả trong điều kiện phủ định. Màu dùng `colorHex` thực tế thay vì chỉ lấy màu gần nhất trong catalog.
+
+Kết quả `/wardrobe-score` bổ sung `checks` (luật khớp, tiêu chí, điểm cơ bản, lý do, gợi ý, nguồn) và
+`assessment` (tổng luật, số luật khớp, bối cảnh đã dùng/còn thiếu, chỉ số màu). Luật cùng `group` chỉ
+đóng góp một lần. Các nguồn lịch sử không xác nhận ngưỡng điểm thẩm mỹ của ứng dụng.
+Tra toàn bộ điều kiện, điểm và giới hạn tại [LUAT-DANH-GIA.md](../LUAT-DANH-GIA.md).
 
 Endpoint cho tủ đồ: `POST /ai/wardrobe-score` (Cultural Check), `POST /ai/wardrobe-review` (stylist nhận xét + Recommend),
 `POST /ai/wardrobe-remix` (phân tích bối cảnh, không làm theo nguyên văn yêu cầu không hợp, đưa các lựa chọn phù hợp hơn đã chấm lại bằng luật).

@@ -47,6 +47,8 @@ def apply_patch(o: OutfitState, patch: dict | None) -> OutfitState:
     for k, v in patch.items():
         if k == "colors" and isinstance(v, dict):
             data["colors"].update(v)
+            for slot in v:
+                data["colorHex"].pop(slot, None)
         else:
             data[k] = v
     return OutfitState.model_validate(data)

@@ -27,7 +27,7 @@ def test_card_shape_and_range(catalog):
 
 def test_risk_caps_total(catalog):
     o = OutfitState(garment="ao_dai", gender="nu", occasion="tet", style="toi_gian",
-                    colors=Colors(main="trang_nga", bottom="trang_nga", accent="trang_nga"), accessories=["khan_van"])
+                    colors=Colors(main="trang_nga", bottom="trang_nga", accent="trang_nga"), accessories=["khan_van"], bottom="quan_ngan")
     _, evals, _, card = score_outfit(o, catalog)
     assert any(e.level == "risk" for e in evals)
     assert card.total <= catalog.scoring["riskCap"] and card.band == "can_chinh"
@@ -44,7 +44,8 @@ def test_rules_move_their_own_criterion(catalog):
     o = outfit(garment="nhat_binh", gender="nu", occasion="dam_cuoi", colors=Colors(main="do_son", bottom="den_tuyen"))
     _, _, _, card = score_outfit(o, catalog, guest)
     ctx = next(c for c in card.criteria if c.id == "boi_canh")
-    assert {"R25", "R26"} <= set(ctx.ruleIds) and ctx.score < 75
+    base = next(c for c in score_outfit(o, catalog)[3].criteria if c.id == 'boi_canh')
+    assert "R25" in ctx.ruleIds and "R26" not in ctx.ruleIds and ctx.score < base.score
 
 
 def test_full_set_scores_higher(catalog):

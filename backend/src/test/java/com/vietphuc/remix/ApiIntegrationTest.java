@@ -82,6 +82,7 @@ class ApiIntegrationTest {
     }
     @Test void fullWardrobeIsCheckedAndSameScoreIsPersisted() throws Exception {
         var request=(com.fasterxml.jackson.databind.node.ObjectNode)mapper.readTree(SELECTION);
+        request.set("context",mapper.readTree("{\"weather\":\"mua\",\"setting\":\"ngoai_troi\",\"role\":\"be_trap\"}"));
         request.set("wardrobe",mapper.readTree("""
             {"character":"female","selection":{"shirt":"jade","pants":"ivory","shoes":"dep-crocs",
             "accessories":{"headphones":"tai-nghe"},"styles":{"shirt":{"color":"#765a94"}}}}
@@ -89,16 +90,22 @@ class ApiIntegrationTest {
         when(ai.culturalScore(any())).thenReturn(mapper.readTree("""
             {"score":72,"level":"WARNING","breakdown":{"structure":80,"garmentCharacteristics":65,
             "accessories":70,"context":75,"modernRemix":60},"warnings":[],"missingCategories":[],
-            "explanation":"Checked full wardrobe"}
+            "explanation":"Checked full wardrobe", "checks":[{"ruleId":"R61","title":"Wet footwear",
+            "category":"CONTEXT","level":"consider","points":-12,"reason":"Outdoor rain","suggestion":"Check sole",
+            "sourceVerified":false,"sourceNote":"App rule"}],"assessment":{"ruleCount":80,"matchedRuleCount":1,
+            "contextUsed":{"weather":"mua"},"missingContext":["timeOfDay"],"colorMetrics":{"lightnessContrast":0.25}}}
             """));
         mvc.perform(post("/api/cultural-score").contentType("application/json").content(request.toString()))
-            .andExpect(status().isOk()).andExpect(jsonPath("$.score").value(72));
+            .andExpect(status().isOk()).andExpect(jsonPath("$.score").value(72))
+            .andExpect(jsonPath("$.checks[0].ruleId").value("R61"))
+            .andExpect(jsonPath("$.assessment.ruleCount").value(80));
         var saved=mvc.perform(post("/api/looks").contentType("application/json").content(request.toString()))
             .andExpect(status().isCreated()).andExpect(jsonPath("$.culturalScore").value(72)).andReturn();
         long id=mapper.readTree(saved.getResponse().getContentAsString()).path("id").asLong();
         mvc.perform(get("/api/looks/"+id)).andExpect(jsonPath("$.culturalScore").value(72));
         verify(ai,times(2)).culturalScore(argThat(value -> value instanceof com.vietphuc.remix.dto.request.LookSelection l
             && l.wardrobe().path("selection").path("styles").path("shirt").path("color").asText().equals("#765a94")
+            && l.context().path("role").asText().equals("be_trap")
             && l.wardrobe().path("selection").path("accessories").path("headphones").asText().equals("tai-nghe")));
     }
     private void rule(ScoreCategory category,TargetType target,String code,int modifier,RuleType type) {

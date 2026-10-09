@@ -25,12 +25,12 @@ def test_ngu_than_with_sneaker_is_consider(catalog):
     assert ids(evaluate(o, catalog.rules)).get("R07") == "consider"
 
 
-def test_all_white_with_khan_at_wedding_is_risk(catalog):
+def test_all_white_with_khan_at_wedding_is_styling_advice(catalog):
     o = outfit(occasion="dam_cuoi", colors=Colors(main="trang_nga", bottom="trang_nga", accent="trang_tinh"),
                accessories=["khan_van"])
     evals = evaluate(o, catalog.rules)
-    assert ids(evals).get("R12") == "risk"
-    assert evals[0].level == "risk"                      # luật nặng nhất đứng đầu
+    assert ids(evals).get("R12") == "consider"
+    assert not any(e.level == "risk" for e in evals)
 
 
 def test_white_outfit_with_colored_khan_is_not_risk(catalog):
@@ -40,8 +40,9 @@ def test_white_outfit_with_colored_khan_is_not_risk(catalog):
 
 
 def test_nhat_binh_dao_pho_is_consider(catalog):
-    o = outfit(garment="nhat_binh", occasion="dao_pho")
-    assert ids(evaluate(o, catalog.rules)).get("R15") == "consider"
+    o = outfit(garment="nhat_binh", occasion="dao_pho", style="truyen_thong")
+    assert ids(evaluate(o, catalog.rules, Intent(role="khach"))).get("R15") == "consider"
+    assert "R15" not in ids(evaluate(o, catalog.rules, Intent(role="chup_anh")))
 
 
 # ---------- chấm màu ----------

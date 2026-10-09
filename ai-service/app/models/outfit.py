@@ -1,5 +1,5 @@
 """Bộ đồ và kết quả đánh giá. Tên trường khớp hợp đồng JSON trong PLAN-DEV mục 6."""
-from typing import Literal, Optional
+from typing import Annotated, Literal, Optional
 
 from pydantic import BaseModel, Field
 
@@ -21,6 +21,7 @@ class OutfitState(BaseModel):
     occasion: str
     style: str
     colors: Colors
+    colorHex: dict[str, Annotated[str, Field(pattern=r'^#[a-fA-F0-9]{6}$')]] = Field(default_factory=dict, max_length=3)
     pattern: str = "tron"              # hoạ tiết phủ lên vùng màu chính (data/patterns.json)
     accessories: list[str] = Field(default_factory=list)
     bottom: Optional[str] = None       # loại quần/váy: quan_dai_suong | quan_ong_rong | quan_dai | quan_bo | quan_lung | quan_ngan | vay_dai | vay_ngan | khong

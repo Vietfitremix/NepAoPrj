@@ -34,6 +34,7 @@ class Selection(BaseModel):
     eventCode: str
     accessories: list[str] = Field(default_factory=list, max_length=10)
     wardrobe: dict | None = None
+    context: Intent | None = None
 
 
 class BackendRequest(BaseModel):
