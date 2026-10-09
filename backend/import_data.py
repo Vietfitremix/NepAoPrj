@@ -87,14 +87,19 @@ def generate_seed():
 
 
 def connect_database():
+    import os
     import psycopg
     from dotenv import dotenv_values
     from urllib.parse import urlparse
 
-    settings = dotenv_values(ROOT / ".env")
-    url = urlparse(settings["DATABASE_URL"].removeprefix("jdbc:"))
+    env_path = ROOT / ".env"
+    settings = dotenv_values(env_path) if env_path.exists() else {}
+    raw_url = os.environ.get("DATABASE_URL") or settings.get("DATABASE_URL", "jdbc:postgresql://localhost:5432/viet_fit")
+    url = urlparse(raw_url.removeprefix("jdbc:"))
+    user = os.environ.get("DATABASE_USERNAME") or settings.get("DATABASE_USERNAME", "viet_fit")
+    password = os.environ.get("DATABASE_PASSWORD") or settings.get("DATABASE_PASSWORD", "")
     return psycopg.connect(host=url.hostname, port=url.port or 5432, dbname=url.path.lstrip("/"),
-                          user=settings["DATABASE_USERNAME"], password=settings["DATABASE_PASSWORD"], connect_timeout=10)
+                          user=user, password=password, connect_timeout=10)
 
 
 def import_assets():

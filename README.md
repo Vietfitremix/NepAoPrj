@@ -107,4 +107,12 @@ GEMINI_MODEL=gemini-3.5-flash
 AI_SERVICE_URL=http://localhost:8000
 ```
 *(Nếu chưa có `GEMINI_API_KEY`, hệ thống sẽ tự động chuyển sang chạy Rule Engine dự phòng mà không phát sinh lỗi).*
-"# AI---ARENA" 
+
+---
+
+## 🚢 Quy trình CI/CD & Triển khai (Deployment)
+
+Dự án đã được tích hợp toàn diện hệ thống **GitHub Actions CI/CD** và **Dockerization**:
+- **CI Pipeline (`.github/workflows/ci.yml`)**: Tự động chạy test độc lập cho Frontend (Node 22), Backend (Java 21/Gradle), AI Service (Python 3.12) và kiểm tra Docker Compose khi có PR hoặc push.
+- **CD Pipeline (`.github/workflows/deploy.yml`)**: Tự động build và đẩy Docker images lên GitHub Container Registry (GHCR), hỗ trợ triển khai tự động qua SSH lên VPS.
+- **Tài liệu hướng dẫn chi tiết:** Xem [DEPLOYMENT.md](DEPLOYMENT.md) để biết cách cấu hình GitHub Secrets, chuẩn bị máy chủ VPS, cài đặt SSL HTTPS và quản trị hệ thống.

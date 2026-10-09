@@ -8,7 +8,12 @@ COPY prompts ./prompts
 COPY scripts ./scripts
 COPY tests ./tests
 COPY data ./data
-# Trên VPS: catalog đọc từ PostgreSQL (DATABASE_URL); thư mục data chỉ cần cho demo-cache.json
+
+# Production defaults
 ENV DATA_DIR=/app/data ENABLE_DEV_ROUTES=false
 EXPOSE 8000
+
+HEALTHCHECK --interval=15s --timeout=5s --retries=5 --start-period=10s \
+  CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/ai/health')" || exit 1
+
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--proxy-headers", "--forwarded-allow-ips", "*"]

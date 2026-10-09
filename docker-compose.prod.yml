@@ -1,66 +1,77 @@
 services:
   postgres:
     image: postgres:16-alpine
-    container_name: vietfit-postgres
+    container_name: vietfit-prod-postgres
     environment:
       POSTGRES_DB: viet_fit
       POSTGRES_USER: ${DATABASE_USERNAME:-viet_fit}
-      POSTGRES_PASSWORD: ${DATABASE_PASSWORD:-change-me}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD:?Set DATABASE_PASSWORD in environment}
     volumes:
-      - postgres-data:/var/lib/postgresql/data
+      - postgres-prod-data:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U \"$$POSTGRES_USER\" -d \"$$POSTGRES_DB\""]
       interval: 5s
       timeout: 5s
       retries: 12
-    restart: unless-stopped
+    restart: always
+    networks:
+      - vietfit-network
 
   ai-service:
+    image: ${AI_SERVICE_IMAGE:-ghcr.io/dth251/vietfit-ai-service:latest}
     build:
       context: ./ai-service
       dockerfile: Dockerfile
-    container_name: vietfit-ai
+    container_name: vietfit-prod-ai
     environment:
       BACKEND_COMPAT_ONLY: "true"
       ENABLE_DEV_ROUTES: "false"
       GEMINI_API_KEY: ${GEMINI_API_KEY:-}
       GEMINI_MODEL: ${GEMINI_MODEL:-gemini-3.5-flash}
-    ports:
-      - "8000:8000"
-    restart: unless-stopped
+    restart: always
+    networks:
+      - vietfit-network
 
   backend:
+    image: ${BACKEND_IMAGE:-ghcr.io/dth251/vietfit-backend:latest}
     build:
       context: ./backend
       dockerfile: Dockerfile
-    container_name: vietfit-backend
-    ports:
-      - "8080:8080"
+    container_name: vietfit-prod-backend
     environment:
       DATABASE_URL: jdbc:postgresql://postgres:5432/viet_fit
       DATABASE_USERNAME: ${DATABASE_USERNAME:-viet_fit}
-      DATABASE_PASSWORD: ${DATABASE_PASSWORD:-change-me}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD:?Set DATABASE_PASSWORD in environment}
       WEATHER_API_KEY: ${WEATHER_API_KEY:-}
       AI_SERVICE_URL: http://ai-service:8000
-      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-http://localhost:5173,http://localhost:5176,http://localhost:80,http://localhost}
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-http://localhost,https://${APP_DOMAIN:-localhost}}
     depends_on:
       postgres:
         condition: service_healthy
       ai-service:
         condition: service_started
-    restart: unless-stopped
+    restart: always
+    networks:
+      - vietfit-network
 
   frontend:
+    image: ${FRONTEND_IMAGE:-ghcr.io/dth251/vietfit-frontend:latest}
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    container_name: vietfit-frontend
+    container_name: vietfit-prod-frontend
     ports:
-      - "${FRONTEND_PORT:-80}:80"
+      - "${HOST_PORT:-80}:80"
     depends_on:
       backend:
         condition: service_started
-    restart: unless-stopped
+    restart: always
+    networks:
+      - vietfit-network
+
+networks:
+  vietfit-network:
+    driver: bridge
 
 volumes:
-  postgres-data:
+  postgres-prod-data:
