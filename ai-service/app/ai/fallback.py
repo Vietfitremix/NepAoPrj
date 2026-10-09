@@ -215,12 +215,16 @@ def fallback_comment(o: OutfitState, evals: list[Evaluation], color_note: str, c
                 "comment": f"{catalog.name('garments', o.garment)} phối {{color1}} với {{color2}} khá hợp dịp này."})
     comment = item["comment"].replace("{color1}", c1.lower()).replace("{color2}", c2.lower())
 
+    title = item.get("title") or catalog.name("garments", o.garment)
     worst = next((e for e in evals if e.level != "ok"), None)
-    if worst:
-        extra = fb.get("by_rule", {}).get(worst.id) or f"{LEVEL_LABEL[worst.level]}: {worst.reason}."
-        comment = f"{comment} {extra}"
-        tip = worst.suggestion.text
+    if worst and worst.level == "risk":        # nhận xét thẳng thắn: có điểm nặng thì không khen, nói rõ là chưa phù hợp
+        reason = worst.reason[0].lower() + worst.reason[1:]
+        comment = fb.get("by_rule", {}).get(worst.id) or f"Mình nói thẳng: bộ này chưa phù hợp vì {reason}."
+        title, tip = "Bộ này cần chỉnh lại", worst.suggestion.text
+    elif worst:
+        extra = fb.get("by_rule", {}).get(worst.id) or f"Điểm cần chỉnh: {worst.reason}."
+        comment, tip = f"{comment} {extra}", worst.suggestion.text
     else:
         comment = f"{comment} {color_note}"
         tip = fb.get("default_tip") or "Bạn có thể vào studio để đổi màu và phụ kiện theo ý mình."
-    return item.get("title") or catalog.name("garments", o.garment), comment.strip(), tip
+    return title, comment.strip(), tip

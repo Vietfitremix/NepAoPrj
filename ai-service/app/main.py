@@ -10,7 +10,7 @@ from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 
 from app.ai import GeminiClient
-from app.api.routers import admin, backend, catalog, dev, stylist, wardrobe_score
+from app.api.routers import admin, backend, catalog, dev, stylist, wardrobe_remix, wardrobe_score
 from app.catalog import Catalog, CatalogStore
 from app.core.config import get_settings
 from app.engine import InvalidOutfit
@@ -58,6 +58,7 @@ def create_app() -> FastAPI:
 
     app.include_router(backend.router, prefix="/ai")
     app.include_router(wardrobe_score.router, prefix="/ai")
+    app.include_router(wardrobe_remix.router, prefix="/ai")
     for r in (catalog.router, stylist.router, admin.router):
         app.include_router(r, prefix="/ai")
 

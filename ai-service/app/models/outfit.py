@@ -23,6 +23,8 @@ class OutfitState(BaseModel):
     colors: Colors
     pattern: str = "tron"              # hoạ tiết phủ lên vùng màu chính (data/patterns.json)
     accessories: list[str] = Field(default_factory=list)
+    bottom: Optional[str] = None       # loại quần/váy: quan_dai_suong | quan_ong_rong | quan_dai | quan_bo | quan_lung | quan_ngan | vay_dai | vay_ngan | khong
+    shoes: Optional[str] = None        # loại giày dép: giay_truyen_thong | giay_bet | giay_the_thao | dep | khong
 
 
 class Suggestion(BaseModel):

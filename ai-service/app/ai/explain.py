@@ -5,6 +5,7 @@ Dùng chung cho: 3 thẻ gợi ý (/ai/stylist), nhận xét 1 bộ (/ai/explain
 import json
 import re
 
+from app.engine.kinds import BOTTOM_LABEL, SHOES_LABEL
 from app.engine.rules import LEVEL_LABEL
 from app.models import StylistOutfit
 
@@ -42,6 +43,8 @@ def outfit_payload(o: StylistOutfit, catalog) -> dict:
         "style": catalog.name("styles", s.style),
         "colors": [catalog.name("colors", c) for c in (s.colors.main, s.colors.bottom) if c],
         "pattern": catalog.name("patterns", s.pattern),
+        **({"quần/váy": BOTTOM_LABEL.get(s.bottom, s.bottom)} if s.bottom else {}),
+        **({"giày dép": SHOES_LABEL.get(s.shoes, s.shoes)} if s.shoes else {}),
         "accessories": [catalog.name("accessories", a) for a in s.accessories],
         "colorScore": o.color.score,
         "colorNote": o.color.note,

@@ -5,7 +5,10 @@ import { useSession } from '../state';
 import type { CulturalResult, MixConfig, Outfit } from '../types';
 import { getOutfits } from '../services/outfitApi';
 import { getCulturalScore } from '../services/culturalApi';
-import { applyChanges, remix } from '../services/remixApi';
+import { applyChanges } from '../services/remixApi';
+import { wardrobeRemix } from '../services/aiApi';
+import type { WardrobeRemix } from '../services/aiApi';
+import RemixPanel from '../components/mix/RemixPanel';
 import { createLook } from '../services/lookApi';
 import { errorMessage } from '../services/api';
 import { EmptyState, ErrorBox, Loading, PageHeading, Stepper } from '../components/common/UI';
@@ -33,7 +36,7 @@ export default function MixStudioPage() {
   const [prompt,setPrompt]=useState('');
   const [busy,setBusy]=useState<'remix'|'generate'|''>('');
   const [error,setError]=useState('');
-  const [explanation,setExplanation]=useState('');
+  const [remixResult,setRemixResult]=useState<WardrobeRemix>();
   const key=JSON.stringify(config);
   const latestKey=useRef(key);latestKey.current=key;
   const active=useRef(true);
@@ -57,7 +60,7 @@ export default function MixStudioPage() {
   if(!config)return <main className="page-container nepao-page"><EmptyState title="Chọn một concept để bắt đầu mix">Bản phối chưa có trong phiên này. Hãy tạo concept để khám phá Mix Studio.</EmptyState></main>;
   const outfit=outfits?.find(item=>item.code===config.outfitCode);
   const wardrobe=config.wardrobe || initialWardrobe(config,session.preferences?.character || 'female');
-  function change(patch:Partial<MixConfig>){if(!config)return;update({mix:{...config,...patch}});setError('');setExplanation('');}
+  function change(patch:Partial<MixConfig>){if(!config)return;update({mix:{...config,...patch}});setError('');setRemixResult(undefined);}
   function chooseWardrobe(selection:MaleSelection,character:WardrobeCharacter){
     if(!config || !outfits)return;
     change(configureWardrobe(config,selection,character,outfits));
@@ -73,9 +76,10 @@ export default function MixStudioPage() {
     event.preventDefault();if(!config || !prompt.trim() || busy)return;
     const requestKey=key;setBusy('remix');setError('');
     try{
-      const result=await remix(config,prompt.trim());
+      const result=await wardrobeRemix(config,prompt.trim(),session.preferences?.answers);
       if(!active.current || latestKey.current!==requestKey)return;
-      update({mix:applyChanges(config,result.changes)});setExplanation(result.explanation);setPrompt('');
+      if(result.applied)chooseWardrobe(result.selection,wardrobe.character);
+      setRemixResult(result);setPrompt('');
     }catch(err){if(active.current)setError(errorMessage(err));}
     finally{if(active.current)setBusy('');}
   }
@@ -106,13 +110,13 @@ export default function MixStudioPage() {
           <p className="form-note">Cultural Check tự cập nhật theo bản phối: áo, màu tự chọn, quần/váy, giày, phụ kiện, họa tiết và bối cảnh. Các món hiện đại được xét theo phong cách bạn chọn.</p>
         </section>
         <CulturalScore result={score?.key===key?score.value:undefined} busy={checking || (!scoreError && score?.key!==key)} error={scoreError}
-          retry={()=>setScoreRetry(value=>value+1)} apply={changes=>{update({mix:applyChanges(config,changes)});setExplanation('');setError('');}} disabled={!!busy}/>
+          retry={()=>setScoreRetry(value=>value+1)} apply={changes=>{update({mix:applyChanges(config,changes)});setRemixResult(undefined);setError('');}} disabled={!!busy}/>
       </div>
       <form className="remix-bar" onSubmit={doRemix}><Sparkles size={22}/><label className="sr-only" htmlFor="remix">Yêu cầu AI remix</label>
         <input id="remix" value={prompt} disabled={!!busy} maxLength={1500} onChange={event=>setPrompt(event.target.value)} placeholder="Cho outfit trẻ hơn nhưng vẫn giữ màu đỏ…"/>
         <button className="button dark" disabled={!!busy || !prompt.trim()}>{busy==='remix'?'Đang remix…':'AI Remix'}<Sparkles size={16}/></button>
       </form>
-      {explanation&&<div className="ai-explanation" role="status"><Sparkles size={19}/>{explanation}</div>}
+      {remixResult&&<RemixPanel result={remixResult} disabled={!!busy} onPick={option=>{chooseWardrobe(option.selection,wardrobe.character);setRemixResult(undefined);}}/>}
       {error&&<ErrorBox message={error}/>}
       <div className="generate-row"><p>Bản phối đã đúng chất bạn?<br/><span>Tạo look để lưu lại và chia sẻ câu chuyện của mình.</span></p>
         <button className="button primary" onClick={generate} disabled={!!busy || checking || !!scoreError || score?.key!==key}>{busy==='generate'?'Đang tạo look…':'Generate look'}<ArrowRight size={19}/></button>

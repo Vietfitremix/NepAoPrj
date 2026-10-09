@@ -59,7 +59,7 @@ def score_card(o: OutfitState, evals: list[Evaluation], color_score: int, catalo
                 value += c.get("paletteBonus", 0)
                 notes.append("Màu chính hợp bảng màu của dịp")
         elif cid == "cach_tan":
-            value = rs["base"] + rs["perModern"] * min(len(modern), 2) + adj
+            value = rs["base"] + rs["perModern"] * min(len(modern), 4) + adj
             if modern:
                 names = ", ".join(catalog.name("accessories", m) or catalog.name("patterns", m) for m in modern)
                 notes.append(f"Yếu tố hiện đại: {names}")
@@ -70,9 +70,11 @@ def score_card(o: OutfitState, evals: list[Evaluation], color_score: int, catalo
 
     total_w = sum(c.weight for c in criteria) or 1
     total = _clamp(sum(c.weight * c.score for c in criteria) / total_w)
-    capped = risk and total > cfg["riskCap"]
+    cap_of = {r["id"]: r.get("cap") for r in catalog.rules}
+    cap = min([cfg["riskCap"]] + [cap_of[e.id] for e in evals if e.level == "risk" and cap_of.get(e.id)])   # luật nặng có thể đặt trần thấp hơn
+    capped = risk and total > cap
     if capped:
-        total = cfg["riskCap"]
+        total = cap
     band = next(b for b in cfg["bands"] if total >= b["min"])
     return ScoreCard(total=total, band=band["id"], bandText=band["text"], capped=capped, criteria=criteria)
 

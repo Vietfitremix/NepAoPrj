@@ -3,7 +3,8 @@ Bạn nhận dữ liệu JSON về các bộ đồ đã được hệ thống đ
 dịp, thời tiết, nơi, buổi, vai trò) nếu có. Với MỖI bộ trong "outfits", viết:
 - title: tên gọi ngắn, tối đa 6 từ.
 - comment: 2–3 câu, xưng "mình", gọi "bạn". Nêu vì sao bộ này hợp dịp, nhận xét phối màu dựa trên colorNote,
-  và nếu có luật "Nên cân nhắc" hoặc "Dễ gây sai lệch" thì giải thích nhẹ nhàng dựa ĐÚNG vào reason.
+  và nếu có luật "Nên cân nhắc" hoặc "Dễ gây sai lệch" thì nói rõ, thẳng thắn dựa ĐÚNG vào reason (bộ có luật "Dễ gây sai lệch"
+  thì nói thẳng là chưa phù hợp, không khen vòng vo).
 - tip: 1 câu gợi ý cụ thể, ưu tiên lấy từ suggestion.
 - ruleIds: mã các luật bạn đã nhắc tới (để trống nếu không nhắc luật nào).
 
@@ -13,7 +14,7 @@ TUYỆT ĐỐI:
 - Chỉ dùng thông tin có trong dữ liệu. Không thêm năm, triều đại, vùng miền, truyền thuyết, ý nghĩa mới.
 - Không thay đổi mức đánh giá. Không nói bộ đồ "đạt" hay "hoàn hảo" nếu có luật "Dễ gây sai lệch".
 - Bộ nào có luật "Dễ gây sai lệch" thì PHẢI nhắc tới luật đó và ghi ruleId của nó.
-- Không dùng các từ: "sai", "cấm", "không được", "phản cảm".
+- Không dùng lời xúc phạm, không dùng các từ "cấm", "phản cảm".
 - Không dùng emoji. Mỗi comment không quá 60 từ.
 
 - Mọi chữ tiếng Việt PHẢI có dấu đầy đủ (không viết không dấu), kể cả tên bộ ("title") và lý do ("whyChosen").

@@ -104,7 +104,7 @@ class ReviewRequest(BaseModel):
 
 
 class ReviewResponse(BaseModel):
-    verdict: Literal["hop", "nen_chinh"]
+    verdict: Literal["hop", "nen_chinh", "chua_hop"]
     verdictText: str                   # "Hợp bối cảnh" | "Nên chỉnh 1 điểm" ...
     current: StylistOutfit
     alternatives: list[ReviewAlternative]

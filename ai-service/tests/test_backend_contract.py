@@ -159,3 +159,82 @@ def test_wardrobe_review_returns_comment_tip_and_score_card(backend_client):
     assert 0 <= current['scoreCard']['total'] <= 100 and len(current['scoreCard']['criteria']) == 5
     payload['wardrobe']['selection']['shirt'] = None
     assert backend_client.post('/ai/wardrobe-review', json=payload).status_code == 422
+
+
+import pytest
+
+
+def score_of(client, character='female', shirt='jade', pants='ivory', shoes=None, event='TET', style='TRADITIONAL', acc=None):
+    payload = dict(outfitCode='AO_DAI', colorCode='RED', styleCode=style, eventCode=event, accessories=[],
+                   wardrobe=dict(character=character, selection=dict(shirt=shirt, pants=pants, shoes=shoes,
+                                 accessories=acc or {}, styles={})))
+    res = client.post('/ai/wardrobe-score', json=payload)
+    assert res.status_code == 200, res.text
+    return res.json()
+
+
+@pytest.mark.parametrize('character,pants', [('female', 'shorts-denim'), ('female', 'skirt-short-navy'), ('male', 'shorts-khaki')])
+def test_short_bottoms_with_traditional_shirt_are_scored_low(backend_client, character, pants):
+    shirt = 'jade' if character == 'female' else 'teal'
+    res = score_of(backend_client, character, shirt, pants)
+    assert res['score'] <= 40, res
+    assert res['level'] == 'HIGH_RISK' and any(w['severity'] == 'HIGH' for w in res['warnings'])
+
+
+def test_missing_bottom_is_scored_low(backend_client):
+    assert score_of(backend_client, pants=None)['score'] <= 40
+
+
+def test_wide_or_straight_trousers_stay_suitable(backend_client):
+    assert score_of(backend_client, pants='ivory')['score'] >= 70
+    assert score_of(backend_client, 'male', 'teal', 'wide-charcoal')['score'] >= 70
+    assert score_of(backend_client, 'male', 'teal', 'slim-black')['score'] < score_of(backend_client, 'male', 'teal', 'wide-charcoal')['score']
+
+
+def test_sandals_are_penalised_by_occasion(backend_client):
+    base = score_of(backend_client, shoes='guoc')['score']
+    formal = score_of(backend_client, shoes='dep-crocs')
+    street = score_of(backend_client, shoes='dep-crocs', event='PHOTOSHOOT', style='GEN_Z')
+    assert formal['score'] <= 45 and formal['score'] < base
+    assert street['score'] < base and street['score'] > formal['score']
+
+
+def remix_payload(prompt, character='female', shirt='jade', pants='ivory'):
+    import json
+    from pathlib import Path
+    cat = json.loads((Path(__file__).resolve().parents[2] / f'frontend/public/figure/{character}-layers/catalog.json').read_text(encoding='utf-8'))
+    items = lambda key: [dict(id=i['id'], name=i['name'], slot=i.get('slot')) for i in cat[key]]       # noqa: E731
+    return dict(outfitCode='AO_DAI', colorCode='RED', styleCode='TRADITIONAL', eventCode='TET', accessories=[], prompt=prompt,
+                wardrobe=dict(character=character, selection=dict(shirt=shirt, pants=pants, shoes='hai-theu', accessories={}, styles={})),
+                options=dict(outfits=items('outfits'), pants=items('pants'), shoes=items('shoes'), accessories=items('accessories')))
+
+
+def test_remix_applies_a_suitable_request(backend_client):
+    res = backend_client.post('/ai/wardrobe-remix', json=remix_payload('Đổi sang váy dài')).json()
+    assert res['status'] == 'hop' and res['applied'] and res['selection']['pants'] == 'skirt-long-ivory'
+    assert res['analysis'] and res['explanation'] and res['scoreAfter'] >= res['scoreBefore'] - 5
+
+
+def test_remix_does_not_blindly_follow_an_unsuitable_request(backend_client):
+    res = backend_client.post('/ai/wardrobe-remix', json=remix_payload('Mình muốn mặc váy ngắn')).json()
+    assert res['scoreRequested'] <= 40                      # yêu cầu bị chấm thấp
+    assert res['status'] in ('dieu_chinh', 'khong_hop')
+    assert res['selection']['pants'] != 'skirt-short-navy'  # không áp dụng nguyên văn
+    if res['status'] == 'dieu_chinh':
+        assert res['scoreAfter'] > res['scoreRequested']
+    assert res['analysis'] and res['explanation']
+
+
+def test_remix_asks_when_request_is_unclear(backend_client):
+    res = backend_client.post('/ai/wardrobe-remix', json=remix_payload('làm đẹp hơn đi')).json()
+    assert res['status'] == 'chua_ro' and not res['applied']
+
+
+def test_review_accepts_modern_items_missing_from_catalog(backend_client):
+    payload = wardrobe_payload()
+    payload['wardrobe']['selection'].update(shoes='dep-crocs', accessories={'headphones': 'tai-nghe', 'headwear': 'mu-luoi-trai'})
+    payload['names'] = {'dep-crocs': 'Dép Crocs', 'tai-nghe': 'Tai nghe', 'mu-luoi-trai': 'Mũ lưỡi trai'}
+    res = backend_client.post('/ai/wardrobe-review', json=payload)
+    assert res.status_code == 200, res.text
+    assert res.json()['verdict'] == 'chua_hop' and res.json()['current']['scoreCard']['total'] <= 45
+

@@ -104,3 +104,20 @@ python -m scripts.build_demo_cache          # tạo data/demo-cache.json cho 5 c
 ## Trên VPS
 
 Chạy bằng Docker trong `deploy/docker-compose.yml` (PLAN-DEV mục 9). Đặt `DATABASE_URL` trỏ tới Postgres bằng user `ai_user`, `ENABLE_DEV_ROUTES=false`. Bảng do Spring Boot tạo bằng Flyway; service này không tạo bảng.
+
+## Chấm điểm phối đồ trong tủ đồ (quy định chung)
+
+Bộ luật (`data/rules.json`, R40–R50) xét **từng món** của tủ đồ, không chỉ áo và màu:
+- **Quần/váy** (`bottom`): áo truyền thống (áo dài, ngũ thân, tứ thân, nhật bình, bà ba) đi với quần đùi/quần ngắn hoặc váy ngắn là
+  luật nặng (trần điểm 35); chưa phối quần/váy là luật nặng (trần 40); quần ống bó hoặc quần lửng với áo dài bị trừ nhẹ.
+  Quần ống suông, ống rộng, quần dài, váy dài đều hợp.
+- **Giày dép** (`shoes`): dép lê / dép Crocs với áo truyền thống ở dịp trang trọng (Tết, kỷ yếu, cưới hỏi, lễ chùa) là luật nặng
+  (trần 45), ở dịp dạo phố chỉ bị trừ; giày thể thao hoặc đi chân trần ở cưới hỏi, đi chùa bị trừ.
+- **Phụ kiện đường phố** (mũ lưỡi trai / cao bồi, tai nghe, ba lô, găng tay, dây xích) ở dịp trang trọng bị trừ; yếu tố hiện đại
+  được tính tới 4 món trong tiêu chí "Cách tân".
+- Bộ nào có luật nặng thì tổng điểm bị chặn ở mức thấp (dưới 60, xếp loại "Cần chỉnh") và nhận xét của stylist nói thẳng là chưa phù hợp.
+- Các luật chỉ áp dụng khi biết loại quần/váy và giày; bộ gợi ý gốc của AI (không có hai trường này) không bị ảnh hưởng.
+
+Endpoint cho tủ đồ: `POST /ai/wardrobe-score` (Cultural Check), `POST /ai/wardrobe-review` (stylist nhận xét + Recommend),
+`POST /ai/wardrobe-remix` (phân tích bối cảnh, không làm theo nguyên văn yêu cầu không hợp, đưa các lựa chọn phù hợp hơn đã chấm lại bằng luật).
+

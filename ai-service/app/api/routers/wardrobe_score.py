@@ -47,6 +47,15 @@ ITEMS = {'sneakers': 'sneaker', 'flats': 'giay_bup_be', 'tui-coi': 'tui', 'quat-
 CATEGORIES = {'cau_truc': 'STRUCTURE', 'dac_trung': 'GARMENT_CHARACTERISTICS', 'phu_kien': 'ACCESSORIES',
               'boi_canh': 'CONTEXT', 'cach_tan': 'MODERN_REMIX'}
 
+# Loại quần/váy và giày dép trong tủ đồ → loại dùng cho bộ luật (data/rules.json: R40–R50)
+BOTTOM_KIND = {'ivory': 'quan_dai_suong', 'wide-charcoal': 'quan_ong_rong', 'long-black': 'quan_dai', 'long-navy': 'quan_dai',
+               'slim-black': 'quan_bo', 'cropped-olive': 'quan_lung', 'shorts-denim': 'quan_ngan', 'shorts-khaki': 'quan_ngan',
+               'skirt-long-ivory': 'vay_dai', 'skirt-short-navy': 'vay_ngan'}
+SHOE_KIND = {'guoc': 'giay_truyen_thong', 'hai-theu': 'giay_truyen_thong', 'giay-ta': 'giay_truyen_thong',
+             'flats': 'giay_bet', 'giay-bup-be': 'giay_bet', 'loafers': 'giay_bet',
+             'sneakers': 'giay_the_thao', 'giay-the-thao': 'giay_the_thao', 'dep-crocs': 'dep', 'dep-le': 'dep'}
+
+
 class Built:
     """Bộ đồ đang mặc đã đổi sang OutfitState của AI (dùng chung cho chấm điểm và nhận xét)."""
     def __init__(self, cat, selection, garment, event, style, main_hex, bottom_hex, accessories, pattern, state):
@@ -80,7 +89,9 @@ def build_state(body: ScoreRequest, svc) -> Built | None:
     pattern = selection.styles.get('shirt', Style()).pattern or 'tron'
     state = OutfitState(garment=garment, gender='nam' if body.wardrobe.character == 'male' else 'nu',
                         occasion=event, style=style, pattern=pattern.replace('-', '_'), accessories=accessories,
-                        colors=Colors(main=nearest_color(main_hex, cat.colors), bottom=nearest_color(bottom_hex, cat.colors)))
+                        colors=Colors(main=nearest_color(main_hex, cat.colors), bottom=nearest_color(bottom_hex, cat.colors)),
+                        bottom=BOTTOM_KIND.get(selection.pants) if selection.pants else 'khong',
+                        shoes=SHOE_KIND.get(selection.shoes) if selection.shoes else 'khong')
     return Built(cat, selection, garment, event, style, main_hex, bottom_hex, accessories, pattern, state)
 
 
@@ -127,6 +138,7 @@ def wardrobe_score(body: ScoreRequest, svc=Depends(get_service)):
 
 class ReviewBody(ScoreRequest):
     context: Intent | None = None      # bối cảnh từ quiz (thời tiết, nơi, buổi, vai trò…)
+    names: dict[str, str] = Field(default_factory=dict, max_length=40)   # tên hiển thị của các món đang mặc (id → tên)
 
 
 @router.post('/wardrobe-review')
@@ -141,5 +153,10 @@ async def wardrobe_review(body: ReviewBody, request: Request, svc=Depends(get_se
             def get(self, _cat=native_catalog(svc.catalog)):
                 return _cat
         svc = copy(svc); svc.catalogs = _Fixed()
-    res = await svc.review(b.state, body.context, None, ip=client_ip(request))
+    # Món hiện đại chưa có trong catalog (dép Crocs, tai nghe, ba lô…) không đưa vào state để khỏi bị từ chối, nhưng vẫn báo cho stylist biết
+    wardrobe_ids = [i for i in [b.selection.shoes, *b.selection.accessories.values()] if i]
+    unknown = [body.names.get(i, i) for i in wardrobe_ids if ITEMS.get(i, i.replace('-', '_')) not in b.cat.accessories]
+    state = b.state.model_copy(update={'accessories': [a for a in b.state.accessories if a in b.cat.accessories]})
+    extra = f"Bạn còn mặc/đeo: {', '.join(unknown)}." if unknown else None
+    res = await svc.review(state, body.context, extra, ip=client_ip(request))
     return dict(verdict=res['verdict'], verdictText=res['verdictText'], source=res['source'], current=res['current'])

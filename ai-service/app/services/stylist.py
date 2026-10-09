@@ -37,7 +37,9 @@ def _ctx_for(state: OutfitState, ctx: Intent | None) -> Intent:
     return base
 
 
-def verdict_of(evals) -> tuple[str, str]:
+def verdict_of(evals, card=None) -> tuple[str, str]:
+    if card is not None and card.band == "can_chinh":          # điểm dưới 60 hoặc bị chặn trần: nói thẳng là chưa phù hợp
+        return "chua_hop", "Chưa phù hợp"
     lv = count_levels(evals)
     n = lv["risk"] + lv["consider"]
     if n == 0:
@@ -139,7 +141,7 @@ class StylistService:
         changes = {a.outfitId: a.changes for a in alts}
         source = await explain([current, *alts], cat, self._gemini_for(ip), user_request=user_request,
                                prompt="review", changes=changes, log=self.log, ctx=c)
-        verdict, verdict_text = verdict_of(current.evaluations)
+        verdict, verdict_text = verdict_of(current.evaluations, current.scoreCard)
         resp = ReviewResponse(verdict=verdict, verdictText=verdict_text, current=current,
                               alternatives=alts, source=source).model_dump()
         if source == "gemini":

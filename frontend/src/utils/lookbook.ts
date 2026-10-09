@@ -32,7 +32,7 @@ export function checklistItems(selection: MaleSelection, character: WardrobeChar
   for (const it of selectedWardrobeItems(selection, character) as WardrobeItem[]) {
     const isShirt = it.id === selection.shirt, isPants = it.id === selection.pants && !isShirt;
     const isShoe = !isShirt && !isPants && getWardrobe(character).shoes.some(s => s.id === it.id) && it.id === selection.shoes;
-    if (isShirt) items.push({ group: 'Áo', name: it.name, detail: it.detail, color: custom('shirt'), tip: tips.garments?.[garment] || '', anchor: ANCHOR.shirt });
+    if (isShirt) items.push({ group: 'Áo', name: custom('shirt') ? it.name.replace(/\s+(xanh ngọc|xanh navy|xanh|hồng|đỏ)$/i, '') : it.name, detail: it.detail, color: custom('shirt'), tip: tips.garments?.[garment] || '', anchor: ANCHOR.shirt });
     else if (isPants) items.push({ group: SKIRT.test(it.name) ? 'Váy' : 'Quần', name: it.name, detail: it.detail, color: custom('pants'),
       tip: tips.bottoms?.[SKIRT.test(it.name) ? 'vay' : 'quan'] || '', anchor: ANCHOR.pants });
     else if (isShoe) items.push({ group: 'Giày dép', name: it.name, detail: it.detail, color: custom('shoes'), tip: '', anchor: ANCHOR.shoes });

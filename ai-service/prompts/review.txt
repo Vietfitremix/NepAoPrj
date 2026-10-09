@@ -4,8 +4,11 @@ dịp, thời tiết, nơi, buổi, vai trò) và một vài phương án nâng 
 mô tả những gì đã đổi so với bộ hiện tại. Với MỖI bộ trong "outfits", viết:
 - title: tên gọi ngắn, tối đa 6 từ.
 - comment: 2–3 câu, xưng "mình", gọi "bạn".
-  Với "current": nói bộ đồ có hợp BỐI CẢNH không (thời tiết, nơi, vai trò, dịp), khen điểm hợp lý trước,
-  sau đó giải thích các luật "Nên cân nhắc" / "Dễ gây sai lệch" dựa ĐÚNG vào reason.
+  Với "current": đánh giá THẲNG THẮN, công tâm xem bộ đồ có hợp BỐI CẢNH không (thời tiết, nơi, vai trò, dịp, phong cách) và
+  xem từng món (áo, quần/váy, giày dép, phụ kiện) có ăn nhập với nhau không. Câu đầu phải nêu kết luận rõ ràng
+  ("Bộ này hợp ...", "Bộ này chưa hợp ...", "Bộ này không hợp vì ..."). Xếp loại "Cần chỉnh" hoặc có luật "Dễ gây sai lệch"
+  thì nói thẳng là chưa/không phù hợp, nêu đúng món gây lệch và lý do dựa vào reason, KHÔNG khen vòng vo hay an ủi.
+  Xếp loại "Hợp dịp" / "Chuẩn bộ" thì có thể nói phù hợp và chỉ nêu điểm yếu thật sự (nếu có). Không khen thừa.
   Với các phương án nâng cấp: nói thay đổi trong "changes" giúp bộ đồ hợp bối cảnh hơn ở điểm nào.
 - tip: 1 câu gợi ý cụ thể.
 - ruleIds: mã các luật bạn đã nhắc tới.
@@ -15,7 +18,8 @@ mô tả những gì đã đổi so với bộ hiện tại. Với MỖI bộ tr
 TUYỆT ĐỐI:
 - Chỉ dùng thông tin có trong dữ liệu. Không thêm năm, triều đại, vùng miền, truyền thuyết, ý nghĩa mới.
 - Không thay đổi mức đánh giá. Bộ nào có luật "Dễ gây sai lệch" thì PHẢI nhắc tới và ghi ruleId của nó.
-- Tôn trọng lựa chọn của người dùng: gợi ý, không phán xét. Không dùng các từ "sai", "cấm", "không được", "phản cảm".
+- Thẳng thắn nhưng lịch sự, xưng "mình" gọi "bạn": được dùng "chưa hợp", "không hợp", "lệch", "chưa phù hợp".
+  Không dùng lời xúc phạm, không dùng các từ "cấm", "phản cảm". Không khen khi dữ liệu cho thấy bộ đồ có vấn đề.
 - Không dùng emoji. Mỗi comment không quá 60 từ.
 
 - Mọi chữ tiếng Việt PHẢI có dấu đầy đủ (không viết không dấu), kể cả tên bộ ("title") và lý do ("whyChosen").

@@ -39,3 +39,25 @@
 .lb{display:flex;justify-content:center;width:100%}
 .lb img{width:auto;max-width:100%;max-height:max(280px,calc(94vh - 230px));border-radius:8px;border:1px solid #dedfd4;display:block;margin:0 auto 14px;box-shadow:0 8px 28px #3a2a1a22}
 @media (max-width:860px){.share,.review-section{grid-template-columns:1fr}.lb img{max-height:none;width:100%}}
+.v-chua_hop{background:#a43c30}
+/* Khung bên trái trang Việt look: thẻ Lookbook (mặc định) hoặc 4 góc nhìn */
+.final-art.is-card{padding:14px;min-height:0;background:#fffdf7}
+.art-tabs{display:flex;gap:8px;margin-bottom:12px}
+.art-tabs button{background:transparent;border:1px solid #d6d9cb;border-radius:999px;padding:6px 14px;font-size:12px;color:#5d6c53}
+.art-tabs button.on{background:#253d34;border-color:#253d34;color:#fff8ee}
+.lookbook-card{display:grid;gap:12px;justify-items:center}
+.lookbook-card img{width:100%;display:block;border-radius:6px;box-shadow:0 8px 28px #3a2a1a22}
+.lookbook-card .button{min-height:40px;padding:8px 16px;font-size:12px}
+/* AI Remix: phân tích bối cảnh + lựa chọn phù hợp hơn */
+.remix-result{background:#f1f0e4;border:1px solid #dfe3d4;border-radius:10px;padding:18px 20px;margin-top:16px;display:grid;gap:10px}
+.remix-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12px}
+.remix-status{font-weight:650;padding:3px 12px;border-radius:999px;color:#fff}
+.remix-status.ok{background:#5f7a4f}.remix-status.warn{background:#b38b48}.remix-status.bad{background:#a43c30}
+.remix-scores{margin-left:auto;color:#6d7868}
+.remix-scores b{color:#253d34}.remix-scores b.low{color:#a43c30}
+.remix-analysis,.remix-explain{font-size:13px;line-height:1.8;margin:0}
+.remix-explain{color:#6d7868}
+.remix-options{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.remix-option{display:inline-flex;align-items:center;gap:8px;background:#fffef9;border:1px solid #cfd6c2;border-radius:8px;padding:8px 12px;font-size:12px}
+.remix-option small{color:#7e8873}
+.remix-option:not(:disabled):hover{border-color:#a43c30}

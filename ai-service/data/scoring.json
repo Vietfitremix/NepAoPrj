@@ -1,5 +1,5 @@
 {
-  "_ghi_chu": "Thang chấm 5 tiêu chí (0–100), dựng trên cách chấm cũ: điểm màu OKLCH góp vào 'dac_trung', mỗi luật trong rules.json thuộc một tiêu chí (trường criterion) và cộng/trừ điểm tiêu chí đó theo mức. Đổi trọng số ở đây, tổng phải bằng 100. Xem ai-service/app/engine/scoring.py.",
+  "_ghi_chu": "Thang chấm 5 tiêu chí (0–100), dựng trên cách chấm cũ: điểm màu OKLCH góp vào 'dac_trung', mỗi luật trong rules.json thuộc một tiêu chí (trường criterion) và cộng/trừ điểm tiêu chí đó theo mức. Đổi trọng số ở đây, tổng phải bằng 100. Xem ai-service/app/engine/scoring.py. Luật nặng (level risk) có thể có trường cap trong rules.json để đặt trần điểm thấp hơn riskCap (ví dụ quần đùi/váy ngắn với áo truyền thống: cap 35).",
   "criteria": [
     {"id": "cau_truc",  "name": "Đúng bộ",          "en": "Structure/Form",          "weight": 20, "base": 80},
     {"id": "dac_trung", "name": "Đặc trưng áo",     "en": "Garment Characteristics", "weight": 25, "base": 75, "colorShare": 0.6},

@@ -38,6 +38,10 @@ def matches(cond: dict, o: OutfitState, ctx: Intent | None = None) -> bool:
         return o.gender in g if isinstance(g, list) else o.gender == g
     if "pattern" in cond:
         return o.pattern in cond["pattern"]
+    if "bottom" in cond:                      # chỉ áp dụng khi biết loại quần/váy (bộ gợi ý gốc không có thì bỏ qua)
+        return o.bottom is not None and o.bottom in cond["bottom"]
+    if "shoes" in cond:
+        return o.shoes is not None and o.shoes in cond["shoes"]
     if "hasAccessory" in cond:
         return cond["hasAccessory"] in o.accessories
     if "mainColorIn" in cond:
