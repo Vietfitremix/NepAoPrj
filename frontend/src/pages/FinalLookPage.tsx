@@ -1,91 +1,27 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { ArrowLeft, Share2 } from 'lucide-react';
-import { EmptyState, ErrorBox, Loading, PageHeading, Stepper } from '../components/common/UI';
-import { Figure } from '../components/ai/Figure';
-import OutfitCard from '../components/ai/OutfitCard';
-import { Recommend, ScoreCardView } from '../components/ai/ScoreCardView';
-import ShareDialog from '../components/ai/ShareDialog';
-import { fullContext, reviewKey, useActions } from '../ai/actions';
-import { aiApi, loadLook, saveLook } from '../ai/api';
-import { VIEWS } from '../ai/figure';
-import { useStore } from '../ai/store';
-import type { ReviewResponse, SavedLook } from '../ai/types';
-import { useContextTags } from './ConceptPage';
-
-/** Bước 4: stylist nhận xét bộ đang mặc (kèm thẻ điểm và phương án nâng cấp); lưu look để chia sẻ bằng liên kết. */
-export default function FinalLookPage() {
-  const { state, context, review, set, reset, catalog: CAT, loading } = useStore(); const { open } = useActions(); const navigate = useNavigate();
-  const [err, setErr] = useState(''); const [busy, setBusy] = useState(false); const [share, setShare] = useState(false);
-  const [link, setLink] = useState(''); const [saving, setSaving] = useState(false);
-  const tags = useContextTags(state ? fullContext(context, state) : null);
-  const key = state ? reviewKey(context, state) : '';
-
-  useEffect(() => {
-    if (!state || !CAT || review.key === key) return;
-    let live = true; setBusy(true); setErr('');
-    aiApi<ReviewResponse>('/review', { state, context: fullContext(context, state) })
-      .then(res => { if (live) set({ review: { key, res } }); })
-      .catch(e => { if (live) setErr(e instanceof Error ? e.message : String(e)); })
-      .finally(() => { if (live) setBusy(false); });
-    return () => { live = false; };
-    // eslint-disable-next-line
-  }, [key, !!CAT]);
-
-  if (loading || !CAT) return <main className="page-container"><Stepper active={3} /><Loading /></main>;
-  if (!state) return <main className="page-container"><EmptyState title="Chưa có bộ nào để nhận xét">Hãy chọn một bộ stylist gợi ý rồi tuỳ chỉnh.</EmptyState></main>;
-  const r = review.key === key ? review.res : null;
-  const note = { title: r?.current.title || '', comment: r?.current.comment || '', tip: r?.current.tip || '', card: r?.current.scoreCard };
-
-  async function save() {
-    setSaving(true); setErr('');
-    try {
-      const id = await saveLook({ state, context: fullContext(context, state!), scoreCard: note.card ?? null, note: { title: note.title, comment: note.comment, tip: note.tip } });
-      setLink(`${window.location.origin}/look/${id}`);
-    } catch (e) { setErr(e instanceof Error ? e.message : String(e)); } finally { setSaving(false); }
-  }
-  return <main className="page-container wide"><Stepper active={3} />
-    <PageHeading eyebrow="YOUR VIỆT LOOK" title="Stylist nhận xét bộ của bạn." description="Nhận xét dựa trên luật chấm của hệ thống; Gemini chỉ diễn giải bằng lời." />
-    <div className="review">
-      <div><div className="fig4">{VIEWS.map(([v, name]) => <div key={v}><Figure state={state} view={v} /><span className="muted">{name}</span></div>)}</div>
-        <div className="tags ctx"><span className="muted">Bối cảnh:</span>{tags.map(t => <span key={t}>{t}</span>)}</div></div>
-      <div>
-        {busy && <Loading text="Stylist đang xem bộ đồ…" />}
-        {err && <ErrorBox message={err} />}
-        {r && <>
-          <div className={`verdict v-${r.verdict}`}>{r.verdictText}</div><p className="muted">Nguồn: <b>{r.source}</b></p>
-          <div className="bubble"><b>{r.current.title}</b><br />{r.current.comment}<Recommend tip={r.current.tip} card={r.current.scoreCard} /></div>
-          <div className="bubble"><ScoreCardView card={r.current.scoreCard} /></div>
-          {r.alternatives.length ? <><h3 className="alt-title">Phương án nâng cấp</h3><div className="alt-grid">{r.alternatives.map(a => <OutfitCard key={a.outfitId} o={a} label="Áp dụng phương án này" onPick={() => open(a)} />)}</div></>
-            : <p className="muted">Bộ này đã ổn, chưa có phương án nâng cấp rõ rệt.</p>}</>}
-      </div>
-    </div>
-    {link && <div className="share-notice">Liên kết look của bạn (lưu trên máy chủ, ai có link đều xem được): <input readOnly value={link} onFocus={e => e.currentTarget.select()} /></div>}
-    <div className="pagebar">
-      <Link className="text-button" to="/mix"><ArrowLeft size={16} /> Tiếp tục chỉnh</Link>
-      <div className="row">
-        <button className="button outline" onClick={() => setShare(true)}><Share2 size={16} /> Checklist &amp; Lookbook</button>
-        <button className="button outline" disabled={saving} onClick={save}>{saving ? 'Đang lưu…' : 'Lưu look & lấy liên kết'}</button>
-        <button className="button primary" onClick={() => { reset(); navigate('/stylist'); }}>Bắt đầu lại</button></div>
-    </div>
-    <ShareDialog open={share} onClose={() => setShare(false)} state={state} note={note} />
-  </main>;
+import { ArrowLeft, BookOpen, Check, Heart, Share2, Sparkles } from 'lucide-react';
+import type { CulturalKnowledge, Look } from '../types';
+import { getLook } from '../services/lookApi';
+import WardrobeFigure from '../components/mix/WardrobeFigure';
+import { outfitPreview } from '../utils/outfitPreview';
+import { characterViews } from '../utils/characterViews';
+import { getCulturalKnowledge } from '../services/culturalApi';
+import { errorMessage } from '../services/api';
+import { useSession } from '../state';
+import { ErrorBox, Loading, PageHeading, Stepper } from '../components/common/UI';
+import { CulturalContent } from '../components/concept/CulturalInfoModal';
+function savedIds(): string[] {
+  try {
+    const value: unknown = JSON.parse(localStorage.getItem('viet-fit-saved-looks') || '[]');
+    return Array.isArray(value) ? value.filter((id): id is string => typeof id === 'string') : [];
+  } catch { return []; }
 }
-
-/** Xem look đã lưu: /look/:id */
-export function SharedLookPage() {
-  const { id = '' } = useParams(); const { catalog: CAT, loading, set } = useStore(); const navigate = useNavigate();
-  const [look, setLook] = useState<SavedLook>(); const [err, setErr] = useState(''); const [share, setShare] = useState(false);
-  useEffect(() => { loadLook<SavedLook>(id).then(setLook).catch(e => setErr(e instanceof Error ? e.message : String(e))); }, [id]);
-  if (err) return <main className="page-container"><ErrorBox message={err} /></main>;
-  if (!look || loading || !CAT) return <main className="page-container"><Loading /></main>;
-  const s = look.state, note = { title: look.note?.title || '', comment: look.note?.comment || '', tip: look.note?.tip || '', card: look.scoreCard };
-  return <main className="page-container wide"><PageHeading eyebrow="YOUR VIỆT LOOK" title={note.title || CAT.garment[s.garment]?.name || 'Việt look'} description="Một bản phối được chia sẻ từ Nếp Áo." />
-    <div className="review"><div className="fig4">{VIEWS.map(([v, name]) => <div key={v}><Figure state={s} view={v} /><span className="muted">{name}</span></div>)}</div>
-      <div>{note.comment && <div className="bubble">{note.comment}<Recommend tip={note.tip} card={look.scoreCard} /></div>}<div className="bubble"><ScoreCardView card={look.scoreCard} /></div></div></div>
-    <div className="pagebar"><span />
-      <div className="row"><button className="button outline" onClick={() => setShare(true)}><Share2 size={16} /> Checklist &amp; Lookbook</button>
-        <button className="button primary" onClick={() => { set({ state: s, context: look.context ?? null, view: 'truoc', review: { key: null, res: null } }); navigate('/mix'); }}>Remix bộ này</button></div></div>
-    <ShareDialog open={share} onClose={() => setShare(false)} state={s} note={note} />
-  </main>;
+export default function FinalLookPage(){
+  const {lookId}=useParams();const navigate=useNavigate();const {update}=useSession();const [look,setLook]=useState<Look>();const [knowledge,setKnowledge]=useState<CulturalKnowledge>();const [error,setError]=useState('');const [cultureError,setCultureError]=useState('');const [retry,setRetry]=useState(0);const [cultureRetry,setCultureRetry]=useState(0);const [saved,setSaved]=useState(false);const [notice,setNotice]=useState('');const [sharing,setSharing]=useState(false);
+  useEffect(()=>{if(!lookId)return;const controller=new AbortController();setLook(undefined);setError('');setNotice('');setSaved(savedIds().includes(lookId));getLook(lookId,controller.signal).then(data=>{if(!controller.signal.aborted)setLook(data);}).catch(err=>{if(!controller.signal.aborted)setError(errorMessage(err));});return()=>controller.abort();},[lookId,retry]);
+  useEffect(()=>{if(!look)return;setKnowledge(undefined);setCultureError('');const controller=new AbortController();getCulturalKnowledge(look.outfitCode,controller.signal).then(data=>{if(!controller.signal.aborted)setKnowledge(data);}).catch(err=>{if(!controller.signal.aborted)setCultureError(errorMessage(err));});return()=>controller.abort();},[look,cultureRetry]);
+  function save(){if(!look)return;try{const ids=savedIds();localStorage.setItem('viet-fit-saved-looks',JSON.stringify(saved?ids.filter(id=>id!==look.id):[...new Set([...ids,look.id])]));setSaved(!saved);setNotice(saved?'Đã bỏ lưu look trên thiết bị này.':'Đã lưu look trên thiết bị này.');}catch{setNotice('Trình duyệt không cho phép lưu. Bạn có thể sao chép liên kết look.');}}
+  async function share(){if(!look)return;setSharing(true);try{if(navigator.share)await navigator.share({title:`${look.name} — VIỆT FIT`,text:'Mặc chất riêng. Giữ hồn Việt.',url:window.location.href});else{await navigator.clipboard.writeText(window.location.href);setNotice('Đã sao chép liên kết look.');}}catch(err){if(!(err instanceof DOMException&&err.name==='AbortError'))setNotice('Chưa thể chia sẻ tự động. Hãy sao chép liên kết bên dưới.');}finally{setSharing(false);}}
+  return <main className="page-container nepao-page wide"><Stepper active={3}/><PageHeading eyebrow="YOUR VIỆT LOOK" title="Rất Việt Nam. Rất là bạn." description="Một bản phối mang dấu ấn riêng, một câu chuyện để tự hào chia sẻ."/>{error?<ErrorBox message={error} retry={()=>setRetry(v=>v+1)}/>:!look?<Loading text="Đang mở Việt look của bạn…"/>:<><div className="final-layout"><div className="final-art"><span className="eyebrow">VIỆT FIT / YOUR EXPRESSION</span><div className="fig4">{characterViews.map(view => <div key={view.id}><WardrobeFigure selection={outfitPreview(look.config)} character={look.config.wardrobe?.character || 'female'} view={view.id} label={`${look.name}, góc ${view.label}`}/><span className="muted">{view.label}</span></div>)}</div><span className="final-art-footer">Mặc chất riêng. Giữ hồn Việt. <Sparkles size={20}/></span></div><div className="final-details"><span className="eyebrow">BẢN PHỐI CỦA BẠN</span><h2>{look.name}</h2><div className="tags"><span>{look.outfitName}</span><span>{look.styleName}</span><span>{look.eventName}</span></div><div className="final-scores">{[['Style Match',look.matchScore],['Cultural Score',look.culturalScore],['Color Harmony',look.colorHarmony]].map(([label,value])=><div key={label}><span>{label}</span><strong>{value === null ? 'Chưa có dữ liệu' : value + '%'}</strong><div className="score-track"><i style={{width:`${Math.max(0,Math.min(100,Number(value)))}%`}}/></div></div>)}</div><div className="final-actions"><button className="button primary" onClick={save}>{saved?<Check size={18}/>:<Heart size={18}/>} {saved?'Đã lưu look':'Lưu look'}</button><button className="button outline" onClick={share} disabled={sharing}><Share2 size={17}/> Chia sẻ</button></div><p className="form-note">Lưu trên trình duyệt này. Chia sẻ bằng liên kết look.</p>{notice&&<div className="share-notice" role="status">{notice}<input aria-label="Liên kết look" readOnly value={window.location.href} onFocus={e=>e.target.select()}/></div>}<button className="text-button back-link" onClick={()=>{update({mix:look.config});navigate(`/mix/${encodeURIComponent(look.config.conceptId)}`);}}><ArrowLeft size={17}/> Remix lại bản phối</button></div></div><section className="knowledge-section"><div><span className="eyebrow"><BookOpen size={18}/> BẠN ĐANG MẶC GÌ?</span><h2>{knowledge?.name||look.outfitName}</h2><p>Hiểu câu chuyện.<br/>Thêm yêu trang phục.</p></div><div>{cultureError?<ErrorBox message={cultureError} retry={()=>setCultureRetry(v=>v+1)}/>:knowledge?<CulturalContent knowledge={knowledge}/>:<Loading text="Đang tải câu chuyện trang phục…"/>}</div></section><div className="center"><Link className="button outline" to="/stylist">Bắt đầu một cảm hứng mới <Sparkles size={17}/></Link></div></>}</main>;
 }

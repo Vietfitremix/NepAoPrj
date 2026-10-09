@@ -7,6 +7,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
+import java.nio.charset.StandardCharsets;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -33,18 +34,18 @@ public class AiProxyController {
     @RequestMapping("/ai/**")
     public ResponseEntity<byte[]> forward(HttpServletRequest request, @RequestBody(required = false) byte[] body) throws IOException, InterruptedException {
         String path = request.getRequestURI();
-        if (path.contains("..") || path.startsWith("/ai/admin")) return ResponseEntity.status(HttpStatus.FORBIDDEN).build();   // quản trị AI không mở ra trình duyệt
+        if (path.contains("..") || path.startsWith("/ai/admin") || path.startsWith("/ai/dev")) return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
         String query = request.getQueryString() == null ? "" : "?" + request.getQueryString();
         var builder = HttpRequest.newBuilder(URI.create(base + path + query)).timeout(timeout);
-        String ip = request.getHeader("X-Forwarded-For") != null ? request.getHeader("X-Forwarded-For").split(",")[0].trim() : request.getRemoteAddr();
-        builder.header("X-Forwarded-For", ip);
+        builder.header("X-Forwarded-For", request.getRemoteAddr());
         if (request.getContentType() != null) builder.header("Content-Type", request.getContentType());
         builder.method(request.getMethod(), body == null || body.length == 0 ? HttpRequest.BodyPublishers.noBody() : HttpRequest.BodyPublishers.ofByteArray(body));
         HttpResponse<byte[]> res;
         try {
             res = http.send(builder.build(), HttpResponse.BodyHandlers.ofByteArray());
         } catch (IOException e) {
-            return ResponseEntity.status(HttpStatus.BAD_GATEWAY).body("{\"code\":\"AI_UNAVAILABLE\",\"message\":\"AI service không phản hồi.\"}".getBytes());
+            return ResponseEntity.status(HttpStatus.BAD_GATEWAY).header("Content-Type", "application/json")
+                .body("{\"code\":\"AI_UNAVAILABLE\",\"message\":\"AI service không phản hồi.\"}".getBytes(StandardCharsets.UTF_8));
         }
         var headers = new HttpHeaders();
         res.headers().firstValue("Content-Type").ifPresent(v -> headers.set("Content-Type", v));

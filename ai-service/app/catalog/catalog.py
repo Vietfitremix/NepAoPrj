@@ -16,6 +16,7 @@ class Catalog:
     quiz: list[dict] = field(default_factory=list)
     scoring: dict = field(default_factory=dict)          # thang 5 tiêu chí (data/scoring.json)
     checklist: dict = field(default_factory=dict)        # gợi ý món tương đương ngoài đời (data/checklist.json)
+    prompt_templates: dict = field(default_factory=dict)
     version: str = "json"
 
     # --- tra tên tiếng Việt -------------------------------------------------

@@ -5,16 +5,18 @@ supported accessories. No dependency on the unrelated catalog PostgreSQL schema.
 """
 import json
 import re
+from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Request
 from pydantic import BaseModel, ConfigDict, Field
 
 from app.ai import AIError
-from app.ai.fallback import norm
+from app.ai.fallback import norm, parse_by_keywords
 from app.ai.select import select_outfits
 from app.api.deps import client_ip, get_service
 from app.catalog import Catalog
 from app.catalog.sources import load_ui_data
+from app.catalog.backend_bridge import enrich_catalog, native_catalog
 from app.core.config import get_settings
 from app.engine import score_outfit
 from app.models import Colors, Intent, OutfitState, StylistOutfit
@@ -30,6 +32,7 @@ class Selection(BaseModel):
     styleCode: str
     eventCode: str
     accessories: list[str] = Field(default_factory=list, max_length=10)
+    wardrobe: dict | None = None
 
 
 class BackendRequest(BaseModel):
@@ -40,12 +43,14 @@ class BackendRequest(BaseModel):
     city: str | None = None
     eventCode: str | None = None
     styleCode: str | None = None
+    character: Literal['male', 'female'] | None = None
     weather: dict | None = None
     currentLook: Selection | None = None
 
 
-def request_catalog(ref: dict) -> Catalog:
-    scoring = load_ui_data(get_settings().data_dir)[2]       # thang 5 tiêu chí là luật chung, không thuộc danh mục Spring
+def request_catalog(ref: dict, scoring: dict | None = None) -> Catalog:
+    if scoring is None:
+        scoring = load_ui_data(get_settings().data_dir)[2]  # standalone test/local mode
     try:
         colors = {r["code"]: {"id": r["code"], "name": r["name"], "hex": r["hexCode"]}
                   for r in ref["colors"]}
@@ -93,21 +98,38 @@ def requested_items(prompt: str, table: dict) -> tuple[list[str], list[str]]:
 
 @router.post("/recommendations")
 async def recommendations(body: BackendRequest, request: Request, svc: StylistService = Depends(get_service)):
-    cat = request_catalog(body.referenceData)
+    native = native_catalog(svc.catalog)
+    cat = enrich_catalog(request_catalog(body.referenceData, native.scoring), native)
     if not body.city or not body.weather or body.eventCode not in cat.occasions or body.styleCode not in cat.styles:
         raise HTTPException(422, "Recommendation context is required")
     wanted, avoided = requested_items(body.prompt, cat.colors)
     accs, avoid_accs = requested_items(body.prompt, cat.accessories)
-    ctx = Intent(occasion=body.eventCode, style=body.styleCode, preferredColors=wanted,
-                 avoidColors=avoided, mustHave=accs, avoidAccessories=avoid_accs)
+    parsed = parse_by_keywords(body.prompt, native)
+    ctx = parsed.model_copy(update=dict(occasion=body.eventCode, style=body.styleCode, preferredColors=wanted,
+                 avoidColors=avoided, mustHave=accs, avoidAccessories=avoid_accs))
+    gender = ('nam' if body.character == 'male' else 'nu') if body.character else (ctx.gender if ctx.gender in ('nu', 'nam') else 'nu')
+    ctx.gender = gender
     candidates = []
-    palette = [c for c in dict.fromkeys([*wanted, *cat.colors]) if c not in avoided]
-    for garment, row in cat.garments.items():
+    event_palette = cat.occasions[body.eventCode]['palette']
+    style_palette = [c for c in cat.styles[body.styleCode]['preferColors'] if c in event_palette]
+    palette = [c for c in dict.fromkeys([*wanted, *style_palette, *event_palette, *cat.colors]) if c not in avoided]
+    garments = [(g, r) for g, r in cat.garments.items() if gender in r['genders']]
+    suitable = [(g, r) for g, r in garments if body.eventCode in r['occasions']] or garments
+    for garment, row in suitable:
+        defaults = cat.occasions[body.eventCode]['defaultAccessories'].get(garment, [])
+        selected, slots = [], set()
+        for acc in dict.fromkeys([*accs, *defaults]):
+            data = cat.accessories.get(acc, {})
+            slot = data.get('slot', acc)
+            if (acc in row['allowedAccessories'] and acc not in avoid_accs and slot not in slots
+                    and gender in data.get('genders', ['nu', 'nam'])):
+                selected.append(acc)
+                slots.add(slot)
         for color in palette[:2]:
             look = Selection(outfitCode=garment, colorCode=color, styleCode=body.styleCode,
                              eventCode=body.eventCode,
-                             accessories=[a for a in accs if a in row["allowedAccessories"]])
-            state = state_for(look, cat)
+                             accessories=selected)
+            state = state_for(look, cat).model_copy(update={'gender': gender})
             _, evaluations, harmony, card = score_outfit(state, cat, ctx)
             candidates.append(StylistOutfit(outfitId=f"c{len(candidates)+1}", state=state,
                                            evaluations=evaluations, color=harmony, scoreCard=card))
@@ -115,7 +137,8 @@ async def recommendations(body: BackendRequest, request: Request, svc: StylistSe
         raise HTTPException(422, "Catalog cannot provide three concepts")
     candidates.sort(key=lambda o: -score_outfit(o.state, cat, ctx)[0])
     # Include Spring's measured weather and available cultural sources in the AI request.
-    prompt = json.dumps({"request": body.prompt, "city": body.city, "weather": body.weather,
+    prompt = json.dumps({"request": body.prompt, "eventCode": body.eventCode, "styleCode": body.styleCode,
+                         "city": body.city, "weather": body.weather,
                          "culturalContext": body.culturalContext}, ensure_ascii=False)
     picked, source = await select_outfits(candidates, ctx, cat, svc._gemini_for(client_ip(request)),
                                           user_request=prompt, log=svc.log)
@@ -218,19 +241,21 @@ def gemini_schema(model) -> dict:
 
 @router.post("/remix", response_model=RemixOutput)
 async def remix(body: BackendRequest, request: Request, svc: StylistService = Depends(get_service)):
-    cat = request_catalog(body.referenceData)
+    cat = request_catalog(body.referenceData, svc.catalog.scoring or None)
     current = body.currentLook
     if current is None:
         raise HTTPException(422, "Current look is required")
     validate_selection(current, cat)
     try:
-        raw, _ = await svc._gemini_for(client_ip(request)).call_json(
+        raw, latency_ms = await svc._gemini_for(client_ip(request)).call_json(
             system="Đề xuất thay đổi theo yêu cầu. Giữ outfitCode và eventCode. Chỉ dùng mã trong referenceData và phụ kiện được hỗ trợ. Không bịa quy tắc văn hóa. Trả JSON changes và explanation.",
             contents=body.model_dump_json(exclude_none=True), schema=gemini_schema(RemixOutput), temperature=0.4)
         output = RemixOutput.model_validate(raw)
         validate_remix(output, current, cat)
+        await svc.log("remix", svc.gemini.model, latency_ms, "gemini", True)
         return output
-    except (AIError, ValueError, HTTPException):
+    except (AIError, ValueError, HTTPException) as exc:
+        await svc.log("remix", svc.gemini.model, None, "fallback", False, str(exc)[:300])
         # Reuse the service's offline behavior while applying only explicit user wishes.
         colors, _ = requested_items(body.prompt, cat.colors)
         styles, _ = requested_items(body.prompt, cat.styles)

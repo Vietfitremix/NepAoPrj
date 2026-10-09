@@ -13,6 +13,7 @@ public class AiClient {
     }
     public JsonNode recommendations(Object request) { return post("/ai/recommendations",request); }
     public JsonNode remix(Object request) { return post("/ai/remix",request); }
+    public JsonNode culturalScore(Object request) { return post("/ai/wardrobe-score",request); }
     private JsonNode post(String path,Object request) {
         try {
             var data=client.post().uri(path).contentType(MediaType.APPLICATION_JSON).body(request)

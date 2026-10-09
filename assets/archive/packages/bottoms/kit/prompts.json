@@ -1,0 +1,461 @@
+[
+  {
+    "gender": "male",
+    "id": "long-navy",
+    "view": "front",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-long-navy-front.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/male-layers/base-barefoot.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact male wearer body, standing pose, camera, scale and canvas reference. Create ONLY navy blue full-length straight-leg tailored cotton trousers, belt loops, zip fly, slanted front pockets and two welt back pockets, regular straight silhouette. Requested direction: strict FRONT view, facing viewer. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1340, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-226d4941-edb3-4b6c-be91-b5038ed1106c.png"
+  },
+  {
+    "gender": "male",
+    "id": "long-navy",
+    "view": "left",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-long-navy-left.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/male-layers/views/base-left.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-long-navy-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact male wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY navy blue full-length straight-leg tailored cotton trousers, belt loops, zip fly, slanted front pockets and two welt back pockets, regular straight silhouette. Requested direction: strict LEFT profile, facing LEFT on screen. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1340, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-dbe2550e-9d71-4ede-9ef4-868f188b036f.png"
+  },
+  {
+    "gender": "male",
+    "id": "long-navy",
+    "view": "right",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-long-navy-right.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/male-layers/views/base-right.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-long-navy-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact male wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY navy blue full-length straight-leg tailored cotton trousers, belt loops, zip fly, slanted front pockets and two welt back pockets, regular straight silhouette. Requested direction: strict RIGHT profile, facing RIGHT on screen. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1340, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-6684bdf5-f1ba-4a47-a092-c780c433853c.png"
+  },
+  {
+    "gender": "male",
+    "id": "long-navy",
+    "view": "back",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-long-navy-back.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/male-layers/views/base-back.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-long-navy-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact male wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY navy blue full-length straight-leg tailored cotton trousers, belt loops, zip fly, slanted front pockets and two welt back pockets, regular straight silhouette. Requested direction: strict BACK view, facing away. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1340, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-51d7acf5-ab03-4b7d-b7bc-9d4f5b5d126b.png"
+  },
+  {
+    "gender": "male",
+    "id": "shorts-khaki",
+    "view": "front",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-shorts-khaki-front.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/male-layers/base-barefoot.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact male wearer body, standing pose, camera, scale and canvas reference. Create ONLY beige khaki above-knee shorts, regular comfortable cut, belt loops, button and zip fly, slanted front pockets and two back welt pockets; hems just above knees, not underwear. Requested direction: strict FRONT view, facing viewer. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=955, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-2de80054-3f20-4ebe-9efb-924d95b4e53b.png"
+  },
+  {
+    "gender": "male",
+    "id": "shorts-khaki",
+    "view": "left",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-shorts-khaki-left.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/male-layers/views/base-left.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-shorts-khaki-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact male wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY beige khaki above-knee shorts, regular comfortable cut, belt loops, button and zip fly, slanted front pockets and two back welt pockets; hems just above knees, not underwear. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict LEFT profile, facing LEFT on screen. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=955, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-e94bce1b-ffd9-4292-ae76-ba6a5a4b2c26.png"
+  },
+  {
+    "gender": "male",
+    "id": "shorts-khaki",
+    "view": "right",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-shorts-khaki-right.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/male-layers/views/base-right.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-shorts-khaki-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact male wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY beige khaki above-knee shorts, regular comfortable cut, belt loops, button and zip fly, slanted front pockets and two back welt pockets; hems just above knees, not underwear. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict RIGHT profile, facing RIGHT on screen. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=955, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-8669d231-bbfc-49cd-9377-20a6bfd9b7c3.png"
+  },
+  {
+    "gender": "male",
+    "id": "shorts-khaki",
+    "view": "back",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-shorts-khaki-back.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/male-layers/views/base-back.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-shorts-khaki-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact male wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY beige khaki above-knee shorts, regular comfortable cut, belt loops, button and zip fly, slanted front pockets and two back welt pockets; hems just above knees, not underwear. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict BACK view, facing away. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=955, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-6f028bde-0063-4cba-878a-0ca54a763832.png"
+  },
+  {
+    "gender": "male",
+    "id": "cropped-olive",
+    "view": "front",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-cropped-olive-front.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/male-layers/base-barefoot.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact male wearer body, standing pose, camera, scale and canvas reference. Create ONLY muted olive green calf-length cropped chinos, regular straight fit, belt loops, button and zip fly, two side pockets and two back pockets, end at mid-calf clearly longer than shorts and shorter than full trousers. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict FRONT view, facing viewer. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1175, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-75789f95-6e62-438e-a759-49b758005c62.png"
+  },
+  {
+    "gender": "male",
+    "id": "cropped-olive",
+    "view": "left",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-cropped-olive-left.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/male-layers/views/base-left.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-cropped-olive-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact male wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY muted olive green calf-length cropped chinos, regular straight fit, belt loops, button and zip fly, two side pockets and two back pockets, end at mid-calf clearly longer than shorts and shorter than full trousers. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict LEFT profile, facing LEFT on screen. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1175, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-96cb2ba4-ecff-418a-9d21-7149e2eee9b9.png"
+  },
+  {
+    "gender": "male",
+    "id": "cropped-olive",
+    "view": "right",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-cropped-olive-right.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/male-layers/views/base-right.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-cropped-olive-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact male wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY muted olive green calf-length cropped chinos, regular straight fit, belt loops, button and zip fly, two side pockets and two back pockets, end at mid-calf clearly longer than shorts and shorter than full trousers. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict RIGHT profile, facing RIGHT on screen. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1175, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-fdeeb8eb-3ca2-47f4-bd14-adc46de91c85.png"
+  },
+  {
+    "gender": "male",
+    "id": "cropped-olive",
+    "view": "back",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-cropped-olive-back.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/male-layers/views/base-back.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-cropped-olive-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact male wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY muted olive green calf-length cropped chinos, regular straight fit, belt loops, button and zip fly, two side pockets and two back pockets, end at mid-calf clearly longer than shorts and shorter than full trousers. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict BACK view, facing away. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1175, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-636133c3-8bc5-4e08-8b94-9b09502a0d5d.png"
+  },
+  {
+    "gender": "male",
+    "id": "slim-black",
+    "view": "front",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-slim-black-front.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/male-layers/base-barefoot.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact male wearer body, standing pose, camera, scale and canvas reference. Create ONLY black full-length slim skinny jeans, fitted closely around thighs, knees and calves, narrow ankle openings, five pockets, stitched seams, belt loops, zip fly, photorealistic matte stretch denim; clearly slim, not wide-leg. Requested direction: strict FRONT view, facing viewer. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1340, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-42c449ca-41eb-4fa3-8f0a-63e7f0aacc76.png"
+  },
+  {
+    "gender": "male",
+    "id": "slim-black",
+    "view": "left",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-slim-black-left.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/male-layers/views/base-left.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-slim-black-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact male wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY black full-length slim skinny jeans, fitted closely around thighs, knees and calves, narrow ankle openings, five pockets, stitched seams, belt loops, zip fly, photorealistic matte stretch denim; clearly slim, not wide-leg. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict LEFT profile, facing LEFT on screen. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1340, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-56b95929-3855-4a79-9265-db1892945d7f.png"
+  },
+  {
+    "gender": "male",
+    "id": "slim-black",
+    "view": "right",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-slim-black-right.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/male-layers/views/base-right.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-slim-black-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact male wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY black full-length slim skinny jeans, fitted closely around thighs, knees and calves, narrow ankle openings, five pockets, stitched seams, belt loops, zip fly, photorealistic matte stretch denim; clearly slim, not wide-leg. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict RIGHT profile, facing RIGHT on screen. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1340, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-9f17b8d4-081a-410b-8255-a299d9be7a00.png"
+  },
+  {
+    "gender": "male",
+    "id": "slim-black",
+    "view": "back",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-slim-black-back.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/male-layers/views/base-back.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-slim-black-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact male wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY black full-length slim skinny jeans, fitted closely around thighs, knees and calves, narrow ankle openings, five pockets, stitched seams, belt loops, zip fly, photorealistic matte stretch denim; clearly slim, not wide-leg. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict BACK view, facing away. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1340, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-e3340e80-b8d1-4d9e-b056-025cce64b6a6.png"
+  },
+  {
+    "gender": "male",
+    "id": "wide-charcoal",
+    "view": "front",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-wide-charcoal-front.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/male-layers/base-barefoot.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact male wearer body, standing pose, camera, scale and canvas reference. Create ONLY charcoal gray full-length wide-leg trousers, generous loose legs with fluid vertical pleats from waist, broad straight openings, tailored waistband, belt loops, slanted pockets and back welt pockets, clearly wider than standard straight trousers. Requested direction: strict FRONT view, facing viewer. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1355, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-cc941a61-9abc-4c7d-954a-035051cfc04d.png"
+  },
+  {
+    "gender": "male",
+    "id": "wide-charcoal",
+    "view": "left",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-wide-charcoal-left.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/male-layers/views/base-left.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-wide-charcoal-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact male wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY charcoal gray full-length wide-leg trousers, generous loose legs with fluid vertical pleats from waist, broad straight openings, tailored waistband, belt loops, slanted pockets and back welt pockets, clearly wider than standard straight trousers. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict LEFT profile, facing LEFT on screen. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1355, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-41c788b9-efe1-446b-8e47-e3c4a332382a.png"
+  },
+  {
+    "gender": "male",
+    "id": "wide-charcoal",
+    "view": "right",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-wide-charcoal-right.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/male-layers/views/base-right.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-wide-charcoal-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact male wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY charcoal gray full-length wide-leg trousers, generous loose legs with fluid vertical pleats from waist, broad straight openings, tailored waistband, belt loops, slanted pockets and back welt pockets, clearly wider than standard straight trousers. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict RIGHT profile, facing RIGHT on screen. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1355, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-2e4939cd-f018-4f58-ad1a-cf690fd99501.png"
+  },
+  {
+    "gender": "male",
+    "id": "wide-charcoal",
+    "view": "back",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-wide-charcoal-back.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/male-layers/views/base-back.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/male/pants-wide-charcoal-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact male wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY charcoal gray full-length wide-leg trousers, generous loose legs with fluid vertical pleats from waist, broad straight openings, tailored waistband, belt loops, slanted pockets and back welt pockets, clearly wider than standard straight trousers. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict BACK view, facing away. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1355, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-95839ba2-385f-49c7-8922-583dd591bf76.png"
+  },
+  {
+    "gender": "female",
+    "id": "skirt-short-navy",
+    "view": "front",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/female/skirt-short-navy-front.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/female-layers/base.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact female wearer body, standing pose, camera, scale and canvas reference. Create ONLY navy blue short A-line skirt, structured waist band, gentle A-line flare, hidden side zipper, modest mid-thigh hem, smooth matte cotton twill; one continuous skirt without pants legs and without leg gap. Requested direction: strict FRONT view, facing viewer. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=940, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-05e7150e-9984-493c-9b0e-0cce47ca50d6.png"
+  },
+  {
+    "gender": "female",
+    "id": "skirt-short-navy",
+    "view": "left",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/female/skirt-short-navy-left.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/female-layers/views/base-left.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/female/skirt-short-navy-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact female wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY navy blue short A-line skirt, structured waist band, gentle A-line flare, hidden side zipper, modest mid-thigh hem, smooth matte cotton twill; one continuous skirt without pants legs and without leg gap. Requested direction: strict LEFT profile, facing LEFT on screen. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=940, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-25ee696b-f348-40dc-8778-7a2b30d7f51e.png"
+  },
+  {
+    "gender": "female",
+    "id": "skirt-short-navy",
+    "view": "right",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/female/skirt-short-navy-right.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/female-layers/views/base-right.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/female/skirt-short-navy-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact female wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY navy blue short A-line skirt, structured waist band, gentle A-line flare, hidden side zipper, modest mid-thigh hem, smooth matte cotton twill; one continuous skirt without pants legs and without leg gap. Requested direction: strict RIGHT profile, facing RIGHT on screen. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=940, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-74f254ec-852c-4eb2-8bd5-ad491a5ef613.png"
+  },
+  {
+    "gender": "female",
+    "id": "skirt-short-navy",
+    "view": "back",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/female/skirt-short-navy-back.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/female-layers/views/base-back.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/female/skirt-short-navy-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact female wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY navy blue short A-line skirt, structured waist band, gentle A-line flare, hidden side zipper, modest mid-thigh hem, smooth matte cotton twill; one continuous skirt without pants legs and without leg gap. Requested direction: strict BACK view, facing away. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=940, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-62f17bd6-99a4-4919-89ae-771922c1e45d.png"
+  },
+  {
+    "gender": "female",
+    "id": "skirt-long-ivory",
+    "view": "front",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/female/skirt-long-ivory-front.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/female-layers/base.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact female wearer body, standing pose, camera, scale and canvas reference. Create ONLY ivory cream ankle-length pleated maxi skirt, fitted waistband, hidden side zipper, flowing vertical accordion pleats and gentle A-line flare, opaque soft fabric, one continuous skirt without trousers legs and without leg gap. Requested direction: strict FRONT view, facing viewer. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1340, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-2f091ba4-d671-4c82-8d61-9d69ee1190e9.png"
+  },
+  {
+    "gender": "female",
+    "id": "skirt-long-ivory",
+    "view": "left",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/female/skirt-long-ivory-left.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/female-layers/views/base-left.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/female/skirt-long-ivory-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact female wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY ivory cream ankle-length pleated maxi skirt, fitted waistband, hidden side zipper, flowing vertical accordion pleats and gentle A-line flare, opaque soft fabric, one continuous skirt without trousers legs and without leg gap. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict LEFT profile, facing LEFT on screen. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1340, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-c929ad29-2722-498d-b4ce-1cfc4c0c63d0.png"
+  },
+  {
+    "gender": "female",
+    "id": "skirt-long-ivory",
+    "view": "right",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/female/skirt-long-ivory-right.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/female-layers/views/base-right.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/female/skirt-long-ivory-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact female wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY ivory cream ankle-length pleated maxi skirt, fitted waistband, hidden side zipper, flowing vertical accordion pleats and gentle A-line flare, opaque soft fabric, one continuous skirt without trousers legs and without leg gap. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict RIGHT profile, facing RIGHT on screen. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1340, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-71334b17-a440-4634-ac49-d343554e55ad.png"
+  },
+  {
+    "gender": "female",
+    "id": "skirt-long-ivory",
+    "view": "back",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/female/skirt-long-ivory-back.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/female-layers/views/base-back.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/female/skirt-long-ivory-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact female wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY ivory cream ankle-length pleated maxi skirt, fitted waistband, hidden side zipper, flowing vertical accordion pleats and gentle A-line flare, opaque soft fabric, one continuous skirt without trousers legs and without leg gap. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict BACK view, facing away. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1340, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-0eadfe47-349e-45a5-9282-630b916dbd7f.png"
+  },
+  {
+    "gender": "female",
+    "id": "shorts-denim",
+    "view": "front",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/female/pants-shorts-denim-front.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/female-layers/base.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact female wearer body, standing pose, camera, scale and canvas reference. Create ONLY medium blue denim shorts for adult woman, modest upper-to-mid-thigh length, structured high-waisted waistband, belt loops, button and fly, five pockets with visible stitching, neatly cuffed hems, not underwear. Requested direction: strict FRONT view, facing viewer. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=895, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-03a9a02b-fe0f-4a85-acb2-ab1ddbe39bac.png"
+  },
+  {
+    "gender": "female",
+    "id": "shorts-denim",
+    "view": "left",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/female/pants-shorts-denim-left.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/female-layers/views/base-left.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/female/pants-shorts-denim-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact female wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY medium blue denim shorts for adult woman, modest upper-to-mid-thigh length, structured high-waisted waistband, belt loops, button and fly, five pockets with visible stitching, neatly cuffed hems, not underwear. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict LEFT profile, facing LEFT on screen. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=895, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-31b72d15-f791-428f-9a1d-cac9ef130b1b.png"
+  },
+  {
+    "gender": "female",
+    "id": "shorts-denim",
+    "view": "right",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/female/pants-shorts-denim-right.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/female-layers/views/base-right.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/female/pants-shorts-denim-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact female wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY medium blue denim shorts for adult woman, modest upper-to-mid-thigh length, structured high-waisted waistband, belt loops, button and fly, five pockets with visible stitching, neatly cuffed hems, not underwear. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict RIGHT profile, facing RIGHT on screen. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=895, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-7ab71169-3fd8-4ef8-890d-b23ed67b0524.png"
+  },
+  {
+    "gender": "female",
+    "id": "shorts-denim",
+    "view": "back",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/female/pants-shorts-denim-back.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/female-layers/views/base-back.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/female/pants-shorts-denim-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact female wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY medium blue denim shorts for adult woman, modest upper-to-mid-thigh length, structured high-waisted waistband, belt loops, button and fly, five pockets with visible stitching, neatly cuffed hems, not underwear. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict BACK view, facing away. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=895, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-e805b021-9462-4627-8dc9-545b27657de4.png"
+  },
+  {
+    "gender": "female",
+    "id": "long-black",
+    "view": "front",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/female/pants-long-black-front.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/female-layers/base.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact female wearer body, standing pose, camera, scale and canvas reference. Create ONLY black full-length high-waisted straight-leg tailored trousers for adult woman, subtle creases, waistband, concealed front fly, slanted pockets, back welt pockets, matte opaque fabric, clean regular straight silhouette. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict FRONT view, facing viewer. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1340, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-6614c85e-ab18-4021-9869-8ac94255b6d5.png"
+  },
+  {
+    "gender": "female",
+    "id": "long-black",
+    "view": "left",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/female/pants-long-black-left.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/female-layers/views/base-left.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/female/pants-long-black-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact female wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY black full-length high-waisted straight-leg tailored trousers for adult woman, subtle creases, waistband, concealed front fly, slanted pockets, back welt pockets, matte opaque fabric, clean regular straight silhouette. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict LEFT profile, facing LEFT on screen. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1340, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-5737ed7c-4aa9-4a62-8a04-05bf9cac21f3.png"
+  },
+  {
+    "gender": "female",
+    "id": "long-black",
+    "view": "right",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/female/pants-long-black-right.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/female-layers/views/base-right.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/female/pants-long-black-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact female wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY black full-length high-waisted straight-leg tailored trousers for adult woman, subtle creases, waistband, concealed front fly, slanted pockets, back welt pockets, matte opaque fabric, clean regular straight silhouette. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict RIGHT profile, facing RIGHT on screen. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1340, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-ba60f1ec-40ed-4582-986b-0cbe0a536f28.png"
+  },
+  {
+    "gender": "female",
+    "id": "long-black",
+    "view": "back",
+    "file": "C:/PROMPTxPTIT/assets/bottoms-v2/female/pants-long-black-back.png",
+    "inputs": [
+      "C:/PROMPTxPTIT/frontend/public/figure/female-layers/views/base-back.png",
+      "C:/PROMPTxPTIT/assets/bottoms-v2/female/pants-long-black-front.png"
+    ],
+    "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact female wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY black full-length high-waisted straight-leg tailored trousers for adult woman, subtle creases, waistband, concealed front fly, slanted pockets, back welt pockets, matte opaque fabric, clean regular straight silhouette. EXACTLY ONE GARMENT, EXACTLY ONE VIEW in this image. No multi-view layout, no side-by-side copies, no contact sheet, no duplicates. Requested direction: strict BACK view, facing away. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=1340, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+    "tool": "built-in image_gen",
+    "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-ad76a21a-af86-44ab-bb71-49bd5ae5ec0e.png"
+  }
+]

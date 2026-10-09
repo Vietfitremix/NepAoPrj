@@ -20,8 +20,6 @@ services:
       ENABLE_DEV_ROUTES: "false"
       GEMINI_API_KEY: ${GEMINI_API_KEY:-}
       GEMINI_MODEL: ${GEMINI_MODEL:-gemini-flash-latest}
-    volumes:
-      - ../data:/data:ro
     restart: unless-stopped
   backend:
     build: .
@@ -33,7 +31,7 @@ services:
       DATABASE_PASSWORD: ${DATABASE_PASSWORD:?Set DATABASE_PASSWORD in .env}
       WEATHER_API_KEY: ${WEATHER_API_KEY:-}
       AI_SERVICE_URL: http://ai:8000
-      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-http://localhost:5173}
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-http://localhost:5173,http://localhost:5176}
     depends_on:
       postgres:
         condition: service_healthy

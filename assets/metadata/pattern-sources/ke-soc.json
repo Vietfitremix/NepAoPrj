@@ -1,0 +1,10 @@
+{
+  "id": "ke-soc",
+  "name": "Kẻ sọc",
+  "subject": "Simple fine elegant straight vertical narrow gold pinstripes evenly spaced, no diagonal or horizontal stripes",
+  "file": "patterns/ke-soc/tile.png",
+  "thumbnail": "patterns/ke-soc/thumbnail.png",
+  "prompt": "Use case: stylized-concept. Asset type: repeatable textile decorative motif PNG for Vietnamese clothing customization. Single square seamless repeat tile, 1024x1024, completely transparent background. Fine high quality embroidered thread illustration with realistic silky thin stitches, restrained ivory/gold accents, subject colors as specified. Harmonious repeating arrangement with plentiful negative transparent space (at least 65%), delicate thin strokes and SMALL motifs that do not merge into a dense solid background. Clean edges, no cast shadows, no fabric ground, no checkerboard, no mockup, no people, no clothing garment, no labels, no text except the single traditional longevity ideogram if requested. Left/right and top/bottom edges must join as a subtle seamless textile repeat. Subject: Simple fine elegant straight vertical narrow gold pinstripes evenly spaced, no diagonal or horizontal stripes",
+  "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-1a46c1ee-cecf-4950-a805-5fff8b0fc394.png",
+  "tool": "image_gen"
+}

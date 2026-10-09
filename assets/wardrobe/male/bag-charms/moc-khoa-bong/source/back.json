@@ -1,0 +1,11 @@
+{
+  "tool": "image_gen",
+  "file": "assets/wardrobe/male/bag-charms/moc-khoa-bong/source/back.png",
+  "view": "back",
+  "prompt": "Use case: product-mockup. Asset type: photoreal modular dress-up accessory source turnaround sprite sheet. Make a SINGLE item with FOUR views on ONE 2x2 square sheet, 2048x2048 preferred, equal cells with no margins between cells, each object isolated and fully inside its cell. TOP LEFT = front of a standing wearer facing camera. TOP RIGHT = strict LEFT profile, wearer faces image-left. BOTTOM LEFT = strict RIGHT profile, wearer faces image-right. BOTTOM RIGHT = rear/back, wearer faces away. Keep exact same physical item, materials, proportions, scale, soft studio light and camera height across all four views. Real photographic textures matching supplied avatar style references. Treat supplied avatars only as lighting/style/anatomical wearing direction references, do not reproduce avatars. Center each accessory within its cell with at least 12% empty padding. Background must be true transparent alpha, no checkerboard, no floor, no shadow background. NO person, skin, mannequin, hair, head, hands, feet, other accessory, labels, text, separators, border or watermark. These are accessory-only alpha cutouts for later attachment to avatar; show ONLY visible accessory surfaces in that viewing direction. Subject: One miniature cream plush teddy bear bag charm attached to a small SILVER key ring and short small-chain above its head. Soft fuzzy fabric, simple brown embroidered eyes, tiny beige paws. Upright hanging orientation, ring at top. Same toy in four orientations, profiles thin and back shows plain plush back. Not a person.",
+  "inputs": [
+    "assets/wardrobe/shared/bag-charms/moc-khoa-bong/source/turnaround.png",
+    "frontend/public/figure/male-layers/body/back.png"
+  ],
+  "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-a57ad840-8ed8-4bdc-86cb-91c7484b5c40.png"
+}

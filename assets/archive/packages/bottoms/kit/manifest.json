@@ -1,0 +1,120 @@
+{
+  "width": 1024,
+  "height": 1536,
+  "views": [
+    "front",
+    "left",
+    "right",
+    "back"
+  ],
+  "items": [
+    {
+      "gender": "male",
+      "id": "long-navy",
+      "name": "Quần dài",
+      "detail": "Xanh navy · Ống đứng",
+      "files": {
+        "front": "male/long-navy/front.png",
+        "left": "male/long-navy/left.png",
+        "right": "male/long-navy/right.png",
+        "back": "male/long-navy/back.png"
+      }
+    },
+    {
+      "gender": "male",
+      "id": "shorts-khaki",
+      "name": "Quần đùi",
+      "detail": "Kaki be · Trên gối",
+      "files": {
+        "front": "male/shorts-khaki/front.png",
+        "left": "male/shorts-khaki/left.png",
+        "right": "male/shorts-khaki/right.png",
+        "back": "male/shorts-khaki/back.png"
+      }
+    },
+    {
+      "gender": "male",
+      "id": "cropped-olive",
+      "name": "Quần lửng",
+      "detail": "Xanh olive · Giữa bắp chân",
+      "files": {
+        "front": "male/cropped-olive/front.png",
+        "left": "male/cropped-olive/left.png",
+        "right": "male/cropped-olive/right.png",
+        "back": "male/cropped-olive/back.png"
+      }
+    },
+    {
+      "gender": "male",
+      "id": "slim-black",
+      "name": "Quần ống bó",
+      "detail": "Đen · Ôm chân",
+      "files": {
+        "front": "male/slim-black/front.png",
+        "left": "male/slim-black/left.png",
+        "right": "male/slim-black/right.png",
+        "back": "male/slim-black/back.png"
+      }
+    },
+    {
+      "gender": "male",
+      "id": "wide-charcoal",
+      "name": "Quần ống rộng",
+      "detail": "Xám than · Ống rộng",
+      "files": {
+        "front": "male/wide-charcoal/front.png",
+        "left": "male/wide-charcoal/left.png",
+        "right": "male/wide-charcoal/right.png",
+        "back": "male/wide-charcoal/back.png"
+      }
+    },
+    {
+      "gender": "female",
+      "id": "skirt-short-navy",
+      "name": "Váy ngắn",
+      "detail": "Xanh navy · Dáng chữ A",
+      "files": {
+        "front": "female/skirt-short-navy/front.png",
+        "left": "female/skirt-short-navy/left.png",
+        "right": "female/skirt-short-navy/right.png",
+        "back": "female/skirt-short-navy/back.png"
+      }
+    },
+    {
+      "gender": "female",
+      "id": "skirt-long-ivory",
+      "name": "Váy dài",
+      "detail": "Trắng ngà · Xếp ly dài",
+      "files": {
+        "front": "female/skirt-long-ivory/front.png",
+        "left": "female/skirt-long-ivory/left.png",
+        "right": "female/skirt-long-ivory/right.png",
+        "back": "female/skirt-long-ivory/back.png"
+      }
+    },
+    {
+      "gender": "female",
+      "id": "shorts-denim",
+      "name": "Quần ngắn",
+      "detail": "Denim xanh · Trên gối",
+      "files": {
+        "front": "female/shorts-denim/front.png",
+        "left": "female/shorts-denim/left.png",
+        "right": "female/shorts-denim/right.png",
+        "back": "female/shorts-denim/back.png"
+      }
+    },
+    {
+      "gender": "female",
+      "id": "long-black",
+      "name": "Quần dài",
+      "detail": "Đen · Ống đứng",
+      "files": {
+        "front": "female/long-black/front.png",
+        "left": "female/long-black/left.png",
+        "right": "female/long-black/right.png",
+        "back": "female/long-black/back.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+Generated using built-in image generation.
+Edit this empty ao dai garment overlay. Change ONLY the navy blue silk fabric color to rich burgundy red. Keep the entire clothing silhouette, neck opening, sleeve outlines, embroidery, folds, lighting, exact position, size and 1024x1536 canvas pixel-for-pixel aligned to input. Preserve gold embroidery. No body or mannequin or skin, no trousers. Preserve transparent alpha outside garment. Do not crop or enlarge or reposition anything. The result is a second interchangeable dress-up clothing layer.

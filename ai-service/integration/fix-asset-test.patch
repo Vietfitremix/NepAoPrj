@@ -1,0 +1,8 @@
+diff --git a/backend/src/test/java/com/vietphuc/remix/ApiIntegrationTest.java b/backend/src/test/java/com/vietphuc/remix/ApiIntegrationTest.java
+--- a/backend/src/test/java/com/vietphuc/remix/ApiIntegrationTest.java
++++ b/backend/src/test/java/com/vietphuc/remix/ApiIntegrationTest.java
+@@ -1 +1,3 @@
+-            .andExpect(jsonPath("$.assets",hasSize(0)));
++            .andExpect(jsonPath("$.assets",hasSize(14)))
++            .andExpect(jsonPath("$.assets[?(@.assetType == 'BASE_AVATAR')]",hasSize(7)))
++            .andExpect(jsonPath("$.assets[?(@.assetType == 'GARMENT')]",hasSize(7)));

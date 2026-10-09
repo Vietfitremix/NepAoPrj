@@ -1,0 +1,10 @@
+{
+  "id": "gam-tho-may",
+  "name": "Gấm chữ Thọ & mây",
+  "subject": "Traditional Vietnamese brocade repeating round longevity Shou Tho symbols (壽), golden geometric stylized longevity ideogram centered in circle surrounded by curled auspicious clouds; no modern typography",
+  "file": "patterns/gam-tho-may/tile.png",
+  "thumbnail": "patterns/gam-tho-may/thumbnail.png",
+  "prompt": "Use case: stylized-concept. Asset type: repeatable textile decorative motif PNG for Vietnamese clothing customization. Single square seamless repeat tile, 1024x1024, completely transparent background. Fine high quality embroidered thread illustration with realistic silky thin stitches, restrained ivory/gold accents, subject colors as specified. Harmonious repeating arrangement with plentiful negative transparent space (at least 65%), delicate thin strokes and SMALL motifs that do not merge into a dense solid background. Clean edges, no cast shadows, no fabric ground, no checkerboard, no mockup, no people, no clothing garment, no labels, no text except the single traditional longevity ideogram if requested. Left/right and top/bottom edges must join as a subtle seamless textile repeat. Subject: Traditional Vietnamese brocade repeating round longevity Shou Tho symbols (壽), golden geometric stylized longevity ideogram centered in circle surrounded by curled auspicious clouds; no modern typography",
+  "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-86fd9f5c-d020-40e5-95da-a1cdad47b0e7.png",
+  "tool": "image_gen"
+}

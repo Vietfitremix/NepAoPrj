@@ -8,7 +8,8 @@ public record SaveLookRequest(
     @NotBlank @Pattern(regexp="[A-Z][A-Z0-9_]{0,39}") String eventCode,
     @NotNull @Size(max=10) List<@NotBlank @Pattern(regexp="[A-Z][A-Z0-9_]{0,39}") String> accessories,
     @Size(max=2000) String originalPrompt,
-    @Size(max=2048) @Pattern(regexp="https?://[^\\s]+") String previewImageUrl
+    @Size(max=2048) @Pattern(regexp="https?://[^\\s]+") String previewImageUrl,
+    com.fasterxml.jackson.databind.JsonNode wardrobe
 ) {
-    public LookSelection selection() { return new LookSelection(outfitCode,colorCode,styleCode,eventCode,accessories); }
+    public LookSelection selection() { return new LookSelection(outfitCode,colorCode,styleCode,eventCode,accessories,wardrobe); }
 }

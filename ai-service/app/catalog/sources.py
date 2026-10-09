@@ -21,6 +21,63 @@ def _fallback_from_json(raw: dict) -> dict:
     }
 
 
+def load_from_documents(documents: dict, version: str = "postgres") -> Catalog:
+    """Build the same complete catalog from database documents instead of local files."""
+    def read(name, default=None):
+        key = "ai." + name.removesuffix(".json")
+        if key in documents:
+            return documents[key]
+        if default is not None:
+            return default
+        raise ValueError("Database catalog document missing: " + key)
+
+    return Catalog(
+        occasions=_by_id(read("occasions.json")), styles=_by_id(read("styles.json")),
+        garments=_by_id(read("garments.json")), accessories=_by_id(read("accessories.json")),
+        colors=_by_id(read("palettes.json")), rules=[r for r in read("rules.json") if r.get("active", True)],
+        culture_cards={c["garmentId"]: c for c in read("culture-cards.json", [])},
+        fallback=_fallback_from_json(read("fallback-comments.json", {})),
+        patterns=_by_id(read("patterns.json")), quiz=read("quiz.json"),
+        scoring=read("scoring.json"), checklist=read("checklist.json"), version=version,
+    )
+
+
+async def load_centralized_postgres(pool) -> Catalog:
+    """Read the tables managed by Spring Flyway V7/V8, including quiz/scoring/checklist."""
+    async with pool.connection() as conn:
+        async def rows(query):
+            cursor = await conn.execute(query)
+            return await cursor.fetchall()
+
+        documents = dict(await rows("SELECT data_key,payload FROM data_documents WHERE data_key LIKE 'ai.%'"))
+        entries = await rows("SELECT dataset_key,entry_key,metadata FROM ai_catalog_entries ORDER BY dataset_key,entry_key")
+        by_dataset = {}
+        for dataset, key, metadata in entries:
+            by_dataset.setdefault(dataset, {})[key] = metadata
+        for dataset, indexed in by_dataset.items():
+            # Preserve the original ordering while accepting new indexed entries.
+            ordered = []
+            for item in documents.get("ai." + dataset, []):
+                value = indexed.pop(item["id"], None)
+                if value is not None:
+                    ordered.append(value)
+            documents["ai." + dataset] = [*ordered, *indexed.values()]
+        documents["ai.rules"] = [r[0] for r in await rows("SELECT metadata FROM ai_cultural_rules WHERE active ORDER BY rule_key")]
+        documents["ai.quiz"] = [r[0] for r in await rows("SELECT metadata FROM quiz_questions ORDER BY sort_order")]
+        documents["ai.scoring"]["criteria"] = [r[0] for r in await rows("SELECT metadata FROM scoring_criteria ORDER BY sort_order")]
+        checklist = documents["ai.checklist"]
+        for section, key, metadata in await rows("SELECT section_key,entry_key,metadata FROM checklist_entries"):
+            if isinstance(checklist.get(section), dict):
+                checklist[section][key] = metadata["text"]
+            else:
+                checklist[section] = metadata["text"]
+        templates = {key.removeprefix("prompt."): value["template"] for key, value in
+                     await rows("SELECT data_key,payload FROM data_documents WHERE data_key LIKE 'prompt.%'")}
+    catalog = load_from_documents(documents)
+    catalog.prompt_templates = templates
+    return catalog
+
+
 def load_from_json(data_dir: Path) -> Catalog:
     def read(name, default=None):
         p = data_dir / name
@@ -104,7 +161,9 @@ async def load_from_postgres(pool, data_dir: Path) -> Catalog:
 
     patterns, quiz, scoring, checklist = load_ui_data(data_dir)
     # bảng rules trên Postgres có thể chưa có cột criterion: lấy theo mã luật trong data/rules.json
-    crit = {r["id"]: r.get("criterion") for r in json.loads((data_dir / "rules.json").read_text(encoding="utf-8"))}         if (data_dir / "rules.json").exists() else {}
+    rules_file = data_dir / "rules.json"
+    crit = {r["id"]: r.get("criterion")
+            for r in json.loads(rules_file.read_text(encoding="utf-8"))} if rules_file.exists() else {}
     for r in rules:
         r["criterion"] = r.get("criterion") or crit.get(r["id"])
     return Catalog(

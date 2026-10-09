@@ -1,0 +1,1022 @@
+{
+  "copiedFiles": 169,
+  "ignored": [
+    ".git (source repository metadata)"
+  ],
+  "files": [
+    {
+      "source": ".gitignore",
+      "target": "frontend/tools/imported.gitignore",
+      "sourceSha256": "c86b168f5631a594718867cf881d5e8ce24d385daa51103e5a51bf8f3ae7e020",
+      "targetSha256": "c86b168f5631a594718867cf881d5e8ce24d385daa51103e5a51bf8f3ae7e020"
+    },
+    {
+      "source": "data/accessories.json",
+      "target": "ai-service/data/accessories.json",
+      "sourceSha256": "44d455c79472707f296014f052a13a01146e4817f6f47f727fd153948e3392bc",
+      "targetSha256": "44d455c79472707f296014f052a13a01146e4817f6f47f727fd153948e3392bc"
+    },
+    {
+      "source": "data/culture-cards.json",
+      "target": "ai-service/data/culture-cards.json",
+      "sourceSha256": "b12b11faf2fd4a84885d3956d134651a036cbec1d5b1dba0a9a5860d1227e708",
+      "targetSha256": "b12b11faf2fd4a84885d3956d134651a036cbec1d5b1dba0a9a5860d1227e708"
+    },
+    {
+      "source": "data/fallback-comments.json",
+      "target": "ai-service/data/fallback-comments.json",
+      "sourceSha256": "6d2fd105f2620df0f0c6fa2fd8b4a81ab935e6c04368edae61890b6923f85e47",
+      "targetSha256": "6d2fd105f2620df0f0c6fa2fd8b4a81ab935e6c04368edae61890b6923f85e47"
+    },
+    {
+      "source": "data/garments.json",
+      "target": "ai-service/data/garments.json",
+      "sourceSha256": "cf2f13e044d2e941d87c115c551388f8b9fae5de8575c735139d4ce758b1cf3b",
+      "targetSha256": "cf2f13e044d2e941d87c115c551388f8b9fae5de8575c735139d4ce758b1cf3b"
+    },
+    {
+      "source": "data/occasions.json",
+      "target": "ai-service/data/occasions.json",
+      "sourceSha256": "51a844bd70d09732830529bc74a94178cf05138cd76cd10db25993af5e26a163",
+      "targetSha256": "51a844bd70d09732830529bc74a94178cf05138cd76cd10db25993af5e26a163"
+    },
+    {
+      "source": "data/palettes.json",
+      "target": "ai-service/data/palettes.json",
+      "sourceSha256": "45b4e6c262cd19390a4ef085b2e419a5062359e8e44d1a43da3cca7ff9355a68",
+      "targetSha256": "45b4e6c262cd19390a4ef085b2e419a5062359e8e44d1a43da3cca7ff9355a68"
+    },
+    {
+      "source": "data/patterns.json",
+      "target": "ai-service/data/patterns.json",
+      "sourceSha256": "e55e30c272373c956cddb0350f58679e41465e0a1705eed3dd49c7a285788dac",
+      "targetSha256": "e55e30c272373c956cddb0350f58679e41465e0a1705eed3dd49c7a285788dac"
+    },
+    {
+      "source": "data/quiz.json",
+      "target": "ai-service/data/quiz.json",
+      "sourceSha256": "7460072ef891b611ad16439280fafcd1a00c0b9616a711db4de5a87f9bb8f9e5",
+      "targetSha256": "7460072ef891b611ad16439280fafcd1a00c0b9616a711db4de5a87f9bb8f9e5"
+    },
+    {
+      "source": "data/rules.json",
+      "target": "ai-service/data/rules.json",
+      "sourceSha256": "6e25f17a70765459ce3160977b4075916a4cc1d272ae129b05322f6e6390bce4",
+      "targetSha256": "6e25f17a70765459ce3160977b4075916a4cc1d272ae129b05322f6e6390bce4"
+    },
+    {
+      "source": "data/styles.json",
+      "target": "ai-service/data/styles.json",
+      "sourceSha256": "ebc5ab0415aec9da85d5620f0f2bf1f23fa2ea5d198252e88d7f6814a9ad0331",
+      "targetSha256": "ebc5ab0415aec9da85d5620f0f2bf1f23fa2ea5d198252e88d7f6814a9ad0331"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/giay_bup_be.svg",
+      "target": "frontend/public/figure/accessory/giay_bup_be.svg",
+      "sourceSha256": "5ef6de125def28d5c4843d29c02920645420e91ddb528006eae5ca030b59113e",
+      "targetSha256": "5ef6de125def28d5c4843d29c02920645420e91ddb528006eae5ca030b59113e"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/giay_bup_be_phai.svg",
+      "target": "frontend/public/figure/accessory/giay_bup_be_phai.svg",
+      "sourceSha256": "0b9af4d14a81128fda55a3727c672aed60a88c7723a90ca51a8f14312f4f3430",
+      "targetSha256": "0b9af4d14a81128fda55a3727c672aed60a88c7723a90ca51a8f14312f4f3430"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/giay_bup_be_sau.svg",
+      "target": "frontend/public/figure/accessory/giay_bup_be_sau.svg",
+      "sourceSha256": "5db8d26d236f58d3303301f4e6ae7a2c923ac156bdfaa7cfb5494992208f9479",
+      "targetSha256": "5db8d26d236f58d3303301f4e6ae7a2c923ac156bdfaa7cfb5494992208f9479"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/giay_bup_be_trai.svg",
+      "target": "frontend/public/figure/accessory/giay_bup_be_trai.svg",
+      "sourceSha256": "654677d2fe601bfcd054a66ca2c02d0ec043348436d78be3af703aec36be2349",
+      "targetSha256": "654677d2fe601bfcd054a66ca2c02d0ec043348436d78be3af703aec36be2349"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/giay_ta.svg",
+      "target": "frontend/public/figure/accessory/giay_ta.svg",
+      "sourceSha256": "425c90dd78f85fbd6e17a95043c306611f046736eade3a40d287e4bc1ae0fe6d",
+      "targetSha256": "425c90dd78f85fbd6e17a95043c306611f046736eade3a40d287e4bc1ae0fe6d"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/giay_ta_phai.svg",
+      "target": "frontend/public/figure/accessory/giay_ta_phai.svg",
+      "sourceSha256": "d51602aab428b1697661c30b4bf77a31c1f6e071116cf42b4fe65389a390ead9",
+      "targetSha256": "d51602aab428b1697661c30b4bf77a31c1f6e071116cf42b4fe65389a390ead9"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/giay_ta_sau.svg",
+      "target": "frontend/public/figure/accessory/giay_ta_sau.svg",
+      "sourceSha256": "7e9cac9544a401ecc72ab3c4a44cffef5dc8182ffc1da2b87ac018904732e587",
+      "targetSha256": "7e9cac9544a401ecc72ab3c4a44cffef5dc8182ffc1da2b87ac018904732e587"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/giay_ta_trai.svg",
+      "target": "frontend/public/figure/accessory/giay_ta_trai.svg",
+      "sourceSha256": "2908105c41be3a2858ee2d0d81feb78e4e6e6451f52bb0459ff75a37ecb9dfdc",
+      "targetSha256": "2908105c41be3a2858ee2d0d81feb78e4e6e6451f52bb0459ff75a37ecb9dfdc"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/guoc.svg",
+      "target": "frontend/public/figure/accessory/guoc.svg",
+      "sourceSha256": "c0158ce2cdc8d326d45e4ea955b86187f3e5c80f212b11cb7a57ed308340734d",
+      "targetSha256": "c0158ce2cdc8d326d45e4ea955b86187f3e5c80f212b11cb7a57ed308340734d"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/guoc_phai.svg",
+      "target": "frontend/public/figure/accessory/guoc_phai.svg",
+      "sourceSha256": "265c35b6bc47c55c24316a14c401df6c5be3df4eb37657f735e09a7f2f506d79",
+      "targetSha256": "265c35b6bc47c55c24316a14c401df6c5be3df4eb37657f735e09a7f2f506d79"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/guoc_sau.svg",
+      "target": "frontend/public/figure/accessory/guoc_sau.svg",
+      "sourceSha256": "29c8b3a8de1758da9ec39f1af4c996488f8a620424cd5c71b97a375d5a774e1e",
+      "targetSha256": "29c8b3a8de1758da9ec39f1af4c996488f8a620424cd5c71b97a375d5a774e1e"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/guoc_trai.svg",
+      "target": "frontend/public/figure/accessory/guoc_trai.svg",
+      "sourceSha256": "f9ff8621938977147fedb812a515ff684cb90241b34aa4ddad8f0a17b276fa26",
+      "targetSha256": "f9ff8621938977147fedb812a515ff684cb90241b34aa4ddad8f0a17b276fa26"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/hai_theu.svg",
+      "target": "frontend/public/figure/accessory/hai_theu.svg",
+      "sourceSha256": "b797968f758a25b2e1775d77441c3c9d2b0b318e9fdc8249a6b8d1b74f086148",
+      "targetSha256": "b797968f758a25b2e1775d77441c3c9d2b0b318e9fdc8249a6b8d1b74f086148"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/hai_theu_phai.svg",
+      "target": "frontend/public/figure/accessory/hai_theu_phai.svg",
+      "sourceSha256": "0a261c27f6849cb6726c8b36f1b835aa385a4c0a0c9f78a8f67228f0ca33fc61",
+      "targetSha256": "0a261c27f6849cb6726c8b36f1b835aa385a4c0a0c9f78a8f67228f0ca33fc61"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/hai_theu_sau.svg",
+      "target": "frontend/public/figure/accessory/hai_theu_sau.svg",
+      "sourceSha256": "ee4e16981676a7563dd4c28e4020cfc3d1901019a88288d0c126b4a68f1abc86",
+      "targetSha256": "ee4e16981676a7563dd4c28e4020cfc3d1901019a88288d0c126b4a68f1abc86"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/hai_theu_trai.svg",
+      "target": "frontend/public/figure/accessory/hai_theu_trai.svg",
+      "sourceSha256": "4c71af5c653b19006c80405e903b59886d57521cd96b2c05e4a82fe613698c95",
+      "targetSha256": "4c71af5c653b19006c80405e903b59886d57521cd96b2c05e4a82fe613698c95"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/hoa_cai_toc.svg",
+      "target": "frontend/public/figure/accessory/hoa_cai_toc.svg",
+      "sourceSha256": "bf81ebd6c03f53afd63ea2e400c5ddcaac76ab50279579166f586bffef4e4eac",
+      "targetSha256": "bf81ebd6c03f53afd63ea2e400c5ddcaac76ab50279579166f586bffef4e4eac"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/hoa_cai_toc_phai.svg",
+      "target": "frontend/public/figure/accessory/hoa_cai_toc_phai.svg",
+      "sourceSha256": "60869827dc3760bad3e28f4181f0a7857a451ab0c62503b168bab8dbef6b992a",
+      "targetSha256": "60869827dc3760bad3e28f4181f0a7857a451ab0c62503b168bab8dbef6b992a"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/hoa_cai_toc_sau.svg",
+      "target": "frontend/public/figure/accessory/hoa_cai_toc_sau.svg",
+      "sourceSha256": "ba06927f9df7000968edd70b7fa11aa16ee8dc6383d8dffc1083c3e5541eb697",
+      "targetSha256": "ba06927f9df7000968edd70b7fa11aa16ee8dc6383d8dffc1083c3e5541eb697"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/hoa_cai_toc_trai.svg",
+      "target": "frontend/public/figure/accessory/hoa_cai_toc_trai.svg",
+      "sourceSha256": "7b94c05f4ca6e498685838cdfd547c8fbde1de0c006c82f5765f4e8371d732ff",
+      "targetSha256": "7b94c05f4ca6e498685838cdfd547c8fbde1de0c006c82f5765f4e8371d732ff"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/khan_mo_qua.svg",
+      "target": "frontend/public/figure/accessory/khan_mo_qua.svg",
+      "sourceSha256": "916def8aabc05b72e9415e58dea79df3f4ef0ccc5b03d3226a1b431ea8106f44",
+      "targetSha256": "916def8aabc05b72e9415e58dea79df3f4ef0ccc5b03d3226a1b431ea8106f44"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/khan_mo_qua_phai.svg",
+      "target": "frontend/public/figure/accessory/khan_mo_qua_phai.svg",
+      "sourceSha256": "3c524457f1893151bcbbd3e8dcc372960c7aad3ca7453ee0a8e3a150ad3aded9",
+      "targetSha256": "3c524457f1893151bcbbd3e8dcc372960c7aad3ca7453ee0a8e3a150ad3aded9"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/khan_mo_qua_sau.svg",
+      "target": "frontend/public/figure/accessory/khan_mo_qua_sau.svg",
+      "sourceSha256": "7971b0e5f48a3bf6e18c4699b9a130c037c5766d8feb57fa802a0b136c265f4c",
+      "targetSha256": "7971b0e5f48a3bf6e18c4699b9a130c037c5766d8feb57fa802a0b136c265f4c"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/khan_mo_qua_trai.svg",
+      "target": "frontend/public/figure/accessory/khan_mo_qua_trai.svg",
+      "sourceSha256": "0d82dbaf1d95f59fdaeb5596057fb4379a522edcc3a75ff2048547b8f5dfa855",
+      "targetSha256": "0d82dbaf1d95f59fdaeb5596057fb4379a522edcc3a75ff2048547b8f5dfa855"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/khan_van.svg",
+      "target": "frontend/public/figure/accessory/khan_van.svg",
+      "sourceSha256": "7b509c82b835619dba69825a16e8adf73c35b337487a1333aeeba3eac1666843",
+      "targetSha256": "7b509c82b835619dba69825a16e8adf73c35b337487a1333aeeba3eac1666843"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/khan_van_phai.svg",
+      "target": "frontend/public/figure/accessory/khan_van_phai.svg",
+      "sourceSha256": "3ee35a1af768bc8e9bc8d5aebddbafe6ac9d6af039697ad4ee8faabbb44f1eae",
+      "targetSha256": "3ee35a1af768bc8e9bc8d5aebddbafe6ac9d6af039697ad4ee8faabbb44f1eae"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/khan_van_sau.svg",
+      "target": "frontend/public/figure/accessory/khan_van_sau.svg",
+      "sourceSha256": "2a2635fa98cfee43850b20a0d2afcce115a949441c04caacbbf7e1da25e6e56e",
+      "targetSha256": "2a2635fa98cfee43850b20a0d2afcce115a949441c04caacbbf7e1da25e6e56e"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/khan_van_trai.svg",
+      "target": "frontend/public/figure/accessory/khan_van_trai.svg",
+      "sourceSha256": "65fa35bc84e40e78cc03dad9533644340f75193fcd2ada42882e46020ee9d8a1",
+      "targetSha256": "65fa35bc84e40e78cc03dad9533644340f75193fcd2ada42882e46020ee9d8a1"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/khan_xep.svg",
+      "target": "frontend/public/figure/accessory/khan_xep.svg",
+      "sourceSha256": "ebfd3d8181908759c72f4d934b5fa5800afd5b8117cd733b5980529ef2940ec0",
+      "targetSha256": "ebfd3d8181908759c72f4d934b5fa5800afd5b8117cd733b5980529ef2940ec0"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/khan_xep_phai.svg",
+      "target": "frontend/public/figure/accessory/khan_xep_phai.svg",
+      "sourceSha256": "357e803dd9ea293269858a286c3c7495a46660207b3e11f9f5152e51651bfd6b",
+      "targetSha256": "357e803dd9ea293269858a286c3c7495a46660207b3e11f9f5152e51651bfd6b"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/khan_xep_sau.svg",
+      "target": "frontend/public/figure/accessory/khan_xep_sau.svg",
+      "sourceSha256": "4062d205dfbfd5698bca71b995079ec1f460db73f4fc71e14f7f15ff7117af1b",
+      "targetSha256": "4062d205dfbfd5698bca71b995079ec1f460db73f4fc71e14f7f15ff7117af1b"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/khan_xep_trai.svg",
+      "target": "frontend/public/figure/accessory/khan_xep_trai.svg",
+      "sourceSha256": "99939c550dc3261fa4cddd9d24d6f7aaf85ea077bf6e432c12652d4d979114a1",
+      "targetSha256": "99939c550dc3261fa4cddd9d24d6f7aaf85ea077bf6e432c12652d4d979114a1"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/kieng_bac.svg",
+      "target": "frontend/public/figure/accessory/kieng_bac.svg",
+      "sourceSha256": "11a3f22e4123c85eeef82c74322ab89dc8313294a20218312231dabe4cae99b9",
+      "targetSha256": "11a3f22e4123c85eeef82c74322ab89dc8313294a20218312231dabe4cae99b9"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/kieng_bac_phai.svg",
+      "target": "frontend/public/figure/accessory/kieng_bac_phai.svg",
+      "sourceSha256": "abec08e8eb3ac0ce1a98194a3a0fd09ec1e9d0c244c47ecfb06f15522cd035bc",
+      "targetSha256": "abec08e8eb3ac0ce1a98194a3a0fd09ec1e9d0c244c47ecfb06f15522cd035bc"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/kieng_bac_sau.svg",
+      "target": "frontend/public/figure/accessory/kieng_bac_sau.svg",
+      "sourceSha256": "4045639b064dd06ddca6df4724256e6cf11a0e0a0b1dbb24bf1138b6626e44df",
+      "targetSha256": "4045639b064dd06ddca6df4724256e6cf11a0e0a0b1dbb24bf1138b6626e44df"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/kieng_bac_trai.svg",
+      "target": "frontend/public/figure/accessory/kieng_bac_trai.svg",
+      "sourceSha256": "08bcd491160287c83764351983341f66bba2500ea9ac46ac6057a22090a5bd0a",
+      "targetSha256": "08bcd491160287c83764351983341f66bba2500ea9ac46ac6057a22090a5bd0a"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/non_la.svg",
+      "target": "frontend/public/figure/accessory/non_la.svg",
+      "sourceSha256": "c7174d44dbda096c4866d2c98fe47eef78a9fb259f2080378bf8522a39d8da9f",
+      "targetSha256": "c7174d44dbda096c4866d2c98fe47eef78a9fb259f2080378bf8522a39d8da9f"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/non_la_phai.svg",
+      "target": "frontend/public/figure/accessory/non_la_phai.svg",
+      "sourceSha256": "924c6dd059aa85bef2184cd0660898d09133c810eb01606b3fb13d2606753471",
+      "targetSha256": "924c6dd059aa85bef2184cd0660898d09133c810eb01606b3fb13d2606753471"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/non_la_sau.svg",
+      "target": "frontend/public/figure/accessory/non_la_sau.svg",
+      "sourceSha256": "ed635cd78fdd3f32d7a8ef0ace2436b13ce4645ffb1aea332e34b2d52b52470f",
+      "targetSha256": "ed635cd78fdd3f32d7a8ef0ace2436b13ce4645ffb1aea332e34b2d52b52470f"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/non_la_trai.svg",
+      "target": "frontend/public/figure/accessory/non_la_trai.svg",
+      "sourceSha256": "dc636255123ae62fd80fbd9915a50efbe117e426cc91f8b16031610c83e0bbfc",
+      "targetSha256": "dc636255123ae62fd80fbd9915a50efbe117e426cc91f8b16031610c83e0bbfc"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/non_quai_thao.svg",
+      "target": "frontend/public/figure/accessory/non_quai_thao.svg",
+      "sourceSha256": "9931882ebf1e80a4b1a24cb7e7739e9c4e7eeb0b27dc2fe6928794a4f6e8e90b",
+      "targetSha256": "9931882ebf1e80a4b1a24cb7e7739e9c4e7eeb0b27dc2fe6928794a4f6e8e90b"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/non_quai_thao_phai.svg",
+      "target": "frontend/public/figure/accessory/non_quai_thao_phai.svg",
+      "sourceSha256": "f805ba18bb50d9e2fb9aa79d3401afaef6f08bad75e3c99058fa4b0e60c94d72",
+      "targetSha256": "f805ba18bb50d9e2fb9aa79d3401afaef6f08bad75e3c99058fa4b0e60c94d72"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/non_quai_thao_sau.svg",
+      "target": "frontend/public/figure/accessory/non_quai_thao_sau.svg",
+      "sourceSha256": "dab6654c3cd2d50f87991c2b1c72e9ba33e4e21867947d573472f181f248a4a8",
+      "targetSha256": "dab6654c3cd2d50f87991c2b1c72e9ba33e4e21867947d573472f181f248a4a8"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/non_quai_thao_trai.svg",
+      "target": "frontend/public/figure/accessory/non_quai_thao_trai.svg",
+      "sourceSha256": "08b434e7e753a513b5e8fd748f77629dde3c0644bc6e86080ed4fd305342ed5f",
+      "targetSha256": "08b434e7e753a513b5e8fd748f77629dde3c0644bc6e86080ed4fd305342ed5f"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/quat_giay_nam.svg",
+      "target": "frontend/public/figure/accessory/quat_giay_nam.svg",
+      "sourceSha256": "3e5a63c9e62b4c49d1d0ef5d677231a62be5bb7f5b44e631f5419e8fbc8e34f3",
+      "targetSha256": "3e5a63c9e62b4c49d1d0ef5d677231a62be5bb7f5b44e631f5419e8fbc8e34f3"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/quat_giay_nam_phai.svg",
+      "target": "frontend/public/figure/accessory/quat_giay_nam_phai.svg",
+      "sourceSha256": "23994c96e0e38d41211b36d6d10e5f56552a33b14ffa5f95b104142c41831d27",
+      "targetSha256": "23994c96e0e38d41211b36d6d10e5f56552a33b14ffa5f95b104142c41831d27"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/quat_giay_nam_sau.svg",
+      "target": "frontend/public/figure/accessory/quat_giay_nam_sau.svg",
+      "sourceSha256": "3c938a693a6d24ba43559f9df1d4e15f9f2c050f2eec9f692e4c9bc0d122e774",
+      "targetSha256": "3c938a693a6d24ba43559f9df1d4e15f9f2c050f2eec9f692e4c9bc0d122e774"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/quat_giay_nam_trai.svg",
+      "target": "frontend/public/figure/accessory/quat_giay_nam_trai.svg",
+      "sourceSha256": "d67d2872612b441a927667a478c58958eb5f973cd96c37332ae5237715ef0e8d",
+      "targetSha256": "d67d2872612b441a927667a478c58958eb5f973cd96c37332ae5237715ef0e8d"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/quat_giay_nu.svg",
+      "target": "frontend/public/figure/accessory/quat_giay_nu.svg",
+      "sourceSha256": "0c3f92d067965e7fc6dfbe7bf53a3ebc33f1d1ec6a04d6d28906fdf916f3bdc6",
+      "targetSha256": "0c3f92d067965e7fc6dfbe7bf53a3ebc33f1d1ec6a04d6d28906fdf916f3bdc6"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/quat_giay_nu_phai.svg",
+      "target": "frontend/public/figure/accessory/quat_giay_nu_phai.svg",
+      "sourceSha256": "1adfc9d5711f628183f40804eaed9f0d08e92025e29def8e542a79ab7bb5aab6",
+      "targetSha256": "1adfc9d5711f628183f40804eaed9f0d08e92025e29def8e542a79ab7bb5aab6"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/quat_giay_nu_sau.svg",
+      "target": "frontend/public/figure/accessory/quat_giay_nu_sau.svg",
+      "sourceSha256": "51b51ce924bfea19523868969625dc650ed3f9783c4b19321d7407af3a28aaf7",
+      "targetSha256": "51b51ce924bfea19523868969625dc650ed3f9783c4b19321d7407af3a28aaf7"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/quat_giay_nu_trai.svg",
+      "target": "frontend/public/figure/accessory/quat_giay_nu_trai.svg",
+      "sourceSha256": "65685224fe4d2c1095a45a8cda6d34e0a5ce4bf36e974929ab5214c3e11e2e51",
+      "targetSha256": "65685224fe4d2c1095a45a8cda6d34e0a5ce4bf36e974929ab5214c3e11e2e51"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/sneaker.svg",
+      "target": "frontend/public/figure/accessory/sneaker.svg",
+      "sourceSha256": "0dd8d3fc5552a026f8a530daba33210be956b3b5eb1461ea25b8bbd6403769ad",
+      "targetSha256": "0dd8d3fc5552a026f8a530daba33210be956b3b5eb1461ea25b8bbd6403769ad"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/sneaker_phai.svg",
+      "target": "frontend/public/figure/accessory/sneaker_phai.svg",
+      "sourceSha256": "296ce3f5d1b9b582197998e0d6ed10235aa4c3d220f496aadb6b6dc01122bce1",
+      "targetSha256": "296ce3f5d1b9b582197998e0d6ed10235aa4c3d220f496aadb6b6dc01122bce1"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/sneaker_sau.svg",
+      "target": "frontend/public/figure/accessory/sneaker_sau.svg",
+      "sourceSha256": "6ca59afa5529cd1eeda5e21d844a664b24a62d16d8357a664581c454537d1683",
+      "targetSha256": "6ca59afa5529cd1eeda5e21d844a664b24a62d16d8357a664581c454537d1683"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/sneaker_trai.svg",
+      "target": "frontend/public/figure/accessory/sneaker_trai.svg",
+      "sourceSha256": "57463191009fcdda2d6ce791fb66f01ec8d7f858a4e9c7f935fefa8c06f91a33",
+      "targetSha256": "57463191009fcdda2d6ce791fb66f01ec8d7f858a4e9c7f935fefa8c06f91a33"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/trang_suc.svg",
+      "target": "frontend/public/figure/accessory/trang_suc.svg",
+      "sourceSha256": "c80e575df9ee7da1d9c751c2148ce079fc1d53b6f8b8e2f65c4027b201ab33ad",
+      "targetSha256": "c80e575df9ee7da1d9c751c2148ce079fc1d53b6f8b8e2f65c4027b201ab33ad"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/trang_suc_phai.svg",
+      "target": "frontend/public/figure/accessory/trang_suc_phai.svg",
+      "sourceSha256": "38c184b175b731c12c1a77bbb9314eb80af1a63538dbc294eb00fcc11100d6c1",
+      "targetSha256": "38c184b175b731c12c1a77bbb9314eb80af1a63538dbc294eb00fcc11100d6c1"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/trang_suc_sau.svg",
+      "target": "frontend/public/figure/accessory/trang_suc_sau.svg",
+      "sourceSha256": "236ba90ae72cad5ea7d56d5f36539209b09b80aa562e205086f186456a659921",
+      "targetSha256": "236ba90ae72cad5ea7d56d5f36539209b09b80aa562e205086f186456a659921"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/trang_suc_trai.svg",
+      "target": "frontend/public/figure/accessory/trang_suc_trai.svg",
+      "sourceSha256": "aa6c5ebaf2aea104995080357b45a884e850c2fafec098e1b256dba53e556d86",
+      "targetSha256": "aa6c5ebaf2aea104995080357b45a884e850c2fafec098e1b256dba53e556d86"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/tui_nam.svg",
+      "target": "frontend/public/figure/accessory/tui_nam.svg",
+      "sourceSha256": "574e62aa0776eda1d41117f18e2b925050544d767abb020a96edf4b59d5285bb",
+      "targetSha256": "574e62aa0776eda1d41117f18e2b925050544d767abb020a96edf4b59d5285bb"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/tui_nam_phai.svg",
+      "target": "frontend/public/figure/accessory/tui_nam_phai.svg",
+      "sourceSha256": "04cca6bfe4501e11bd09fe4dc140ee55338b67dc087dae11023d7cd1cc3fcdbd",
+      "targetSha256": "04cca6bfe4501e11bd09fe4dc140ee55338b67dc087dae11023d7cd1cc3fcdbd"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/tui_nam_sau.svg",
+      "target": "frontend/public/figure/accessory/tui_nam_sau.svg",
+      "sourceSha256": "c193571cdf4a6d63e8765850f04fcbd8a3a1c083055d31c86f893f933c8480e1",
+      "targetSha256": "c193571cdf4a6d63e8765850f04fcbd8a3a1c083055d31c86f893f933c8480e1"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/tui_nam_trai.svg",
+      "target": "frontend/public/figure/accessory/tui_nam_trai.svg",
+      "sourceSha256": "a64c57df34b61f22a4a938f90df4b70d1354a95343411987d5d11417a016046b",
+      "targetSha256": "a64c57df34b61f22a4a938f90df4b70d1354a95343411987d5d11417a016046b"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/tui_nu.svg",
+      "target": "frontend/public/figure/accessory/tui_nu.svg",
+      "sourceSha256": "ffb1fc90ee865fcd4fe603b772c80f15b5033d1c38f8496f7e8d678e9712c5f9",
+      "targetSha256": "ffb1fc90ee865fcd4fe603b772c80f15b5033d1c38f8496f7e8d678e9712c5f9"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/tui_nu_phai.svg",
+      "target": "frontend/public/figure/accessory/tui_nu_phai.svg",
+      "sourceSha256": "caa6d3c36eb86698f9e1e40e244efd334cea6ab72690bbf4a3a47be82195955e",
+      "targetSha256": "caa6d3c36eb86698f9e1e40e244efd334cea6ab72690bbf4a3a47be82195955e"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/tui_nu_sau.svg",
+      "target": "frontend/public/figure/accessory/tui_nu_sau.svg",
+      "sourceSha256": "4591f4754aee0f9fcf620584190c21011491d5a0866a2e8544541329e6e03cc0",
+      "targetSha256": "4591f4754aee0f9fcf620584190c21011491d5a0866a2e8544541329e6e03cc0"
+    },
+    {
+      "source": "frontend/src/assets/figure/accessory/tui_nu_trai.svg",
+      "target": "frontend/public/figure/accessory/tui_nu_trai.svg",
+      "sourceSha256": "7f2684003177b1daf224fee56abe9a6e270120b5fa9c2edb108b21c536cfaa51",
+      "targetSha256": "7f2684003177b1daf224fee56abe9a6e270120b5fa9c2edb108b21c536cfaa51"
+    },
+    {
+      "source": "frontend/src/assets/figure/body/body_nam.svg",
+      "target": "frontend/public/figure/body/body_nam.svg",
+      "sourceSha256": "a99260c7dfcdeb4e916253cf42027ccf1f53ab2ba1b2b3da97787d590d0c0e5f",
+      "targetSha256": "a99260c7dfcdeb4e916253cf42027ccf1f53ab2ba1b2b3da97787d590d0c0e5f"
+    },
+    {
+      "source": "frontend/src/assets/figure/body/body_nam_phai.svg",
+      "target": "frontend/public/figure/body/body_nam_phai.svg",
+      "sourceSha256": "28be5190f48e222dac4432ccc124cd525f72f0e397d9f41048ec854f74129ccf",
+      "targetSha256": "28be5190f48e222dac4432ccc124cd525f72f0e397d9f41048ec854f74129ccf"
+    },
+    {
+      "source": "frontend/src/assets/figure/body/body_nam_sau.svg",
+      "target": "frontend/public/figure/body/body_nam_sau.svg",
+      "sourceSha256": "6d19925fdaf84ef39a3c349133ba0a44ce5f6f955974fe2d14aa9bcdaee17526",
+      "targetSha256": "6d19925fdaf84ef39a3c349133ba0a44ce5f6f955974fe2d14aa9bcdaee17526"
+    },
+    {
+      "source": "frontend/src/assets/figure/body/body_nam_trai.svg",
+      "target": "frontend/public/figure/body/body_nam_trai.svg",
+      "sourceSha256": "194f0f7beb15afcb25b22e87bcde78625828021904c9735570ffc7492fa11a1f",
+      "targetSha256": "194f0f7beb15afcb25b22e87bcde78625828021904c9735570ffc7492fa11a1f"
+    },
+    {
+      "source": "frontend/src/assets/figure/body/body_nu.svg",
+      "target": "frontend/public/figure/body/body_nu.svg",
+      "sourceSha256": "2f53eadcd8d401a53bcfae77994eef74831d4f6113833796d3a6b727ee1b30ad",
+      "targetSha256": "2f53eadcd8d401a53bcfae77994eef74831d4f6113833796d3a6b727ee1b30ad"
+    },
+    {
+      "source": "frontend/src/assets/figure/body/body_nu_phai.svg",
+      "target": "frontend/public/figure/body/body_nu_phai.svg",
+      "sourceSha256": "fd15f4b7c0b366f4624d933d91794de7dc75d475d114f6ba5234e348a279695b",
+      "targetSha256": "fd15f4b7c0b366f4624d933d91794de7dc75d475d114f6ba5234e348a279695b"
+    },
+    {
+      "source": "frontend/src/assets/figure/body/body_nu_sau.svg",
+      "target": "frontend/public/figure/body/body_nu_sau.svg",
+      "sourceSha256": "5b3ad1f2e5bac4aa00cd8df5109b37d07d2bc0e61041915487f6c64a209cc75e",
+      "targetSha256": "5b3ad1f2e5bac4aa00cd8df5109b37d07d2bc0e61041915487f6c64a209cc75e"
+    },
+    {
+      "source": "frontend/src/assets/figure/body/body_nu_trai.svg",
+      "target": "frontend/public/figure/body/body_nu_trai.svg",
+      "sourceSha256": "73e7587e8109a2e23309e08bffff1f8e958d6ccb5925d23a8ca7667a3ac7163a",
+      "targetSha256": "73e7587e8109a2e23309e08bffff1f8e958d6ccb5925d23a8ca7667a3ac7163a"
+    },
+    {
+      "source": "frontend/src/assets/figure/bottom/quan_nam.svg",
+      "target": "frontend/public/figure/bottom/quan_nam.svg",
+      "sourceSha256": "12fa879d4da7233e7dbba6fc68fd3c7b072a237f61f410e5a0a06458299754f2",
+      "targetSha256": "12fa879d4da7233e7dbba6fc68fd3c7b072a237f61f410e5a0a06458299754f2"
+    },
+    {
+      "source": "frontend/src/assets/figure/bottom/quan_nam_phai.svg",
+      "target": "frontend/public/figure/bottom/quan_nam_phai.svg",
+      "sourceSha256": "ce291232d91a2a1f1a1df455baba3ca2445e90192cdf2fd4577f949b711bbd33",
+      "targetSha256": "ce291232d91a2a1f1a1df455baba3ca2445e90192cdf2fd4577f949b711bbd33"
+    },
+    {
+      "source": "frontend/src/assets/figure/bottom/quan_nam_sau.svg",
+      "target": "frontend/public/figure/bottom/quan_nam_sau.svg",
+      "sourceSha256": "ef2c44c3d56eff6416b3965f55b10463c3fa5be8853795856c6bcf6f9e89dd10",
+      "targetSha256": "ef2c44c3d56eff6416b3965f55b10463c3fa5be8853795856c6bcf6f9e89dd10"
+    },
+    {
+      "source": "frontend/src/assets/figure/bottom/quan_nam_trai.svg",
+      "target": "frontend/public/figure/bottom/quan_nam_trai.svg",
+      "sourceSha256": "4c1e027b7a83ebe9dd0f2b276c656da77eea008742f833526f2f997836473a93",
+      "targetSha256": "4c1e027b7a83ebe9dd0f2b276c656da77eea008742f833526f2f997836473a93"
+    },
+    {
+      "source": "frontend/src/assets/figure/bottom/quan_nu.svg",
+      "target": "frontend/public/figure/bottom/quan_nu.svg",
+      "sourceSha256": "616e0c9ab218464734d723147e2edbf7d6a40be331bb523dad218f5a388b8226",
+      "targetSha256": "616e0c9ab218464734d723147e2edbf7d6a40be331bb523dad218f5a388b8226"
+    },
+    {
+      "source": "frontend/src/assets/figure/bottom/quan_nu_phai.svg",
+      "target": "frontend/public/figure/bottom/quan_nu_phai.svg",
+      "sourceSha256": "7eedd7b5a4e337bc36a8e668fcd6e00959d706d199c71557fae5c1aa4a36482d",
+      "targetSha256": "7eedd7b5a4e337bc36a8e668fcd6e00959d706d199c71557fae5c1aa4a36482d"
+    },
+    {
+      "source": "frontend/src/assets/figure/bottom/quan_nu_sau.svg",
+      "target": "frontend/public/figure/bottom/quan_nu_sau.svg",
+      "sourceSha256": "36aea6c651540732dd79b05f87420decaeb85b7cf26a841552aa71cd5f9efa56",
+      "targetSha256": "36aea6c651540732dd79b05f87420decaeb85b7cf26a841552aa71cd5f9efa56"
+    },
+    {
+      "source": "frontend/src/assets/figure/bottom/quan_nu_trai.svg",
+      "target": "frontend/public/figure/bottom/quan_nu_trai.svg",
+      "sourceSha256": "1ca3f53d33a06e520ecfe2b19d6df82ca2cf555afd9a152a1c6f4e555a0ca03d",
+      "targetSha256": "1ca3f53d33a06e520ecfe2b19d6df82ca2cf555afd9a152a1c6f4e555a0ca03d"
+    },
+    {
+      "source": "frontend/src/assets/figure/bottom/vay_nu.svg",
+      "target": "frontend/public/figure/bottom/vay_nu.svg",
+      "sourceSha256": "0cf3ee65e1b01402e616d40db6aac0e83ff7bf14a22b42d237cbce976e241f6e",
+      "targetSha256": "0cf3ee65e1b01402e616d40db6aac0e83ff7bf14a22b42d237cbce976e241f6e"
+    },
+    {
+      "source": "frontend/src/assets/figure/bottom/vay_nu_phai.svg",
+      "target": "frontend/public/figure/bottom/vay_nu_phai.svg",
+      "sourceSha256": "f11340b95a3cb8165ca2ea41f9dc94068d065993b145497844c0f3b3ff26be70",
+      "targetSha256": "f11340b95a3cb8165ca2ea41f9dc94068d065993b145497844c0f3b3ff26be70"
+    },
+    {
+      "source": "frontend/src/assets/figure/bottom/vay_nu_sau.svg",
+      "target": "frontend/public/figure/bottom/vay_nu_sau.svg",
+      "sourceSha256": "f6346694f5d3bd6b5b453eed1e1dd0c5a50c11e0c9830c9e220588ea08c1651b",
+      "targetSha256": "f6346694f5d3bd6b5b453eed1e1dd0c5a50c11e0c9830c9e220588ea08c1651b"
+    },
+    {
+      "source": "frontend/src/assets/figure/bottom/vay_nu_trai.svg",
+      "target": "frontend/public/figure/bottom/vay_nu_trai.svg",
+      "sourceSha256": "9f495ff4813892b941f8be30666576513da6dd8cca1091350958994022eb686e",
+      "targetSha256": "9f495ff4813892b941f8be30666576513da6dd8cca1091350958994022eb686e"
+    },
+    {
+      "source": "frontend/src/assets/figure/bottom/vay_xep_ly_nu.svg",
+      "target": "frontend/public/figure/bottom/vay_xep_ly_nu.svg",
+      "sourceSha256": "f9c33328d4616b77e7193177dcadab028962a1ad44c6b284586712f089c6939b",
+      "targetSha256": "f9c33328d4616b77e7193177dcadab028962a1ad44c6b284586712f089c6939b"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_ba_ba_nam.svg",
+      "target": "frontend/public/figure/garment/ao_ba_ba_nam.svg",
+      "sourceSha256": "637761e8cf68ba419e11b3229988d41b01539d13fa71c94059dc47d70da7402b",
+      "targetSha256": "637761e8cf68ba419e11b3229988d41b01539d13fa71c94059dc47d70da7402b"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_ba_ba_nam_phai.svg",
+      "target": "frontend/public/figure/garment/ao_ba_ba_nam_phai.svg",
+      "sourceSha256": "74d7ff3c916807038d29b620dfb56b40cb5294751e981c43c61b8c999d3608f5",
+      "targetSha256": "74d7ff3c916807038d29b620dfb56b40cb5294751e981c43c61b8c999d3608f5"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_ba_ba_nam_sau.svg",
+      "target": "frontend/public/figure/garment/ao_ba_ba_nam_sau.svg",
+      "sourceSha256": "2a4e56ac898e5c55d678a1930aea5ef0fbfb86c4aaa0e974a55eba6580506f2a",
+      "targetSha256": "2a4e56ac898e5c55d678a1930aea5ef0fbfb86c4aaa0e974a55eba6580506f2a"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_ba_ba_nam_trai.svg",
+      "target": "frontend/public/figure/garment/ao_ba_ba_nam_trai.svg",
+      "sourceSha256": "3dae7af06db2657b79a38877ef7270d43bfbe70c7a3ad796e0921d442457c947",
+      "targetSha256": "3dae7af06db2657b79a38877ef7270d43bfbe70c7a3ad796e0921d442457c947"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_ba_ba_nu.svg",
+      "target": "frontend/public/figure/garment/ao_ba_ba_nu.svg",
+      "sourceSha256": "503367bb439ea0bed6133cd375fbdfd6743f4f0b69f2484ad19b43109914db23",
+      "targetSha256": "503367bb439ea0bed6133cd375fbdfd6743f4f0b69f2484ad19b43109914db23"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_ba_ba_nu_phai.svg",
+      "target": "frontend/public/figure/garment/ao_ba_ba_nu_phai.svg",
+      "sourceSha256": "9c25e726d94d4c4717daf36ddf45ea12c4a8404f89c2396a2851ebea5cb65060",
+      "targetSha256": "9c25e726d94d4c4717daf36ddf45ea12c4a8404f89c2396a2851ebea5cb65060"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_ba_ba_nu_sau.svg",
+      "target": "frontend/public/figure/garment/ao_ba_ba_nu_sau.svg",
+      "sourceSha256": "6fcacb32d5629d36d86b09db908e948ab08ea571e261e380903a36a3076f8d86",
+      "targetSha256": "6fcacb32d5629d36d86b09db908e948ab08ea571e261e380903a36a3076f8d86"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_ba_ba_nu_trai.svg",
+      "target": "frontend/public/figure/garment/ao_ba_ba_nu_trai.svg",
+      "sourceSha256": "a058b94a2df61112049eb8e0eca61550f97b5e577a87a2059616c6bd843a9f89",
+      "targetSha256": "a058b94a2df61112049eb8e0eca61550f97b5e577a87a2059616c6bd843a9f89"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_dai_nam.svg",
+      "target": "frontend/public/figure/garment/ao_dai_nam.svg",
+      "sourceSha256": "ff998ab616f7ae55c4a3763752d3f234a5ac62ef2c7fa86e77d144e464bec4e3",
+      "targetSha256": "ff998ab616f7ae55c4a3763752d3f234a5ac62ef2c7fa86e77d144e464bec4e3"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_dai_nam_phai.svg",
+      "target": "frontend/public/figure/garment/ao_dai_nam_phai.svg",
+      "sourceSha256": "269a420716ad4e4ddeaf3746c14e5a13b54c8b6193f8dce49c6cf8c40d0cc733",
+      "targetSha256": "269a420716ad4e4ddeaf3746c14e5a13b54c8b6193f8dce49c6cf8c40d0cc733"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_dai_nam_phai_them.svg",
+      "target": "frontend/public/figure/garment/ao_dai_nam_phai_them.svg",
+      "sourceSha256": "d5708423c67b20da2cd0bd175dd6f5623f0386f4eefd034f2d43245b9386c037",
+      "targetSha256": "d5708423c67b20da2cd0bd175dd6f5623f0386f4eefd034f2d43245b9386c037"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_dai_nam_sau.svg",
+      "target": "frontend/public/figure/garment/ao_dai_nam_sau.svg",
+      "sourceSha256": "414927da5160d11f16939f264350475adfa2ff85fc0864fbe4f3c1b30ae57516",
+      "targetSha256": "414927da5160d11f16939f264350475adfa2ff85fc0864fbe4f3c1b30ae57516"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_dai_nam_trai.svg",
+      "target": "frontend/public/figure/garment/ao_dai_nam_trai.svg",
+      "sourceSha256": "30049710224915f5615c6e321d3b4f4fe0c3f285bc42c8be252d8459bfc5d3cd",
+      "targetSha256": "30049710224915f5615c6e321d3b4f4fe0c3f285bc42c8be252d8459bfc5d3cd"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_dai_nu.svg",
+      "target": "frontend/public/figure/garment/ao_dai_nu.svg",
+      "sourceSha256": "dae702416b0c14da2787386c1eb7ed09c532bb6c4a651505926a520b8730ecfd",
+      "targetSha256": "dae702416b0c14da2787386c1eb7ed09c532bb6c4a651505926a520b8730ecfd"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_dai_nu_phai.svg",
+      "target": "frontend/public/figure/garment/ao_dai_nu_phai.svg",
+      "sourceSha256": "f156ddf3f48aede74ba793e8c4f78229e244dd2a14518823d37d1bed920432b1",
+      "targetSha256": "f156ddf3f48aede74ba793e8c4f78229e244dd2a14518823d37d1bed920432b1"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_dai_nu_phai_them.svg",
+      "target": "frontend/public/figure/garment/ao_dai_nu_phai_them.svg",
+      "sourceSha256": "266d38809ddd1f4b769f0444984c659fe11a439f970d18586fa16f06b0e613aa",
+      "targetSha256": "266d38809ddd1f4b769f0444984c659fe11a439f970d18586fa16f06b0e613aa"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_dai_nu_sau.svg",
+      "target": "frontend/public/figure/garment/ao_dai_nu_sau.svg",
+      "sourceSha256": "a459ff7f7278865c8327568e797d928098e162595ca3d3da99773fba1d125f2a",
+      "targetSha256": "a459ff7f7278865c8327568e797d928098e162595ca3d3da99773fba1d125f2a"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_dai_nu_trai.svg",
+      "target": "frontend/public/figure/garment/ao_dai_nu_trai.svg",
+      "sourceSha256": "bd54411516fc2783fbc0197df8901261fe5165bb7abe04388d1215fdda5e1daf",
+      "targetSha256": "bd54411516fc2783fbc0197df8901261fe5165bb7abe04388d1215fdda5e1daf"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_ngu_than_co_dien_nam.svg",
+      "target": "frontend/public/figure/garment/ao_ngu_than_co_dien_nam.svg",
+      "sourceSha256": "5dffc665ceeb4b3cb5e2067e0b13206ce0267214b65da956f7544e6d84496146",
+      "targetSha256": "5dffc665ceeb4b3cb5e2067e0b13206ce0267214b65da956f7544e6d84496146"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_ngu_than_nam.svg",
+      "target": "frontend/public/figure/garment/ao_ngu_than_nam.svg",
+      "sourceSha256": "4fe66ac14ae7602965297d90ce5a77ff3b693be3cfeee3987b417fc957701602",
+      "targetSha256": "4fe66ac14ae7602965297d90ce5a77ff3b693be3cfeee3987b417fc957701602"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_ngu_than_nam_phai.svg",
+      "target": "frontend/public/figure/garment/ao_ngu_than_nam_phai.svg",
+      "sourceSha256": "d8f718e6671d090cf699cef441a70123724e37b2e5cd09c389a5d9d634ceb3ad",
+      "targetSha256": "d8f718e6671d090cf699cef441a70123724e37b2e5cd09c389a5d9d634ceb3ad"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_ngu_than_nam_phai_them.svg",
+      "target": "frontend/public/figure/garment/ao_ngu_than_nam_phai_them.svg",
+      "sourceSha256": "23519ca259e24f5a8b575ba4919c28dfdedd8fdec27e1913345b779adebedc19",
+      "targetSha256": "23519ca259e24f5a8b575ba4919c28dfdedd8fdec27e1913345b779adebedc19"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_ngu_than_nam_sau.svg",
+      "target": "frontend/public/figure/garment/ao_ngu_than_nam_sau.svg",
+      "sourceSha256": "0c7d46ac212f626cfafcb2a0fa789d0ad7fcf2fe30089b35334a09a8c9bc7e7e",
+      "targetSha256": "0c7d46ac212f626cfafcb2a0fa789d0ad7fcf2fe30089b35334a09a8c9bc7e7e"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_ngu_than_nam_trai.svg",
+      "target": "frontend/public/figure/garment/ao_ngu_than_nam_trai.svg",
+      "sourceSha256": "cad40529c8d7dda03242f1ff2cf2f1698c631a3000dc220ccbe81c5ac93d1c86",
+      "targetSha256": "cad40529c8d7dda03242f1ff2cf2f1698c631a3000dc220ccbe81c5ac93d1c86"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_ngu_than_nu.svg",
+      "target": "frontend/public/figure/garment/ao_ngu_than_nu.svg",
+      "sourceSha256": "2a363dc6460792ae37d8b4f44d1d91a47fb8fbd1aa11e5b82bfb6f4774e18e7b",
+      "targetSha256": "2a363dc6460792ae37d8b4f44d1d91a47fb8fbd1aa11e5b82bfb6f4774e18e7b"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_ngu_than_nu_phai.svg",
+      "target": "frontend/public/figure/garment/ao_ngu_than_nu_phai.svg",
+      "sourceSha256": "d65ca6d8ec7b24d7b672c49b7b098af0a688e917c72eb5c694fc45568de0aa07",
+      "targetSha256": "d65ca6d8ec7b24d7b672c49b7b098af0a688e917c72eb5c694fc45568de0aa07"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_ngu_than_nu_phai_them.svg",
+      "target": "frontend/public/figure/garment/ao_ngu_than_nu_phai_them.svg",
+      "sourceSha256": "ed4fc9291adcec5dda46995e7abed1738b871bf3a565f3f3eb49b7c760ef60c8",
+      "targetSha256": "ed4fc9291adcec5dda46995e7abed1738b871bf3a565f3f3eb49b7c760ef60c8"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_ngu_than_nu_sau.svg",
+      "target": "frontend/public/figure/garment/ao_ngu_than_nu_sau.svg",
+      "sourceSha256": "acdc89671424bebd06685c5e6ba4f18b262cdcf28a93b48b2913097d6579b357",
+      "targetSha256": "acdc89671424bebd06685c5e6ba4f18b262cdcf28a93b48b2913097d6579b357"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_ngu_than_nu_trai.svg",
+      "target": "frontend/public/figure/garment/ao_ngu_than_nu_trai.svg",
+      "sourceSha256": "143cf11deb30de7fccc67052ffc176dd15ad9ebe81d1daa492f81150f3954a8f",
+      "targetSha256": "143cf11deb30de7fccc67052ffc176dd15ad9ebe81d1daa492f81150f3954a8f"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_tu_than_nu.svg",
+      "target": "frontend/public/figure/garment/ao_tu_than_nu.svg",
+      "sourceSha256": "fc3f93bf9422ae732b3e6442b573b6a97b04c9e2ca569e866b0acb24fdff7ddd",
+      "targetSha256": "fc3f93bf9422ae732b3e6442b573b6a97b04c9e2ca569e866b0acb24fdff7ddd"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_tu_than_nu_phai.svg",
+      "target": "frontend/public/figure/garment/ao_tu_than_nu_phai.svg",
+      "sourceSha256": "14b60710c92bca2f042cf5215e4aca7ce3e02cd41de296449af1be0d05211bc1",
+      "targetSha256": "14b60710c92bca2f042cf5215e4aca7ce3e02cd41de296449af1be0d05211bc1"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_tu_than_nu_sau.svg",
+      "target": "frontend/public/figure/garment/ao_tu_than_nu_sau.svg",
+      "sourceSha256": "157e322d26e888768d5f6101dc465eacc08ca6103e5bf3f48663501e8bafd48e",
+      "targetSha256": "157e322d26e888768d5f6101dc465eacc08ca6103e5bf3f48663501e8bafd48e"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_tu_than_nu_trai.svg",
+      "target": "frontend/public/figure/garment/ao_tu_than_nu_trai.svg",
+      "sourceSha256": "55c99981bb9f8424fd0e6c37eb3fd254c080e043f3a24b4812d43aa3f4b32b94",
+      "targetSha256": "55c99981bb9f8424fd0e6c37eb3fd254c080e043f3a24b4812d43aa3f4b32b94"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/ao_tu_than_tha_vat_nu.svg",
+      "target": "frontend/public/figure/garment/ao_tu_than_tha_vat_nu.svg",
+      "sourceSha256": "debc39ee63458138d54217c46a6679f3ab36b1df31f72d1f09e479bb437031d7",
+      "targetSha256": "debc39ee63458138d54217c46a6679f3ab36b1df31f72d1f09e479bb437031d7"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/nhat_binh_nu.svg",
+      "target": "frontend/public/figure/garment/nhat_binh_nu.svg",
+      "sourceSha256": "261fc4ec5cbb664db04017d85d55ccffca2937336adf923e34081e71587606e3",
+      "targetSha256": "261fc4ec5cbb664db04017d85d55ccffca2937336adf923e34081e71587606e3"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/nhat_binh_nu_phai.svg",
+      "target": "frontend/public/figure/garment/nhat_binh_nu_phai.svg",
+      "sourceSha256": "0e7c7789c5f04377cba1ff86bdea843db75a39c68a06c26d42903c68622e5211",
+      "targetSha256": "0e7c7789c5f04377cba1ff86bdea843db75a39c68a06c26d42903c68622e5211"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/nhat_binh_nu_sau.svg",
+      "target": "frontend/public/figure/garment/nhat_binh_nu_sau.svg",
+      "sourceSha256": "4f95c3c7e6c3fd12089b3fb21577a958754be4852bda31eff6f02850722f46cd",
+      "targetSha256": "4f95c3c7e6c3fd12089b3fb21577a958754be4852bda31eff6f02850722f46cd"
+    },
+    {
+      "source": "frontend/src/assets/figure/garment/nhat_binh_nu_trai.svg",
+      "target": "frontend/public/figure/garment/nhat_binh_nu_trai.svg",
+      "sourceSha256": "a8a944b60ad52823990f7fd2fcf49a4f20e9a4f33a8e6548e76a45104fe4b37f",
+      "targetSha256": "a8a944b60ad52823990f7fd2fcf49a4f20e9a4f33a8e6548e76a45104fe4b37f"
+    },
+    {
+      "source": "frontend/src/assets/figure/motif/buom.svg",
+      "target": "frontend/public/figure/motif/buom.svg",
+      "sourceSha256": "7830a2bc0e70d3695ca4d08c688603b67a106df0ebf72b6a40a2108621ab54d6",
+      "targetSha256": "7830a2bc0e70d3695ca4d08c688603b67a106df0ebf72b6a40a2108621ab54d6"
+    },
+    {
+      "source": "frontend/src/assets/figure/motif/canh_dao.svg",
+      "target": "frontend/public/figure/motif/canh_dao.svg",
+      "sourceSha256": "436bdd2c6027a466d3af820418b8c3852cfb6123824dfb1b4287714e1ef2c808",
+      "targetSha256": "436bdd2c6027a466d3af820418b8c3852cfb6123824dfb1b4287714e1ef2c808"
+    },
+    {
+      "source": "frontend/src/assets/figure/motif/chim_lac.svg",
+      "target": "frontend/public/figure/motif/chim_lac.svg",
+      "sourceSha256": "4c0059c06803baeab132332e8a3fb189aa3e62953619ca609b477fcddfeb9635",
+      "targetSha256": "4c0059c06803baeab132332e8a3fb189aa3e62953619ca609b477fcddfeb9635"
+    },
+    {
+      "source": "frontend/src/assets/figure/motif/cuc.svg",
+      "target": "frontend/public/figure/motif/cuc.svg",
+      "sourceSha256": "7f020991ac668a0ba04c10a54e33f03e2885adecb8e87e2fb63b01d8db3a0640",
+      "targetSha256": "7f020991ac668a0ba04c10a54e33f03e2885adecb8e87e2fb63b01d8db3a0640"
+    },
+    {
+      "source": "frontend/src/assets/figure/motif/hac_mai.svg",
+      "target": "frontend/public/figure/motif/hac_mai.svg",
+      "sourceSha256": "475c5b55f7dc5b9f60789abf006f82415d89294fefdbfeb5d426d672ece88555",
+      "targetSha256": "475c5b55f7dc5b9f60789abf006f82415d89294fefdbfeb5d426d672ece88555"
+    },
+    {
+      "source": "frontend/src/assets/figure/motif/hoi_van.svg",
+      "target": "frontend/public/figure/motif/hoi_van.svg",
+      "sourceSha256": "352e963a9a3c5e944b3c55f7c90d6a46d886468aaa8c1420d7774473e2370cdd",
+      "targetSha256": "352e963a9a3c5e944b3c55f7c90d6a46d886468aaa8c1420d7774473e2370cdd"
+    },
+    {
+      "source": "frontend/src/assets/figure/motif/mai_vang.svg",
+      "target": "frontend/public/figure/motif/mai_vang.svg",
+      "sourceSha256": "4657743c9a093cf7364bfebfa32e2c2bbd06efafd7e4eaa02cc3bd09d87480c0",
+      "targetSha256": "4657743c9a093cf7364bfebfa32e2c2bbd06efafd7e4eaa02cc3bd09d87480c0"
+    },
+    {
+      "source": "frontend/src/assets/figure/motif/may.svg",
+      "target": "frontend/public/figure/motif/may.svg",
+      "sourceSha256": "b718d460c564cf5cac1107c630d6d5bfed8f16e07dda4ab09b31fffa89c6d38e",
+      "targetSha256": "b718d460c564cf5cac1107c630d6d5bfed8f16e07dda4ab09b31fffa89c6d38e"
+    },
+    {
+      "source": "frontend/src/assets/figure/motif/phuong_hoang.svg",
+      "target": "frontend/public/figure/motif/phuong_hoang.svg",
+      "sourceSha256": "1d2d5f36648a8d058bd278431f1910ccf004d4e62b30b8e03aa2e19910031687",
+      "targetSha256": "1d2d5f36648a8d058bd278431f1910ccf004d4e62b30b8e03aa2e19910031687"
+    },
+    {
+      "source": "frontend/src/assets/figure/motif/rong_may.svg",
+      "target": "frontend/public/figure/motif/rong_may.svg",
+      "sourceSha256": "156b185cd57df2311c780e08f18dad3722254e137553690f4e75b962643148c5",
+      "targetSha256": "156b185cd57df2311c780e08f18dad3722254e137553690f4e75b962643148c5"
+    },
+    {
+      "source": "frontend/src/assets/figure/motif/sen.svg",
+      "target": "frontend/public/figure/motif/sen.svg",
+      "sourceSha256": "998a57d983e8b5e0ece7f69febbd9958bd3bb853be6ec2a1099f61f43ed1a754",
+      "targetSha256": "998a57d983e8b5e0ece7f69febbd9958bd3bb853be6ec2a1099f61f43ed1a754"
+    },
+    {
+      "source": "frontend/src/assets/figure/motif/song_nuoc.svg",
+      "target": "frontend/public/figure/motif/song_nuoc.svg",
+      "sourceSha256": "71ab3488776abc04853f348b64df2747e03e49a2439c81c573bc06f18f483fcc",
+      "targetSha256": "71ab3488776abc04853f348b64df2747e03e49a2439c81c573bc06f18f483fcc"
+    },
+    {
+      "source": "frontend/src/assets/figure/motif/truc.svg",
+      "target": "frontend/public/figure/motif/truc.svg",
+      "sourceSha256": "01c0b28dbfa4ff8dbb68551a81ceb13ccea0748bfebeb02f99e4c5b132aa9ebe",
+      "targetSha256": "01c0b28dbfa4ff8dbb68551a81ceb13ccea0748bfebeb02f99e4c5b132aa9ebe"
+    },
+    {
+      "source": "frontend/src/assets/figure/motif/tung.svg",
+      "target": "frontend/public/figure/motif/tung.svg",
+      "sourceSha256": "2af3a6ffedf06ca885cd6b52a55e8279f20fdf9b705c78fdee0bd0fa64cdb4c9",
+      "targetSha256": "2af3a6ffedf06ca885cd6b52a55e8279f20fdf9b705c78fdee0bd0fa64cdb4c9"
+    },
+    {
+      "source": "frontend/src/assets/figure/NGUON-THAM-KHAO.md",
+      "target": "frontend/public/figure/NGUON-THAM-KHAO.md",
+      "sourceSha256": "2c47bdfedfd2e8b42ad4c44db7e6dc3c6badb29813bf725fda802ab8744ab50e",
+      "targetSha256": "2c47bdfedfd2e8b42ad4c44db7e6dc3c6badb29813bf725fda802ab8744ab50e"
+    },
+    {
+      "source": "frontend/src/assets/figure/preview.html",
+      "target": "frontend/public/figure/preview.html",
+      "sourceSha256": "24af96569f638a616b5caac43513501b3713696c342bc0e0f9c7d0ad156aba69",
+      "targetSha256": "24af96569f638a616b5caac43513501b3713696c342bc0e0f9c7d0ad156aba69"
+    },
+    {
+      "source": "frontend/src/assets/figure/README.md",
+      "target": "frontend/public/figure/README.md",
+      "sourceSha256": "e8be1b3db0e4e6a1350fbd8d1ef9446d8c09c185bf836c43ea9531e91eefaf4c",
+      "targetSha256": "e8be1b3db0e4e6a1350fbd8d1ef9446d8c09c185bf836c43ea9531e91eefaf4c"
+    },
+    {
+      "source": "tools/body_measure.py",
+      "target": "frontend/tools/body_measure.py",
+      "sourceSha256": "05543907b466744398a3af5a7f4051c2172d1b0bcd37674dea553985713cda89",
+      "targetSha256": "05543907b466744398a3af5a7f4051c2172d1b0bcd37674dea553985713cda89"
+    },
+    {
+      "source": "tools/build_figure_preview.py",
+      "target": "frontend/tools/build_figure_preview.py",
+      "sourceSha256": "f1e12323f5018f8de013ab4600933741619048ed0af98e3af1b31472bb348d3f",
+      "targetSha256": "52c1177065b5d5e3b40c8ff27a41d2937d46bc319cc8ea772f727a2639b3cdef"
+    },
+    {
+      "source": "tools/figure_lib.py",
+      "target": "frontend/tools/figure_lib.py",
+      "sourceSha256": "735018aba623622c459e1f3e329a4f95e246503e6755521a46edb93417db0466",
+      "targetSha256": "735018aba623622c459e1f3e329a4f95e246503e6755521a46edb93417db0466"
+    },
+    {
+      "source": "tools/figure_preview_template.html",
+      "target": "frontend/tools/figure_preview_template.html",
+      "sourceSha256": "44e3d1bdb136c92036446ba238c6bb79da38b3c94277434f46260aeabc224868",
+      "targetSha256": "44e3d1bdb136c92036446ba238c6bb79da38b3c94277434f46260aeabc224868"
+    },
+    {
+      "source": "tools/gen_accessories.py",
+      "target": "frontend/tools/gen_accessories.py",
+      "sourceSha256": "483340567b53ae16c9559a0b857931068772d7d7d938725408757f87ef63bfc8",
+      "targetSha256": "9003175390f1769957d09eb5670c2f945564893bdaaea37803624c18c54eab4c"
+    },
+    {
+      "source": "tools/gen_body_nam.py",
+      "target": "frontend/tools/gen_body_nam.py",
+      "sourceSha256": "6765c444fa86824e633ca8ca6e79c26b63892d4b93e0e757ce2ca25093827053",
+      "targetSha256": "8dd08e7e03ea8cf2de2c629716b0e65537754f79125c07e1c713e41010c7e113"
+    },
+    {
+      "source": "tools/gen_body_nu.py",
+      "target": "frontend/tools/gen_body_nu.py",
+      "sourceSha256": "9a72e5359edcef7b703af2e203f48a6d6aab996a429ba95cd0c20e1fc7788e49",
+      "targetSha256": "97b0539fe59e1a8a2cb4f56fcc6cde72f0a2ac3fa9210b3aad64d7780d0ee13a"
+    },
+    {
+      "source": "tools/gen_body_views.py",
+      "target": "frontend/tools/gen_body_views.py",
+      "sourceSha256": "4d17d1ebf9be695aaafa42318d70359ffbb142ff31695ab1b23665eeb9490821",
+      "targetSha256": "86dec1fbb616367706c9279c01beb7bf55c9128973b0de83caf1bd01bfe0c800"
+    },
+    {
+      "source": "tools/gen_garment_views.py",
+      "target": "frontend/tools/gen_garment_views.py",
+      "sourceSha256": "4e1d70f21ad58b64d8899aeb9a1b24d09d721c02caf1281350292d957298f7af",
+      "targetSha256": "925393c3f70791a08582f54df34ad0acb65e8599cb0d8d4fa358d8395752f0bc"
+    },
+    {
+      "source": "tools/gen_motifs.py",
+      "target": "frontend/tools/gen_motifs.py",
+      "sourceSha256": "f0b548a868c4672ad29e57cb5a27a6ec64a327d71af658f8559769e6fe1713cd",
+      "targetSha256": "ddb4c733c7cf12b357d9ce8e0bf3730204ab4c047a63093ca570625d506adb2b"
+    },
+    {
+      "source": "tools/md2docx.py",
+      "target": "frontend/tools/md2docx.py",
+      "sourceSha256": "8d8bc345ef9307787b31f390846cc0d3e18c3a1276de06b23b77b574a0104c4a",
+      "targetSha256": "8d8bc345ef9307787b31f390846cc0d3e18c3a1276de06b23b77b574a0104c4a"
+    },
+    {
+      "source": "tools/mirror_views.py",
+      "target": "frontend/tools/mirror_views.py",
+      "sourceSha256": "21837b6c3f716df2b0749336c1729eef84c16c9bd9c368373486dd365bb56fd5",
+      "targetSha256": "ab08b8135c0d2a41bbf56130886a9552890eeeedb78691100bfff2578e18a7b9"
+    },
+    {
+      "source": "tools/render_check.py",
+      "target": "frontend/tools/render_check.py",
+      "sourceSha256": "3c2d9d62f45f65f4579b5db1b6e4a6781777bdcbdd28ff404e8513058631916a",
+      "targetSha256": "6c8e10a757cd5a22dd9709f26d3c69596956ee7d470ae4b976c5c630f284b385"
+    },
+    {
+      "source": "tools/view_measure.py",
+      "target": "frontend/tools/view_measure.py",
+      "sourceSha256": "2a750506eb830572339f53e4089437d0b785ee786fbff080618ec34046dc6d06",
+      "targetSha256": "b0c8e9b7f26b0df6516474023737d71dce5bd362edd48aa60a9dc55755f64976"
+    }
+  ]
+}

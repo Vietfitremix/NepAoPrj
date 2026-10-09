@@ -1,0 +1,14 @@
+{
+  "gender": "female",
+  "id": "ba-ba",
+  "kind": "outfits",
+  "view": "back",
+  "file": "assets/wardrobe/female/shirts/ba-ba/source/back.png",
+  "inputs": [
+    "C:/PROMPTxPTIT/frontend/public/figure/female-layers/body/back.png",
+    "C:/PROMPTxPTIT/assets/wardrobe/female/shirts/ba-ba/source/reference.png"
+  ],
+  "prompt": "Use case: compositing / identity-preserve. Production transparent PNG clothing layer for Vietnamese dress-up avatar. Image 1 is the exact full-body female BODY/POSE/CAMERA reference. Image 2 is the ORIGINAL CLOTHING SOURCE to preserve. Requested view: strict back view, facing away from viewer. ONLY the complete upper garment and its long/short panels; preserve exactly source silhouette, layering, embroidery, silk/linen color, collar, closures and cuffs. Fit the upper garment to the reference torso and the sleeve to the reference arm; cuff ends at the reference wrist and leaves the hand uncovered. Render depth, natural fabric tension and realistic folds as physically WORN, with rear panel behind leg, not a flat pasted frontal garment. Short hip-length blouse, no long robe panels. OUTPUT IS AN EMPTY GARMENT LAYER, with wearer INVISIBLE, not a person and not a mannequin. Remove all skin, head, hair, hands, legs, feet, grey undershirt/shorts, unrelated clothes, background and glow. Only this selected item fabric/shoes remains opaque. Match the body reference 1024x1536 FULL-BODY CANVAS and coordinates, leave blank transparent space above/below where removed body was; do NOT recenter, zoom, crop or enlarge item. Collar around y=240, shoulders around y=300, cuffs around y=740, waist around y=660, feet around y=1400 for reference alignment, adapted exactly to image1. Photorealistic source material with original intricate motifs and natural dimensional folds, no cartoon, no low-poly model, no changes to source design, no text, no shadow, no glow. Genuine transparent alpha everywhere outside this single item, and inside openings/slits. For back view do not show front closures/chest motif; rotate the item physically to the requested direction, do not flip a front image.",
+  "tool": "built-in image_gen",
+  "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-60dd58b3-4c18-44d5-91b6-9887c1328692.png"
+}

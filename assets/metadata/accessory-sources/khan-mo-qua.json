@@ -1,0 +1,11 @@
+{
+  "id": "khan-mo-qua",
+  "name": "Khăn mỏ quạ",
+  "category": "headwear",
+  "slot": "headwear",
+  "detail": "Khăn đen chít đầu, mỏ nhọn trước trán",
+  "subject": "Vietnamese khan mo qua black triangular headscarf, taut folded cloth over crown, distinctive small pointed beak at center of forehead, ties at nape, flowing triangular cloth rear. Open face area must be transparent, no face or hair.",
+  "prompt": "Use case: product-mockup. Asset type: photoreal modular dress-up accessory source turnaround sprite sheet. Make a SINGLE item with FOUR views on ONE 2x2 square sheet, 2048x2048 preferred, equal cells with no margins between cells, each object isolated and fully inside its cell. TOP LEFT = front of a standing wearer facing camera. TOP RIGHT = strict LEFT profile, wearer faces image-left. BOTTOM LEFT = strict RIGHT profile, wearer faces image-right. BOTTOM RIGHT = rear/back, wearer faces away. Keep exact same physical item, materials, proportions, scale, soft studio light and camera height across all four views. Real photographic textures matching supplied avatar style references. Treat supplied avatars only as lighting/style/anatomical wearing direction references, do not reproduce avatars. Center each accessory within its cell with at least 12% empty padding. Background must be true transparent alpha, no checkerboard, no floor, no shadow background. NO person, skin, mannequin, hair, head, hands, feet, other accessory, labels, text, separators, border or watermark. These are accessory-only alpha cutouts for later attachment to avatar; show ONLY visible accessory surfaces in that viewing direction. Subject: Vietnamese khan mo qua black triangular headscarf, taut folded cloth over crown, distinctive small pointed beak at center of forehead, ties at nape, flowing triangular cloth rear. Open face area must be transparent, no face or hair.",
+  "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-691f02f4-5d1e-4683-b3c2-45dedd24b4dd.png",
+  "tool": "image_gen"
+}

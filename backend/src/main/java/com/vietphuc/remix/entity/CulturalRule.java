@@ -16,6 +16,8 @@ public class CulturalRule extends BaseEntity {
     @Column(columnDefinition="text") private String suggestion;
     @Column(nullable=false) private String sourceName;
     @Column(nullable=false,columnDefinition="text") private String sourceUrl;
+    @Column(nullable=false) private boolean sourceVerified;
+    @Column(columnDefinition="text") private String sourceNote;
     @Column(nullable=false,updatable=false) private Instant createdAt;
     @PrePersist void create() { if(createdAt == null) createdAt = Instant.now(); }
 }

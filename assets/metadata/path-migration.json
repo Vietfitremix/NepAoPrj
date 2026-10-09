@@ -1,0 +1,1926 @@
+{
+  "moves": [
+    {
+      "from": "frontend/public/figure/male-layers/base-barefoot.png",
+      "to": "frontend/public/figure/male-layers/body/front.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/base-left.png",
+      "to": "frontend/public/figure/male-layers/body/left.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/base-right.png",
+      "to": "frontend/public/figure/male-layers/body/right.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/base-back.png",
+      "to": "frontend/public/figure/male-layers/body/back.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/base.prompt.txt",
+      "to": "assets/wardrobe/male/body/front.prompt.txt"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/base.png",
+      "to": "assets/archive/body/male/base.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/female-base.png",
+      "to": "assets/archive/body/male/female-base.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/female-base.prompt.txt",
+      "to": "assets/archive/body/male/female-base.prompt.txt"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/ao-dai-navy-front-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/navy/front.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/ao-dai-navy-left-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/navy/left.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/ao-dai-navy-right-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/navy/right.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/ao-dai-navy-back-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/navy/back.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/ao-dai-navy.png",
+      "to": "assets/wardrobe/male/shirts/navy/source/reference.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/ao-dai-navy.prompt.txt",
+      "to": "assets/wardrobe/male/shirts/navy/source/reference.prompt.txt"
+    },
+    {
+      "from": "assets/source-layers/male/ao-dai-navy-left.png",
+      "to": "assets/wardrobe/male/shirts/navy/source/left.png"
+    },
+    {
+      "from": "assets/source-layers/male/ao-dai-navy-left.json",
+      "to": "assets/wardrobe/male/shirts/navy/source/left.json"
+    },
+    {
+      "from": "assets/source-layers/male/ao-dai-navy-right.png",
+      "to": "assets/wardrobe/male/shirts/navy/source/right.png"
+    },
+    {
+      "from": "assets/source-layers/male/ao-dai-navy-right.json",
+      "to": "assets/wardrobe/male/shirts/navy/source/right.json"
+    },
+    {
+      "from": "assets/source-layers/male/ao-dai-navy-back.png",
+      "to": "assets/wardrobe/male/shirts/navy/source/back.png"
+    },
+    {
+      "from": "assets/source-layers/male/ao-dai-navy-back.json",
+      "to": "assets/wardrobe/male/shirts/navy/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/ao-dai-burgundy-front-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/burgundy/front.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/ao-dai-burgundy-left-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/burgundy/left.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/ao-dai-burgundy-right-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/burgundy/right.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/ao-dai-burgundy-back-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/burgundy/back.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/ao-dai-burgundy.png",
+      "to": "assets/wardrobe/male/shirts/burgundy/source/reference.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/ao-dai-burgundy.prompt.txt",
+      "to": "assets/wardrobe/male/shirts/burgundy/source/reference.prompt.txt"
+    },
+    {
+      "from": "assets/source-layers/male/ao-dai-burgundy-left.png",
+      "to": "assets/wardrobe/male/shirts/burgundy/source/left.png"
+    },
+    {
+      "from": "assets/source-layers/male/ao-dai-burgundy-left.json",
+      "to": "assets/wardrobe/male/shirts/burgundy/source/left.json"
+    },
+    {
+      "from": "assets/source-layers/male/ao-dai-burgundy-right.png",
+      "to": "assets/wardrobe/male/shirts/burgundy/source/right.png"
+    },
+    {
+      "from": "assets/source-layers/male/ao-dai-burgundy-right.json",
+      "to": "assets/wardrobe/male/shirts/burgundy/source/right.json"
+    },
+    {
+      "from": "assets/source-layers/male/ao-dai-burgundy-back.png",
+      "to": "assets/wardrobe/male/shirts/burgundy/source/back.png"
+    },
+    {
+      "from": "assets/source-layers/male/ao-dai-burgundy-back.json",
+      "to": "assets/wardrobe/male/shirts/burgundy/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/ao-dai-teal-front-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/teal/front.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/ao-dai-teal-left-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/teal/left.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/ao-dai-teal-right-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/teal/right.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/ao-dai-teal-back-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/teal/back.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/ao-dai-teal.png",
+      "to": "assets/wardrobe/male/shirts/teal/source/reference.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/ao-dai-teal.prompt.txt",
+      "to": "assets/wardrobe/male/shirts/teal/source/reference.prompt.txt"
+    },
+    {
+      "from": "assets/source-layers/male/ao-dai-teal-left.png",
+      "to": "assets/wardrobe/male/shirts/teal/source/left.png"
+    },
+    {
+      "from": "assets/source-layers/male/ao-dai-teal-left.json",
+      "to": "assets/wardrobe/male/shirts/teal/source/left.json"
+    },
+    {
+      "from": "assets/source-layers/male/ao-dai-teal-right.png",
+      "to": "assets/wardrobe/male/shirts/teal/source/right.png"
+    },
+    {
+      "from": "assets/source-layers/male/ao-dai-teal-right.json",
+      "to": "assets/wardrobe/male/shirts/teal/source/right.json"
+    },
+    {
+      "from": "assets/source-layers/male/ao-dai-teal-back.png",
+      "to": "assets/wardrobe/male/shirts/teal/source/back.png"
+    },
+    {
+      "from": "assets/source-layers/male/ao-dai-teal-back.json",
+      "to": "assets/wardrobe/male/shirts/teal/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/tu-than-front-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/tu-than/front.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/tu-than-left-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/tu-than/left.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/tu-than-right-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/tu-than/right.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/tu-than-back-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/tu-than/back.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/tu-than.png",
+      "to": "assets/wardrobe/male/shirts/tu-than/source/reference.png"
+    },
+    {
+      "from": "assets/source-layers/male/tu-than-left.png",
+      "to": "assets/wardrobe/male/shirts/tu-than/source/left.png"
+    },
+    {
+      "from": "assets/source-layers/male/tu-than-left.json",
+      "to": "assets/wardrobe/male/shirts/tu-than/source/left.json"
+    },
+    {
+      "from": "assets/source-layers/male/tu-than-right.png",
+      "to": "assets/wardrobe/male/shirts/tu-than/source/right.png"
+    },
+    {
+      "from": "assets/source-layers/male/tu-than-right.json",
+      "to": "assets/wardrobe/male/shirts/tu-than/source/right.json"
+    },
+    {
+      "from": "assets/source-layers/male/tu-than-back.png",
+      "to": "assets/wardrobe/male/shirts/tu-than/source/back.png"
+    },
+    {
+      "from": "assets/source-layers/male/tu-than-back.json",
+      "to": "assets/wardrobe/male/shirts/tu-than/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/ngu-than-front-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/ngu-than/front.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/ngu-than-left-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/ngu-than/left.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/ngu-than-right-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/ngu-than/right.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/ngu-than-back-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/ngu-than/back.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/ngu-than.png",
+      "to": "assets/wardrobe/male/shirts/ngu-than/source/reference.png"
+    },
+    {
+      "from": "assets/source-layers/male/ngu-than-left.png",
+      "to": "assets/wardrobe/male/shirts/ngu-than/source/left.png"
+    },
+    {
+      "from": "assets/source-layers/male/ngu-than-left.json",
+      "to": "assets/wardrobe/male/shirts/ngu-than/source/left.json"
+    },
+    {
+      "from": "assets/source-layers/male/ngu-than-right.png",
+      "to": "assets/wardrobe/male/shirts/ngu-than/source/right.png"
+    },
+    {
+      "from": "assets/source-layers/male/ngu-than-right.json",
+      "to": "assets/wardrobe/male/shirts/ngu-than/source/right.json"
+    },
+    {
+      "from": "assets/source-layers/male/ngu-than-back.png",
+      "to": "assets/wardrobe/male/shirts/ngu-than/source/back.png"
+    },
+    {
+      "from": "assets/source-layers/male/ngu-than-back.json",
+      "to": "assets/wardrobe/male/shirts/ngu-than/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/nhat-binh-front-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/nhat-binh/front.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/nhat-binh-left-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/nhat-binh/left.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/nhat-binh-right-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/nhat-binh/right.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/nhat-binh-back-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/nhat-binh/back.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/nhat-binh.png",
+      "to": "assets/wardrobe/male/shirts/nhat-binh/source/reference.png"
+    },
+    {
+      "from": "assets/source-layers/male/nhat-binh-left.png",
+      "to": "assets/wardrobe/male/shirts/nhat-binh/source/left.png"
+    },
+    {
+      "from": "assets/source-layers/male/nhat-binh-left.json",
+      "to": "assets/wardrobe/male/shirts/nhat-binh/source/left.json"
+    },
+    {
+      "from": "assets/source-layers/male/nhat-binh-right.png",
+      "to": "assets/wardrobe/male/shirts/nhat-binh/source/right.png"
+    },
+    {
+      "from": "assets/source-layers/male/nhat-binh-right.json",
+      "to": "assets/wardrobe/male/shirts/nhat-binh/source/right.json"
+    },
+    {
+      "from": "assets/source-layers/male/nhat-binh-back.png",
+      "to": "assets/wardrobe/male/shirts/nhat-binh/source/back.png"
+    },
+    {
+      "from": "assets/source-layers/male/nhat-binh-back.json",
+      "to": "assets/wardrobe/male/shirts/nhat-binh/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/ba-ba-front-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/ba-ba/front.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/ba-ba-left-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/ba-ba/left.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/ba-ba-right-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/ba-ba/right.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/ba-ba-back-source.png",
+      "to": "frontend/public/figure/male-layers/shirts/ba-ba/back.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/ba-ba.png",
+      "to": "assets/wardrobe/male/shirts/ba-ba/source/reference.png"
+    },
+    {
+      "from": "assets/source-layers/male/ba-ba-left.png",
+      "to": "assets/wardrobe/male/shirts/ba-ba/source/left.png"
+    },
+    {
+      "from": "assets/source-layers/male/ba-ba-left.json",
+      "to": "assets/wardrobe/male/shirts/ba-ba/source/left.json"
+    },
+    {
+      "from": "assets/source-layers/male/ba-ba-right.png",
+      "to": "assets/wardrobe/male/shirts/ba-ba/source/right.png"
+    },
+    {
+      "from": "assets/source-layers/male/ba-ba-right.json",
+      "to": "assets/wardrobe/male/shirts/ba-ba/source/right.json"
+    },
+    {
+      "from": "assets/source-layers/male/ba-ba-back.png",
+      "to": "assets/wardrobe/male/shirts/ba-ba/source/back.png"
+    },
+    {
+      "from": "assets/source-layers/male/ba-ba-back.json",
+      "to": "assets/wardrobe/male/shirts/ba-ba/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/trousers-ivory-front-source.png",
+      "to": "frontend/public/figure/male-layers/pants/ivory/front.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/trousers-ivory-left-source.png",
+      "to": "frontend/public/figure/male-layers/pants/ivory/left.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/trousers-ivory-right-source.png",
+      "to": "frontend/public/figure/male-layers/pants/ivory/right.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/trousers-ivory-back-source.png",
+      "to": "frontend/public/figure/male-layers/pants/ivory/back.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/trousers-ivory.png",
+      "to": "assets/wardrobe/male/pants/ivory/source/reference.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/trousers-ivory.prompt.txt",
+      "to": "assets/wardrobe/male/pants/ivory/source/reference.prompt.txt"
+    },
+    {
+      "from": "assets/source-layers/male/trousers-ivory-left.png",
+      "to": "assets/wardrobe/male/pants/ivory/source/left.png"
+    },
+    {
+      "from": "assets/source-layers/male/trousers-ivory-left.json",
+      "to": "assets/wardrobe/male/pants/ivory/source/left.json"
+    },
+    {
+      "from": "assets/source-layers/male/trousers-ivory-right.png",
+      "to": "assets/wardrobe/male/pants/ivory/source/right.png"
+    },
+    {
+      "from": "assets/source-layers/male/trousers-ivory-right.json",
+      "to": "assets/wardrobe/male/pants/ivory/source/right.json"
+    },
+    {
+      "from": "assets/source-layers/male/trousers-ivory-back.png",
+      "to": "assets/wardrobe/male/pants/ivory/source/back.png"
+    },
+    {
+      "from": "assets/source-layers/male/trousers-ivory-back.json",
+      "to": "assets/wardrobe/male/pants/ivory/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/pants-long-navy-front-source.png",
+      "to": "frontend/public/figure/male-layers/pants/long-navy/front.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/pants-long-navy-left-source.png",
+      "to": "frontend/public/figure/male-layers/pants/long-navy/left.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/pants-long-navy-right-source.png",
+      "to": "frontend/public/figure/male-layers/pants/long-navy/right.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/pants-long-navy-back-source.png",
+      "to": "frontend/public/figure/male-layers/pants/long-navy/back.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/pants-long-navy.png",
+      "to": "assets/wardrobe/male/pants/long-navy/source/reference.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/pants-long-navy-thumbnail.png",
+      "to": "frontend/public/figure/male-layers/pants/long-navy/thumbnail.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-long-navy-front.png",
+      "to": "assets/wardrobe/male/pants/long-navy/source/front.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-long-navy-front.json",
+      "to": "assets/wardrobe/male/pants/long-navy/source/front.json"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-long-navy-left.png",
+      "to": "assets/wardrobe/male/pants/long-navy/source/left.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-long-navy-left.json",
+      "to": "assets/wardrobe/male/pants/long-navy/source/left.json"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-long-navy-right.png",
+      "to": "assets/wardrobe/male/pants/long-navy/source/right.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-long-navy-right.json",
+      "to": "assets/wardrobe/male/pants/long-navy/source/right.json"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-long-navy-back.png",
+      "to": "assets/wardrobe/male/pants/long-navy/source/back.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-long-navy-back.json",
+      "to": "assets/wardrobe/male/pants/long-navy/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/pants-shorts-khaki-front-source.png",
+      "to": "frontend/public/figure/male-layers/pants/shorts-khaki/front.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/pants-shorts-khaki-left-source.png",
+      "to": "frontend/public/figure/male-layers/pants/shorts-khaki/left.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/pants-shorts-khaki-right-source.png",
+      "to": "frontend/public/figure/male-layers/pants/shorts-khaki/right.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/pants-shorts-khaki-back-source.png",
+      "to": "frontend/public/figure/male-layers/pants/shorts-khaki/back.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/pants-shorts-khaki.png",
+      "to": "assets/wardrobe/male/pants/shorts-khaki/source/reference.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/pants-shorts-khaki-thumbnail.png",
+      "to": "frontend/public/figure/male-layers/pants/shorts-khaki/thumbnail.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-shorts-khaki-front.png",
+      "to": "assets/wardrobe/male/pants/shorts-khaki/source/front.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-shorts-khaki-front.json",
+      "to": "assets/wardrobe/male/pants/shorts-khaki/source/front.json"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-shorts-khaki-left.png",
+      "to": "assets/wardrobe/male/pants/shorts-khaki/source/left.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-shorts-khaki-left.json",
+      "to": "assets/wardrobe/male/pants/shorts-khaki/source/left.json"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-shorts-khaki-right.png",
+      "to": "assets/wardrobe/male/pants/shorts-khaki/source/right.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-shorts-khaki-right.json",
+      "to": "assets/wardrobe/male/pants/shorts-khaki/source/right.json"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-shorts-khaki-back.png",
+      "to": "assets/wardrobe/male/pants/shorts-khaki/source/back.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-shorts-khaki-back.json",
+      "to": "assets/wardrobe/male/pants/shorts-khaki/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/pants-cropped-olive-front-source.png",
+      "to": "frontend/public/figure/male-layers/pants/cropped-olive/front.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/pants-cropped-olive-left-source.png",
+      "to": "frontend/public/figure/male-layers/pants/cropped-olive/left.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/pants-cropped-olive-right-source.png",
+      "to": "frontend/public/figure/male-layers/pants/cropped-olive/right.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/pants-cropped-olive-back-source.png",
+      "to": "frontend/public/figure/male-layers/pants/cropped-olive/back.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/pants-cropped-olive.png",
+      "to": "assets/wardrobe/male/pants/cropped-olive/source/reference.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/pants-cropped-olive-thumbnail.png",
+      "to": "frontend/public/figure/male-layers/pants/cropped-olive/thumbnail.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-cropped-olive-front.png",
+      "to": "assets/wardrobe/male/pants/cropped-olive/source/front.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-cropped-olive-front.json",
+      "to": "assets/wardrobe/male/pants/cropped-olive/source/front.json"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-cropped-olive-front-discarded.png",
+      "to": "assets/archive/rejected/male/pants-cropped-olive-front.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-cropped-olive-left.png",
+      "to": "assets/wardrobe/male/pants/cropped-olive/source/left.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-cropped-olive-left.json",
+      "to": "assets/wardrobe/male/pants/cropped-olive/source/left.json"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-cropped-olive-right.png",
+      "to": "assets/wardrobe/male/pants/cropped-olive/source/right.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-cropped-olive-right.json",
+      "to": "assets/wardrobe/male/pants/cropped-olive/source/right.json"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-cropped-olive-back.png",
+      "to": "assets/wardrobe/male/pants/cropped-olive/source/back.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-cropped-olive-back.json",
+      "to": "assets/wardrobe/male/pants/cropped-olive/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/pants-slim-black-front-source.png",
+      "to": "frontend/public/figure/male-layers/pants/slim-black/front.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/pants-slim-black-left-source.png",
+      "to": "frontend/public/figure/male-layers/pants/slim-black/left.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/pants-slim-black-right-source.png",
+      "to": "frontend/public/figure/male-layers/pants/slim-black/right.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/pants-slim-black-back-source.png",
+      "to": "frontend/public/figure/male-layers/pants/slim-black/back.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/pants-slim-black.png",
+      "to": "assets/wardrobe/male/pants/slim-black/source/reference.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/pants-slim-black-thumbnail.png",
+      "to": "frontend/public/figure/male-layers/pants/slim-black/thumbnail.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-slim-black-front.png",
+      "to": "assets/wardrobe/male/pants/slim-black/source/front.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-slim-black-front.json",
+      "to": "assets/wardrobe/male/pants/slim-black/source/front.json"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-slim-black-left.png",
+      "to": "assets/wardrobe/male/pants/slim-black/source/left.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-slim-black-left.json",
+      "to": "assets/wardrobe/male/pants/slim-black/source/left.json"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-slim-black-right.png",
+      "to": "assets/wardrobe/male/pants/slim-black/source/right.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-slim-black-right.json",
+      "to": "assets/wardrobe/male/pants/slim-black/source/right.json"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-slim-black-back.png",
+      "to": "assets/wardrobe/male/pants/slim-black/source/back.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-slim-black-back.json",
+      "to": "assets/wardrobe/male/pants/slim-black/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/pants-wide-charcoal-front-source.png",
+      "to": "frontend/public/figure/male-layers/pants/wide-charcoal/front.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/pants-wide-charcoal-left-source.png",
+      "to": "frontend/public/figure/male-layers/pants/wide-charcoal/left.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/pants-wide-charcoal-right-source.png",
+      "to": "frontend/public/figure/male-layers/pants/wide-charcoal/right.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/pants-wide-charcoal-back-source.png",
+      "to": "frontend/public/figure/male-layers/pants/wide-charcoal/back.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/pants-wide-charcoal.png",
+      "to": "assets/wardrobe/male/pants/wide-charcoal/source/reference.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/pants-wide-charcoal-thumbnail.png",
+      "to": "frontend/public/figure/male-layers/pants/wide-charcoal/thumbnail.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-wide-charcoal-front.png",
+      "to": "assets/wardrobe/male/pants/wide-charcoal/source/front.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-wide-charcoal-front.json",
+      "to": "assets/wardrobe/male/pants/wide-charcoal/source/front.json"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-wide-charcoal-left.png",
+      "to": "assets/wardrobe/male/pants/wide-charcoal/source/left.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-wide-charcoal-left.json",
+      "to": "assets/wardrobe/male/pants/wide-charcoal/source/left.json"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-wide-charcoal-right.png",
+      "to": "assets/wardrobe/male/pants/wide-charcoal/source/right.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-wide-charcoal-right.json",
+      "to": "assets/wardrobe/male/pants/wide-charcoal/source/right.json"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-wide-charcoal-back.png",
+      "to": "assets/wardrobe/male/pants/wide-charcoal/source/back.png"
+    },
+    {
+      "from": "assets/bottoms-v2/male/pants-wide-charcoal-back.json",
+      "to": "assets/wardrobe/male/pants/wide-charcoal/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/shoes-loafers-front-source.png",
+      "to": "frontend/public/figure/male-layers/shoes/loafers/front.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/shoes-loafers-left-source.png",
+      "to": "frontend/public/figure/male-layers/shoes/loafers/left.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/shoes-loafers-right-source.png",
+      "to": "frontend/public/figure/male-layers/shoes/loafers/right.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/shoes-loafers-back-source.png",
+      "to": "frontend/public/figure/male-layers/shoes/loafers/back.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/shoes-loafers.png",
+      "to": "assets/wardrobe/male/shoes/loafers/source/reference.png"
+    },
+    {
+      "from": "assets/source-layers/male/shoes-loafers-left.png",
+      "to": "assets/wardrobe/male/shoes/loafers/source/left.png"
+    },
+    {
+      "from": "assets/source-layers/male/shoes-loafers-left.json",
+      "to": "assets/wardrobe/male/shoes/loafers/source/left.json"
+    },
+    {
+      "from": "assets/source-layers/male/shoes-loafers-right.png",
+      "to": "assets/wardrobe/male/shoes/loafers/source/right.png"
+    },
+    {
+      "from": "assets/source-layers/male/shoes-loafers-right.json",
+      "to": "assets/wardrobe/male/shoes/loafers/source/right.json"
+    },
+    {
+      "from": "assets/source-layers/male/shoes-loafers-back.png",
+      "to": "assets/wardrobe/male/shoes/loafers/source/back.png"
+    },
+    {
+      "from": "assets/source-layers/male/shoes-loafers-back.json",
+      "to": "assets/wardrobe/male/shoes/loafers/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/shoes-sneakers-front-source.png",
+      "to": "frontend/public/figure/male-layers/shoes/sneakers/front.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/shoes-sneakers-left-source.png",
+      "to": "frontend/public/figure/male-layers/shoes/sneakers/left.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/shoes-sneakers-right-source.png",
+      "to": "frontend/public/figure/male-layers/shoes/sneakers/right.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/views/shoes-sneakers-back-source.png",
+      "to": "frontend/public/figure/male-layers/shoes/sneakers/back.png"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/shoes-sneakers.png",
+      "to": "assets/wardrobe/male/shoes/sneakers/source/reference.png"
+    },
+    {
+      "from": "assets/source-layers/male/shoes-sneakers-left.png",
+      "to": "assets/wardrobe/male/shoes/sneakers/source/left.png"
+    },
+    {
+      "from": "assets/source-layers/male/shoes-sneakers-left.json",
+      "to": "assets/wardrobe/male/shoes/sneakers/source/left.json"
+    },
+    {
+      "from": "assets/source-layers/male/shoes-sneakers-right.png",
+      "to": "assets/wardrobe/male/shoes/sneakers/source/right.png"
+    },
+    {
+      "from": "assets/source-layers/male/shoes-sneakers-right.json",
+      "to": "assets/wardrobe/male/shoes/sneakers/source/right.json"
+    },
+    {
+      "from": "assets/source-layers/male/shoes-sneakers-back.png",
+      "to": "assets/wardrobe/male/shoes/sneakers/source/back.png"
+    },
+    {
+      "from": "assets/source-layers/male/shoes-sneakers-back.json",
+      "to": "assets/wardrobe/male/shoes/sneakers/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/male-layers/README.md",
+      "to": "assets/archive/documentation/male-layers-README.md"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/base.png",
+      "to": "frontend/public/figure/female-layers/body/front.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/base-left.png",
+      "to": "frontend/public/figure/female-layers/body/left.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/base-right.png",
+      "to": "frontend/public/figure/female-layers/body/right.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/base-back.png",
+      "to": "frontend/public/figure/female-layers/body/back.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/ao-dai-jade-front-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/jade/front.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/ao-dai-jade-left-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/jade/left.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/ao-dai-jade-right-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/jade/right.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/ao-dai-jade-back-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/jade/back.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/ao-dai-jade.png",
+      "to": "assets/wardrobe/female/shirts/jade/source/reference.png"
+    },
+    {
+      "from": "assets/source-layers/female/ao-dai-jade-left.png",
+      "to": "assets/wardrobe/female/shirts/jade/source/left.png"
+    },
+    {
+      "from": "assets/source-layers/female/ao-dai-jade-left.json",
+      "to": "assets/wardrobe/female/shirts/jade/source/left.json"
+    },
+    {
+      "from": "assets/source-layers/female/ao-dai-jade-right.png",
+      "to": "assets/wardrobe/female/shirts/jade/source/right.png"
+    },
+    {
+      "from": "assets/source-layers/female/ao-dai-jade-right.json",
+      "to": "assets/wardrobe/female/shirts/jade/source/right.json"
+    },
+    {
+      "from": "assets/source-layers/female/ao-dai-jade-back.png",
+      "to": "assets/wardrobe/female/shirts/jade/source/back.png"
+    },
+    {
+      "from": "assets/source-layers/female/ao-dai-jade-back.json",
+      "to": "assets/wardrobe/female/shirts/jade/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/ao-dai-rose-front-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/rose/front.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/ao-dai-rose-left-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/rose/left.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/ao-dai-rose-right-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/rose/right.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/ao-dai-rose-back-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/rose/back.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/ao-dai-rose.png",
+      "to": "assets/wardrobe/female/shirts/rose/source/reference.png"
+    },
+    {
+      "from": "assets/source-layers/female/ao-dai-rose-left.png",
+      "to": "assets/wardrobe/female/shirts/rose/source/left.png"
+    },
+    {
+      "from": "assets/source-layers/female/ao-dai-rose-left.json",
+      "to": "assets/wardrobe/female/shirts/rose/source/left.json"
+    },
+    {
+      "from": "assets/source-layers/female/ao-dai-rose-right.png",
+      "to": "assets/wardrobe/female/shirts/rose/source/right.png"
+    },
+    {
+      "from": "assets/source-layers/female/ao-dai-rose-right.json",
+      "to": "assets/wardrobe/female/shirts/rose/source/right.json"
+    },
+    {
+      "from": "assets/source-layers/female/ao-dai-rose-back.png",
+      "to": "assets/wardrobe/female/shirts/rose/source/back.png"
+    },
+    {
+      "from": "assets/source-layers/female/ao-dai-rose-back.json",
+      "to": "assets/wardrobe/female/shirts/rose/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/tu-than-front-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/tu-than/front.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/tu-than-left-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/tu-than/left.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/tu-than-right-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/tu-than/right.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/tu-than-back-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/tu-than/back.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/tu-than.png",
+      "to": "assets/wardrobe/female/shirts/tu-than/source/reference.png"
+    },
+    {
+      "from": "assets/source-layers/female/tu-than-left.png",
+      "to": "assets/wardrobe/female/shirts/tu-than/source/left.png"
+    },
+    {
+      "from": "assets/source-layers/female/tu-than-left.json",
+      "to": "assets/wardrobe/female/shirts/tu-than/source/left.json"
+    },
+    {
+      "from": "assets/source-layers/female/tu-than-right.png",
+      "to": "assets/wardrobe/female/shirts/tu-than/source/right.png"
+    },
+    {
+      "from": "assets/source-layers/female/tu-than-right.json",
+      "to": "assets/wardrobe/female/shirts/tu-than/source/right.json"
+    },
+    {
+      "from": "assets/source-layers/female/tu-than-back.png",
+      "to": "assets/wardrobe/female/shirts/tu-than/source/back.png"
+    },
+    {
+      "from": "assets/source-layers/female/tu-than-back.json",
+      "to": "assets/wardrobe/female/shirts/tu-than/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/ngu-than-front-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/ngu-than/front.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/ngu-than-left-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/ngu-than/left.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/ngu-than-right-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/ngu-than/right.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/ngu-than-back-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/ngu-than/back.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/ngu-than.png",
+      "to": "assets/wardrobe/female/shirts/ngu-than/source/reference.png"
+    },
+    {
+      "from": "assets/source-layers/female/ngu-than-left.png",
+      "to": "assets/wardrobe/female/shirts/ngu-than/source/left.png"
+    },
+    {
+      "from": "assets/source-layers/female/ngu-than-left.json",
+      "to": "assets/wardrobe/female/shirts/ngu-than/source/left.json"
+    },
+    {
+      "from": "assets/source-layers/female/ngu-than-right.png",
+      "to": "assets/wardrobe/female/shirts/ngu-than/source/right.png"
+    },
+    {
+      "from": "assets/source-layers/female/ngu-than-right.json",
+      "to": "assets/wardrobe/female/shirts/ngu-than/source/right.json"
+    },
+    {
+      "from": "assets/source-layers/female/ngu-than-back.png",
+      "to": "assets/wardrobe/female/shirts/ngu-than/source/back.png"
+    },
+    {
+      "from": "assets/source-layers/female/ngu-than-back.json",
+      "to": "assets/wardrobe/female/shirts/ngu-than/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/nhat-binh-front-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/nhat-binh/front.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/nhat-binh-left-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/nhat-binh/left.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/nhat-binh-right-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/nhat-binh/right.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/nhat-binh-back-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/nhat-binh/back.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/nhat-binh.png",
+      "to": "assets/wardrobe/female/shirts/nhat-binh/source/reference.png"
+    },
+    {
+      "from": "assets/source-layers/female/nhat-binh-left.png",
+      "to": "assets/wardrobe/female/shirts/nhat-binh/source/left.png"
+    },
+    {
+      "from": "assets/source-layers/female/nhat-binh-left.json",
+      "to": "assets/wardrobe/female/shirts/nhat-binh/source/left.json"
+    },
+    {
+      "from": "assets/source-layers/female/nhat-binh-right.png",
+      "to": "assets/wardrobe/female/shirts/nhat-binh/source/right.png"
+    },
+    {
+      "from": "assets/source-layers/female/nhat-binh-right.json",
+      "to": "assets/wardrobe/female/shirts/nhat-binh/source/right.json"
+    },
+    {
+      "from": "assets/source-layers/female/nhat-binh-back.png",
+      "to": "assets/wardrobe/female/shirts/nhat-binh/source/back.png"
+    },
+    {
+      "from": "assets/source-layers/female/nhat-binh-back.json",
+      "to": "assets/wardrobe/female/shirts/nhat-binh/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/ba-ba-front-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/ba-ba/front.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/ba-ba-left-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/ba-ba/left.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/ba-ba-right-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/ba-ba/right.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/ba-ba-back-source.png",
+      "to": "frontend/public/figure/female-layers/shirts/ba-ba/back.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/ba-ba.png",
+      "to": "assets/wardrobe/female/shirts/ba-ba/source/reference.png"
+    },
+    {
+      "from": "assets/source-layers/female/ba-ba-left.png",
+      "to": "assets/wardrobe/female/shirts/ba-ba/source/left.png"
+    },
+    {
+      "from": "assets/source-layers/female/ba-ba-left.json",
+      "to": "assets/wardrobe/female/shirts/ba-ba/source/left.json"
+    },
+    {
+      "from": "assets/source-layers/female/ba-ba-right.png",
+      "to": "assets/wardrobe/female/shirts/ba-ba/source/right.png"
+    },
+    {
+      "from": "assets/source-layers/female/ba-ba-right.json",
+      "to": "assets/wardrobe/female/shirts/ba-ba/source/right.json"
+    },
+    {
+      "from": "assets/source-layers/female/ba-ba-back.png",
+      "to": "assets/wardrobe/female/shirts/ba-ba/source/back.png"
+    },
+    {
+      "from": "assets/source-layers/female/ba-ba-back.json",
+      "to": "assets/wardrobe/female/shirts/ba-ba/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/trousers-ivory-front-source.png",
+      "to": "frontend/public/figure/female-layers/pants/ivory/front.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/trousers-ivory-left-source.png",
+      "to": "frontend/public/figure/female-layers/pants/ivory/left.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/trousers-ivory-right-source.png",
+      "to": "frontend/public/figure/female-layers/pants/ivory/right.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/trousers-ivory-back-source.png",
+      "to": "frontend/public/figure/female-layers/pants/ivory/back.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/trousers-ivory.png",
+      "to": "assets/wardrobe/female/pants/ivory/source/reference.png"
+    },
+    {
+      "from": "assets/source-layers/female/trousers-ivory-left.png",
+      "to": "assets/wardrobe/female/pants/ivory/source/left.png"
+    },
+    {
+      "from": "assets/source-layers/female/trousers-ivory-left.json",
+      "to": "assets/wardrobe/female/pants/ivory/source/left.json"
+    },
+    {
+      "from": "assets/source-layers/female/trousers-ivory-right.png",
+      "to": "assets/wardrobe/female/pants/ivory/source/right.png"
+    },
+    {
+      "from": "assets/source-layers/female/trousers-ivory-right.json",
+      "to": "assets/wardrobe/female/pants/ivory/source/right.json"
+    },
+    {
+      "from": "assets/source-layers/female/trousers-ivory-back.png",
+      "to": "assets/wardrobe/female/pants/ivory/source/back.png"
+    },
+    {
+      "from": "assets/source-layers/female/trousers-ivory-back.json",
+      "to": "assets/wardrobe/female/pants/ivory/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/skirt-short-navy-front-source.png",
+      "to": "frontend/public/figure/female-layers/skirts/skirt-short-navy/front.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/skirt-short-navy-left-source.png",
+      "to": "frontend/public/figure/female-layers/skirts/skirt-short-navy/left.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/skirt-short-navy-right-source.png",
+      "to": "frontend/public/figure/female-layers/skirts/skirt-short-navy/right.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/skirt-short-navy-back-source.png",
+      "to": "frontend/public/figure/female-layers/skirts/skirt-short-navy/back.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/skirt-short-navy.png",
+      "to": "assets/wardrobe/female/skirts/skirt-short-navy/source/reference.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/skirt-short-navy-thumbnail.png",
+      "to": "frontend/public/figure/female-layers/skirts/skirt-short-navy/thumbnail.png"
+    },
+    {
+      "from": "assets/bottoms-v2/female/skirt-short-navy-front.png",
+      "to": "assets/wardrobe/female/skirts/skirt-short-navy/source/front.png"
+    },
+    {
+      "from": "assets/bottoms-v2/female/skirt-short-navy-front.json",
+      "to": "assets/wardrobe/female/skirts/skirt-short-navy/source/front.json"
+    },
+    {
+      "from": "assets/bottoms-v2/female/skirt-short-navy-left.png",
+      "to": "assets/wardrobe/female/skirts/skirt-short-navy/source/left.png"
+    },
+    {
+      "from": "assets/bottoms-v2/female/skirt-short-navy-left.json",
+      "to": "assets/wardrobe/female/skirts/skirt-short-navy/source/left.json"
+    },
+    {
+      "from": "assets/bottoms-v2/female/skirt-short-navy-right.png",
+      "to": "assets/wardrobe/female/skirts/skirt-short-navy/source/right.png"
+    },
+    {
+      "from": "assets/bottoms-v2/female/skirt-short-navy-right.json",
+      "to": "assets/wardrobe/female/skirts/skirt-short-navy/source/right.json"
+    },
+    {
+      "from": "assets/bottoms-v2/female/skirt-short-navy-back.png",
+      "to": "assets/wardrobe/female/skirts/skirt-short-navy/source/back.png"
+    },
+    {
+      "from": "assets/bottoms-v2/female/skirt-short-navy-back.json",
+      "to": "assets/wardrobe/female/skirts/skirt-short-navy/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/skirt-long-ivory-front-source.png",
+      "to": "frontend/public/figure/female-layers/skirts/skirt-long-ivory/front.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/skirt-long-ivory-left-source.png",
+      "to": "frontend/public/figure/female-layers/skirts/skirt-long-ivory/left.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/skirt-long-ivory-right-source.png",
+      "to": "frontend/public/figure/female-layers/skirts/skirt-long-ivory/right.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/skirt-long-ivory-back-source.png",
+      "to": "frontend/public/figure/female-layers/skirts/skirt-long-ivory/back.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/skirt-long-ivory.png",
+      "to": "assets/wardrobe/female/skirts/skirt-long-ivory/source/reference.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/skirt-long-ivory-thumbnail.png",
+      "to": "frontend/public/figure/female-layers/skirts/skirt-long-ivory/thumbnail.png"
+    },
+    {
+      "from": "assets/bottoms-v2/female/skirt-long-ivory-front.png",
+      "to": "assets/wardrobe/female/skirts/skirt-long-ivory/source/front.png"
+    },
+    {
+      "from": "assets/bottoms-v2/female/skirt-long-ivory-front.json",
+      "to": "assets/wardrobe/female/skirts/skirt-long-ivory/source/front.json"
+    },
+    {
+      "from": "assets/bottoms-v2/female/skirt-long-ivory-left.png",
+      "to": "assets/wardrobe/female/skirts/skirt-long-ivory/source/left.png"
+    },
+    {
+      "from": "assets/bottoms-v2/female/skirt-long-ivory-left.json",
+      "to": "assets/wardrobe/female/skirts/skirt-long-ivory/source/left.json"
+    },
+    {
+      "from": "assets/bottoms-v2/female/skirt-long-ivory-right.png",
+      "to": "assets/wardrobe/female/skirts/skirt-long-ivory/source/right.png"
+    },
+    {
+      "from": "assets/bottoms-v2/female/skirt-long-ivory-right.json",
+      "to": "assets/wardrobe/female/skirts/skirt-long-ivory/source/right.json"
+    },
+    {
+      "from": "assets/bottoms-v2/female/skirt-long-ivory-back.png",
+      "to": "assets/wardrobe/female/skirts/skirt-long-ivory/source/back.png"
+    },
+    {
+      "from": "assets/bottoms-v2/female/skirt-long-ivory-back.json",
+      "to": "assets/wardrobe/female/skirts/skirt-long-ivory/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/pants-shorts-denim-front-source.png",
+      "to": "frontend/public/figure/female-layers/pants/shorts-denim/front.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/pants-shorts-denim-left-source.png",
+      "to": "frontend/public/figure/female-layers/pants/shorts-denim/left.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/pants-shorts-denim-right-source.png",
+      "to": "frontend/public/figure/female-layers/pants/shorts-denim/right.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/pants-shorts-denim-back-source.png",
+      "to": "frontend/public/figure/female-layers/pants/shorts-denim/back.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/pants-shorts-denim.png",
+      "to": "assets/wardrobe/female/pants/shorts-denim/source/reference.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/pants-shorts-denim-thumbnail.png",
+      "to": "frontend/public/figure/female-layers/pants/shorts-denim/thumbnail.png"
+    },
+    {
+      "from": "assets/bottoms-v2/female/pants-shorts-denim-front.png",
+      "to": "assets/wardrobe/female/pants/shorts-denim/source/front.png"
+    },
+    {
+      "from": "assets/bottoms-v2/female/pants-shorts-denim-front.json",
+      "to": "assets/wardrobe/female/pants/shorts-denim/source/front.json"
+    },
+    {
+      "from": "assets/bottoms-v2/female/pants-shorts-denim-left.png",
+      "to": "assets/wardrobe/female/pants/shorts-denim/source/left.png"
+    },
+    {
+      "from": "assets/bottoms-v2/female/pants-shorts-denim-left.json",
+      "to": "assets/wardrobe/female/pants/shorts-denim/source/left.json"
+    },
+    {
+      "from": "assets/bottoms-v2/female/pants-shorts-denim-right.png",
+      "to": "assets/wardrobe/female/pants/shorts-denim/source/right.png"
+    },
+    {
+      "from": "assets/bottoms-v2/female/pants-shorts-denim-right.json",
+      "to": "assets/wardrobe/female/pants/shorts-denim/source/right.json"
+    },
+    {
+      "from": "assets/bottoms-v2/female/pants-shorts-denim-back.png",
+      "to": "assets/wardrobe/female/pants/shorts-denim/source/back.png"
+    },
+    {
+      "from": "assets/bottoms-v2/female/pants-shorts-denim-back.json",
+      "to": "assets/wardrobe/female/pants/shorts-denim/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/pants-long-black-front-source.png",
+      "to": "frontend/public/figure/female-layers/pants/long-black/front.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/pants-long-black-left-source.png",
+      "to": "frontend/public/figure/female-layers/pants/long-black/left.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/pants-long-black-right-source.png",
+      "to": "frontend/public/figure/female-layers/pants/long-black/right.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/pants-long-black-back-source.png",
+      "to": "frontend/public/figure/female-layers/pants/long-black/back.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/pants-long-black.png",
+      "to": "assets/wardrobe/female/pants/long-black/source/reference.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/pants-long-black-thumbnail.png",
+      "to": "frontend/public/figure/female-layers/pants/long-black/thumbnail.png"
+    },
+    {
+      "from": "assets/bottoms-v2/female/pants-long-black-front.png",
+      "to": "assets/wardrobe/female/pants/long-black/source/front.png"
+    },
+    {
+      "from": "assets/bottoms-v2/female/pants-long-black-front.json",
+      "to": "assets/wardrobe/female/pants/long-black/source/front.json"
+    },
+    {
+      "from": "assets/bottoms-v2/female/pants-long-black-front-discarded.png",
+      "to": "assets/archive/rejected/female/pants-long-black-front.png"
+    },
+    {
+      "from": "assets/bottoms-v2/female/pants-long-black-left.png",
+      "to": "assets/wardrobe/female/pants/long-black/source/left.png"
+    },
+    {
+      "from": "assets/bottoms-v2/female/pants-long-black-left.json",
+      "to": "assets/wardrobe/female/pants/long-black/source/left.json"
+    },
+    {
+      "from": "assets/bottoms-v2/female/pants-long-black-right.png",
+      "to": "assets/wardrobe/female/pants/long-black/source/right.png"
+    },
+    {
+      "from": "assets/bottoms-v2/female/pants-long-black-right.json",
+      "to": "assets/wardrobe/female/pants/long-black/source/right.json"
+    },
+    {
+      "from": "assets/bottoms-v2/female/pants-long-black-back.png",
+      "to": "assets/wardrobe/female/pants/long-black/source/back.png"
+    },
+    {
+      "from": "assets/bottoms-v2/female/pants-long-black-back.json",
+      "to": "assets/wardrobe/female/pants/long-black/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/shoes-flats-front-source.png",
+      "to": "frontend/public/figure/female-layers/shoes/flats/front.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/shoes-flats-left-source.png",
+      "to": "frontend/public/figure/female-layers/shoes/flats/left.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/shoes-flats-right-source.png",
+      "to": "frontend/public/figure/female-layers/shoes/flats/right.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/shoes-flats-back-source.png",
+      "to": "frontend/public/figure/female-layers/shoes/flats/back.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/shoes-flats.png",
+      "to": "assets/wardrobe/female/shoes/flats/source/reference.png"
+    },
+    {
+      "from": "assets/source-layers/female/shoes-flats-left.png",
+      "to": "assets/wardrobe/female/shoes/flats/source/left.png"
+    },
+    {
+      "from": "assets/source-layers/female/shoes-flats-left.json",
+      "to": "assets/wardrobe/female/shoes/flats/source/left.json"
+    },
+    {
+      "from": "assets/source-layers/female/shoes-flats-right.png",
+      "to": "assets/wardrobe/female/shoes/flats/source/right.png"
+    },
+    {
+      "from": "assets/source-layers/female/shoes-flats-right.json",
+      "to": "assets/wardrobe/female/shoes/flats/source/right.json"
+    },
+    {
+      "from": "assets/source-layers/female/shoes-flats-back.png",
+      "to": "assets/wardrobe/female/shoes/flats/source/back.png"
+    },
+    {
+      "from": "assets/source-layers/female/shoes-flats-back.json",
+      "to": "assets/wardrobe/female/shoes/flats/source/back.json"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/shoes-sneakers-front-source.png",
+      "to": "frontend/public/figure/female-layers/shoes/sneakers/front.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/shoes-sneakers-left-source.png",
+      "to": "frontend/public/figure/female-layers/shoes/sneakers/left.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/shoes-sneakers-right-source.png",
+      "to": "frontend/public/figure/female-layers/shoes/sneakers/right.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/views/shoes-sneakers-back-source.png",
+      "to": "frontend/public/figure/female-layers/shoes/sneakers/back.png"
+    },
+    {
+      "from": "frontend/public/figure/female-layers/shoes-sneakers.png",
+      "to": "assets/wardrobe/female/shoes/sneakers/source/reference.png"
+    },
+    {
+      "from": "assets/source-layers/female/shoes-sneakers-left.png",
+      "to": "assets/wardrobe/female/shoes/sneakers/source/left.png"
+    },
+    {
+      "from": "assets/source-layers/female/shoes-sneakers-left.json",
+      "to": "assets/wardrobe/female/shoes/sneakers/source/left.json"
+    },
+    {
+      "from": "assets/source-layers/female/shoes-sneakers-right.png",
+      "to": "assets/wardrobe/female/shoes/sneakers/source/right.png"
+    },
+    {
+      "from": "assets/source-layers/female/shoes-sneakers-right.json",
+      "to": "assets/wardrobe/female/shoes/sneakers/source/right.json"
+    },
+    {
+      "from": "assets/source-layers/female/shoes-sneakers-back.png",
+      "to": "assets/wardrobe/female/shoes/sneakers/source/back.png"
+    },
+    {
+      "from": "assets/source-layers/female/shoes-sneakers-back.json",
+      "to": "assets/wardrobe/female/shoes/sneakers/source/back.json"
+    },
+    {
+      "from": "assets/bottoms-v2/items.json",
+      "to": "assets/archive/documentation/bottoms-items-original.json"
+    },
+    {
+      "from": "assets/bottoms-v2/alignment.json",
+      "to": "assets/metadata/bottoms-alignment.json"
+    },
+    {
+      "from": "assets/source-layers/alignment.json",
+      "to": "assets/metadata/traditional-alignment.json"
+    },
+    {
+      "from": "assets/bottoms-v2/preview-male.png",
+      "to": "assets/previews/bottoms-male.png"
+    },
+    {
+      "from": "assets/bottoms-v2/preview-female.png",
+      "to": "assets/previews/bottoms-female.png"
+    },
+    {
+      "from": "assets/source-worn/male/ao-dai-navy-front-v1.png",
+      "to": "assets/wardrobe/male/shirts/navy/validation/front.png"
+    },
+    {
+      "from": "assets/source-worn/male/ao-dai-navy-left-v1.png",
+      "to": "assets/wardrobe/male/shirts/navy/validation/left.png"
+    },
+    {
+      "from": "assets/source-worn/male/ao-dai-navy-right-v1.png",
+      "to": "assets/wardrobe/male/shirts/navy/validation/right.png"
+    },
+    {
+      "from": "assets/source-worn/male/ao-dai-navy-back-v1.png",
+      "to": "assets/wardrobe/male/shirts/navy/validation/back.png"
+    },
+    {
+      "from": "assets/source-worn/prompts.json",
+      "to": "assets/wardrobe/male/shirts/navy/validation/prompts.json"
+    },
+    {
+      "from": "assets/source-worn/README.md",
+      "to": "assets/wardrobe/male/shirts/navy/validation/README.md"
+    },
+    {
+      "from": "assets/source-layers",
+      "to": "assets/archive/packages/traditional"
+    },
+    {
+      "from": "assets/bottoms-v2",
+      "to": "assets/archive/packages/bottoms"
+    },
+    {
+      "from": "assets/blender",
+      "to": "assets/archive/blender"
+    }
+  ],
+  "spriteHashes": [
+    {
+      "file": "frontend/public/figure/male-layers/shirts/navy/front.png",
+      "hash": "bb4de66b33dc6cc2361993878d9eb3430317c8842ffcb6e21047f18731add17b"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/navy/left.png",
+      "hash": "b43c839fd4d1ea91cef8e007b52bf627204e162dc0b1da17cfef4b7796a09804"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/navy/right.png",
+      "hash": "858c820fccb1a72cd6f4a824596e45122d917999665e13af88761950af777201"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/navy/back.png",
+      "hash": "18566f5ea9efbcd337cc553733599f90034f7b642e5d97ca152b6469c1f06aec"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/burgundy/front.png",
+      "hash": "8362232193cb66bc639f6c9244c9d88b874678e34c187f6b22b84f6c335a3c75"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/burgundy/left.png",
+      "hash": "6eee9fe93419498ebad34508dbcd4989f8e4fbb7c16db9f4e8b67da09c764605"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/burgundy/right.png",
+      "hash": "2ea388b608b1f564ce287ea7a6f2ed805d82ace60802b2d8868638c2a4f77550"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/burgundy/back.png",
+      "hash": "f76de43d9d1e1451fdf5954b941ce953fa832ba2c40388050301c3695d137e6e"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/teal/front.png",
+      "hash": "b7e40665397c52ae13643764c354ca95b1abd7ec8c50c72105368e45d40c63ae"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/teal/left.png",
+      "hash": "6b03f5915a1a08a1cc37de898b54aa8fbb4e00fd1095816a6050bf5eaef3f696"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/teal/right.png",
+      "hash": "a41a14bf154424ea69ee0faea8b6b4399f71b257e01f83b712fcf8693d39d21a"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/teal/back.png",
+      "hash": "3a31babae616357cf36cb343974a6e6b172fa1bc61401894f5e8ba6cbcaa9b6b"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/tu-than/front.png",
+      "hash": "51b7739a6b4fa9c24f97420944153078c669f54a84c1ffb838d14c1f8a068937"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/tu-than/left.png",
+      "hash": "cc425b6e6267a6a938182b4f6a5f3208111f2eb0aab9fa455d57b4707592cd99"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/tu-than/right.png",
+      "hash": "1b41ecfecb3461b7f181fc37ff078a9327f7c7c6ee3b8e5af93f96a8e7027ebd"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/tu-than/back.png",
+      "hash": "a3b23702d13c5fee6ba0c991004dac4b1d75bbf069574ad9b1436bcb62473bff"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/ngu-than/front.png",
+      "hash": "d7c83775aee02d94007ff98483d59c53ac2dca914703ee348003b70588465462"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/ngu-than/left.png",
+      "hash": "a4397939ea79a9d289aeac84053250b77330e2d4d97714622fd15e6c248f6569"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/ngu-than/right.png",
+      "hash": "70d82f2035f14c6a15c46caf4efe65809ff43eac2bb42585f2c222396d17ec86"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/ngu-than/back.png",
+      "hash": "4ad19aac25996591569d6389fa94639252fd98a0caf588a9cf1a952d2b0969a4"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/nhat-binh/front.png",
+      "hash": "3ed7038329192fabbce05e85d4eacb211db1ad7bfa641f7823f8b5d17ef78660"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/nhat-binh/left.png",
+      "hash": "55022b5b2c9dcd4bb86d45bd19521133d19174b7f7abb037f24c7a8d1543c69b"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/nhat-binh/right.png",
+      "hash": "9ecd0b76431fd66693b5d95ee0b363fc05bab8038d640e09514bbb7a0252f42a"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/nhat-binh/back.png",
+      "hash": "74ae0a717be3cbad08489fea59a1c4e5d8c2391f6fa61edcb5cbc9b82cf52045"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/ba-ba/front.png",
+      "hash": "e9cf7d12e2881f37cdbc089741b0a9dfbbf2f9d470fe99f820c6b2e037f2a600"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/ba-ba/left.png",
+      "hash": "2472e2be518cdc04d474500d2a92191bf89b211f2d96f4573b75d871e77d9778"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/ba-ba/right.png",
+      "hash": "77969a6cb4cb0a87e057483b82fe33f2219e73f8b084587ae59fae3d742b3d87"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shirts/ba-ba/back.png",
+      "hash": "efa25fc599b42ddb247e82ff14dbb682cb9bc1b9e10358c2c85102a6c1c56a80"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/ivory/front.png",
+      "hash": "9a75e29910f7d06d74c0e0660e2691d2f97983f03a7ddd6a0c07f8518d2ad4e8"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/ivory/left.png",
+      "hash": "2cfb27bebce621efbc260a79fcfffa18cb9d3532d9e0bed2bea6799ce0266410"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/ivory/right.png",
+      "hash": "abf7f1af2630044d859957e3c04b4a5efb7d89d3e31c834a0910b0edfb70df83"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/ivory/back.png",
+      "hash": "0590b20557814368327cd8e44c10d087db0861da0d07977ae7da40879a819b39"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/long-navy/front.png",
+      "hash": "b26a28909619095fc79fa56e6925f8338ede27dbadc200998de5a9218b3774e7"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/long-navy/left.png",
+      "hash": "a44b29cebcf08cae178aad03e4bd9f996c89d533a1ffea61cc1fe7b353b41bda"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/long-navy/right.png",
+      "hash": "6be2f7e0b876acd2fa0b645f81482e4755389e296660af2fee16d64fb21af97b"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/long-navy/back.png",
+      "hash": "2fc0252ca37af36febb7cebdab21f47b304d699ed6f1062deb8cfe4b246d9b81"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/shorts-khaki/front.png",
+      "hash": "60a2add106d65684dd4e9c27ef0be48c9f058269d5ffc3c92f846d2ed418706d"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/shorts-khaki/left.png",
+      "hash": "2655089223fb33152c0ed0ddeeefba8c64317f9943f611026d5f09137f0757dc"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/shorts-khaki/right.png",
+      "hash": "027357c21a2c3b0b1c957e3363c4053c97028fbbf3501eee5363947cc0184a2d"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/shorts-khaki/back.png",
+      "hash": "eede0d9b6ea4a3fd064b9686070156fc137b19b9d954a0f33c1a8742d6ce082f"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/cropped-olive/front.png",
+      "hash": "6fa2763dc4d89ca3721fad4fd6bba889ce42d8fb55bbe7b04f2762c641a36020"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/cropped-olive/left.png",
+      "hash": "d51d11a05033acf6e4d7a303e18813e0f2e187df6b5dcac1bb4897b62f5a3bff"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/cropped-olive/right.png",
+      "hash": "0f76b2e59a6adee3174b6500e85059f76baff844b7326f03aac9e36be9293b76"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/cropped-olive/back.png",
+      "hash": "27aa22e7ee5d539f0e2c8e4824d32aaaafa0db92416a4ca81bcdf230c574ab40"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/slim-black/front.png",
+      "hash": "7b27fe0bc3ec6ed5c880a82019e865d63116a62fd5cbab7ffff0fcf6019f1c69"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/slim-black/left.png",
+      "hash": "719bd1188dee9a47fbdda2c091fbd3ded8236d0ec261092a49ea9e201842500f"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/slim-black/right.png",
+      "hash": "34f993b2199fcb2c004861493bf144c64c654e1fb2bdb70f6d3ba8c284c195e3"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/slim-black/back.png",
+      "hash": "b10a70f360765e403cf1fb294615c30a52cc72b5aa057e481e5c88ed143c6318"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/wide-charcoal/front.png",
+      "hash": "b180728b5549ad88168469198a9db8ecdd65ad8628f8e4c9f3a66fea37493887"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/wide-charcoal/left.png",
+      "hash": "bb68487cc76c88b897f5d03d842a891ed43d0fed8fe25616f7feda5041ebbf4b"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/wide-charcoal/right.png",
+      "hash": "be268ed2859b46c9b1ca2e73bd70a956c5bd93c7becafe62ed0991c42ef3def1"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/pants/wide-charcoal/back.png",
+      "hash": "648994a3c648d8299b3597543268be8f6455a98cbf4575933804c9332fabcd91"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shoes/loafers/front.png",
+      "hash": "1f5dc46b5eab47e1963a3e51d21a357641b5783b6dc01d9396676633cea3243b"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shoes/loafers/left.png",
+      "hash": "4244ef46a27be4188fea0b1a0748e7d252694ca0a8df5fb786b960853a158bb1"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shoes/loafers/right.png",
+      "hash": "d7a709048aa9c75e79a1aeb83b6c515b817b2a7fa49186bba63fd195014cd6d0"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shoes/loafers/back.png",
+      "hash": "3591213b0a3240c965e765cee3f5d440a5194d11dd5be9c4bbcc5155babba9b4"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shoes/sneakers/front.png",
+      "hash": "0cbb5b5d82265ec4d21c86c362d4de6565eeb72737529adfcdbb94358b647976"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shoes/sneakers/left.png",
+      "hash": "9a379738409426d0e94f2bc00a0e9c746e4566b4d4acfdface29cb4399b525ab"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shoes/sneakers/right.png",
+      "hash": "352ef610a0760638a65dd259d895d1b5134576ebdb6e5effd0eea1b8887de845"
+    },
+    {
+      "file": "frontend/public/figure/male-layers/shoes/sneakers/back.png",
+      "hash": "34f72bff28c69a22238f863412a15837fc6d3e082194ea0bc9d1b35c2a6bb327"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/jade/front.png",
+      "hash": "670d938008b3f38e6faad34d4e8813f0f075cf5736cf1d288c88583f6dd64b76"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/jade/left.png",
+      "hash": "364e57ccfae1eb2ba608615de9ed78e2e6fd95f89a846f86b9b034eeb69b6f17"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/jade/right.png",
+      "hash": "872cec258e4cf2419ba5efc714cdcd79dad81cce2256f224099d71fc00f0633b"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/jade/back.png",
+      "hash": "f6694d6ee95f5de22b3bd1f65df07d7cd7c326d9a4eec30ee71b710dd259a9ac"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/rose/front.png",
+      "hash": "2d0f15abf61bb9fdf457f98e52911c2a054979854d44eb65224f4decd258cb05"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/rose/left.png",
+      "hash": "246fd0c37e85d9624d9e7fc3d85015c71a1330461ee2ec6d3d645e69f2b66c6e"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/rose/right.png",
+      "hash": "3f8ac4baf86febdfee1f27d09b028d7fd8c2c14d5d91d5308c8aab3e9aaa38c6"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/rose/back.png",
+      "hash": "b9cf66b8d20624a2c54448e46a47a13c427640c81b4c14b56c766193ba12ed60"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/tu-than/front.png",
+      "hash": "6e4b388e3ec034681fcfa8f7c1e1a41308346cceba5425fd08b7c38a54a6c57b"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/tu-than/left.png",
+      "hash": "27def4c8bc17a0a6271a78787d8f34a47d4c90260df05db2764a36faa98c2e66"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/tu-than/right.png",
+      "hash": "275ec61c70b9e68a60827576ae7368e638f84fd22bfec709c6fd63af822ba4f7"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/tu-than/back.png",
+      "hash": "c8416ddccf1ab164fa2cfeb9fe610458a36884d945fbf5dd3f3875059a419a09"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/ngu-than/front.png",
+      "hash": "9838fd31e9bc866360e37d05945469afeb2bf1fdde40410a2c6a4821400b91f6"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/ngu-than/left.png",
+      "hash": "a182f564a2f517ecb1698c5c287385cded01d5a01dd870f5e143f8dd528f1851"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/ngu-than/right.png",
+      "hash": "b1213b9794ba507ec8f4ba3d5f673252c72032f62fa28ef673144a20fb472c47"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/ngu-than/back.png",
+      "hash": "7961e384cb3bd63c5f2ba3cb01c5c57dc5390292bc26a73d091de1aa62dfd39a"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/nhat-binh/front.png",
+      "hash": "24221358242f90ba5d84ca7bc2d774fca65aaa7fa1f337617b324068cc946741"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/nhat-binh/left.png",
+      "hash": "e065709babd34f40fd5e695a94273822a4ee53bd2489117dbbdf79fd142c2075"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/nhat-binh/right.png",
+      "hash": "e595086410252991b2c59057a6895ab12baa6a8e2de1433856c22e3a96f6b4a8"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/nhat-binh/back.png",
+      "hash": "eeedb2af7166552fdc076403dd19b6f7256368bdc29a86fe2021faec21e5a8e9"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/ba-ba/front.png",
+      "hash": "65e6ce03c1e3aef5c1f9475e181057e84fe123d2be7570e0244483630d0f322f"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/ba-ba/left.png",
+      "hash": "fcdaa3aeacdd65e93a0cb42757b95931345ba433140d955614bb339c4bdb2b5f"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/ba-ba/right.png",
+      "hash": "e3a2b6f8b2f5d20fd374354b720d7c39b8db2d9434b7d5b5deea22d5dc962278"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shirts/ba-ba/back.png",
+      "hash": "59a07fe193f2126e6a064dfac6054f6dcb463d160dc113971b30dee69feb3023"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/pants/ivory/front.png",
+      "hash": "1ff020983ffc17346546c1cb5ba28e2a29eeb6a500ad48aad5e79f12c7a53b03"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/pants/ivory/left.png",
+      "hash": "ef7834255afa46dbec5f880f0c626fa4c8ba571a4bb96a3d8f2d14b8a39add03"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/pants/ivory/right.png",
+      "hash": "c96fb8c3a6035c3dba708fd631aaa4282c61e7421ac3891d13b3b720c249c2d4"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/pants/ivory/back.png",
+      "hash": "c3210264f5f76dbc26efda1e8f805bdf9d8bc9f1b3c4387ce73e92e4b6d22353"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/skirts/skirt-short-navy/front.png",
+      "hash": "a509294443cc27856681d34fff1c2f65ee88e1ac18f1a74e0d6735b9e6081622"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/skirts/skirt-short-navy/left.png",
+      "hash": "6a50dce046f084a0dd9a538f51c21d0527d7030021eb98cacba8d8b1b942dae7"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/skirts/skirt-short-navy/right.png",
+      "hash": "5c8e6d055c3c61120bb520af8469cfe1e8a840f0dfb15624a45682cc998b44ad"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/skirts/skirt-short-navy/back.png",
+      "hash": "50676220525a86721e8285b081bbe41319baf237d56f80f77e5f3829c7e0136f"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/skirts/skirt-long-ivory/front.png",
+      "hash": "7aece2c23ddd0ea1e4ed2d9c0d7f90e267a6a28d5fd518464866d5e037c84731"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/skirts/skirt-long-ivory/left.png",
+      "hash": "7c1fe428940bc98a14129e030d948aba4aa35f4ed0714ea63c20f9cbdcaa2c69"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/skirts/skirt-long-ivory/right.png",
+      "hash": "78bf70a7c4448fe460e158d8b8b623ffe27e959e63a8cf584a0fd2b1e2ef6697"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/skirts/skirt-long-ivory/back.png",
+      "hash": "493c48f5ce8a62ae7190d35e39956b91df7eaa0a494abe3fb5b70ceceab4f672"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/pants/shorts-denim/front.png",
+      "hash": "5046f3fc031db81a1e72830777b2726f6662656d20beaad87a91c9f5cd070932"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/pants/shorts-denim/left.png",
+      "hash": "25048fd26ab4d7dd807ce893d7528f47c33ee9ed18e074e2ca76f9af8e2e9af2"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/pants/shorts-denim/right.png",
+      "hash": "8c97c3e3b4e99bdf425ce8797dad0482df2c5a6c2cf48b45f6273fc38f7ff97f"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/pants/shorts-denim/back.png",
+      "hash": "386df64d79e85e928282ce7241046b891506abbb2107e78a764c818db55f463a"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/pants/long-black/front.png",
+      "hash": "f47f5cc06f11159b2dba0e9c1df057a818a9d3dd1589556a34718b407ecb7898"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/pants/long-black/left.png",
+      "hash": "3384a952b8c7c29afdae7b97aeb5f8922fc7dac39ca3cc907fee254a353d6695"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/pants/long-black/right.png",
+      "hash": "a2f7ad25ff544fbf9cbad68d9d206f585c69cc059fa16481a550f6cb36e5e920"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/pants/long-black/back.png",
+      "hash": "34c03489cef7cfdafcced270f4200261f98d2934bdb6fc94e9589e859a9ffa47"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shoes/flats/front.png",
+      "hash": "a3a514451c33c0a156742b02ad9b0ac1cd36c50c047a2c35d5e73b0bd7eaccfd"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shoes/flats/left.png",
+      "hash": "08b33cba63f3222bf6df18822522fd138a45a0443d6e12c51529d40a337846f4"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shoes/flats/right.png",
+      "hash": "99f8999f2a80ef2dbb6ec7fb9ed4e9ecad2db17f44a20f09c64d5bfb12cab3e5"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shoes/flats/back.png",
+      "hash": "37f93018bc47b862f902973041ac63c3669c6f575973a2f86d8d30b457eb601a"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shoes/sneakers/front.png",
+      "hash": "cb7b80328b345ac60feae6600f9c98de99b67effc3fe822f5766bd604f4675d1"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shoes/sneakers/left.png",
+      "hash": "9a2983da3dd71df5836c8951e9bf284d3cae033f91a154e9fe9020b16dfd5834"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shoes/sneakers/right.png",
+      "hash": "ce7d99f19c1194d479982621ed29182bafcd7e4e1c00c5f5cefebc2d5604ed90"
+    },
+    {
+      "file": "frontend/public/figure/female-layers/shoes/sneakers/back.png",
+      "hash": "63d9aa2a3f22de86a04ce9db90c9a7497c2e0b7d579be53e5cf8d557fed844bc"
+    }
+  ]
+}

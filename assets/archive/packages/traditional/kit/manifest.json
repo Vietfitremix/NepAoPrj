@@ -1,0 +1,240 @@
+{
+  "width": 1024,
+  "height": 1536,
+  "views": [
+    "front",
+    "left",
+    "right",
+    "back"
+  ],
+  "items": [
+    {
+      "gender": "male",
+      "kind": "outfits",
+      "id": "navy",
+      "name": "Áo dài xanh navy",
+      "files": {
+        "front": "male/outfits/navy/front.png",
+        "left": "male/outfits/navy/left.png",
+        "right": "male/outfits/navy/right.png",
+        "back": "male/outfits/navy/back.png"
+      }
+    },
+    {
+      "gender": "male",
+      "kind": "outfits",
+      "id": "burgundy",
+      "name": "Áo dài đỏ",
+      "files": {
+        "front": "male/outfits/burgundy/front.png",
+        "left": "male/outfits/burgundy/left.png",
+        "right": "male/outfits/burgundy/right.png",
+        "back": "male/outfits/burgundy/back.png"
+      }
+    },
+    {
+      "gender": "male",
+      "kind": "outfits",
+      "id": "teal",
+      "name": "Áo dài xanh ngọc",
+      "files": {
+        "front": "male/outfits/teal/front.png",
+        "left": "male/outfits/teal/left.png",
+        "right": "male/outfits/teal/right.png",
+        "back": "male/outfits/teal/back.png"
+      }
+    },
+    {
+      "gender": "male",
+      "kind": "outfits",
+      "id": "tu-than",
+      "name": "Áo tứ thân",
+      "files": {
+        "front": "male/outfits/tu-than/front.png",
+        "left": "male/outfits/tu-than/left.png",
+        "right": "male/outfits/tu-than/right.png",
+        "back": "male/outfits/tu-than/back.png"
+      }
+    },
+    {
+      "gender": "male",
+      "kind": "outfits",
+      "id": "ngu-than",
+      "name": "Áo ngũ thân",
+      "files": {
+        "front": "male/outfits/ngu-than/front.png",
+        "left": "male/outfits/ngu-than/left.png",
+        "right": "male/outfits/ngu-than/right.png",
+        "back": "male/outfits/ngu-than/back.png"
+      }
+    },
+    {
+      "gender": "male",
+      "kind": "outfits",
+      "id": "nhat-binh",
+      "name": "Nhật bình",
+      "files": {
+        "front": "male/outfits/nhat-binh/front.png",
+        "left": "male/outfits/nhat-binh/left.png",
+        "right": "male/outfits/nhat-binh/right.png",
+        "back": "male/outfits/nhat-binh/back.png"
+      }
+    },
+    {
+      "gender": "male",
+      "kind": "outfits",
+      "id": "ba-ba",
+      "name": "Áo bà ba",
+      "files": {
+        "front": "male/outfits/ba-ba/front.png",
+        "left": "male/outfits/ba-ba/left.png",
+        "right": "male/outfits/ba-ba/right.png",
+        "back": "male/outfits/ba-ba/back.png"
+      }
+    },
+    {
+      "gender": "male",
+      "kind": "pants",
+      "id": "ivory",
+      "name": "Quần trắng ngà",
+      "files": {
+        "front": "male/pants/ivory/front.png",
+        "left": "male/pants/ivory/left.png",
+        "right": "male/pants/ivory/right.png",
+        "back": "male/pants/ivory/back.png"
+      }
+    },
+    {
+      "gender": "male",
+      "kind": "shoes",
+      "id": "loafers",
+      "name": "Giày da đen",
+      "files": {
+        "front": "male/shoes/loafers/front.png",
+        "left": "male/shoes/loafers/left.png",
+        "right": "male/shoes/loafers/right.png",
+        "back": "male/shoes/loafers/back.png"
+      }
+    },
+    {
+      "gender": "male",
+      "kind": "shoes",
+      "id": "sneakers",
+      "name": "Sneaker trắng",
+      "files": {
+        "front": "male/shoes/sneakers/front.png",
+        "left": "male/shoes/sneakers/left.png",
+        "right": "male/shoes/sneakers/right.png",
+        "back": "male/shoes/sneakers/back.png"
+      }
+    },
+    {
+      "gender": "female",
+      "kind": "outfits",
+      "id": "jade",
+      "name": "Áo dài xanh ngọc",
+      "files": {
+        "front": "female/outfits/jade/front.png",
+        "left": "female/outfits/jade/left.png",
+        "right": "female/outfits/jade/right.png",
+        "back": "female/outfits/jade/back.png"
+      }
+    },
+    {
+      "gender": "female",
+      "kind": "outfits",
+      "id": "rose",
+      "name": "Áo dài hồng",
+      "files": {
+        "front": "female/outfits/rose/front.png",
+        "left": "female/outfits/rose/left.png",
+        "right": "female/outfits/rose/right.png",
+        "back": "female/outfits/rose/back.png"
+      }
+    },
+    {
+      "gender": "female",
+      "kind": "outfits",
+      "id": "tu-than",
+      "name": "Áo tứ thân",
+      "files": {
+        "front": "female/outfits/tu-than/front.png",
+        "left": "female/outfits/tu-than/left.png",
+        "right": "female/outfits/tu-than/right.png",
+        "back": "female/outfits/tu-than/back.png"
+      }
+    },
+    {
+      "gender": "female",
+      "kind": "outfits",
+      "id": "ngu-than",
+      "name": "Áo ngũ thân",
+      "files": {
+        "front": "female/outfits/ngu-than/front.png",
+        "left": "female/outfits/ngu-than/left.png",
+        "right": "female/outfits/ngu-than/right.png",
+        "back": "female/outfits/ngu-than/back.png"
+      }
+    },
+    {
+      "gender": "female",
+      "kind": "outfits",
+      "id": "nhat-binh",
+      "name": "Nhật bình",
+      "files": {
+        "front": "female/outfits/nhat-binh/front.png",
+        "left": "female/outfits/nhat-binh/left.png",
+        "right": "female/outfits/nhat-binh/right.png",
+        "back": "female/outfits/nhat-binh/back.png"
+      }
+    },
+    {
+      "gender": "female",
+      "kind": "outfits",
+      "id": "ba-ba",
+      "name": "Áo bà ba",
+      "files": {
+        "front": "female/outfits/ba-ba/front.png",
+        "left": "female/outfits/ba-ba/left.png",
+        "right": "female/outfits/ba-ba/right.png",
+        "back": "female/outfits/ba-ba/back.png"
+      }
+    },
+    {
+      "gender": "female",
+      "kind": "pants",
+      "id": "ivory",
+      "name": "Quần trắng ngà",
+      "files": {
+        "front": "female/pants/ivory/front.png",
+        "left": "female/pants/ivory/left.png",
+        "right": "female/pants/ivory/right.png",
+        "back": "female/pants/ivory/back.png"
+      }
+    },
+    {
+      "gender": "female",
+      "kind": "shoes",
+      "id": "flats",
+      "name": "Giày búp bê",
+      "files": {
+        "front": "female/shoes/flats/front.png",
+        "left": "female/shoes/flats/left.png",
+        "right": "female/shoes/flats/right.png",
+        "back": "female/shoes/flats/back.png"
+      }
+    },
+    {
+      "gender": "female",
+      "kind": "shoes",
+      "id": "sneakers",
+      "name": "Sneaker trắng",
+      "files": {
+        "front": "female/shoes/sneakers/front.png",
+        "left": "female/shoes/sneakers/left.png",
+        "right": "female/shoes/sneakers/right.png",
+        "back": "female/shoes/sneakers/back.png"
+      }
+    }
+  ]
+}

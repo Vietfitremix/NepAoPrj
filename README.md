@@ -17,13 +17,13 @@ graph TD
     GM["🤖 Google Gemini API<br/>(Diễn giải ngôn ngữ tự nhiên)"]
 
     User -->|HTTP / SPA| FE
-    FE -->|Vite Proxy /api/*| BE
+    FE -->|Vite Proxy /api/* và /figure/*| BE
     BE -->|Flyway / JPA SQL| DB
     BE -->|REST / HTTP 1.1| AI
     BE -->|HTTP GET /weather| OW
     AI -->|Prompt / JSON Schema| GM
     AI -.->|Fallback nội bộ| AI
-    FE -.->|Chia sẻ Figure SVG 2D| AI
+    AI -->|Catalog, luật, quiz và prompt| DB
 ```
 
 ---
@@ -32,10 +32,10 @@ graph TD
 
 | Thư mục | Ngôn ngữ / Công nghệ | Vai trò trong hệ thống |
 | :--- | :--- | :--- |
-| **[`frontend/`](./frontend)** | React 18, TypeScript, Vite, Tailwind | Giao diện người dùng: Landing, Stylist Form, Concept Cards, Studio phối đồ 2D canvas nhiều lớp (SVG), trang Look detail. |
+| **[`frontend/`](./frontend)** | React 19, TypeScript, Vite, Tailwind | Giao diện người dùng: Landing, Stylist Form, Concept Cards, Studio phối đồ 2D canvas nhiều lớp PNG, trang Look detail. |
 | **[`backend/`](./backend)** | Java 21, Spring Boot 3, JPA, Flyway | Trung tâm xử lý nghiệp vụ: Quản lý catalog Việt phục, lưu trữ Look, gọi OpenWeather, kết nối AI Service và kiểm tra văn hóa. |
 | **[`ai-service/`](./ai-service)** | Python 3.12, FastAPI, Pydantic | Động cơ trí tuệ nhân tạo: Bộ luật phối đồ lịch sử (Rule engine), chấm hài hòa màu sắc OKLCH, tích hợp Google Gemini AI và nhánh dự phòng. |
-| **[`frontend/src/assets/figure/`](./frontend/src/assets/figure)** | SVG Vector Layers | Kho tài nguyên đồ họa 2D chia sẻ: Thân người, trang phục (áo dài, tứ thân, ngũ thân, nhật bình, bà ba), phụ kiện 4 góc nhìn. |
+| **[`frontend/public/figure/`](./frontend/public/figure)** | PNG Layers | Bộ ảnh nam/nữ và phụ kiện 4 góc nhìn; byte gốc được lưu trong bảng `asset_files`, phục vụ qua backend. |
 | **[`.vscode/`](./.vscode)** | VS Code Configurations | Cấu hình IDE tích hợp sẵn: Debug Spring Boot + FastAPI (F5), chạy tasks, cấu hình Java LS & Python venv. |
 
 ---
@@ -47,6 +47,13 @@ Chỉ cần chạy lệnh từ thư mục gốc của dự án:
 ```powershell
 .\start-all.ps1
 ```
+Script kiểm tra kết nối của AI, backend và proxy `/api` trước khi báo sẵn sàng.
+Log khởi động được lưu trong `.tools/ai.*.log`, `.tools/backend.*.log` và
+`.tools/frontend.*.log`. Script import asset sau migration và cấu hình AI đọc cùng
+database backend. Catalog, luật, 8 câu hỏi, thang điểm, checklist và prompt đều
+được lưu trong PostgreSQL. Chi tiết import/audit: [backend/README.md](backend/README.md).
+`CORS_ALLOWED_ORIGINS` mặc định cho phép giao diện ở `http://localhost:5173`
+và bản preview ở `http://localhost:5176`; nếu dùng URL khác, thêm URL đó vào `.env`.
 Để dừng toàn bộ các tiến trình:
 ```powershell
 .\stop-all.ps1
@@ -90,7 +97,7 @@ Tất cả cấu hình tập trung tại file [`.env`](./.env) ở thư mục g�
 DATABASE_URL=jdbc:postgresql://localhost:5432/viet_fit
 DATABASE_USERNAME=viet_fit
 DATABASE_PASSWORD=change-me
-WEATHER_API_KEY=
+WEATHER_API_KEY=6d0a8d868a4ce53d340d71e14fe04d9c
 GEMINI_API_KEY=
 GEMINI_MODEL=gemini-3.5-flash
 AI_SERVICE_URL=http://localhost:8000

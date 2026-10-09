@@ -1,0 +1,10 @@
+{
+  "id": "hac-va-mai",
+  "name": "Hạc và mai",
+  "subject": "A graceful white crane with golden beak and black flight feather tips beside golden apricot blossom branches",
+  "file": "patterns/hac-va-mai/tile.png",
+  "thumbnail": "patterns/hac-va-mai/thumbnail.png",
+  "prompt": "Use case: stylized-concept. Asset type: repeatable textile decorative motif PNG for Vietnamese clothing customization. Single square seamless repeat tile, 1024x1024, completely transparent background. Fine high quality embroidered thread illustration with realistic silky thin stitches, restrained ivory/gold accents, subject colors as specified. Harmonious repeating arrangement with plentiful negative transparent space (at least 65%), delicate thin strokes and SMALL motifs that do not merge into a dense solid background. Clean edges, no cast shadows, no fabric ground, no checkerboard, no mockup, no people, no clothing garment, no labels, no text except the single traditional longevity ideogram if requested. Left/right and top/bottom edges must join as a subtle seamless textile repeat. Subject: A graceful white crane with golden beak and black flight feather tips beside golden apricot blossom branches",
+  "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-05e2ddfb-370b-4aa1-b5bd-6099fe848a18.png",
+  "tool": "image_gen"
+}

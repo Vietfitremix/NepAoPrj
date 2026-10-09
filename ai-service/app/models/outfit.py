@@ -36,6 +36,8 @@ class Evaluation(BaseModel):
     reason: str
     suggestion: Suggestion
     sources: list[str] = Field(default_factory=list)
+    sourceVerified: bool = False
+    sourceNote: str = ""
 
 
 class ColorScore(BaseModel):

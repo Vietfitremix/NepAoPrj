@@ -1,0 +1,92 @@
+[
+  {
+    "gender": "male",
+    "id": "long-navy",
+    "file": "pants-long-navy.png",
+    "name": "Quần dài",
+    "detail": "Xanh navy · Ống đứng",
+    "style": "navy blue full-length straight-leg tailored cotton trousers, belt loops, zip fly, slanted front pockets and two welt back pockets, regular straight silhouette",
+    "hem": 1340,
+    "fit": "regular"
+  },
+  {
+    "gender": "male",
+    "id": "shorts-khaki",
+    "file": "pants-shorts-khaki.png",
+    "name": "Quần đùi",
+    "detail": "Kaki be · Trên gối",
+    "style": "beige khaki above-knee shorts, regular comfortable cut, belt loops, button and zip fly, slanted front pockets and two back welt pockets; hems just above knees, not underwear",
+    "hem": 955,
+    "fit": "regular"
+  },
+  {
+    "gender": "male",
+    "id": "cropped-olive",
+    "file": "pants-cropped-olive.png",
+    "name": "Quần lửng",
+    "detail": "Xanh olive · Giữa bắp chân",
+    "style": "muted olive green calf-length cropped chinos, regular straight fit, belt loops, button and zip fly, two side pockets and two back pockets, end at mid-calf clearly longer than shorts and shorter than full trousers",
+    "hem": 1175,
+    "fit": "regular"
+  },
+  {
+    "gender": "male",
+    "id": "slim-black",
+    "file": "pants-slim-black.png",
+    "name": "Quần ống bó",
+    "detail": "Đen · Ôm chân",
+    "style": "black full-length slim skinny jeans, fitted closely around thighs, knees and calves, narrow ankle openings, five pockets, stitched seams, belt loops, zip fly, photorealistic matte stretch denim; clearly slim, not wide-leg",
+    "hem": 1340,
+    "fit": "slim"
+  },
+  {
+    "gender": "male",
+    "id": "wide-charcoal",
+    "file": "pants-wide-charcoal.png",
+    "name": "Quần ống rộng",
+    "detail": "Xám than · Ống rộng",
+    "style": "charcoal gray full-length wide-leg trousers, generous loose legs with fluid vertical pleats from waist, broad straight openings, tailored waistband, belt loops, slanted pockets and back welt pockets, clearly wider than standard straight trousers",
+    "hem": 1355,
+    "fit": "wide"
+  },
+  {
+    "gender": "female",
+    "id": "skirt-short-navy",
+    "file": "skirt-short-navy.png",
+    "name": "Váy ngắn",
+    "detail": "Xanh navy · Dáng chữ A",
+    "style": "navy blue short A-line skirt, structured waist band, gentle A-line flare, hidden side zipper, modest mid-thigh hem, smooth matte cotton twill; one continuous skirt without pants legs and without leg gap",
+    "hem": 940,
+    "fit": "skirt"
+  },
+  {
+    "gender": "female",
+    "id": "skirt-long-ivory",
+    "file": "skirt-long-ivory.png",
+    "name": "Váy dài",
+    "detail": "Trắng ngà · Xếp ly dài",
+    "style": "ivory cream ankle-length pleated maxi skirt, fitted waistband, hidden side zipper, flowing vertical accordion pleats and gentle A-line flare, opaque soft fabric, one continuous skirt without trousers legs and without leg gap",
+    "hem": 1340,
+    "fit": "skirt"
+  },
+  {
+    "gender": "female",
+    "id": "shorts-denim",
+    "file": "pants-shorts-denim.png",
+    "name": "Quần ngắn",
+    "detail": "Denim xanh · Trên gối",
+    "style": "medium blue denim shorts for adult woman, modest upper-to-mid-thigh length, structured high-waisted waistband, belt loops, button and fly, five pockets with visible stitching, neatly cuffed hems, not underwear",
+    "hem": 895,
+    "fit": "regular"
+  },
+  {
+    "gender": "female",
+    "id": "long-black",
+    "file": "pants-long-black.png",
+    "name": "Quần dài",
+    "detail": "Đen · Ống đứng",
+    "style": "black full-length high-waisted straight-leg tailored trousers for adult woman, subtle creases, waistband, concealed front fly, slanted pockets, back welt pockets, matte opaque fabric, clean regular straight silhouette",
+    "hem": 1340,
+    "fit": "regular"
+  }
+]

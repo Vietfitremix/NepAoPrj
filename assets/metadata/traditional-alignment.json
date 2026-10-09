@@ -1,0 +1,1943 @@
+[
+  {
+    "gender": "male",
+    "kind": "outfits",
+    "id": "navy",
+    "view": "right",
+    "raw": "assets/wardrobe/male/shirts/navy/source/right.png",
+    "file": "shirts/navy/right.png",
+    "source": {
+      "x0": 342,
+      "x1": 707,
+      "y0": 182,
+      "y1": 1282,
+      "width": 366,
+      "height": 1101,
+      "center": 524.5
+    },
+    "scaleX": 0.8530465949820788,
+    "x": 59.181003584229416,
+    "rows": [
+      [
+        182,
+        218
+      ],
+      [
+        292.1,
+        302
+      ],
+      [
+        831.5899999999999,
+        735
+      ],
+      [
+        1283,
+        1140
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "outfits",
+    "id": "burgundy",
+    "view": "right",
+    "raw": "assets/wardrobe/male/shirts/burgundy/source/right.png",
+    "file": "shirts/burgundy/right.png",
+    "source": {
+      "x0": 282,
+      "x1": 706,
+      "y0": 110,
+      "y1": 1351,
+      "width": 425,
+      "height": 1242,
+      "center": 494
+    },
+    "scaleX": 0.9118773946360154,
+    "x": 20.676245210727927,
+    "rows": [
+      [
+        110,
+        218
+      ],
+      [
+        234.2,
+        302
+      ],
+      [
+        805.5200000000001,
+        735
+      ],
+      [
+        1352,
+        1140
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "outfits",
+    "id": "teal",
+    "view": "right",
+    "raw": "assets/wardrobe/male/shirts/teal/source/right.png",
+    "file": "shirts/teal/right.png",
+    "source": {
+      "x0": 291,
+      "x1": 700,
+      "y0": 107,
+      "y1": 1346,
+      "width": 410,
+      "height": 1240,
+      "center": 495.5
+    },
+    "scaleX": 0.8913857677902621,
+    "x": 29.631086142322147,
+    "rows": [
+      [
+        107,
+        218
+      ],
+      [
+        231,
+        302
+      ],
+      [
+        801.4000000000001,
+        735
+      ],
+      [
+        1347,
+        1140
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "outfits",
+    "id": "tu-than",
+    "view": "right",
+    "raw": "assets/wardrobe/male/shirts/tu-than/source/right.png",
+    "file": "shirts/tu-than/right.png",
+    "source": {
+      "x0": 227,
+      "x1": 714,
+      "y0": 153,
+      "y1": 1325,
+      "width": 488,
+      "height": 1173,
+      "center": 470.5
+    },
+    "scaleX": 0.8439716312056738,
+    "x": 43.17730496453902,
+    "rows": [
+      [
+        153,
+        218
+      ],
+      [
+        270.3,
+        302
+      ],
+      [
+        809.8800000000001,
+        735
+      ],
+      [
+        1326,
+        1140
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "outfits",
+    "id": "ngu-than",
+    "view": "right",
+    "raw": "assets/wardrobe/male/shirts/ngu-than/source/right.png",
+    "file": "shirts/ngu-than/right.png",
+    "source": {
+      "x0": 319,
+      "x1": 721,
+      "y0": 101,
+      "y1": 1421,
+      "width": 403,
+      "height": 1321,
+      "center": 520
+    },
+    "scaleX": 0.8439716312056738,
+    "x": 60.900709219858186,
+    "rows": [
+      [
+        101,
+        218
+      ],
+      [
+        233.1,
+        302
+      ],
+      [
+        840.7600000000001,
+        735
+      ],
+      [
+        1422,
+        1140
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "outfits",
+    "id": "nhat-binh",
+    "view": "right",
+    "raw": "assets/wardrobe/male/shirts/nhat-binh/source/right.png",
+    "file": "shirts/nhat-binh/right.png",
+    "source": {
+      "x0": 253,
+      "x1": 712,
+      "y0": 129,
+      "y1": 1363,
+      "width": 460,
+      "height": 1235,
+      "center": 482.5
+    },
+    "scaleX": 1.0386100386100385,
+    "x": -50.92471042471038,
+    "rows": [
+      [
+        129,
+        218
+      ],
+      [
+        252.5,
+        302
+      ],
+      [
+        820.6,
+        735
+      ],
+      [
+        1364,
+        1190
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "outfits",
+    "id": "ba-ba",
+    "view": "right",
+    "raw": "assets/wardrobe/male/shirts/ba-ba/source/right.png",
+    "file": "shirts/ba-ba/right.png",
+    "source": {
+      "x0": 392,
+      "x1": 704,
+      "y0": 192,
+      "y1": 925,
+      "width": 313,
+      "height": 734,
+      "center": 548
+    },
+    "scaleX": 0.8067796610169492,
+    "x": 63.64576271186439,
+    "rows": [
+      [
+        192,
+        266
+      ],
+      [
+        265.4,
+        302
+      ],
+      [
+        926,
+        750
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "pants",
+    "id": "ivory",
+    "view": "right",
+    "raw": "assets/wardrobe/male/pants/ivory/source/right.png",
+    "file": "pants/ivory/right.png",
+    "source": {
+      "x0": 400,
+      "x1": 645,
+      "y0": 306,
+      "y1": 1317,
+      "width": 246,
+      "height": 1012,
+      "center": 522.5
+    },
+    "scaleX": 0.8211382113821138,
+    "x": 78.45528455284551,
+    "rows": [
+      [
+        306,
+        650
+      ],
+      [
+        1318,
+        1369
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "shoes",
+    "id": "loafers",
+    "view": "right",
+    "raw": "assets/wardrobe/male/shoes/loafers/source/right.png",
+    "file": "shoes/loafers/right.png",
+    "source": {
+      "x0": 301,
+      "x1": 779,
+      "y0": 1254,
+      "y1": 1433,
+      "width": 479,
+      "height": 180,
+      "center": 540
+    },
+    "scaleX": 0.4697286012526096,
+    "x": 288.3465553235908,
+    "rows": [
+      [
+        1254,
+        1334
+      ],
+      [
+        1434,
+        1418
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "shoes",
+    "id": "sneakers",
+    "view": "right",
+    "raw": "assets/wardrobe/male/shoes/sneakers/source/right.png",
+    "file": "shoes/sneakers/right.png",
+    "source": {
+      "x0": 158,
+      "x1": 865,
+      "y0": 1147,
+      "y1": 1448,
+      "width": 708,
+      "height": 302,
+      "center": 511.5
+    },
+    "scaleX": 0.3177966101694915,
+    "x": 379.4470338983051,
+    "rows": [
+      [
+        1147,
+        1317
+      ],
+      [
+        1449,
+        1418
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "outfits",
+    "id": "navy",
+    "view": "left",
+    "raw": "assets/wardrobe/male/shirts/navy/source/left.png",
+    "file": "shirts/navy/left.png",
+    "source": {
+      "x0": 351,
+      "x1": 747,
+      "y0": 162,
+      "y1": 1346,
+      "width": 397,
+      "height": 1185,
+      "center": 549
+    },
+    "scaleX": 0.8781362007168458,
+    "x": 69.12544802867387,
+    "rows": [
+      [
+        162,
+        224
+      ],
+      [
+        280.5,
+        302
+      ],
+      [
+        861.15,
+        735
+      ],
+      [
+        1347,
+        1140
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "outfits",
+    "id": "burgundy",
+    "view": "left",
+    "raw": "assets/wardrobe/male/shirts/burgundy/source/left.png",
+    "file": "shirts/burgundy/left.png",
+    "source": {
+      "x0": 362,
+      "x1": 738,
+      "y0": 110,
+      "y1": 1364,
+      "width": 377,
+      "height": 1255,
+      "center": 550
+    },
+    "scaleX": 0.9074074074074074,
+    "x": 58.046296296296305,
+    "rows": [
+      [
+        110,
+        224
+      ],
+      [
+        235.5,
+        302
+      ],
+      [
+        812.8000000000001,
+        735
+      ],
+      [
+        1365,
+        1140
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "outfits",
+    "id": "teal",
+    "view": "left",
+    "raw": "assets/wardrobe/male/shirts/teal/source/left.png",
+    "file": "shirts/teal/left.png",
+    "source": {
+      "x0": 320,
+      "x1": 763,
+      "y0": 125,
+      "y1": 1437,
+      "width": 444,
+      "height": 1313,
+      "center": 541.5
+    },
+    "scaleX": 0.7827476038338658,
+    "x": 118.53674121405754,
+    "rows": [
+      [
+        125,
+        224
+      ],
+      [
+        256.3,
+        302
+      ],
+      [
+        860.2800000000001,
+        735
+      ],
+      [
+        1438,
+        1140
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "outfits",
+    "id": "tu-than",
+    "view": "left",
+    "raw": "assets/wardrobe/male/shirts/tu-than/source/left.png",
+    "file": "shirts/tu-than/left.png",
+    "source": {
+      "x0": 304,
+      "x1": 826,
+      "y0": 122,
+      "y1": 1368,
+      "width": 523,
+      "height": 1247,
+      "center": 565
+    },
+    "scaleX": 0.7928802588996764,
+    "x": 119.63106796116506,
+    "rows": [
+      [
+        122,
+        224
+      ],
+      [
+        246.7,
+        302
+      ],
+      [
+        820.32,
+        735
+      ],
+      [
+        1369,
+        1140
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "outfits",
+    "id": "ngu-than",
+    "view": "left",
+    "raw": "assets/wardrobe/male/shirts/ngu-than/source/left.png",
+    "file": "shirts/ngu-than/left.png",
+    "source": {
+      "x0": 348,
+      "x1": 750,
+      "y0": 105,
+      "y1": 1383,
+      "width": 403,
+      "height": 1279,
+      "center": 549
+    },
+    "scaleX": 0.9459459459459459,
+    "x": 34,
+    "rows": [
+      [
+        105,
+        224
+      ],
+      [
+        232.9,
+        302
+      ],
+      [
+        821.2400000000001,
+        735
+      ],
+      [
+        1384,
+        1140
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "outfits",
+    "id": "nhat-binh",
+    "view": "left",
+    "raw": "assets/wardrobe/male/shirts/nhat-binh/source/left.png",
+    "file": "shirts/nhat-binh/left.png",
+    "source": {
+      "x0": 307,
+      "x1": 785,
+      "y0": 130,
+      "y1": 1413,
+      "width": 479,
+      "height": 1284,
+      "center": 546
+    },
+    "scaleX": 0.7863247863247863,
+    "x": 144.991452991453,
+    "rows": [
+      [
+        130,
+        224
+      ],
+      [
+        258.4,
+        302
+      ],
+      [
+        849.0400000000001,
+        735
+      ],
+      [
+        1414,
+        1190
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "outfits",
+    "id": "ba-ba",
+    "view": "left",
+    "raw": "assets/wardrobe/male/shirts/ba-ba/source/left.png",
+    "file": "shirts/ba-ba/left.png",
+    "source": {
+      "x0": 351,
+      "x1": 674,
+      "y0": 236,
+      "y1": 998,
+      "width": 324,
+      "height": 763,
+      "center": 512.5
+    },
+    "scaleX": 0.7903225806451613,
+    "x": 122.12096774193549,
+    "rows": [
+      [
+        236,
+        266
+      ],
+      [
+        312.3,
+        302
+      ],
+      [
+        999,
+        750
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "pants",
+    "id": "ivory",
+    "view": "left",
+    "raw": "assets/wardrobe/male/pants/ivory/source/left.png",
+    "file": "pants/ivory/left.png",
+    "source": {
+      "x0": 417,
+      "x1": 678,
+      "y0": 176,
+      "y1": 1356,
+      "width": 262,
+      "height": 1181,
+      "center": 547.5
+    },
+    "scaleX": 0.8244274809160306,
+    "x": 71.12595419847327,
+    "rows": [
+      [
+        176,
+        650
+      ],
+      [
+        1357,
+        1396
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "shoes",
+    "id": "loafers",
+    "view": "left",
+    "raw": "assets/wardrobe/male/shoes/loafers/source/left.png",
+    "file": "shoes/loafers/left.png",
+    "source": {
+      "x0": 257,
+      "x1": 748,
+      "y0": 1219,
+      "y1": 1427,
+      "width": 492,
+      "height": 209,
+      "center": 502.5
+    },
+    "scaleX": 0.4796747967479675,
+    "x": 261.4634146341464,
+    "rows": [
+      [
+        1219,
+        1361
+      ],
+      [
+        1428,
+        1445
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "shoes",
+    "id": "sneakers",
+    "view": "left",
+    "raw": "assets/wardrobe/male/shoes/sneakers/source/left.png",
+    "file": "shoes/sneakers/left.png",
+    "source": {
+      "x0": 216,
+      "x1": 838,
+      "y0": 1191,
+      "y1": 1463,
+      "width": 623,
+      "height": 273,
+      "center": 527
+    },
+    "scaleX": 0.37881219903691815,
+    "x": 302.86597110754417,
+    "rows": [
+      [
+        1191,
+        1344
+      ],
+      [
+        1464,
+        1445
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "outfits",
+    "id": "navy",
+    "view": "back",
+    "raw": "assets/wardrobe/male/shirts/navy/source/back.png",
+    "file": "shirts/navy/back.png",
+    "source": {
+      "x0": 121,
+      "x1": 914,
+      "y0": 163,
+      "y1": 1377,
+      "width": 794,
+      "height": 1215,
+      "center": 517.5
+    },
+    "scaleX": 0.7905491698595147,
+    "x": 102.49553001277138,
+    "rows": [
+      [
+        163,
+        251
+      ],
+      [
+        284.5,
+        302
+      ],
+      [
+        818,
+        735
+      ],
+      [
+        1378,
+        1140
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "outfits",
+    "id": "burgundy",
+    "view": "back",
+    "raw": "assets/wardrobe/male/shirts/burgundy/source/back.png",
+    "file": "shirts/burgundy/back.png",
+    "source": {
+      "x0": 71,
+      "x1": 952,
+      "y0": 88,
+      "y1": 1406,
+      "width": 882,
+      "height": 1319,
+      "center": 511.5
+    },
+    "scaleX": 0.7098623853211009,
+    "x": 148.9053899082569,
+    "rows": [
+      [
+        88,
+        251
+      ],
+      [
+        219.9,
+        302
+      ],
+      [
+        799,
+        735
+      ],
+      [
+        1407,
+        1140
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "outfits",
+    "id": "teal",
+    "view": "back",
+    "raw": "assets/wardrobe/male/shirts/teal/source/back.png",
+    "file": "shirts/teal/back.png",
+    "source": {
+      "x0": 89,
+      "x1": 934,
+      "y0": 116,
+      "y1": 1423,
+      "width": 846,
+      "height": 1308,
+      "center": 511.5
+    },
+    "scaleX": 0.7484885126964933,
+    "x": 128.77388149939543,
+    "rows": [
+      [
+        116,
+        251
+      ],
+      [
+        246.8,
+        302
+      ],
+      [
+        826,
+        735
+      ],
+      [
+        1424,
+        1140
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "outfits",
+    "id": "tu-than",
+    "view": "back",
+    "raw": "assets/wardrobe/male/shirts/tu-than/source/back.png",
+    "file": "shirts/tu-than/back.png",
+    "source": {
+      "x0": 63,
+      "x1": 960,
+      "y0": 139,
+      "y1": 1375,
+      "width": 898,
+      "height": 1237,
+      "center": 511.5
+    },
+    "scaleX": 0.6893095768374164,
+    "x": 159.4181514476615,
+    "rows": [
+      [
+        139,
+        251
+      ],
+      [
+        262.7,
+        302
+      ],
+      [
+        788,
+        735
+      ],
+      [
+        1376,
+        1140
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "outfits",
+    "id": "ngu-than",
+    "view": "back",
+    "raw": "assets/wardrobe/male/shirts/ngu-than/source/back.png",
+    "file": "shirts/ngu-than/back.png",
+    "source": {
+      "x0": 113,
+      "x1": 910,
+      "y0": 152,
+      "y1": 1444,
+      "width": 798,
+      "height": 1293,
+      "center": 511.5
+    },
+    "scaleX": 0.7756892230576441,
+    "x": 115.23496240601503,
+    "rows": [
+      [
+        152,
+        251
+      ],
+      [
+        281.3,
+        302
+      ],
+      [
+        775,
+        735
+      ],
+      [
+        1445,
+        1140
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "outfits",
+    "id": "nhat-binh",
+    "view": "back",
+    "raw": "assets/wardrobe/male/shirts/nhat-binh/source/back.png",
+    "file": "shirts/nhat-binh/back.png",
+    "source": {
+      "x0": 27,
+      "x1": 998,
+      "y0": 126,
+      "y1": 1455,
+      "width": 972,
+      "height": 1330,
+      "center": 512.5
+    },
+    "scaleX": 0.7412371134020619,
+    "x": 132.1159793814433,
+    "rows": [
+      [
+        126,
+        251
+      ],
+      [
+        259,
+        302
+      ],
+      [
+        895,
+        735
+      ],
+      [
+        1456,
+        1190
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "outfits",
+    "id": "ba-ba",
+    "view": "back",
+    "raw": "assets/wardrobe/male/shirts/ba-ba/source/back.png",
+    "file": "shirts/ba-ba/back.png",
+    "source": {
+      "x0": 29,
+      "x1": 995,
+      "y0": 277,
+      "y1": 1012,
+      "width": 967,
+      "height": 736,
+      "center": 512
+    },
+    "scaleX": 0.8198675496688742,
+    "x": 92.2278145695364,
+    "rows": [
+      [
+        277,
+        278
+      ],
+      [
+        350.6,
+        302
+      ],
+      [
+        1013,
+        750
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "pants",
+    "id": "ivory",
+    "view": "back",
+    "raw": "assets/wardrobe/male/pants/ivory/source/back.png",
+    "file": "pants/ivory/back.png",
+    "source": {
+      "x0": 301,
+      "x1": 738,
+      "y0": 289,
+      "y1": 1348,
+      "width": 438,
+      "height": 1060,
+      "center": 519.5
+    },
+    "scaleX": 0.682648401826484,
+    "x": 157.36415525114154,
+    "rows": [
+      [
+        289,
+        650
+      ],
+      [
+        1349,
+        1377
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "shoes",
+    "id": "loafers",
+    "view": "back",
+    "raw": "assets/wardrobe/male/shoes/loafers/source/back.png",
+    "file": "shoes/loafers/back.png",
+    "source": {
+      "x0": 284,
+      "x1": 739,
+      "y0": 1255,
+      "y1": 1443,
+      "width": 456,
+      "height": 189,
+      "center": 511.5
+    },
+    "scaleX": 0.918859649122807,
+    "x": 42.00328947368422,
+    "rows": [
+      [
+        1255,
+        1342
+      ],
+      [
+        1444,
+        1426
+      ]
+    ]
+  },
+  {
+    "gender": "male",
+    "kind": "shoes",
+    "id": "sneakers",
+    "view": "back",
+    "raw": "assets/wardrobe/male/shoes/sneakers/source/back.png",
+    "file": "shoes/sneakers/back.png",
+    "source": {
+      "x0": 185,
+      "x1": 839,
+      "y0": 1149,
+      "y1": 1450,
+      "width": 655,
+      "height": 302,
+      "center": 512
+    },
+    "scaleX": 0.6396946564885496,
+    "x": 184.4763358778626,
+    "rows": [
+      [
+        1149,
+        1325
+      ],
+      [
+        1451,
+        1426
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "outfits",
+    "id": "jade",
+    "view": "right",
+    "raw": "assets/wardrobe/female/shirts/jade/source/right.png",
+    "file": "shirts/jade/right.png",
+    "source": {
+      "x0": 298,
+      "x1": 704,
+      "y0": 117,
+      "y1": 1418,
+      "width": 407,
+      "height": 1302,
+      "center": 501
+    },
+    "scaleX": 1.025,
+    "x": -31.337499999999977,
+    "rows": [
+      [
+        117,
+        244
+      ],
+      [
+        247.20000000000002,
+        302
+      ],
+      [
+        676.86,
+        735
+      ],
+      [
+        1419,
+        1230
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "outfits",
+    "id": "rose",
+    "view": "right",
+    "raw": "assets/wardrobe/female/shirts/rose/source/right.png",
+    "file": "shirts/rose/right.png",
+    "source": {
+      "x0": 316,
+      "x1": 730,
+      "y0": 119,
+      "y1": 1421,
+      "width": 415,
+      "height": 1303,
+      "center": 523
+    },
+    "scaleX": 1.0379746835443038,
+    "x": -41.89240506329111,
+    "rows": [
+      [
+        119,
+        244
+      ],
+      [
+        249.3,
+        302
+      ],
+      [
+        679.29,
+        735
+      ],
+      [
+        1422,
+        1230
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "outfits",
+    "id": "tu-than",
+    "view": "right",
+    "raw": "assets/wardrobe/female/shirts/tu-than/source/right.png",
+    "file": "shirts/tu-than/right.png",
+    "source": {
+      "x0": 186,
+      "x1": 753,
+      "y0": 88,
+      "y1": 1459,
+      "width": 568,
+      "height": 1372,
+      "center": 469.5
+    },
+    "scaleX": 0.7569230769230769,
+    "x": 90.86615384615385,
+    "rows": [
+      [
+        88,
+        244
+      ],
+      [
+        225.20000000000002,
+        302
+      ],
+      [
+        677.96,
+        735
+      ],
+      [
+        1460,
+        1230
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "outfits",
+    "id": "ngu-than",
+    "view": "right",
+    "raw": "assets/wardrobe/female/shirts/ngu-than/source/right.png",
+    "file": "shirts/ngu-than/right.png",
+    "source": {
+      "x0": 280,
+      "x1": 751,
+      "y0": 91,
+      "y1": 1442,
+      "width": 472,
+      "height": 1352,
+      "center": 515.5
+    },
+    "scaleX": 0.8754448398576512,
+    "x": 38.38256227758012,
+    "rows": [
+      [
+        91,
+        244
+      ],
+      [
+        226.20000000000002,
+        302
+      ],
+      [
+        672.36,
+        735
+      ],
+      [
+        1443,
+        1230
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "outfits",
+    "id": "nhat-binh",
+    "view": "right",
+    "raw": "assets/wardrobe/female/shirts/nhat-binh/source/right.png",
+    "file": "shirts/nhat-binh/right.png",
+    "source": {
+      "x0": 252,
+      "x1": 765,
+      "y0": 79,
+      "y1": 1434,
+      "width": 514,
+      "height": 1356,
+      "center": 508.5
+    },
+    "scaleX": 1.0146520146520146,
+    "x": -27.338827838827797,
+    "rows": [
+      [
+        79,
+        244
+      ],
+      [
+        214.6,
+        302
+      ],
+      [
+        662.08,
+        735
+      ],
+      [
+        1435,
+        1230
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "outfits",
+    "id": "ba-ba",
+    "view": "right",
+    "raw": "assets/wardrobe/female/shirts/ba-ba/source/right.png",
+    "file": "shirts/ba-ba/right.png",
+    "source": {
+      "x0": 375,
+      "x1": 692,
+      "y0": 269,
+      "y1": 1008,
+      "width": 318,
+      "height": 740,
+      "center": 533.5
+    },
+    "scaleX": 0.8338983050847457,
+    "x": 61.025423728813564,
+    "rows": [
+      [
+        269,
+        266
+      ],
+      [
+        343,
+        302
+      ],
+      [
+        1009,
+        750
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "pants",
+    "id": "ivory",
+    "view": "right",
+    "raw": "assets/wardrobe/female/pants/ivory/source/right.png",
+    "file": "pants/ivory/right.png",
+    "source": {
+      "x0": 407,
+      "x1": 633,
+      "y0": 304,
+      "y1": 1356,
+      "width": 227,
+      "height": 1053,
+      "center": 520
+    },
+    "scaleX": 0.9074889867841409,
+    "x": 28.60572687224675,
+    "rows": [
+      [
+        304,
+        650
+      ],
+      [
+        1357,
+        1371
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "shoes",
+    "id": "flats",
+    "view": "right",
+    "raw": "assets/wardrobe/female/shoes/flats/source/right.png",
+    "file": "shoes/flats/right.png",
+    "source": {
+      "x0": 301,
+      "x1": 812,
+      "y0": 1233,
+      "y1": 1392,
+      "width": 512,
+      "height": 160,
+      "center": 556.5
+    },
+    "scaleX": 0.41796875,
+    "x": 309.900390625,
+    "rows": [
+      [
+        1233,
+        1344
+      ],
+      [
+        1393,
+        1420
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "shoes",
+    "id": "sneakers",
+    "view": "right",
+    "raw": "assets/wardrobe/female/shoes/sneakers/source/right.png",
+    "file": "shoes/sneakers/right.png",
+    "source": {
+      "x0": 361,
+      "x1": 762,
+      "y0": 1300,
+      "y1": 1475,
+      "width": 402,
+      "height": 176,
+      "center": 561.5
+    },
+    "scaleX": 0.5323383084577115,
+    "x": 243.592039800995,
+    "rows": [
+      [
+        1300,
+        1319
+      ],
+      [
+        1476,
+        1420
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "outfits",
+    "id": "jade",
+    "view": "left",
+    "raw": "assets/wardrobe/female/shirts/jade/source/left.png",
+    "file": "shirts/jade/left.png",
+    "source": {
+      "x0": 349,
+      "x1": 765,
+      "y0": 137,
+      "y1": 1450,
+      "width": 417,
+      "height": 1314,
+      "center": 557
+    },
+    "scaleX": 0.9245283018867925,
+    "x": 25.094339622641485,
+    "rows": [
+      [
+        137,
+        244
+      ],
+      [
+        268.4,
+        302
+      ],
+      [
+        702.02,
+        735
+      ],
+      [
+        1451,
+        1230
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "outfits",
+    "id": "rose",
+    "view": "left",
+    "raw": "assets/wardrobe/female/shirts/rose/source/left.png",
+    "file": "shirts/rose/left.png",
+    "source": {
+      "x0": 348,
+      "x1": 713,
+      "y0": 141,
+      "y1": 1428,
+      "width": 366,
+      "height": 1288,
+      "center": 530.5
+    },
+    "scaleX": 0.9879032258064516,
+    "x": -4.276209677419388,
+    "rows": [
+      [
+        141,
+        244
+      ],
+      [
+        269.8,
+        302
+      ],
+      [
+        694.84,
+        735
+      ],
+      [
+        1429,
+        1230
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "outfits",
+    "id": "tu-than",
+    "view": "left",
+    "raw": "assets/wardrobe/female/shirts/tu-than/source/left.png",
+    "file": "shirts/tu-than/left.png",
+    "source": {
+      "x0": 359,
+      "x1": 864,
+      "y0": 108,
+      "y1": 1427,
+      "width": 506,
+      "height": 1320,
+      "center": 611.5
+    },
+    "scaleX": 0.8974358974358975,
+    "x": 40.025641025640994,
+    "rows": [
+      [
+        108,
+        244
+      ],
+      [
+        240,
+        302
+      ],
+      [
+        675.6,
+        735
+      ],
+      [
+        1428,
+        1230
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "outfits",
+    "id": "ngu-than",
+    "view": "left",
+    "raw": "assets/wardrobe/female/shirts/ngu-than/source/left.png",
+    "file": "shirts/ngu-than/left.png",
+    "source": {
+      "x0": 260,
+      "x1": 817,
+      "y0": 77,
+      "y1": 1468,
+      "width": 558,
+      "height": 1392,
+      "center": 538.5
+    },
+    "scaleX": 0.8032786885245902,
+    "x": 99.14754098360658,
+    "rows": [
+      [
+        77,
+        244
+      ],
+      [
+        216.20000000000002,
+        302
+      ],
+      [
+        675.56,
+        735
+      ],
+      [
+        1469,
+        1230
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "outfits",
+    "id": "nhat-binh",
+    "view": "left",
+    "raw": "assets/wardrobe/female/shirts/nhat-binh/source/left.png",
+    "file": "shirts/nhat-binh/left.png",
+    "source": {
+      "x0": 350,
+      "x1": 878,
+      "y0": 99,
+      "y1": 1447,
+      "width": 529,
+      "height": 1349,
+      "center": 614
+    },
+    "scaleX": 0.9324324324324325,
+    "x": 19.601351351351354,
+    "rows": [
+      [
+        99,
+        244
+      ],
+      [
+        233.9,
+        302
+      ],
+      [
+        679.0699999999999,
+        735
+      ],
+      [
+        1448,
+        1230
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "outfits",
+    "id": "ba-ba",
+    "view": "left",
+    "raw": "assets/wardrobe/female/shirts/ba-ba/source/left.png",
+    "file": "shirts/ba-ba/left.png",
+    "source": {
+      "x0": 348,
+      "x1": 695,
+      "y0": 250,
+      "y1": 1059,
+      "width": 348,
+      "height": 810,
+      "center": 521.5
+    },
+    "scaleX": 0.7492354740061162,
+    "x": 121.14067278287462,
+    "rows": [
+      [
+        250,
+        266
+      ],
+      [
+        331,
+        302
+      ],
+      [
+        1060,
+        750
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "pants",
+    "id": "ivory",
+    "view": "left",
+    "raw": "assets/wardrobe/female/pants/ivory/source/left.png",
+    "file": "pants/ivory/left.png",
+    "source": {
+      "x0": 427,
+      "x1": 633,
+      "y0": 330,
+      "y1": 1371,
+      "width": 207,
+      "height": 1042,
+      "center": 530
+    },
+    "scaleX": 0.9855072463768116,
+    "x": -2.818840579710127,
+    "rows": [
+      [
+        330,
+        650
+      ],
+      [
+        1372,
+        1406
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "shoes",
+    "id": "flats",
+    "view": "left",
+    "raw": "assets/wardrobe/female/shoes/flats/source/left.png",
+    "file": "shoes/flats/left.png",
+    "source": {
+      "x0": 150,
+      "x1": 944,
+      "y0": 1145,
+      "y1": 1402,
+      "width": 795,
+      "height": 258,
+      "center": 547
+    },
+    "scaleX": 0.2679245283018868,
+    "x": 341.44528301886794,
+    "rows": [
+      [
+        1145,
+        1379
+      ],
+      [
+        1403,
+        1455
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "shoes",
+    "id": "sneakers",
+    "view": "left",
+    "raw": "assets/wardrobe/female/shoes/sneakers/source/left.png",
+    "file": "shoes/sneakers/left.png",
+    "source": {
+      "x0": 263,
+      "x1": 789,
+      "y0": 1226,
+      "y1": 1481,
+      "width": 527,
+      "height": 256,
+      "center": 526
+    },
+    "scaleX": 0.40417457305502846,
+    "x": 275.404174573055,
+    "rows": [
+      [
+        1226,
+        1354
+      ],
+      [
+        1482,
+        1455
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "outfits",
+    "id": "jade",
+    "view": "back",
+    "raw": "assets/wardrobe/female/shirts/jade/source/back.png",
+    "file": "shirts/jade/back.png",
+    "source": {
+      "x0": 231,
+      "x1": 802,
+      "y0": 88,
+      "y1": 1460,
+      "width": 572,
+      "height": 1373,
+      "center": 516.5
+    },
+    "scaleX": 0.9397163120567376,
+    "x": 30.95567375886526,
+    "rows": [
+      [
+        88,
+        264
+      ],
+      [
+        225.3,
+        302
+      ],
+      [
+        639,
+        735
+      ],
+      [
+        1461,
+        1230
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "outfits",
+    "id": "rose",
+    "view": "back",
+    "raw": "assets/wardrobe/female/shirts/rose/source/back.png",
+    "file": "shirts/rose/back.png",
+    "source": {
+      "x0": 243,
+      "x1": 783,
+      "y0": 120,
+      "y1": 1438,
+      "width": 541,
+      "height": 1319,
+      "center": 513
+    },
+    "scaleX": 0.9814814814814815,
+    "x": 10.490740740740705,
+    "rows": [
+      [
+        120,
+        264
+      ],
+      [
+        251.9,
+        302
+      ],
+      [
+        657,
+        735
+      ],
+      [
+        1439,
+        1230
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "outfits",
+    "id": "tu-than",
+    "view": "back",
+    "raw": "assets/wardrobe/female/shirts/tu-than/source/back.png",
+    "file": "shirts/tu-than/back.png",
+    "source": {
+      "x0": 102,
+      "x1": 922,
+      "y0": 98,
+      "y1": 1437,
+      "width": 821,
+      "height": 1340,
+      "center": 512
+    },
+    "scaleX": 0.7464788732394366,
+    "x": 131.67605633802816,
+    "rows": [
+      [
+        98,
+        264
+      ],
+      [
+        232,
+        302
+      ],
+      [
+        662,
+        735
+      ],
+      [
+        1438,
+        1230
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "outfits",
+    "id": "ngu-than",
+    "view": "back",
+    "raw": "assets/wardrobe/female/shirts/ngu-than/source/back.png",
+    "file": "shirts/ngu-than/back.png",
+    "source": {
+      "x0": 165,
+      "x1": 858,
+      "y0": 76,
+      "y1": 1459,
+      "width": 694,
+      "height": 1384,
+      "center": 511.5
+    },
+    "scaleX": 0.7636887608069164,
+    "x": 122.87319884726224,
+    "rows": [
+      [
+        76,
+        264
+      ],
+      [
+        214.4,
+        302
+      ],
+      [
+        707,
+        735
+      ],
+      [
+        1460,
+        1230
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "outfits",
+    "id": "nhat-binh",
+    "view": "back",
+    "raw": "assets/wardrobe/female/shirts/nhat-binh/source/back.png",
+    "file": "shirts/nhat-binh/back.png",
+    "source": {
+      "x0": 64,
+      "x1": 960,
+      "y0": 100,
+      "y1": 1441,
+      "width": 897,
+      "height": 1342,
+      "center": 512
+    },
+    "scaleX": 0.703125,
+    "x": 153.8515625,
+    "rows": [
+      [
+        100,
+        264
+      ],
+      [
+        234.20000000000002,
+        302
+      ],
+      [
+        871,
+        735
+      ],
+      [
+        1442,
+        1230
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "outfits",
+    "id": "ba-ba",
+    "view": "back",
+    "raw": "assets/wardrobe/female/shirts/ba-ba/source/back.png",
+    "file": "shirts/ba-ba/back.png",
+    "source": {
+      "x0": 48,
+      "x1": 977,
+      "y0": 265,
+      "y1": 1012,
+      "width": 930,
+      "height": 748,
+      "center": 512.5
+    },
+    "scaleX": 0.7737226277372263,
+    "x": 117.35401459854012,
+    "rows": [
+      [
+        265,
+        278
+      ],
+      [
+        339.8,
+        302
+      ],
+      [
+        1013,
+        750
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "pants",
+    "id": "ivory",
+    "view": "back",
+    "raw": "assets/wardrobe/female/pants/ivory/source/back.png",
+    "file": "pants/ivory/back.png",
+    "source": {
+      "x0": 314,
+      "x1": 715,
+      "y0": 208,
+      "y1": 1345,
+      "width": 402,
+      "height": 1138,
+      "center": 514.5
+    },
+    "scaleX": 0.7437810945273632,
+    "x": 131.32462686567163,
+    "rows": [
+      [
+        208,
+        650
+      ],
+      [
+        1346,
+        1386
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "shoes",
+    "id": "flats",
+    "view": "back",
+    "raw": "assets/wardrobe/female/shoes/flats/source/back.png",
+    "file": "shoes/flats/back.png",
+    "source": {
+      "x0": 263,
+      "x1": 802,
+      "y0": 1194,
+      "y1": 1425,
+      "width": 540,
+      "height": 232,
+      "center": 532.5
+    },
+    "scaleX": 0.5425925925925926,
+    "x": 224.0694444444444,
+    "rows": [
+      [
+        1194,
+        1359
+      ],
+      [
+        1426,
+        1435
+      ]
+    ]
+  },
+  {
+    "gender": "female",
+    "kind": "shoes",
+    "id": "sneakers",
+    "view": "back",
+    "raw": "assets/wardrobe/female/shoes/sneakers/source/back.png",
+    "file": "shoes/sneakers/back.png",
+    "source": {
+      "x0": 275,
+      "x1": 748,
+      "y0": 1201,
+      "y1": 1458,
+      "width": 474,
+      "height": 258,
+      "center": 511.5
+    },
+    "scaleX": 0.6181434599156118,
+    "x": 196.81962025316454,
+    "rows": [
+      [
+        1201,
+        1334
+      ],
+      [
+        1459,
+        1435
+      ]
+    ]
+  }
+]

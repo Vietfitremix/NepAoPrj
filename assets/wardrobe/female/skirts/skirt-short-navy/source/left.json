@@ -1,0 +1,13 @@
+{
+  "gender": "female",
+  "id": "skirt-short-navy",
+  "view": "left",
+  "file": "assets/wardrobe/female/skirts/skirt-short-navy/source/left.png",
+  "inputs": [
+    "C:/PROMPTxPTIT/frontend/public/figure/female-layers/body/left.png",
+    "C:/PROMPTxPTIT/assets/wardrobe/female/skirts/skirt-short-navy/source/front.png"
+  ],
+  "prompt": "Use case: compositing. Asset type: independent transparent clothing sprite for photorealistic Vietnamese dress-up character. Image 1 is the exact female wearer body, standing pose, camera, scale and canvas reference. Image 2 is the exact front garment design reference; preserve fabric color, seams, pockets, cut and details while rotating physically. Create ONLY navy blue short A-line skirt, structured waist band, gentle A-line flare, hidden side zipper, modest mid-thigh hem, smooth matte cotton twill; one continuous skirt without pants legs and without leg gap. Requested direction: strict LEFT profile, facing LEFT on screen. It must be fitted physically around the reference waist, hips, crotch and legs in exactly that pose, with natural 3D fabric folds and view-correct construction. Render waist and all garment parts including sections hidden by the arm, without gaps cut out for hands. The WEARER IS INVISIBLE: remove all head, torso, skin, hands, legs, feet, undershirt, reference gray shorts and footwear. OUTPUT is the EMPTY CLOTHING ONLY on a genuinely transparent alpha background, including transparent waist opening and space between trouser legs. Do not include any human pixels. Canvas MUST remain 1024x1536 full-body reference dimensions, with large blank transparent area where head and upper body were. Keep waist approximately y=660 and hem approximately y=940, follow exact hip and leg placement of image1; do not center item, enlarge it to fill image, zoom or crop. Photorealistic neutral studio texture matching the reference, no glow, no drop shadow, no background, no labels, no logos, no text, no cartoon, no mannequin, no extra garment. For side profile draw near and far leg cloth in correct depth. For back view show genuine rear construction, no front zipper/button.",
+  "tool": "built-in image_gen",
+  "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-25ee696b-f348-40dc-8778-7a2b30d7f51e.png"
+}

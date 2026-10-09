@@ -1,0 +1,6010 @@
+[
+  {
+    "gender": "male",
+    "id": "non-la",
+    "view": "front",
+    "file": "headwear/non-la/front.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 22,
+          "y": 63,
+          "w": 583,
+          "h": 506
+        },
+        "target": [
+          297,
+          74.87924528301886,
+          430,
+          373.20754716981133
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "non-la",
+    "view": "left",
+    "file": "headwear/non-la/left.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 47,
+          "y": 80,
+          "w": 562,
+          "h": 466
+        },
+        "target": [
+          305,
+          85.37473309608544,
+          430,
+          356.5480427046263
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "non-la",
+    "view": "right",
+    "file": "headwear/non-la/right.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 18,
+          "y": 70,
+          "w": 570,
+          "h": 465
+        },
+        "target": [
+          291,
+          89.00263157894736,
+          430,
+          350.7894736842105
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "non-la",
+    "view": "back",
+    "file": "headwear/non-la/back.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 29,
+          "y": 72,
+          "w": 563,
+          "h": 491
+        },
+        "target": [
+          297,
+          73.744404973357,
+          430,
+          375.0088809946714
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "non-la",
+    "view": "front",
+    "file": "headwear/non-la/front.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 22,
+          "y": 63,
+          "w": 583,
+          "h": 506
+        },
+        "target": [
+          312,
+          96.28301886792454,
+          400,
+          347.1698113207547
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "non-la",
+    "view": "left",
+    "file": "headwear/non-la/left.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 47,
+          "y": 80,
+          "w": 562,
+          "h": 466
+        },
+        "target": [
+          320,
+          106.04626334519571,
+          400,
+          331.6725978647687
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "non-la",
+    "view": "right",
+    "file": "headwear/non-la/right.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 18,
+          "y": 70,
+          "w": 570,
+          "h": 465
+        },
+        "target": [
+          306,
+          109.42105263157893,
+          400,
+          326.3157894736842
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "non-la",
+    "view": "back",
+    "file": "headwear/non-la/back.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 29,
+          "y": 72,
+          "w": 563,
+          "h": 491
+        },
+        "target": [
+          312,
+          95.22735346358792,
+          400,
+          348.8454706927176
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "non-quai-thao",
+    "view": "front",
+    "file": "headwear/non-quai-thao/front.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 38,
+          "y": 52,
+          "w": 566,
+          "h": 542
+        },
+        "target": [
+          232,
+          229.5618374558304,
+          560,
+          536.2544169611307
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "non-quai-thao",
+    "view": "left",
+    "file": "headwear/non-quai-thao/left.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 48,
+          "y": 53,
+          "w": 541,
+          "h": 556
+        },
+        "target": [
+          240,
+          223.6709796672828,
+          560,
+          575.5268022181147
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "non-quai-thao",
+    "view": "right",
+    "file": "headwear/non-quai-thao/right.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 39,
+          "y": 45,
+          "w": 547,
+          "h": 537
+        },
+        "target": [
+          226,
+          227.53564899451555,
+          560,
+          549.762340036563
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "non-quai-thao",
+    "view": "back",
+    "file": "headwear/non-quai-thao/back.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 29,
+          "y": 40,
+          "w": 565,
+          "h": 541
+        },
+        "target": [
+          232,
+          229.56814159292037,
+          560,
+          536.212389380531
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "non-quai-thao",
+    "view": "front",
+    "file": "headwear/non-quai-thao/front.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 38,
+          "y": 52,
+          "w": 566,
+          "h": 542
+        },
+        "target": [
+          247,
+          238.8710247349823,
+          530,
+          507.52650176678446
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "non-quai-thao",
+    "view": "left",
+    "file": "headwear/non-quai-thao/left.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 48,
+          "y": 53,
+          "w": 541,
+          "h": 556
+        },
+        "target": [
+          255,
+          233.29574861367837,
+          530,
+          544.6950092421441
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "non-quai-thao",
+    "view": "right",
+    "file": "headwear/non-quai-thao/right.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 39,
+          "y": 45,
+          "w": 547,
+          "h": 537
+        },
+        "target": [
+          241,
+          236.95338208409507,
+          530,
+          520.3107861060329
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "non-quai-thao",
+    "view": "back",
+    "file": "headwear/non-quai-thao/back.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 29,
+          "y": 40,
+          "w": 565,
+          "h": 541
+        },
+        "target": [
+          247,
+          238.87699115044248,
+          530,
+          507.4867256637168
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "khan-van",
+    "view": "front",
+    "file": "headwear/khan-van/front.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 32,
+          "y": 115,
+          "w": 580,
+          "h": 393
+        },
+        "target": [
+          409.5,
+          204,
+          205,
+          95
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "khan-van",
+    "view": "left",
+    "file": "headwear/khan-van/left.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 85,
+          "y": 114,
+          "w": 505,
+          "h": 420
+        },
+        "target": [
+          417.5,
+          204,
+          205,
+          95
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "khan-van",
+    "view": "right",
+    "file": "headwear/khan-van/right.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 45,
+          "y": 93,
+          "w": 520,
+          "h": 405
+        },
+        "target": [
+          403.5,
+          204,
+          205,
+          95
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "khan-van",
+    "view": "back",
+    "file": "headwear/khan-van/back.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 45,
+          "y": 114,
+          "w": 556,
+          "h": 376
+        },
+        "target": [
+          409.5,
+          204,
+          205,
+          95
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "khan-van",
+    "view": "front",
+    "file": "headwear/khan-van/front.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 32,
+          "y": 115,
+          "w": 580,
+          "h": 393
+        },
+        "target": [
+          412,
+          218,
+          200,
+          95
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "khan-van",
+    "view": "left",
+    "file": "headwear/khan-van/left.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 85,
+          "y": 114,
+          "w": 505,
+          "h": 420
+        },
+        "target": [
+          420,
+          218,
+          200,
+          95
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "khan-van",
+    "view": "right",
+    "file": "headwear/khan-van/right.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 45,
+          "y": 93,
+          "w": 520,
+          "h": 405
+        },
+        "target": [
+          406,
+          218,
+          200,
+          95
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "khan-van",
+    "view": "back",
+    "file": "headwear/khan-van/back.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 45,
+          "y": 114,
+          "w": 556,
+          "h": 376
+        },
+        "target": [
+          412,
+          218,
+          200,
+          95
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "khan-mo-qua",
+    "view": "front",
+    "file": "headwear/khan-mo-qua/front.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 35,
+          "y": 68,
+          "w": 566,
+          "h": 519
+        },
+        "target": [
+          389.5,
+          204,
+          245,
+          280
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "khan-mo-qua",
+    "view": "left",
+    "file": "headwear/khan-mo-qua/left.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 19,
+          "y": 70,
+          "w": 594,
+          "h": 516
+        },
+        "target": [
+          397.5,
+          204,
+          245,
+          280
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "khan-mo-qua",
+    "view": "right",
+    "file": "headwear/khan-mo-qua/right.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 20,
+          "y": 69,
+          "w": 590,
+          "h": 492
+        },
+        "target": [
+          383.5,
+          204,
+          245,
+          280
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "khan-mo-qua",
+    "view": "back",
+    "file": "headwear/khan-mo-qua/back.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 30,
+          "y": 40,
+          "w": 577,
+          "h": 531
+        },
+        "target": [
+          389.5,
+          204,
+          245,
+          280
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "khan-mo-qua",
+    "view": "front",
+    "file": "headwear/khan-mo-qua/front.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 35,
+          "y": 68,
+          "w": 566,
+          "h": 519
+        },
+        "target": [
+          392,
+          218,
+          240,
+          280
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "khan-mo-qua",
+    "view": "left",
+    "file": "headwear/khan-mo-qua/left.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 19,
+          "y": 70,
+          "w": 594,
+          "h": 516
+        },
+        "target": [
+          400,
+          218,
+          240,
+          280
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "khan-mo-qua",
+    "view": "right",
+    "file": "headwear/khan-mo-qua/right.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 20,
+          "y": 69,
+          "w": 590,
+          "h": 492
+        },
+        "target": [
+          386,
+          218,
+          240,
+          280
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "khan-mo-qua",
+    "view": "back",
+    "file": "headwear/khan-mo-qua/back.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 30,
+          "y": 40,
+          "w": 577,
+          "h": 531
+        },
+        "target": [
+          392,
+          218,
+          240,
+          280
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "khan-xep",
+    "view": "front",
+    "file": "headwear/khan-xep/front.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 67,
+          "y": 103,
+          "w": 512,
+          "h": 397
+        },
+        "target": [
+          409.5,
+          204,
+          205,
+          135
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "khan-xep",
+    "view": "left",
+    "file": "headwear/khan-xep/left.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 43,
+          "y": 124,
+          "w": 539,
+          "h": 419
+        },
+        "target": [
+          417.5,
+          204,
+          205,
+          135
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "khan-xep",
+    "view": "right",
+    "file": "headwear/khan-xep/right.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 61,
+          "y": 98,
+          "w": 536,
+          "h": 409
+        },
+        "target": [
+          403.5,
+          204,
+          205,
+          135
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "khan-xep",
+    "view": "back",
+    "file": "headwear/khan-xep/back.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 58,
+          "y": 84,
+          "w": 511,
+          "h": 424
+        },
+        "target": [
+          409.5,
+          204,
+          205,
+          135
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "khan-xep",
+    "view": "front",
+    "file": "headwear/khan-xep/front.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 67,
+          "y": 103,
+          "w": 512,
+          "h": 397
+        },
+        "target": [
+          412,
+          218,
+          200,
+          135
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "khan-xep",
+    "view": "left",
+    "file": "headwear/khan-xep/left.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 43,
+          "y": 124,
+          "w": 539,
+          "h": 419
+        },
+        "target": [
+          420,
+          218,
+          200,
+          135
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "khan-xep",
+    "view": "right",
+    "file": "headwear/khan-xep/right.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 61,
+          "y": 98,
+          "w": 536,
+          "h": 409
+        },
+        "target": [
+          406,
+          218,
+          200,
+          135
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "khan-xep",
+    "view": "back",
+    "file": "headwear/khan-xep/back.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 58,
+          "y": 84,
+          "w": 511,
+          "h": 424
+        },
+        "target": [
+          412,
+          218,
+          200,
+          135
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "hoa-cai-toc",
+    "view": "front",
+    "file": "hair-accessories/hoa-cai-toc/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 64,
+          "y": 57,
+          "w": 535,
+          "h": 509
+        },
+        "target": [
+          583,
+          82,
+          49,
+          49
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "hoa-cai-toc",
+    "view": "left",
+    "file": "hair-accessories/hoa-cai-toc/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 199,
+          "y": 63,
+          "w": 357,
+          "h": 514
+        },
+        "target": [
+          570,
+          82,
+          49,
+          49
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "hoa-cai-toc",
+    "view": "right",
+    "file": "hair-accessories/hoa-cai-toc/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 107,
+          "y": 54,
+          "w": 372,
+          "h": 497
+        },
+        "target": [
+          435,
+          82,
+          49,
+          49
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "hoa-cai-toc",
+    "view": "back",
+    "file": "hair-accessories/hoa-cai-toc/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 56,
+          "y": 57,
+          "w": 519,
+          "h": 482
+        },
+        "target": [
+          397,
+          82,
+          49,
+          49
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "hoa-cai-toc",
+    "view": "front",
+    "file": "hair-accessories/hoa-cai-toc/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 64,
+          "y": 57,
+          "w": 535,
+          "h": 509
+        },
+        "target": [
+          583,
+          95,
+          49,
+          49
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "hoa-cai-toc",
+    "view": "left",
+    "file": "hair-accessories/hoa-cai-toc/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 199,
+          "y": 63,
+          "w": 357,
+          "h": 514
+        },
+        "target": [
+          570,
+          95,
+          49,
+          49
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "hoa-cai-toc",
+    "view": "right",
+    "file": "hair-accessories/hoa-cai-toc/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 107,
+          "y": 54,
+          "w": 372,
+          "h": 497
+        },
+        "target": [
+          435,
+          95,
+          49,
+          49
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "hoa-cai-toc",
+    "view": "back",
+    "file": "hair-accessories/hoa-cai-toc/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 56,
+          "y": 57,
+          "w": 519,
+          "h": 482
+        },
+        "target": [
+          397,
+          95,
+          49,
+          49
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "guoc",
+    "view": "front",
+    "file": "shoes/guoc/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 43,
+          "y": 152,
+          "w": 263,
+          "h": 318
+        },
+        "target": [
+          302,
+          1320,
+          145,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 330,
+          "y": 152,
+          "w": 262,
+          "h": 318
+        },
+        "target": [
+          585,
+          1320,
+          145,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "guoc",
+    "view": "left",
+    "file": "shoes/guoc/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 19,
+          "y": 196,
+          "w": 579,
+          "h": 270
+        },
+        "target": [
+          345,
+          1325,
+          250,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "guoc",
+    "view": "right",
+    "file": "shoes/guoc/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 29,
+          "y": 196,
+          "w": 580,
+          "h": 270
+        },
+        "target": [
+          432,
+          1325,
+          226,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "guoc",
+    "view": "back",
+    "file": "shoes/guoc/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 61,
+          "y": 158,
+          "w": 247,
+          "h": 299
+        },
+        "target": [
+          302,
+          1310,
+          145,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 325,
+          "y": 158,
+          "w": 248,
+          "h": 299
+        },
+        "target": [
+          595,
+          1310,
+          145,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "guoc",
+    "view": "front",
+    "file": "shoes/guoc/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 43,
+          "y": 152,
+          "w": 263,
+          "h": 318
+        },
+        "target": [
+          363,
+          1320,
+          115,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 330,
+          "y": 152,
+          "w": 262,
+          "h": 318
+        },
+        "target": [
+          569,
+          1320,
+          115,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "guoc",
+    "view": "left",
+    "file": "shoes/guoc/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 19,
+          "y": 196,
+          "w": 579,
+          "h": 270
+        },
+        "target": [
+          355,
+          1325,
+          245,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "guoc",
+    "view": "right",
+    "file": "shoes/guoc/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 29,
+          "y": 196,
+          "w": 580,
+          "h": 270
+        },
+        "target": [
+          422,
+          1325,
+          213,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "guoc",
+    "view": "back",
+    "file": "shoes/guoc/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 61,
+          "y": 158,
+          "w": 247,
+          "h": 299
+        },
+        "target": [
+          365,
+          1310,
+          115,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 325,
+          "y": 158,
+          "w": 248,
+          "h": 299
+        },
+        "target": [
+          565,
+          1310,
+          115,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "hai-theu",
+    "view": "front",
+    "file": "shoes/hai-theu/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 28,
+          "y": 141,
+          "w": 273,
+          "h": 359
+        },
+        "target": [
+          302,
+          1320,
+          145,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 325,
+          "y": 141,
+          "w": 273,
+          "h": 357
+        },
+        "target": [
+          585,
+          1320,
+          145,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "hai-theu",
+    "view": "left",
+    "file": "shoes/hai-theu/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 11,
+          "y": 198,
+          "w": 610,
+          "h": 264
+        },
+        "target": [
+          345,
+          1325,
+          250,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "hai-theu",
+    "view": "right",
+    "file": "shoes/hai-theu/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 6,
+          "y": 199,
+          "w": 611,
+          "h": 263
+        },
+        "target": [
+          432,
+          1325,
+          226,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "hai-theu",
+    "view": "back",
+    "file": "shoes/hai-theu/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 30,
+          "y": 138,
+          "w": 279,
+          "h": 338
+        },
+        "target": [
+          302,
+          1310,
+          145,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 317,
+          "y": 138,
+          "w": 280,
+          "h": 339
+        },
+        "target": [
+          595,
+          1310,
+          145,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "hai-theu",
+    "view": "front",
+    "file": "shoes/hai-theu/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 28,
+          "y": 141,
+          "w": 273,
+          "h": 359
+        },
+        "target": [
+          363,
+          1320,
+          115,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 325,
+          "y": 141,
+          "w": 273,
+          "h": 357
+        },
+        "target": [
+          569,
+          1320,
+          115,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "hai-theu",
+    "view": "left",
+    "file": "shoes/hai-theu/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 11,
+          "y": 198,
+          "w": 610,
+          "h": 264
+        },
+        "target": [
+          355,
+          1325,
+          245,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "hai-theu",
+    "view": "right",
+    "file": "shoes/hai-theu/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 6,
+          "y": 199,
+          "w": 611,
+          "h": 263
+        },
+        "target": [
+          422,
+          1325,
+          213,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "hai-theu",
+    "view": "back",
+    "file": "shoes/hai-theu/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 30,
+          "y": 138,
+          "w": 279,
+          "h": 338
+        },
+        "target": [
+          365,
+          1310,
+          115,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 317,
+          "y": 138,
+          "w": 280,
+          "h": 339
+        },
+        "target": [
+          565,
+          1310,
+          115,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "giay-bup-be",
+    "view": "front",
+    "file": "shoes/giay-bup-be/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 42,
+          "y": 173,
+          "w": 270,
+          "h": 368
+        },
+        "target": [
+          302,
+          1320,
+          145,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 320,
+          "y": 173,
+          "w": 269,
+          "h": 369
+        },
+        "target": [
+          585,
+          1320,
+          145,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "giay-bup-be",
+    "view": "left",
+    "file": "shoes/giay-bup-be/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 2,
+          "y": 253,
+          "w": 597,
+          "h": 274
+        },
+        "target": [
+          345,
+          1325,
+          250,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "giay-bup-be",
+    "view": "right",
+    "file": "shoes/giay-bup-be/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 31,
+          "y": 206,
+          "w": 595,
+          "h": 269
+        },
+        "target": [
+          432,
+          1325,
+          226,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "giay-bup-be",
+    "view": "back",
+    "file": "shoes/giay-bup-be/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 62,
+          "y": 181,
+          "w": 247,
+          "h": 285
+        },
+        "target": [
+          302,
+          1310,
+          145,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 319,
+          "y": 181,
+          "w": 247,
+          "h": 286
+        },
+        "target": [
+          595,
+          1310,
+          145,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "giay-bup-be",
+    "view": "front",
+    "file": "shoes/giay-bup-be/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 42,
+          "y": 173,
+          "w": 270,
+          "h": 368
+        },
+        "target": [
+          363,
+          1320,
+          115,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 320,
+          "y": 173,
+          "w": 269,
+          "h": 369
+        },
+        "target": [
+          569,
+          1320,
+          115,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "giay-bup-be",
+    "view": "left",
+    "file": "shoes/giay-bup-be/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 2,
+          "y": 253,
+          "w": 597,
+          "h": 274
+        },
+        "target": [
+          355,
+          1325,
+          245,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "giay-bup-be",
+    "view": "right",
+    "file": "shoes/giay-bup-be/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 31,
+          "y": 206,
+          "w": 595,
+          "h": 269
+        },
+        "target": [
+          422,
+          1325,
+          213,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "giay-bup-be",
+    "view": "back",
+    "file": "shoes/giay-bup-be/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 62,
+          "y": 181,
+          "w": 247,
+          "h": 285
+        },
+        "target": [
+          365,
+          1310,
+          115,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 319,
+          "y": 181,
+          "w": 247,
+          "h": 286
+        },
+        "target": [
+          565,
+          1310,
+          115,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "giay-ta",
+    "view": "front",
+    "file": "shoes/giay-ta/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 39,
+          "y": 134,
+          "w": 269,
+          "h": 375
+        },
+        "target": [
+          302,
+          1320,
+          145,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 319,
+          "y": 134,
+          "w": 269,
+          "h": 375
+        },
+        "target": [
+          585,
+          1320,
+          145,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "giay-ta",
+    "view": "left",
+    "file": "shoes/giay-ta/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 8,
+          "y": 209,
+          "w": 599,
+          "h": 263
+        },
+        "target": [
+          345,
+          1325,
+          250,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "giay-ta",
+    "view": "right",
+    "file": "shoes/giay-ta/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 21,
+          "y": 183,
+          "w": 599,
+          "h": 261
+        },
+        "target": [
+          432,
+          1325,
+          226,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "giay-ta",
+    "view": "back",
+    "file": "shoes/giay-ta/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 39,
+          "y": 136,
+          "w": 266,
+          "h": 309
+        },
+        "target": [
+          302,
+          1310,
+          145,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 322,
+          "y": 136,
+          "w": 267,
+          "h": 309
+        },
+        "target": [
+          595,
+          1310,
+          145,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "giay-ta",
+    "view": "front",
+    "file": "shoes/giay-ta/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 39,
+          "y": 134,
+          "w": 269,
+          "h": 375
+        },
+        "target": [
+          363,
+          1320,
+          115,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 319,
+          "y": 134,
+          "w": 269,
+          "h": 375
+        },
+        "target": [
+          569,
+          1320,
+          115,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "giay-ta",
+    "view": "left",
+    "file": "shoes/giay-ta/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 8,
+          "y": 209,
+          "w": 599,
+          "h": 263
+        },
+        "target": [
+          355,
+          1325,
+          245,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "giay-ta",
+    "view": "right",
+    "file": "shoes/giay-ta/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 21,
+          "y": 183,
+          "w": 599,
+          "h": 261
+        },
+        "target": [
+          422,
+          1325,
+          213,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "giay-ta",
+    "view": "back",
+    "file": "shoes/giay-ta/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 39,
+          "y": 136,
+          "w": 266,
+          "h": 309
+        },
+        "target": [
+          365,
+          1310,
+          115,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 322,
+          "y": 136,
+          "w": 267,
+          "h": 309
+        },
+        "target": [
+          565,
+          1310,
+          115,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "giay-the-thao",
+    "view": "front",
+    "file": "shoes/giay-the-thao/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 42,
+          "y": 154,
+          "w": 261,
+          "h": 390
+        },
+        "target": [
+          302,
+          1320,
+          145,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 325,
+          "y": 153,
+          "w": 260,
+          "h": 391
+        },
+        "target": [
+          585,
+          1320,
+          145,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "giay-the-thao",
+    "view": "left",
+    "file": "shoes/giay-the-thao/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 17,
+          "y": 215,
+          "w": 578,
+          "h": 333
+        },
+        "target": [
+          345,
+          1325,
+          250,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "giay-the-thao",
+    "view": "right",
+    "file": "shoes/giay-the-thao/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 32,
+          "y": 208,
+          "w": 580,
+          "h": 330
+        },
+        "target": [
+          432,
+          1325,
+          226,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "giay-the-thao",
+    "view": "back",
+    "file": "shoes/giay-the-thao/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 60,
+          "y": 171,
+          "w": 253,
+          "h": 337
+        },
+        "target": [
+          302,
+          1310,
+          145,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 313,
+          "y": 171,
+          "w": 262,
+          "h": 337
+        },
+        "target": [
+          595,
+          1310,
+          145,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "giay-the-thao",
+    "view": "front",
+    "file": "shoes/giay-the-thao/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 42,
+          "y": 154,
+          "w": 261,
+          "h": 390
+        },
+        "target": [
+          363,
+          1320,
+          115,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 325,
+          "y": 153,
+          "w": 260,
+          "h": 391
+        },
+        "target": [
+          569,
+          1320,
+          115,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "giay-the-thao",
+    "view": "left",
+    "file": "shoes/giay-the-thao/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 17,
+          "y": 215,
+          "w": 578,
+          "h": 333
+        },
+        "target": [
+          355,
+          1325,
+          245,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "giay-the-thao",
+    "view": "right",
+    "file": "shoes/giay-the-thao/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 32,
+          "y": 208,
+          "w": 580,
+          "h": 330
+        },
+        "target": [
+          422,
+          1325,
+          213,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "giay-the-thao",
+    "view": "back",
+    "file": "shoes/giay-the-thao/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 60,
+          "y": 171,
+          "w": 253,
+          "h": 337
+        },
+        "target": [
+          365,
+          1310,
+          115,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 313,
+          "y": 171,
+          "w": 262,
+          "h": 337
+        },
+        "target": [
+          565,
+          1310,
+          115,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "tui-coi",
+    "view": "front",
+    "file": "bags/tui-coi/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 52,
+          "y": 55,
+          "w": 530,
+          "h": 516
+        },
+        "target": [
+          697,
+          810,
+          170,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "tui-coi",
+    "view": "left",
+    "file": "bags/tui-coi/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 231,
+          "y": 58,
+          "w": 178,
+          "h": 510
+        },
+        "target": [
+          448,
+          810,
+          62,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "tui-coi",
+    "view": "right",
+    "file": "bags/tui-coi/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 221,
+          "y": 58,
+          "w": 181,
+          "h": 505
+        },
+        "target": [
+          518,
+          810,
+          62,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "tui-coi",
+    "view": "back",
+    "file": "bags/tui-coi/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 49,
+          "y": 58,
+          "w": 529,
+          "h": 507
+        },
+        "target": [
+          169,
+          810,
+          170,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "tui-coi",
+    "view": "front",
+    "file": "bags/tui-coi/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 52,
+          "y": 55,
+          "w": 530,
+          "h": 516
+        },
+        "target": [
+          657,
+          810,
+          170,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "tui-coi",
+    "view": "left",
+    "file": "bags/tui-coi/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 231,
+          "y": 58,
+          "w": 178,
+          "h": 510
+        },
+        "target": [
+          448,
+          810,
+          62,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "tui-coi",
+    "view": "right",
+    "file": "bags/tui-coi/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 221,
+          "y": 58,
+          "w": 181,
+          "h": 505
+        },
+        "target": [
+          518,
+          810,
+          62,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "tui-coi",
+    "view": "back",
+    "file": "bags/tui-coi/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 49,
+          "y": 58,
+          "w": 529,
+          "h": 507
+        },
+        "target": [
+          200,
+          810,
+          170,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "quat-giay",
+    "view": "front",
+    "file": "handheld/quat-giay/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 9,
+          "y": 111,
+          "w": 618,
+          "h": 446
+        },
+        "target": [
+          130,
+          812,
+          210,
+          230
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "quat-giay",
+    "view": "left",
+    "file": "handheld/quat-giay/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 0,
+          "y": 84,
+          "w": 386,
+          "h": 492
+        },
+        "target": [
+          459,
+          812,
+          26,
+          230
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "quat-giay",
+    "view": "right",
+    "file": "handheld/quat-giay/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 243,
+          "y": 81,
+          "w": 120,
+          "h": 480
+        },
+        "target": [
+          536,
+          812,
+          26,
+          230
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "quat-giay",
+    "view": "back",
+    "file": "handheld/quat-giay/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 0,
+          "y": 97,
+          "w": 621,
+          "h": 438
+        },
+        "target": [
+          677,
+          812,
+          210,
+          230
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "quat-giay",
+    "view": "front",
+    "file": "handheld/quat-giay/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 9,
+          "y": 111,
+          "w": 618,
+          "h": 446
+        },
+        "target": [
+          175,
+          821,
+          210,
+          230
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "quat-giay",
+    "view": "left",
+    "file": "handheld/quat-giay/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 0,
+          "y": 84,
+          "w": 386,
+          "h": 492
+        },
+        "target": [
+          459,
+          821,
+          26,
+          230
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "quat-giay",
+    "view": "right",
+    "file": "handheld/quat-giay/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 243,
+          "y": 81,
+          "w": 120,
+          "h": 480
+        },
+        "target": [
+          536,
+          821,
+          26,
+          230
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "quat-giay",
+    "view": "back",
+    "file": "handheld/quat-giay/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 0,
+          "y": 97,
+          "w": 621,
+          "h": 438
+        },
+        "target": [
+          637,
+          821,
+          210,
+          230
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "kieng-bac",
+    "view": "front",
+    "file": "jewelry/necklaces/kieng-bac/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 41,
+          "y": 76,
+          "w": 586,
+          "h": 499
+        },
+        "target": [
+          431,
+          254,
+          162,
+          64
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "kieng-bac",
+    "view": "left",
+    "file": "jewelry/necklaces/kieng-bac/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 0,
+          "y": 52,
+          "w": 475,
+          "h": 538
+        },
+        "target": [
+          444,
+          252,
+          45,
+          76
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "kieng-bac",
+    "view": "right",
+    "file": "jewelry/necklaces/kieng-bac/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 169,
+          "y": 44,
+          "w": 170,
+          "h": 529
+        },
+        "target": [
+          510,
+          252,
+          45,
+          76
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "kieng-bac",
+    "view": "back",
+    "file": "jewelry/necklaces/kieng-bac/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 19,
+          "y": 76,
+          "w": 587,
+          "h": 483
+        },
+        "target": [
+          431,
+          242,
+          162,
+          64
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "kieng-bac",
+    "view": "front",
+    "file": "jewelry/necklaces/kieng-bac/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 41,
+          "y": 76,
+          "w": 586,
+          "h": 499
+        },
+        "target": [
+          435,
+          254,
+          154,
+          64
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "kieng-bac",
+    "view": "left",
+    "file": "jewelry/necklaces/kieng-bac/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 0,
+          "y": 52,
+          "w": 475,
+          "h": 538
+        },
+        "target": [
+          444,
+          252,
+          45,
+          76
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "kieng-bac",
+    "view": "right",
+    "file": "jewelry/necklaces/kieng-bac/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 169,
+          "y": 44,
+          "w": 170,
+          "h": 529
+        },
+        "target": [
+          510,
+          252,
+          45,
+          76
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "kieng-bac",
+    "view": "back",
+    "file": "jewelry/necklaces/kieng-bac/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 19,
+          "y": 76,
+          "w": 587,
+          "h": 483
+        },
+        "target": [
+          435,
+          242,
+          154,
+          64
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "bong-tai",
+    "view": "front",
+    "file": "jewelry/earrings/bong-tai/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 86,
+          "y": 130,
+          "w": 188,
+          "h": 405
+        },
+        "target": [
+          435,
+          170,
+          16,
+          32
+        ]
+      },
+      {
+        "crop": {
+          "x": 358,
+          "y": 133,
+          "w": 188,
+          "h": 401
+        },
+        "target": [
+          570,
+          170,
+          16,
+          32
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "bong-tai",
+    "view": "left",
+    "file": "jewelry/earrings/bong-tai/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 197,
+          "y": 90,
+          "w": 241,
+          "h": 469
+        },
+        "target": [
+          519,
+          179,
+          16,
+          32
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "bong-tai",
+    "view": "right",
+    "file": "jewelry/earrings/bong-tai/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 194,
+          "y": 81,
+          "w": 232,
+          "h": 459
+        },
+        "target": [
+          497,
+          179,
+          16,
+          32
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "bong-tai",
+    "view": "back",
+    "file": "jewelry/earrings/bong-tai/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 86,
+          "y": 126,
+          "w": 192,
+          "h": 406
+        },
+        "target": [
+          435,
+          170,
+          16,
+          32
+        ]
+      },
+      {
+        "crop": {
+          "x": 351,
+          "y": 128,
+          "w": 192,
+          "h": 404
+        },
+        "target": [
+          570,
+          170,
+          16,
+          32
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "bong-tai",
+    "view": "front",
+    "file": "jewelry/earrings/bong-tai/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 86,
+          "y": 130,
+          "w": 188,
+          "h": 405
+        },
+        "target": [
+          435,
+          179,
+          16,
+          32
+        ]
+      },
+      {
+        "crop": {
+          "x": 358,
+          "y": 133,
+          "w": 188,
+          "h": 401
+        },
+        "target": [
+          575,
+          179,
+          16,
+          32
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "bong-tai",
+    "view": "left",
+    "file": "jewelry/earrings/bong-tai/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 197,
+          "y": 90,
+          "w": 241,
+          "h": 469
+        },
+        "target": [
+          516,
+          190,
+          16,
+          32
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "bong-tai",
+    "view": "right",
+    "file": "jewelry/earrings/bong-tai/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 194,
+          "y": 81,
+          "w": 232,
+          "h": 459
+        },
+        "target": [
+          483,
+          190,
+          16,
+          32
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "bong-tai",
+    "view": "back",
+    "file": "jewelry/earrings/bong-tai/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 86,
+          "y": 126,
+          "w": 192,
+          "h": 406
+        },
+        "target": [
+          435,
+          179,
+          16,
+          32
+        ]
+      },
+      {
+        "crop": {
+          "x": 351,
+          "y": 128,
+          "w": 192,
+          "h": 404
+        },
+        "target": [
+          575,
+          179,
+          16,
+          32
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "vong-tay",
+    "view": "front",
+    "file": "jewelry/bracelets/vong-tay/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 52,
+          "y": 225,
+          "w": 547,
+          "h": 181
+        },
+        "target": [
+          757,
+          733,
+          54,
+          19
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "vong-tay",
+    "view": "left",
+    "file": "jewelry/bracelets/vong-tay/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 230,
+          "y": 78,
+          "w": 152,
+          "h": 466
+        },
+        "target": [
+          455,
+          733,
+          54,
+          19
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "vong-tay",
+    "view": "right",
+    "file": "jewelry/bracelets/vong-tay/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 249,
+          "y": 77,
+          "w": 159,
+          "h": 460
+        },
+        "target": [
+          501,
+          733,
+          54,
+          19
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "vong-tay",
+    "view": "back",
+    "file": "jewelry/bracelets/vong-tay/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 46,
+          "y": 224,
+          "w": 535,
+          "h": 183
+        },
+        "target": [
+          221,
+          733,
+          54,
+          19
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "vong-tay",
+    "view": "front",
+    "file": "jewelry/bracelets/vong-tay/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 52,
+          "y": 225,
+          "w": 547,
+          "h": 181
+        },
+        "target": [
+          718,
+          727,
+          43,
+          19
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "vong-tay",
+    "view": "left",
+    "file": "jewelry/bracelets/vong-tay/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 230,
+          "y": 78,
+          "w": 152,
+          "h": 466
+        },
+        "target": [
+          455,
+          727,
+          43,
+          19
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "vong-tay",
+    "view": "right",
+    "file": "jewelry/bracelets/vong-tay/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 249,
+          "y": 77,
+          "w": 159,
+          "h": 460
+        },
+        "target": [
+          502,
+          727,
+          43,
+          19
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "vong-tay",
+    "view": "back",
+    "file": "jewelry/bracelets/vong-tay/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 46,
+          "y": 224,
+          "w": 535,
+          "h": 183
+        },
+        "target": [
+          253,
+          727,
+          43,
+          19
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "tai-nghe",
+    "view": "front",
+    "file": "headphones/tai-nghe/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 54,
+          "y": 39,
+          "w": 527,
+          "h": 260
+        },
+        "target": [
+          408,
+          12,
+          208,
+          117
+        ]
+      },
+      {
+        "crop": {
+          "x": 46,
+          "y": 292,
+          "w": 217,
+          "h": 280
+        },
+        "target": [
+          400,
+          116,
+          51,
+          81
+        ]
+      },
+      {
+        "crop": {
+          "x": 366,
+          "y": 292,
+          "w": 223,
+          "h": 281
+        },
+        "target": [
+          574,
+          116,
+          51,
+          81
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "tai-nghe",
+    "view": "left",
+    "file": "headphones/tai-nghe/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 272,
+          "y": 43,
+          "w": 136,
+          "h": 261
+        },
+        "target": [
+          506,
+          18,
+          40,
+          115
+        ]
+      },
+      {
+        "crop": {
+          "x": 220,
+          "y": 297,
+          "w": 255,
+          "h": 283
+        },
+        "target": [
+          486,
+          116,
+          80,
+          84
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "tai-nghe",
+    "view": "right",
+    "file": "headphones/tai-nghe/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 217,
+          "y": 46,
+          "w": 148,
+          "h": 259
+        },
+        "target": [
+          480,
+          18,
+          40,
+          115
+        ]
+      },
+      {
+        "crop": {
+          "x": 153,
+          "y": 298,
+          "w": 261,
+          "h": 281
+        },
+        "target": [
+          460,
+          116,
+          80,
+          84
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "tai-nghe",
+    "view": "back",
+    "file": "headphones/tai-nghe/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 51,
+          "y": 37,
+          "w": 535,
+          "h": 257
+        },
+        "target": [
+          408,
+          12,
+          208,
+          117
+        ]
+      },
+      {
+        "crop": {
+          "x": 45,
+          "y": 287,
+          "w": 216,
+          "h": 279
+        },
+        "target": [
+          400,
+          116,
+          51,
+          81
+        ]
+      },
+      {
+        "crop": {
+          "x": 368,
+          "y": 287,
+          "w": 222,
+          "h": 279
+        },
+        "target": [
+          574,
+          116,
+          51,
+          81
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "tai-nghe",
+    "view": "front",
+    "file": "headphones/tai-nghe/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 54,
+          "y": 39,
+          "w": 527,
+          "h": 260
+        },
+        "target": [
+          408,
+          25,
+          208,
+          117
+        ]
+      },
+      {
+        "crop": {
+          "x": 46,
+          "y": 292,
+          "w": 217,
+          "h": 280
+        },
+        "target": [
+          404,
+          128,
+          51,
+          81
+        ]
+      },
+      {
+        "crop": {
+          "x": 366,
+          "y": 292,
+          "w": 223,
+          "h": 281
+        },
+        "target": [
+          574,
+          128,
+          51,
+          81
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "tai-nghe",
+    "view": "left",
+    "file": "headphones/tai-nghe/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 272,
+          "y": 43,
+          "w": 136,
+          "h": 261
+        },
+        "target": [
+          502,
+          32,
+          40,
+          115
+        ]
+      },
+      {
+        "crop": {
+          "x": 220,
+          "y": 297,
+          "w": 255,
+          "h": 283
+        },
+        "target": [
+          482,
+          128,
+          80,
+          84
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "tai-nghe",
+    "view": "right",
+    "file": "headphones/tai-nghe/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 217,
+          "y": 46,
+          "w": 148,
+          "h": 259
+        },
+        "target": [
+          466,
+          32,
+          40,
+          115
+        ]
+      },
+      {
+        "crop": {
+          "x": 153,
+          "y": 298,
+          "w": 261,
+          "h": 281
+        },
+        "target": [
+          446,
+          128,
+          80,
+          84
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "tai-nghe",
+    "view": "back",
+    "file": "headphones/tai-nghe/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 51,
+          "y": 37,
+          "w": 535,
+          "h": 257
+        },
+        "target": [
+          408,
+          25,
+          208,
+          117
+        ]
+      },
+      {
+        "crop": {
+          "x": 45,
+          "y": 287,
+          "w": 216,
+          "h": 279
+        },
+        "target": [
+          404,
+          128,
+          51,
+          81
+        ]
+      },
+      {
+        "crop": {
+          "x": 368,
+          "y": 287,
+          "w": 222,
+          "h": 279
+        },
+        "target": [
+          574,
+          128,
+          51,
+          81
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "mu-luoi-trai",
+    "view": "front",
+    "file": "headwear/mu-luoi-trai/front.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 48,
+          "y": 81,
+          "w": 527,
+          "h": 480
+        },
+        "target": [
+          404.5,
+          170,
+          215,
+          140
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "mu-luoi-trai",
+    "view": "left",
+    "file": "headwear/mu-luoi-trai/left.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 2,
+          "y": 168,
+          "w": 608,
+          "h": 338
+        },
+        "target": [
+          400,
+          170,
+          240,
+          140
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "mu-luoi-trai",
+    "view": "right",
+    "file": "headwear/mu-luoi-trai/right.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 19,
+          "y": 162,
+          "w": 605,
+          "h": 331
+        },
+        "target": [
+          386,
+          170,
+          240,
+          140
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "mu-luoi-trai",
+    "view": "back",
+    "file": "headwear/mu-luoi-trai/back.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 37,
+          "y": 70,
+          "w": 553,
+          "h": 455
+        },
+        "target": [
+          404.5,
+          170,
+          215,
+          140
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "mu-luoi-trai",
+    "view": "front",
+    "file": "headwear/mu-luoi-trai/front.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 48,
+          "y": 81,
+          "w": 527,
+          "h": 480
+        },
+        "target": [
+          404.5,
+          184,
+          215,
+          140
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "mu-luoi-trai",
+    "view": "left",
+    "file": "headwear/mu-luoi-trai/left.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 2,
+          "y": 168,
+          "w": 608,
+          "h": 338
+        },
+        "target": [
+          400,
+          184,
+          240,
+          140
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "mu-luoi-trai",
+    "view": "right",
+    "file": "headwear/mu-luoi-trai/right.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 19,
+          "y": 162,
+          "w": 605,
+          "h": 331
+        },
+        "target": [
+          386,
+          184,
+          240,
+          140
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "mu-luoi-trai",
+    "view": "back",
+    "file": "headwear/mu-luoi-trai/back.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 37,
+          "y": 70,
+          "w": 553,
+          "h": 455
+        },
+        "target": [
+          404.5,
+          184,
+          215,
+          140
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "moc-khoa-bong",
+    "view": "front",
+    "file": "bag-charms/moc-khoa-bong/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 184,
+          "y": 12,
+          "w": 311,
+          "h": 601
+        },
+        "target": [
+          653,
+          680,
+          60,
+          90
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "moc-khoa-bong",
+    "view": "left",
+    "file": "bag-charms/moc-khoa-bong/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 204,
+          "y": 13,
+          "w": 224,
+          "h": 604
+        },
+        "target": [
+          432,
+          680,
+          60,
+          90
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "moc-khoa-bong",
+    "view": "right",
+    "file": "bag-charms/moc-khoa-bong/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 234,
+          "y": 9,
+          "w": 217,
+          "h": 598
+        },
+        "target": [
+          537,
+          680,
+          60,
+          90
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "moc-khoa-bong",
+    "view": "back",
+    "file": "bag-charms/moc-khoa-bong/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 147,
+          "y": 8,
+          "w": 318,
+          "h": 598
+        },
+        "target": [
+          305,
+          680,
+          60,
+          90
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "moc-khoa-bong",
+    "view": "front",
+    "file": "bag-charms/moc-khoa-bong/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 184,
+          "y": 12,
+          "w": 311,
+          "h": 601
+        },
+        "target": [
+          623,
+          680,
+          60,
+          90
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "moc-khoa-bong",
+    "view": "left",
+    "file": "bag-charms/moc-khoa-bong/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 204,
+          "y": 13,
+          "w": 224,
+          "h": 604
+        },
+        "target": [
+          432,
+          680,
+          60,
+          90
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "moc-khoa-bong",
+    "view": "right",
+    "file": "bag-charms/moc-khoa-bong/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 234,
+          "y": 9,
+          "w": 217,
+          "h": 598
+        },
+        "target": [
+          537,
+          680,
+          60,
+          90
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "moc-khoa-bong",
+    "view": "back",
+    "file": "bag-charms/moc-khoa-bong/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 147,
+          "y": 8,
+          "w": 318,
+          "h": 598
+        },
+        "target": [
+          335,
+          680,
+          60,
+          90
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "ba-lo",
+    "view": "front",
+    "file": "backpacks/ba-lo/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 108,
+          "y": 62,
+          "w": 433,
+          "h": 506
+        },
+        "target": [
+          366,
+          275,
+          292,
+          445
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "ba-lo",
+    "view": "left",
+    "file": "backpacks/ba-lo/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 147,
+          "y": 52,
+          "w": 404,
+          "h": 534
+        },
+        "target": [
+          430,
+          275,
+          330,
+          500
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "ba-lo",
+    "view": "right",
+    "file": "backpacks/ba-lo/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 74,
+          "y": 40,
+          "w": 402,
+          "h": 523
+        },
+        "target": [
+          266,
+          275,
+          335,
+          500
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "ba-lo",
+    "view": "back",
+    "file": "backpacks/ba-lo/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 71,
+          "y": 43,
+          "w": 490,
+          "h": 522
+        },
+        "target": [
+          350,
+          290,
+          324,
+          460
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "ba-lo",
+    "view": "front",
+    "file": "backpacks/ba-lo/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 108,
+          "y": 62,
+          "w": 433,
+          "h": 506
+        },
+        "target": [
+          385,
+          275,
+          255,
+          445
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "ba-lo",
+    "view": "left",
+    "file": "backpacks/ba-lo/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 147,
+          "y": 52,
+          "w": 404,
+          "h": 534
+        },
+        "target": [
+          430,
+          275,
+          330,
+          500
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "ba-lo",
+    "view": "right",
+    "file": "backpacks/ba-lo/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 74,
+          "y": 40,
+          "w": 402,
+          "h": 523
+        },
+        "target": [
+          266,
+          275,
+          335,
+          500
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "ba-lo",
+    "view": "back",
+    "file": "backpacks/ba-lo/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 71,
+          "y": 43,
+          "w": 490,
+          "h": 522
+        },
+        "target": [
+          374,
+          290,
+          278,
+          460
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "tui-tote",
+    "view": "front",
+    "file": "bags/tui-tote/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 141,
+          "y": 15,
+          "w": 349,
+          "h": 597
+        },
+        "target": [
+          697,
+          810,
+          170,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "tui-tote",
+    "view": "left",
+    "file": "bags/tui-tote/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 252,
+          "y": 17,
+          "w": 132,
+          "h": 597
+        },
+        "target": [
+          448,
+          810,
+          62,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "tui-tote",
+    "view": "right",
+    "file": "bags/tui-tote/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 246,
+          "y": 15,
+          "w": 136,
+          "h": 598
+        },
+        "target": [
+          518,
+          810,
+          62,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "tui-tote",
+    "view": "back",
+    "file": "bags/tui-tote/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 141,
+          "y": 12,
+          "w": 348,
+          "h": 593
+        },
+        "target": [
+          169,
+          810,
+          170,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "tui-tote",
+    "view": "front",
+    "file": "bags/tui-tote/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 141,
+          "y": 15,
+          "w": 349,
+          "h": 597
+        },
+        "target": [
+          657,
+          810,
+          170,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "tui-tote",
+    "view": "left",
+    "file": "bags/tui-tote/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 252,
+          "y": 17,
+          "w": 132,
+          "h": 597
+        },
+        "target": [
+          448,
+          810,
+          62,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "tui-tote",
+    "view": "right",
+    "file": "bags/tui-tote/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 246,
+          "y": 15,
+          "w": 136,
+          "h": 598
+        },
+        "target": [
+          518,
+          810,
+          62,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "tui-tote",
+    "view": "back",
+    "file": "bags/tui-tote/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 141,
+          "y": 12,
+          "w": 348,
+          "h": 593
+        },
+        "target": [
+          200,
+          810,
+          170,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "tui-deo-cheo",
+    "view": "front",
+    "file": "bags/tui-deo-cheo/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 228,
+          "y": 32,
+          "w": 348,
+          "h": 568
+        },
+        "target": [
+          328,
+          275,
+          395,
+          515
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "tui-deo-cheo",
+    "view": "left",
+    "file": "bags/tui-deo-cheo/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 239,
+          "y": 34,
+          "w": 191,
+          "h": 559
+        },
+        "target": [
+          408,
+          275,
+          205,
+          515
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "tui-deo-cheo",
+    "view": "right",
+    "file": "bags/tui-deo-cheo/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 202,
+          "y": 29,
+          "w": 197,
+          "h": 561
+        },
+        "target": [
+          410,
+          275,
+          205,
+          515
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "tui-deo-cheo",
+    "view": "back",
+    "file": "bags/tui-deo-cheo/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 80,
+          "y": 28,
+          "w": 357,
+          "h": 560
+        },
+        "target": [
+          300,
+          275,
+          395,
+          515
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "tui-deo-cheo",
+    "view": "front",
+    "file": "bags/tui-deo-cheo/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 228,
+          "y": 32,
+          "w": 348,
+          "h": 568
+        },
+        "target": [
+          360,
+          275,
+          355,
+          515
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "tui-deo-cheo",
+    "view": "left",
+    "file": "bags/tui-deo-cheo/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 239,
+          "y": 34,
+          "w": 191,
+          "h": 559
+        },
+        "target": [
+          408,
+          275,
+          205,
+          515
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "tui-deo-cheo",
+    "view": "right",
+    "file": "bags/tui-deo-cheo/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 202,
+          "y": 29,
+          "w": 197,
+          "h": 561
+        },
+        "target": [
+          410,
+          275,
+          205,
+          515
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "tui-deo-cheo",
+    "view": "back",
+    "file": "bags/tui-deo-cheo/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 80,
+          "y": 28,
+          "w": 357,
+          "h": 560
+        },
+        "target": [
+          330,
+          275,
+          355,
+          515
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "kinh-ram",
+    "view": "front",
+    "file": "eyewear/kinh-ram/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 21,
+          "y": 260,
+          "w": 586,
+          "h": 158
+        },
+        "target": [
+          449,
+          114,
+          130,
+          40
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "kinh-ram",
+    "view": "left",
+    "file": "eyewear/kinh-ram/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 50,
+          "y": 246,
+          "w": 558,
+          "h": 185
+        },
+        "target": [
+          437,
+          114,
+          115,
+          40
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "kinh-ram",
+    "view": "right",
+    "file": "eyewear/kinh-ram/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 20,
+          "y": 231,
+          "w": 557,
+          "h": 187
+        },
+        "target": [
+          464,
+          114,
+          115,
+          40
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "kinh-ram",
+    "view": "back",
+    "file": "eyewear/kinh-ram/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 31,
+          "y": 188,
+          "w": 566,
+          "h": 279
+        },
+        "target": [
+          449,
+          114,
+          130,
+          40
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "kinh-ram",
+    "view": "front",
+    "file": "eyewear/kinh-ram/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 21,
+          "y": 260,
+          "w": 586,
+          "h": 158
+        },
+        "target": [
+          449,
+          126,
+          130,
+          40
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "kinh-ram",
+    "view": "left",
+    "file": "eyewear/kinh-ram/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 50,
+          "y": 246,
+          "w": 558,
+          "h": 185
+        },
+        "target": [
+          430,
+          126,
+          115,
+          40
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "kinh-ram",
+    "view": "right",
+    "file": "eyewear/kinh-ram/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 20,
+          "y": 231,
+          "w": 557,
+          "h": 187
+        },
+        "target": [
+          470,
+          126,
+          115,
+          40
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "kinh-ram",
+    "view": "back",
+    "file": "eyewear/kinh-ram/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 31,
+          "y": 188,
+          "w": 566,
+          "h": 279
+        },
+        "target": [
+          449,
+          126,
+          130,
+          40
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "dep-crocs",
+    "view": "front",
+    "file": "shoes/dep-crocs/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 34,
+          "y": 148,
+          "w": 271,
+          "h": 363
+        },
+        "target": [
+          302,
+          1320,
+          145,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 321,
+          "y": 148,
+          "w": 273,
+          "h": 363
+        },
+        "target": [
+          585,
+          1320,
+          145,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "dep-crocs",
+    "view": "left",
+    "file": "shoes/dep-crocs/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 25,
+          "y": 236,
+          "w": 576,
+          "h": 255
+        },
+        "target": [
+          345,
+          1325,
+          250,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "dep-crocs",
+    "view": "right",
+    "file": "shoes/dep-crocs/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 27,
+          "y": 213,
+          "w": 575,
+          "h": 253
+        },
+        "target": [
+          432,
+          1325,
+          226,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "dep-crocs",
+    "view": "back",
+    "file": "shoes/dep-crocs/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 49,
+          "y": 144,
+          "w": 258,
+          "h": 317
+        },
+        "target": [
+          302,
+          1310,
+          145,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 324,
+          "y": 143,
+          "w": 255,
+          "h": 318
+        },
+        "target": [
+          595,
+          1310,
+          145,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "dep-crocs",
+    "view": "front",
+    "file": "shoes/dep-crocs/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 34,
+          "y": 148,
+          "w": 271,
+          "h": 363
+        },
+        "target": [
+          363,
+          1320,
+          115,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 321,
+          "y": 148,
+          "w": 273,
+          "h": 363
+        },
+        "target": [
+          569,
+          1320,
+          115,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "dep-crocs",
+    "view": "left",
+    "file": "shoes/dep-crocs/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 25,
+          "y": 236,
+          "w": 576,
+          "h": 255
+        },
+        "target": [
+          355,
+          1325,
+          245,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "dep-crocs",
+    "view": "right",
+    "file": "shoes/dep-crocs/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 27,
+          "y": 213,
+          "w": 575,
+          "h": 253
+        },
+        "target": [
+          422,
+          1325,
+          213,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "dep-crocs",
+    "view": "back",
+    "file": "shoes/dep-crocs/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 49,
+          "y": 144,
+          "w": 258,
+          "h": 317
+        },
+        "target": [
+          365,
+          1310,
+          115,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 324,
+          "y": 143,
+          "w": 255,
+          "h": 318
+        },
+        "target": [
+          565,
+          1310,
+          115,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "dep-le",
+    "view": "front",
+    "file": "shoes/dep-le/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 24,
+          "y": 170,
+          "w": 285,
+          "h": 320
+        },
+        "target": [
+          302,
+          1320,
+          145,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 320,
+          "y": 169,
+          "w": 284,
+          "h": 322
+        },
+        "target": [
+          585,
+          1320,
+          145,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "dep-le",
+    "view": "left",
+    "file": "shoes/dep-le/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 19,
+          "y": 243,
+          "w": 586,
+          "h": 209
+        },
+        "target": [
+          345,
+          1325,
+          250,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "dep-le",
+    "view": "right",
+    "file": "shoes/dep-le/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 22,
+          "y": 241,
+          "w": 585,
+          "h": 209
+        },
+        "target": [
+          432,
+          1325,
+          226,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "dep-le",
+    "view": "back",
+    "file": "shoes/dep-le/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 29,
+          "y": 199,
+          "w": 272,
+          "h": 258
+        },
+        "target": [
+          302,
+          1310,
+          145,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 322,
+          "y": 199,
+          "w": 274,
+          "h": 258
+        },
+        "target": [
+          595,
+          1310,
+          145,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "dep-le",
+    "view": "front",
+    "file": "shoes/dep-le/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 24,
+          "y": 170,
+          "w": 285,
+          "h": 320
+        },
+        "target": [
+          363,
+          1320,
+          115,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 320,
+          "y": 169,
+          "w": 284,
+          "h": 322
+        },
+        "target": [
+          569,
+          1320,
+          115,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "dep-le",
+    "view": "left",
+    "file": "shoes/dep-le/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 19,
+          "y": 243,
+          "w": 586,
+          "h": 209
+        },
+        "target": [
+          355,
+          1325,
+          245,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "dep-le",
+    "view": "right",
+    "file": "shoes/dep-le/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 22,
+          "y": 241,
+          "w": 585,
+          "h": 209
+        },
+        "target": [
+          422,
+          1325,
+          213,
+          119
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "dep-le",
+    "view": "back",
+    "file": "shoes/dep-le/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 29,
+          "y": 199,
+          "w": 272,
+          "h": 258
+        },
+        "target": [
+          365,
+          1310,
+          115,
+          120
+        ]
+      },
+      {
+        "crop": {
+          "x": 322,
+          "y": 199,
+          "w": 274,
+          "h": 258
+        },
+        "target": [
+          565,
+          1310,
+          115,
+          120
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "day-xich-hong",
+    "view": "front",
+    "file": "waist-accessories/day-xich-hong/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 59,
+          "y": 110,
+          "w": 530,
+          "h": 372
+        },
+        "target": [
+          572,
+          650,
+          118,
+          110
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "day-xich-hong",
+    "view": "left",
+    "file": "waist-accessories/day-xich-hong/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 338,
+          "y": 31,
+          "w": 175,
+          "h": 568
+        },
+        "target": [
+          433,
+          650,
+          125,
+          110
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "day-xich-hong",
+    "view": "right",
+    "file": "waist-accessories/day-xich-hong/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 116,
+          "y": 30,
+          "w": 189,
+          "h": 564
+        },
+        "target": [
+          440,
+          650,
+          125,
+          110
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "day-xich-hong",
+    "view": "back",
+    "file": "waist-accessories/day-xich-hong/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 39,
+          "y": 97,
+          "w": 538,
+          "h": 391
+        },
+        "target": [
+          332,
+          650,
+          118,
+          110
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "day-xich-hong",
+    "view": "front",
+    "file": "waist-accessories/day-xich-hong/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 59,
+          "y": 110,
+          "w": 530,
+          "h": 372
+        },
+        "target": [
+          558,
+          650,
+          100,
+          110
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "day-xich-hong",
+    "view": "left",
+    "file": "waist-accessories/day-xich-hong/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 338,
+          "y": 31,
+          "w": 175,
+          "h": 568
+        },
+        "target": [
+          433,
+          650,
+          125,
+          110
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "day-xich-hong",
+    "view": "right",
+    "file": "waist-accessories/day-xich-hong/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 116,
+          "y": 30,
+          "w": 189,
+          "h": 564
+        },
+        "target": [
+          440,
+          650,
+          125,
+          110
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "day-xich-hong",
+    "view": "back",
+    "file": "waist-accessories/day-xich-hong/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 39,
+          "y": 97,
+          "w": 538,
+          "h": 391
+        },
+        "target": [
+          368,
+          650,
+          100,
+          110
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "gang-tay-ho-ngon",
+    "view": "front",
+    "file": "gloves/gang-tay-ho-ngon/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 21,
+          "y": 95,
+          "w": 289,
+          "h": 406
+        },
+        "target": [
+          204,
+          732,
+          76,
+          92
+        ]
+      },
+      {
+        "crop": {
+          "x": 317,
+          "y": 95,
+          "w": 291,
+          "h": 406
+        },
+        "target": [
+          747,
+          732,
+          76,
+          92
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "gang-tay-ho-ngon",
+    "view": "left",
+    "file": "gloves/gang-tay-ho-ngon/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 220,
+          "y": 91,
+          "w": 240,
+          "h": 486
+        },
+        "target": [
+          436,
+          728,
+          95,
+          96
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "gang-tay-ho-ngon",
+    "view": "right",
+    "file": "gloves/gang-tay-ho-ngon/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 170,
+          "y": 86,
+          "w": 249,
+          "h": 489
+        },
+        "target": [
+          489,
+          728,
+          95,
+          96
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "gang-tay-ho-ngon",
+    "view": "back",
+    "file": "gloves/gang-tay-ho-ngon/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 13,
+          "y": 119,
+          "w": 295,
+          "h": 398
+        },
+        "target": [
+          205,
+          732,
+          76,
+          92
+        ]
+      },
+      {
+        "crop": {
+          "x": 316,
+          "y": 119,
+          "w": 297,
+          "h": 398
+        },
+        "target": [
+          742,
+          732,
+          76,
+          92
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "gang-tay-ho-ngon",
+    "view": "front",
+    "file": "gloves/gang-tay-ho-ngon/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 21,
+          "y": 95,
+          "w": 289,
+          "h": 406
+        },
+        "target": [
+          251,
+          726,
+          71,
+          92
+        ]
+      },
+      {
+        "crop": {
+          "x": 317,
+          "y": 95,
+          "w": 291,
+          "h": 406
+        },
+        "target": [
+          698,
+          726,
+          71,
+          92
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "gang-tay-ho-ngon",
+    "view": "left",
+    "file": "gloves/gang-tay-ho-ngon/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 220,
+          "y": 91,
+          "w": 240,
+          "h": 486
+        },
+        "target": [
+          440,
+          727,
+          79,
+          96
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "gang-tay-ho-ngon",
+    "view": "right",
+    "file": "gloves/gang-tay-ho-ngon/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 170,
+          "y": 86,
+          "w": 249,
+          "h": 489
+        },
+        "target": [
+          499,
+          727,
+          79,
+          96
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "gang-tay-ho-ngon",
+    "view": "back",
+    "file": "gloves/gang-tay-ho-ngon/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 13,
+          "y": 119,
+          "w": 295,
+          "h": 398
+        },
+        "target": [
+          240,
+          726,
+          71,
+          92
+        ]
+      },
+      {
+        "crop": {
+          "x": 316,
+          "y": 119,
+          "w": 297,
+          "h": 398
+        },
+        "target": [
+          700,
+          726,
+          71,
+          92
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "mu-cao-boi",
+    "view": "front",
+    "file": "headwear/mu-cao-boi/front.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 33,
+          "y": 155,
+          "w": 567,
+          "h": 324
+        },
+        "target": [
+          337,
+          131,
+          350,
+          200
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "mu-cao-boi",
+    "view": "left",
+    "file": "headwear/mu-cao-boi/left.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 12,
+          "y": 189,
+          "w": 598,
+          "h": 293
+        },
+        "target": [
+          345,
+          155.80518394648828,
+          350,
+          171.48829431438128
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "mu-cao-boi",
+    "view": "right",
+    "file": "headwear/mu-cao-boi/right.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 17,
+          "y": 159,
+          "w": 598,
+          "h": 298
+        },
+        "target": [
+          331,
+          153.2591973244147,
+          350,
+          174.41471571906354
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "mu-cao-boi",
+    "view": "back",
+    "file": "headwear/mu-cao-boi/back.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 26,
+          "y": 125,
+          "w": 574,
+          "h": 340
+        },
+        "target": [
+          337,
+          124.6341463414634,
+          350,
+          207.3170731707317
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "mu-cao-boi",
+    "view": "front",
+    "file": "headwear/mu-cao-boi/front.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 33,
+          "y": 155,
+          "w": 567,
+          "h": 324
+        },
+        "target": [
+          344.5,
+          138.45714285714286,
+          335,
+          191.42857142857142
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "mu-cao-boi",
+    "view": "left",
+    "file": "headwear/mu-cao-boi/left.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 12,
+          "y": 189,
+          "w": 598,
+          "h": 293
+        },
+        "target": [
+          352.5,
+          162.1992474916388,
+          335,
+          164.13879598662209
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "mu-cao-boi",
+    "view": "right",
+    "file": "headwear/mu-cao-boi/right.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 17,
+          "y": 159,
+          "w": 598,
+          "h": 298
+        },
+        "target": [
+          338.5,
+          159.7623745819398,
+          335,
+          166.93979933110367
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "mu-cao-boi",
+    "view": "back",
+    "file": "headwear/mu-cao-boi/back.png",
+    "offsetY": -200,
+    "placements": [
+      {
+        "crop": {
+          "x": 26,
+          "y": 125,
+          "w": 574,
+          "h": 340
+        },
+        "target": [
+          344.5,
+          132.36411149825784,
+          335,
+          198.43205574912892
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "tui-xach-thoi-trang",
+    "view": "front",
+    "file": "bags/tui-xach-thoi-trang/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 100,
+          "y": 50,
+          "w": 473,
+          "h": 539
+        },
+        "target": [
+          697,
+          810,
+          170,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "tui-xach-thoi-trang",
+    "view": "left",
+    "file": "bags/tui-xach-thoi-trang/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 201,
+          "y": 56,
+          "w": 200,
+          "h": 535
+        },
+        "target": [
+          448,
+          810,
+          62,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "tui-xach-thoi-trang",
+    "view": "right",
+    "file": "bags/tui-xach-thoi-trang/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 233,
+          "y": 41,
+          "w": 204,
+          "h": 533
+        },
+        "target": [
+          518,
+          810,
+          62,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "id": "tui-xach-thoi-trang",
+    "view": "back",
+    "file": "bags/tui-xach-thoi-trang/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 62,
+          "y": 34,
+          "w": 479,
+          "h": 536
+        },
+        "target": [
+          169,
+          810,
+          170,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "tui-xach-thoi-trang",
+    "view": "front",
+    "file": "bags/tui-xach-thoi-trang/front.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 100,
+          "y": 50,
+          "w": 473,
+          "h": 539
+        },
+        "target": [
+          657,
+          810,
+          170,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "tui-xach-thoi-trang",
+    "view": "left",
+    "file": "bags/tui-xach-thoi-trang/left.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 201,
+          "y": 56,
+          "w": 200,
+          "h": 535
+        },
+        "target": [
+          448,
+          810,
+          62,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "tui-xach-thoi-trang",
+    "view": "right",
+    "file": "bags/tui-xach-thoi-trang/right.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 233,
+          "y": 41,
+          "w": 204,
+          "h": 533
+        },
+        "target": [
+          518,
+          810,
+          62,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "id": "tui-xach-thoi-trang",
+    "view": "back",
+    "file": "bags/tui-xach-thoi-trang/back.png",
+    "offsetY": 0,
+    "placements": [
+      {
+        "crop": {
+          "x": 62,
+          "y": 34,
+          "w": 479,
+          "h": 536
+        },
+        "target": [
+          200,
+          810,
+          170,
+          215
+        ]
+      }
+    ]
+  }
+]

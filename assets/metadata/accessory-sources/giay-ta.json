@@ -1,0 +1,11 @@
+{
+  "id": "giay-ta",
+  "name": "Giày ta",
+  "category": "shoes",
+  "slot": "shoes",
+  "detail": "Giày vải đen kiểu truyền thống",
+  "subject": "A matched pair of traditional Vietnamese giay ta black cotton cloth slip-on shoes, rounded closed toe, simple black fabric upper, thin dark sole, no laces, no modern sneaker branding. Front/back show pair, left/right profile one near shoe and far shoe behind. No feet.",
+  "prompt": "Use case: product-mockup. Asset type: photoreal modular dress-up accessory source turnaround sprite sheet. Make a SINGLE item with FOUR views on ONE 2x2 square sheet, 2048x2048 preferred, equal cells with no margins between cells, each object isolated and fully inside its cell. TOP LEFT = front of a standing wearer facing camera. TOP RIGHT = strict LEFT profile, wearer faces image-left. BOTTOM LEFT = strict RIGHT profile, wearer faces image-right. BOTTOM RIGHT = rear/back, wearer faces away. Keep exact same physical item, materials, proportions, scale, soft studio light and camera height across all four views. Real photographic textures matching supplied avatar style references. Treat supplied avatars only as lighting/style/anatomical wearing direction references, do not reproduce avatars. Center each accessory within its cell with at least 12% empty padding. Background must be true transparent alpha, no checkerboard, no floor, no shadow background. NO person, skin, mannequin, hair, head, hands, feet, other accessory, labels, text, separators, border or watermark. These are accessory-only alpha cutouts for later attachment to avatar; show ONLY visible accessory surfaces in that viewing direction. Subject: A matched pair of traditional Vietnamese giay ta black cotton cloth slip-on shoes, rounded closed toe, simple black fabric upper, thin dark sole, no laces, no modern sneaker branding. Front/back show pair, left/right profile one near shoe and far shoe behind. No feet.",
+  "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-ccecd7f6-a6e0-4f9c-b657-017c15a109eb.png",
+  "tool": "image_gen"
+}

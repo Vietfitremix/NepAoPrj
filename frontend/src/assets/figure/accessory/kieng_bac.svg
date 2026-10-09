@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800">
-  <!-- Kiềng bạc: vòng cứng đeo ở chân cổ, phía trước trễ xuống – hướng TRƯỚC. Sinh bằng tools/gen_accessories.py. -->
-  <g id="kieng_bac" stroke="#000" stroke-opacity="0.3" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
-    <path id="vien_kieng" d="M 150.8 162.8 Q 200.5 191.5 249.7 162.7" fill="none" stroke="#8A9099" stroke-opacity="1" stroke-width="7.6"/>
-    <path id="kieng" d="M 150.8 162.8 Q 200.5 191.5 249.7 162.7" fill="none" stroke="#C9CED6" stroke-opacity="1" stroke-width="6"/>
-    <path id="sang_kieng" d="M 150.8 162.8 Q 200.5 191.5 249.7 162.7" fill="none" stroke="#FFFFFF" stroke-opacity="0.7" stroke-width="1.6"/>
-  </g>
-</svg>

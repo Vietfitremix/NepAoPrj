@@ -1,0 +1,74 @@
+{
+  "mode": "Built-in imagegen",
+  "format": "1024x1536 transparent PNG",
+  "prompts": [
+    {
+      "name": "female_petite",
+      "prompt": "Edit this adult Vietnamese woman dress-up BASE CHARACTER. Keep her face identity, neat dark low-bun hair, realistic cinematic 3D render style, neutral gray sleeveless opaque athletic top and gray mid-thigh shorts, perfectly frontal upright pose and same 1024x1536 canvas. Make her build PETITE AND SLENDER: narrower graceful shoulders, noticeably slimmer arms and hands, slender legs and ankles, natural healthy adult proportions, not muscular or bulky. Reduce body width, particularly arms and calves, while retaining her full height and framing so the dress-up rig still works. Keep head top y35, neck y260, shoulders around y295, waist y680, wrists around y740, center x512. IMPORTANT remove BOTH shoes and socks completely and show natural BARE FEET with anatomically correct toes resting at y1430, separated symmetrically around x390 and x630. No footwear. Entire head through toes visible. Actual transparent alpha background without any backdrop, floor, halo or cast shadow. No text or props."
+    },
+    {
+      "name": "male_barefoot",
+      "prompt": "Create a full-length adult male Vietnamese dress-up avatar using this image as pose and face reference. He wears modest opaque light-gray athletic sportswear: a sleeveless tank top and plain loose sports shorts ending above the knees. No shoes; he is standing with bare feet visible. Preserve the reference frontal symmetrical standing pose, adult male proportions, head position, arm and wrist position, neutral cinematic 3D shading and 1024x1536 canvas. Head top y30, neck y250, waist y690, wrists y730, feet at y1430. Character center x512. Transparent background, no text or accessories."
+    },
+    {
+      "name": "female_teal",
+      "prompt": "Use image 1 only as exact spatial and pose reference. Produce a separate FEMALE AO DAI garment layer fitted to this petite adult woman's body, NOT to a male body. Feminine gently fitted waist, narrow shoulders, slender long sleeves, jade teal silk with delicate gold lotus embroidery, Vietnamese standing collar, long front and back panels and side slits. Front orthographic view and neutral high-quality 3D fabric shading matching the reference. Output only the empty garment on an invisible wearer; NO woman, no face, no skin or hands, no trousers, no shoes, no mannequin. Neck opening transparent. Keep SAME 1024x1536 canvas, do NOT enlarge or center garment as a product shot. Collar top y265, shoulder line around y295 with shoulder span x350 to675, fitted waist around x395 to635 at y600, sleeve cuffs exactly at her wrists near (295,735) and (735,735), long skirt hem y1200. Everything except opaque fabric must have true transparent alpha. No backdrop, glow, shadow, text or watermark."
+    },
+    {
+      "name": "female_rose",
+      "prompt": "Create a second interchangeable female ao dai layer from this isolated jade garment. Change silk color to elegant dusty rose pink and embroidery to delicate ivory-and-gold lotus blossoms. Preserve the garment silhouette, narrow shoulders, shaped waist, long slender sleeves, standing collar, flowing panels, all canvas coordinates and scale EXACTLY. Same 1024x1536 canvas and framing, collar starts y133, cuffs around y650, hem around y1440. Only the empty garment, no body, mannequin, hands, pants or footwear. Maintain transparent alpha in all empty space, no background, no halo or shadow, no words or logos. Realistic cinematic 3D silk fabric matching source."
+    },
+    {
+      "name": "female_pants",
+      "prompt": "Use image 1 as the petite female pose and fitting reference. Generate ONLY a pair of long feminine ivory silk trousers, empty garment on invisible wearer. Natural slim waist and hips, two gently flowing straight legs for wearing under Vietnamese ao dai. Neutral realistic 3D silk shading. FRONT orthographic. Keep original 1024x1536 canvas and place waistband y670 across x375 to650, trouser hems y1360 just above her bare feet, legs matching reference stance and separation. No woman, mannequin, body, hands, feet, shoes, top or belt. Transparent alpha outside trousers and between legs. No background, no halo, no floor shadow, no text. Do not enlarge or recenter pants as a catalog product."
+    },
+    {
+      "name": "male_loafers",
+      "prompt": "Create a separate PAIR of men's black leather formal shoes for the supplied adult male dress-up avatar. Reference image supplies foot stance, perspective and render style. TWO empty shoes, left and right, soles pointing downward, viewed from the front and slightly above like reference feet, angled slightly outward to match his stance. Black polished leather loafers, low heel, elegant unbranded design, realistic 3D studio shading. No person, no feet, no legs, no socks or mannequin. Keep both shoes separated with clear transparent space between them, left shoe on left half, right on right half of a portrait 1024x1536 transparent canvas. True alpha outside the footwear, no background, no halo, no floor or shadow, no text. Shoes complete and uncropped. Asset only."
+    },
+    {
+      "name": "male_sneakers",
+      "prompt": "Generate a separate pair of men's WHITE LOW-TOP SNEAKERS for this male avatar. Empty left and right shoes, plain unbranded white leather and white sole, simple laces, realistic 3D material shading. Viewed from front and slightly above, toes angled slightly outward exactly like reference foot stance. Keep left shoe wholly on left half and right wholly on right half of a transparent 1024x1536 portrait canvas, with clear space between shoes, complete and uncropped. No feet, body, ankles, socks or mannequin, no background, glow or shadow, no text or logo. Footwear asset only."
+    },
+    {
+      "name": "female_flats",
+      "prompt": "Generate only a pair of women's elegant ivory closed-toe ballet flats for this petite Vietnamese avatar. Empty left and right shoes, no body, feet, legs, socks or mannequin. Fine satin texture, tiny restrained gold edging, low flat heel, realistic 3D shading. Front and slightly-above perspective matching reference feet, toes mostly facing forward, left shoe in left half and right shoe in right half, separate and uncropped, 1024x1536 transparent canvas, no text, no floor or halo or shadow."
+    },
+    {
+      "name": "female_sneakers",
+      "prompt": "Generate only a pair of women's slim white low-top sneakers for this petite Vietnamese avatar. Empty left and right shoes, white leather, simple laces, thin white soles, unbranded. No body, feet, legs, socks or mannequin. Realistic 3D shading, front and slightly-above perspective matching reference feet, toes mostly facing forward. Left shoe on left half, right shoe on right half, separated and uncropped. 1024x1536 transparent alpha canvas, no background, no text, no floor or halo or cast shadow."
+    },
+    {
+      "name": "male_tu-than",
+      "prompt": "Create a separate dress-up clothing PNG asset: Áo tứ thân for an adult male Vietnamese character in the reference pose. four open long brown outer panels, an opaque ivory inner shirt covering chest and torso, a green sash, Vietnamese traditional four-panel robe. Masculine straight fit, broader shoulders. Empty garment only with opaque fabric, no person, skin, hands, legs, pants, shoes or mannequin. Frontal symmetrical A-pose, sleeves down at same angle as reference arms. Entire garment uncropped on 1024x1536 transparent alpha canvas. Realistic polished 3D fabric rendering. No background, no floor, no cast shadow, no text. Keep neck, shoulder, waist and cuff locations consistent with reference character to allow overlay."
+    },
+    {
+      "name": "male_ngu-than",
+      "prompt": "Create a separate dress-up clothing PNG asset: Áo ngũ thân for an adult male Vietnamese character in the reference pose. deep indigo Vietnamese five-panel tunic, standing collar, asymmetrical right overlap closure with five small simple round buttons, refined plain silk, long panels. Masculine straight fit, broader shoulders. Empty garment only with opaque fabric, no person, skin, hands, legs, pants, shoes or mannequin. Frontal symmetrical A-pose, sleeves down at same angle as reference arms. Entire garment uncropped on 1024x1536 transparent alpha canvas. Realistic polished 3D fabric rendering. No background, no floor, no cast shadow, no text. Keep neck, shoulder, waist and cuff locations consistent with reference character to allow overlay."
+    },
+    {
+      "name": "male_nhat-binh",
+      "prompt": "Create a separate dress-up clothing PNG asset: Nhật bình for an adult male Vietnamese character in the reference pose. Vietnamese Nhat Binh ceremonial robe, broad rectangular embroidered collar, wide sleeves angled down along reference arms, small circular floral medallions, ornate gold borders, red silk for female and royal blue silk for male. Masculine straight fit, broader shoulders. Empty garment only with opaque fabric, no person, skin, hands, legs, pants, shoes or mannequin. Frontal symmetrical A-pose, sleeves down at same angle as reference arms. Entire garment uncropped on 1024x1536 transparent alpha canvas. Realistic polished 3D fabric rendering. No background, no floor, no cast shadow, no text. Keep neck, shoulder, waist and cuff locations consistent with reference character to allow overlay."
+    },
+    {
+      "name": "male_ba-ba",
+      "prompt": "Create a separate dress-up clothing PNG asset: Áo bà ba for an adult male Vietnamese character in the reference pose. Vietnamese brown silk collarless button-front shirt, simple small round buttons, long sleeves, two lower pockets, shirt hem at upper thigh, no long skirt panels. Masculine straight fit, broader shoulders. Empty garment only with opaque fabric, no person, skin, hands, legs, pants, shoes or mannequin. Frontal symmetrical A-pose, sleeves down at same angle as reference arms. Entire garment uncropped on 1024x1536 transparent alpha canvas. Realistic polished 3D fabric rendering. No background, no floor, no cast shadow, no text. Keep neck, shoulder, waist and cuff locations consistent with reference character to allow overlay."
+    },
+    {
+      "name": "female_tu-than",
+      "prompt": "Create a separate dress-up clothing PNG asset: Áo tứ thân for an adult female Vietnamese character in the reference pose. four open long brown outer panels, an opaque ivory inner shirt covering chest and torso, a green sash, Vietnamese traditional four-panel robe. Petite slim feminine fit, narrow arms and shoulders. Empty garment only with opaque fabric, no person, skin, hands, legs, pants, shoes or mannequin. Frontal symmetrical A-pose, sleeves down at same angle as reference arms. Entire garment uncropped on 1024x1536 transparent alpha canvas. Realistic polished 3D fabric rendering. No background, no floor, no cast shadow, no text. Keep neck, shoulder, waist and cuff locations consistent with reference character to allow overlay."
+    },
+    {
+      "name": "female_ngu-than",
+      "prompt": "Create a separate dress-up clothing PNG asset: Áo ngũ thân for an adult female Vietnamese character in the reference pose. deep indigo Vietnamese five-panel tunic, standing collar, asymmetrical right overlap closure with five small simple round buttons, refined plain silk, long panels. Petite slim feminine fit, narrow arms and shoulders. Empty garment only with opaque fabric, no person, skin, hands, legs, pants, shoes or mannequin. Frontal symmetrical A-pose, sleeves down at same angle as reference arms. Entire garment uncropped on 1024x1536 transparent alpha canvas. Realistic polished 3D fabric rendering. No background, no floor, no cast shadow, no text. Keep neck, shoulder, waist and cuff locations consistent with reference character to allow overlay."
+    },
+    {
+      "name": "female_nhat-binh",
+      "prompt": "Create a separate dress-up clothing PNG asset: Nhật bình for an adult female Vietnamese character in the reference pose. Vietnamese Nhat Binh ceremonial robe, broad rectangular embroidered collar, wide sleeves angled down along reference arms, small circular floral medallions, ornate gold borders, red silk for female and royal blue silk for male. Petite slim feminine fit, narrow arms and shoulders. Empty garment only with opaque fabric, no person, skin, hands, legs, pants, shoes or mannequin. Frontal symmetrical A-pose, sleeves down at same angle as reference arms. Entire garment uncropped on 1024x1536 transparent alpha canvas. Realistic polished 3D fabric rendering. No background, no floor, no cast shadow, no text. Keep neck, shoulder, waist and cuff locations consistent with reference character to allow overlay."
+    },
+    {
+      "name": "female_ba-ba",
+      "prompt": "Create a separate dress-up clothing PNG asset: Áo bà ba for an adult female Vietnamese character in the reference pose. Vietnamese brown silk collarless button-front shirt, simple small round buttons, long sleeves, two lower pockets, shirt hem at upper thigh, no long skirt panels. Petite slim feminine fit, narrow arms and shoulders. Empty garment only with opaque fabric, no person, skin, hands, legs, pants, shoes or mannequin. Frontal symmetrical A-pose, sleeves down at same angle as reference arms. Entire garment uncropped on 1024x1536 transparent alpha canvas. Realistic polished 3D fabric rendering. No background, no floor, no cast shadow, no text. Keep neck, shoulder, waist and cuff locations consistent with reference character to allow overlay."
+    }
+  ]
+}

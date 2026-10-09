@@ -1,0 +1,11 @@
+{
+  "id": "quat-giay",
+  "name": "Quạt giấy",
+  "category": "handheld",
+  "slot": "fan",
+  "detail": "Quạt giấy mở, nan tre",
+  "subject": "One OPEN traditional Vietnamese ivory paper folding hand fan, dark fine bamboo ribs, small subtle painted pink lotus on paper, golden-brown bamboo pivot and short handle below. Held hanging downward from wearer RIGHT hand, pivot at top, fan spread below pivot. Front shows decorated paper face, back reverse paper/ribs, strict profiles show a thin fan edge in perspective, not duplicated face. No hand.",
+  "prompt": "Use case: product-mockup. Asset type: photoreal modular dress-up accessory source turnaround sprite sheet. Make a SINGLE item with FOUR views on ONE 2x2 square sheet, 2048x2048 preferred, equal cells with no margins between cells, each object isolated and fully inside its cell. TOP LEFT = front of a standing wearer facing camera. TOP RIGHT = strict LEFT profile, wearer faces image-left. BOTTOM LEFT = strict RIGHT profile, wearer faces image-right. BOTTOM RIGHT = rear/back, wearer faces away. Keep exact same physical item, materials, proportions, scale, soft studio light and camera height across all four views. Real photographic textures matching supplied avatar style references. Treat supplied avatars only as lighting/style/anatomical wearing direction references, do not reproduce avatars. Center each accessory within its cell with at least 12% empty padding. Background must be true transparent alpha, no checkerboard, no floor, no shadow background. NO person, skin, mannequin, hair, head, hands, feet, other accessory, labels, text, separators, border or watermark. These are accessory-only alpha cutouts for later attachment to avatar; show ONLY visible accessory surfaces in that viewing direction. Subject: One OPEN traditional Vietnamese ivory paper folding hand fan, dark fine bamboo ribs, small subtle painted pink lotus on paper, golden-brown bamboo pivot and short handle below. Held hanging downward from wearer RIGHT hand, pivot at top, fan spread below pivot. Front shows decorated paper face, back reverse paper/ribs, strict profiles show a thin fan edge in perspective, not duplicated face. No hand.",
+  "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-ae9e6e07-f63c-4e92-a932-cb96a37560cd.png",
+  "tool": "image_gen"
+}

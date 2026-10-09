@@ -28,6 +28,7 @@ public class AiService {
         var payload=new LinkedHashMap<String,Object>();
         payload.put("prompt",request.prompt()); payload.put("city",request.city());
         payload.put("eventCode",request.eventCode()); payload.put("styleCode",request.styleCode());
+        payload.put("character",request.character());
         payload.put("weather",weather); payload.put("referenceData",outfits.references());
         payload.put("culturalContext",outfits.culturalContext());
         var data=client.recommendations(payload);

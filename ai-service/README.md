@@ -6,6 +6,25 @@ Service gợi ý và chấm Việt phục. Thiết kế chi tiết: PLAN-AI, PLA
 
 ## Chạy local (không cần Postgres, không cần API key)
 
+Trong stack PROMPTxPTIT hiện tại, `start-all.ps1` cấu hình `CATALOG_DATABASE_URL`
+từ database Spring và khởi động backend/import trước AI. AI đọc catalog, quiz,
+scoring, checklist, rules, culture cards và prompt từ PostgreSQL, không cần đọc
+các file JSON/prompt ở chế độ này. Cache và nhật ký runtime dùng bộ nhớ.
+`GET /ai/health` trả `catalogSource: postgres`. Khi chạy AI riêng, đặt URI
+PostgreSQL vào `CATALOG_DATABASE_URL` trong `.env` (không dùng URL `jdbc:`).
+
+Windows với psycopg async cần SelectorEventLoop:
+
+```powershell
+.venv\Scripts\python.exe -m uvicorn app.main:app --loop app.core.event_loop:selector_loop_factory --host 127.0.0.1 --port 8000
+```
+
+Các hướng dẫn JSON bên dưới dành cho chế độ chạy riêng khi cả hai biến
+`CATALOG_DATABASE_URL` và `DATABASE_URL` đều trống. Thay đổi dữ liệu tập trung
+bằng migration mới trong backend; không sửa migration đã áp dụng.
+Trong phản hồi đánh giá, `sources` là URL thực; `sourceVerified` và `sourceNote`
+phân biệt nguồn về trang phục với nhận định phối đồ chưa được kiểm chứng.
+
 ```bash
 cd ai-service
 python -m venv .venv
@@ -15,10 +34,32 @@ copy .env.example .env              # điền GEMINI_API_KEY nếu có
 uvicorn app.main:app --reload --port 8000
 ```
 
-- Giao diện thử, chia 4 trang theo luồng: http://localhost:8000/ai/playground — `#/quiz` (bối cảnh) → `#/goi-y` (3 bộ) → `#/tuy-chinh` (studio) → `#/nhan-xet` (Hỏi stylist). Tiến trình lưu trong phiên, tải lại trang không mất.
 - Tài liệu API: http://localhost:8000/ai/docs
 - Chưa có `GEMINI_API_KEY`: mọi bước tự chạy nhánh dự phòng (bắt từ khóa + câu viết sẵn).
-- Chưa có `DATABASE_URL`: catalog đọc từ `../data/*.json`, cache và log lưu trong bộ nhớ.
+- Chưa có `DATABASE_URL`: catalog đọc từ `data/*.json` bên trong ai-service, cache và log lưu trong bộ nhớ.
+
+Ảnh/layer hiện có ở `../frontend/public/figure`, gồm bộ PNG nam/nữ bốn góc và họa tiết.
+Công cụ tạo/kiểm tra hình nằm ở `../frontend/tools`. `DATA_DIR` mặc định là `ai-service/data`;
+`FIGURE_DIR` mặc định là `frontend/public/figure`. Đặt `BACKEND_COMPAT_ONLY=false` để dùng
+các endpoint native với catalog JSON này. Luồng Spring dùng `/ai/recommendations` và `/ai/remix`
+với catalog do backend gửi trong request, không cần chia sẻ schema PostgreSQL.
+
+## Phần ghép từ NepAoPrj
+
+`engine/scoring.py` chấm 5 tiêu chí và trả `scoreCard` trong các phản hồi native
+stylist/evaluate/review/explain. Trọng số, bảng xếp loại và trần điểm đọc từ
+`data/scoring.json`; mỗi luật trong `data/rules.json` có trường `criterion`.
+`GET /ai/catalog` cũng trả cấu hình scoring và checklist từ `data/checklist.json`.
+Prompt trong `prompts/` dùng thẻ điểm đã chấm để diễn giải; schema Gemini cho remix
+được chuyển đổi để loại bỏ các khóa không hỗ trợ.
+
+Giữ nguyên hai chế độ: `BACKEND_COMPAT_ONLY=true` dùng catalog Spring gửi trong request
+(vẫn cần `data/scoring.json`); `BACKEND_COMPAT_ONLY=false` bật cả API native và API
+tích hợp. Với native local, để `DATABASE_URL` của AI trống để đọc JSON, không dùng URL
+JDBC/database của Spring. Không cần chuyển thư mục `data` ra ngoài `ai-service`.
+
+Giao diện website dùng frontend React hiện có. Bản merge này không khôi phục playground
+HTML cũ hoặc bổ sung/sửa bộ asset.
 
 ## Cấu trúc
 
@@ -33,7 +74,6 @@ app/
   services/          điều phối pipeline (cache → hiểu ý → ghép → chấm → diễn giải)
   storage/           Postgres pool, cache, nhật ký lượt gọi, giới hạn theo IP
   api/routers/       endpoint chia theo chức năng
-  web/               trang playground (chỉ bật khi ENABLE_DEV_ROUTES=true)
 prompts/             prompt dạng .txt (sửa lời không cần đụng code)
 scripts/             đo độ chính xác, tạo cache demo
 tests/               pytest + 20 câu test hiểu ý

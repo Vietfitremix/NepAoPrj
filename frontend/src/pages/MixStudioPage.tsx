@@ -1,122 +1,122 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, Share2 } from 'lucide-react';
-import { EmptyState, Loading, PageHeading, Stepper } from '../components/common/UI';
-import { Figure, useFigure } from '../components/ai/Figure';
-import { Badges, ScoreCardView } from '../components/ai/ScoreCardView';
-import ShareDialog from '../components/ai/ShareDialog';
-import { LEVEL, fullContext, reviewKey } from '../ai/actions';
-import { aiApi } from '../ai/api';
-import { motifTop, patternDef, patternOk, SLOT_NAME, SLOT_ORDER, VIEWS } from '../ai/figure';
-import { useStore } from '../ai/store';
-import type { EvaluateResponse, OutfitState } from '../ai/types';
-import { useContextTags } from './ConceptPage';
+﻿import { useEffect, useRef, useState } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { ArrowLeft, ArrowRight, RotateCcw, SlidersHorizontal, Sparkles } from 'lucide-react';
+import { useSession } from '../state';
+import type { CulturalResult, MixConfig, Outfit } from '../types';
+import { getOutfits } from '../services/outfitApi';
+import { getCulturalScore } from '../services/culturalApi';
+import { applyChanges, remix } from '../services/remixApi';
+import { createLook } from '../services/lookApi';
+import { errorMessage } from '../services/api';
+import { EmptyState, ErrorBox, Loading, PageHeading, Stepper } from '../components/common/UI';
+import { ChoiceGroup } from '../components/mix/Selectors';
+import WardrobeControls from '../components/mix/WardrobeControls';
+import Avatar2D from '../components/mix/Avatar2D';
+import CulturalScore from '../components/cultural/CulturalScore';
+import { configureWardrobe, initialWardrobe } from '../utils/mixWardrobe';
+import type { MaleSelection, WardrobeCharacter } from '../utils/maleWardrobe';
+import { events } from './StylistPage';
 
-const SWATCH_SLOTS: [keyof OutfitState['colors'], string][] = [['main', 'Màu chính'], ['bottom', 'Quần / váy'], ['lining', 'Lót / viền / yếm'], ['accent', 'Khăn / thắt lưng / điểm nhấn']];
-
-/** Bước 3: tuỳ chỉnh bộ đồ. Người mẫu giấy 4 góc, màu theo từng vị trí, hoạ tiết, phụ kiện; thẻ điểm và cảnh báo văn hoá chấm lại theo luật mỗi lần đổi. */
 export default function MixStudioPage() {
-  const store = useStore(); const { state, context, view, catalog: CAT, review, set, loading } = store; const navigate = useNavigate();
-  const [ev, setEv] = useState<EvaluateResponse | null>(null); const [evErr, setEvErr] = useState('');
-  const [share, setShare] = useState(false);
-  const tags = useContextTags(state ? fullContext(context, state) : null);
-  const big = useFigure(state, view);
-  const timer = useRef<number | undefined>(undefined);
-  const ctxKey = state ? JSON.stringify(fullContext(context, state)) : '';
-
-  useEffect(() => {
-    if (!state) return;
-    window.clearTimeout(timer.current);
-    timer.current = window.setTimeout(async () => {
-      try { setEv(await aiApi<EvaluateResponse>('/evaluate', { state, context: fullContext(context, state) })); setEvErr(''); }
-      catch (e) { setEvErr(e instanceof Error ? e.message : String(e)); }
-    }, 150);
-    return () => window.clearTimeout(timer.current);
-    // eslint-disable-next-line
-  }, [JSON.stringify(state), ctxKey]);
-
-  const patterns = useMemo(() => CAT && state ? CAT.patterns.filter(p => patternOk(p, state)) : [], [CAT, state]);
-  if (loading || !CAT) return <main className="page-container"><Stepper active={2} /><Loading /></main>;
-  if (!state) return <main className="page-container"><EmptyState title="Chưa có bộ nào để tuỳ chỉnh">Hãy chọn một trong 3 bộ stylist gợi ý.</EmptyState></main>;
-
-  const update = (patch: Partial<OutfitState>) => set({ state: { ...state, ...patch }, review: { key: null, res: null } });
-  const setGender = (gender: string) => {
-    const ok = CAT.garments.filter(g => g.genders.includes(gender));
-    const garment = ok.some(g => g.id === state.garment) ? state.garment : ok[0].id;
-    update({ gender, garment, accessories: state.accessories.filter(a => CAT.acc[a].genders.includes(gender)), pattern: patternOk(CAT.pattern[state.pattern || 'tron'] || {}, { ...state, gender, garment }) ? state.pattern : 'tron' });
-  };
-  const setGarment = (garment: string) => update({ garment, pattern: patternOk(CAT.pattern[state.pattern || 'tron'] || {}, { ...state, garment }) ? state.pattern : 'tron' });
-  const toggleAcc = (id: string, on: boolean) => {
-    const slot = CAT.acc[id].slot;
-    const rest = state.accessories.filter(x => CAT.acc[x].slot !== slot);
-    update({ accessories: on ? [...rest, id] : rest });
-  };
-  const applyPatch = (p: Record<string, unknown>) => {
-    const next = { ...state } as Record<string, unknown>;
-    for (const [k, v] of Object.entries(p)) next[k] = k === 'colors' ? { ...state.colors, ...(v as object) } : v;
-    set({ state: next as unknown as OutfitState, review: { key: null, res: null } });
-  };
-  const base = CAT.color[state.colors.main]?.hex || '#ccc';
-  const accOk = CAT.accessories.filter(a => a.genders.includes(state.gender));
-  const card = CAT.cultureCards.find(c => c.garmentId === state.garment);
-  const fresh = review.key === reviewKey(context, state);
-  const vi = VIEWS.findIndex(x => x[0] === view);
-
-  return <main className="page-container wide"><Stepper active={2} />
-    <PageHeading eyebrow="YOUR STYLE. YOUR STORY." title="Một chút remix. Một chất riêng." description="Thử màu mới, đổi hoạ tiết, thêm phụ kiện. Thẻ điểm bên cạnh chấm lại ngay theo bối cảnh của bạn." />
-    <div className="tags ctx"><span className="muted">Bối cảnh:</span>{tags.map(t => <span key={t}>{t}</span>)}</div>
-    <div className="studio">
-      <div className="figwrap panel">
-        <div className="bigfig"><Figure state={state} view={view} /></div>
-        <div className="viewnav"><button className="icon-button" aria-label="Góc trước đó" onClick={() => set({ view: VIEWS[(vi + 3) % 4][0] })}>◀</button><span className="muted">{VIEWS[vi][1]}</span>
-          <button className="icon-button" aria-label="Góc kế tiếp" onClick={() => set({ view: VIEWS[(vi + 1) % 4][0] })}>▶</button></div>
-        <div className="views">{VIEWS.map(([v, name]) => <ViewThumb key={v} state={state} v={v} name={name} active={v === view} onPick={() => set({ view: v })} />)}</div>
-        {big?.missing.length ? <div className="missing">Chưa có hình: {big.missing.join(', ')}</div> : null}
-      </div>
-      <div className="controls panel">
-        <div className="selects">
-          <Field label="Người mẫu"><select value={state.gender} onChange={e => setGender(e.target.value)}><option value="nu">Nữ</option><option value="nam">Nam</option></select></Field>
-          <Field label="Dịp"><select value={state.occasion} onChange={e => update({ occasion: e.target.value })}>{CAT.occasions.map(o => <option key={o.id} value={o.id}>{o.name}</option>)}</select></Field>
-          <Field label="Phong cách"><select value={state.style} onChange={e => update({ style: e.target.value })}>{CAT.styles.map(o => <option key={o.id} value={o.id}>{o.name}</option>)}</select></Field>
-          <Field label="Trang phục"><select value={state.garment} onChange={e => setGarment(e.target.value)}>{CAT.garments.filter(g => g.genders.includes(state.gender)).map(g => <option key={g.id} value={g.id}>{g.name}{g.hasSvg === false ? ' (chưa có hình)' : ''}</option>)}</select></Field>
-        </div>
-        {SWATCH_SLOTS.map(([slot, label]) => <Field key={slot} label={label}><div className="swatches">{CAT.colors.map(c =>
-          <button key={c.id} className="sw" title={c.name} style={{ background: c.hex }} aria-pressed={state.colors[slot] === c.id}
-            onClick={() => update({ colors: { ...state.colors, [slot]: c.id } })} />)}</div></Field>)}
-        <Field label="Hoạ tiết"><div className="accs">{[...new Set(patterns.map(p => p.group || ''))].map(gr => <div className="accgroup" key={gr}>{gr && <span className="muted">{gr}</span>}
-          {patterns.filter(p => (p.group || '') === gr).map((p, i) => {
-            const def = patternDef(p.id, base, `sw_pat_${gr}_${i}`);
-            const art = p.kind === 'placement' ? `<rect width="44" height="44" fill="${base}"/><g transform="translate(2 -2) scale(0.4)">${motifTop(p.id)}</g>`
-              : `${def ? `<defs>${def}</defs>` : ''}<rect width="44" height="44" fill="${def ? `url(#sw_pat_${gr}_${i})` : base}"/>`;
-            return <button key={p.id} className="pat" title={p.name + (p.note ? ' – ' + p.note : '')} aria-pressed={(state.pattern || 'tron') === p.id} onClick={() => update({ pattern: p.id })}>
-              <svg viewBox="0 0 44 44" dangerouslySetInnerHTML={{ __html: art }} /></button>;
-          })}</div>)}</div></Field>
-        <Field label="Phụ kiện (mỗi vị trí 1 món)"><div className="accs">{[...SLOT_ORDER].reverse().filter(sl => accOk.some(a => a.slot === sl)).map(sl => <div className="accgroup" key={sl}><span className="muted">{SLOT_NAME[sl]}</span>
-          {accOk.filter(a => a.slot === sl).map(a => <label key={a.id}><input type="checkbox" checked={state.accessories.includes(a.id)} onChange={e => toggleAcc(a.id, e.target.checked)} /> {a.name}</label>)}</div>)}</div></Field>
-      </div>
-      <aside className="cultural-panel panel" aria-live="polite">
-        <div className="small-panel-heading"><h2>Thẻ điểm và kiểm tra văn hoá</h2></div>
-        {ev ? <><ScoreCardView card={ev.scoreCard} /><p className="muted">Màu: {ev.color.note}</p>
-          {ev.evaluations.length ? ev.evaluations.map((e, i) => <div className={`eval ${e.level}`} key={i}><span className={`badge b-${e.level}`}>{LEVEL[e.level]}</span> {e.reason}
-            <div className="muted">Gợi ý: {e.suggestion.text} {e.suggestion.patch && <button className="chip" onClick={() => applyPatch(e.suggestion.patch!)}>Áp dụng</button>}</div></div>)
-            : <div className="eval ok"><span className="badge b-ok">Phù hợp</span> Không có cảnh báo văn hoá nào cho bộ này.</div>}</>
-          : evErr ? <p className="warn">{evErr}</p> : <Loading text="Đang chấm điểm…" />}
-        {card && <div className="culture"><b>{card.title}</b> {!card.verified && <span className="muted">(chưa kiểm chứng nguồn)</span>}<br />{card.body}</div>}
-      </aside>
+  const {conceptId}=useParams();
+  const {session,update}=useSession();
+  const navigate=useNavigate();
+  const config=session.mix?.conceptId===conceptId?session.mix:undefined;
+  const concept=session.recommendation?.concepts.find(item=>item.id===conceptId);
+  const [outfits,setOutfits]=useState<Outfit[]>();
+  const [outfitError,setOutfitError]=useState('');
+  const [retry,setRetry]=useState(0);
+  const [scoreRetry,setScoreRetry]=useState(0);
+  const [score,setScore]=useState<{key:string;value:CulturalResult}>();
+  const [scoreError,setScoreError]=useState('');
+  const [checking,setChecking]=useState(false);
+  const [prompt,setPrompt]=useState('');
+  const [busy,setBusy]=useState<'remix'|'generate'|''>('');
+  const [error,setError]=useState('');
+  const [explanation,setExplanation]=useState('');
+  const key=JSON.stringify(config);
+  const latestKey=useRef(key);latestKey.current=key;
+  const active=useRef(true);
+  useEffect(()=>{active.current=true;return()=>{active.current=false;};},[]);
+  useEffect(()=>{
+    const controller=new AbortController();setOutfits(undefined);setOutfitError('');
+    getOutfits(controller.signal).then(data=>{if(!controller.signal.aborted)setOutfits(data);})
+      .catch(err=>{if(!controller.signal.aborted)setOutfitError(errorMessage(err));});
+    return()=>controller.abort();
+  },[retry]);
+  useEffect(()=>{
+    if(!config)return;
+    const controller=new AbortController();setChecking(true);setScoreError('');
+    const timer=setTimeout(()=>{
+      getCulturalScore(config,controller.signal).then(value=>{if(!controller.signal.aborted)setScore({key,value});})
+        .catch(err=>{if(!controller.signal.aborted)setScoreError(errorMessage(err));})
+        .finally(()=>{if(!controller.signal.aborted)setChecking(false);});
+    },450);
+    return()=>{clearTimeout(timer);controller.abort();};
+  },[key,scoreRetry]);
+  if(!config)return <main className="page-container nepao-page"><EmptyState title="Chọn một concept để bắt đầu mix">Bản phối chưa có trong phiên này. Hãy tạo concept để khám phá Mix Studio.</EmptyState></main>;
+  const outfit=outfits?.find(item=>item.code===config.outfitCode);
+  const wardrobe=config.wardrobe || initialWardrobe(config,session.preferences?.character || 'female');
+  function change(patch:Partial<MixConfig>){if(!config)return;update({mix:{...config,...patch}});setError('');setExplanation('');}
+  function chooseWardrobe(selection:MaleSelection,character:WardrobeCharacter){
+    if(!config || !outfits)return;
+    change(configureWardrobe(config,selection,character,outfits));
+  }
+  function reset(){
+    if(!concept || !config)return;
+    const original:MixConfig={conceptId:config.conceptId,outfitCode:concept.outfitCode,colorCode:concept.colorCode,
+      styleCode:concept.styleCode,accessoryCodes:concept.accessoryCodes || [],eventCode:session.preferences?.eventCode || 'TET'};
+    original.wardrobe=initialWardrobe(original,session.preferences?.character || 'female');
+    change(original);
+  }
+  async function doRemix(event:React.FormEvent){
+    event.preventDefault();if(!config || !prompt.trim() || busy)return;
+    const requestKey=key;setBusy('remix');setError('');
+    try{
+      const result=await remix(config,prompt.trim());
+      if(!active.current || latestKey.current!==requestKey)return;
+      update({mix:applyChanges(config,result.changes)});setExplanation(result.explanation);setPrompt('');
+    }catch(err){if(active.current)setError(errorMessage(err));}
+    finally{if(active.current)setBusy('');}
+  }
+  async function generate(){
+    if(!config || busy || checking || score?.key!==key)return;
+    setBusy('generate');setError('');
+    try{
+      const look=await createLook(config);
+      if(!look.id)throw new Error('Máy chủ chưa trả về mã look. Vui lòng thử lại.');
+      if(active.current)navigate(`/look/${encodeURIComponent(look.id)}`);
+    }catch(err){if(active.current)setError(errorMessage(err));}
+    finally{if(active.current)setBusy('');}
+  }
+  return <main className="page-container studio-page nepao-page wide">
+    <Stepper active={2}/><PageHeading eyebrow="YOUR STYLE. YOUR STORY." title="Một chút remix. Một chất riêng." description="Đổi trang phục, phối quần váy, giày dép, màu, họa tiết và mọi phụ kiện trong tủ đồ của bạn."/>
+    <div className="studio-toolbar"><Link to="/concepts" className="text-button"><ArrowLeft size={16}/> Chọn lại concept</Link>
+      <span>{concept?.name || 'Bản phối của bạn'}</span>
+      {concept&&<button className="text-button" disabled={!!busy} onClick={reset}><RotateCcw size={15}/> Về bản gốc</button>}
     </div>
-    <div className="pagebar">
-      <Link className="text-button" to="/concepts"><ArrowLeft size={16} /> Chọn bộ khác</Link>
-      <div className="row">{fresh && <span className="muted">Bộ đồ chưa đổi kể từ lần hỏi trước, sẽ xem lại nhận xét cũ.</span>}
-        <button className="button outline" onClick={() => setShare(true)}><Share2 size={16} /> Checklist &amp; Lookbook</button>
-        <button className="button primary" onClick={() => navigate('/look')}>Hỏi stylist <ArrowRight size={16} /></button></div>
-    </div>
-    <ShareDialog open={share} onClose={() => setShare(false)} state={state} note={{ title: '', comment: '', tip: '', card: ev?.scoreCard }} />
+    {outfitError?<ErrorBox message={outfitError} retry={()=>setRetry(value=>value+1)}/>:!outfit?<Loading text="Đang tải trang phục và phụ kiện…"/>:<>
+      <div className="studio">
+        <Avatar2D outfit={outfit} config={{...config,wardrobe}}/>
+        <section className="panel controls controls-panel">
+          <div className="small-panel-heading"><SlidersHorizontal size={19}/><h2>Tùy chỉnh</h2></div>
+          <WardrobeControls character={wardrobe.character} selection={wardrobe.selection} onChange={chooseWardrobe} disabled={!!busy}/>
+          <ChoiceGroup label="Phong cách" options={outfit.styles} value={config.styleCode} onChange={styleCode=>change({styleCode})} disabled={!!busy}/>
+          <ChoiceGroup label="Bối cảnh" options={events} value={config.eventCode} onChange={eventCode=>change({eventCode})} disabled={!!busy}/>
+          <p className="form-note">Cultural Check tự cập nhật theo bản phối: áo, màu tự chọn, quần/váy, giày, phụ kiện, họa tiết và bối cảnh. Các món hiện đại được xét theo phong cách bạn chọn.</p>
+        </section>
+        <CulturalScore result={score?.key===key?score.value:undefined} busy={checking || (!scoreError && score?.key!==key)} error={scoreError}
+          retry={()=>setScoreRetry(value=>value+1)} apply={changes=>{update({mix:applyChanges(config,changes)});setExplanation('');setError('');}} disabled={!!busy}/>
+      </div>
+      <form className="remix-bar" onSubmit={doRemix}><Sparkles size={22}/><label className="sr-only" htmlFor="remix">Yêu cầu AI remix</label>
+        <input id="remix" value={prompt} disabled={!!busy} maxLength={1500} onChange={event=>setPrompt(event.target.value)} placeholder="Cho outfit trẻ hơn nhưng vẫn giữ màu đỏ…"/>
+        <button className="button dark" disabled={!!busy || !prompt.trim()}>{busy==='remix'?'Đang remix…':'AI Remix'}<Sparkles size={16}/></button>
+      </form>
+      {explanation&&<div className="ai-explanation" role="status"><Sparkles size={19}/>{explanation}</div>}
+      {error&&<ErrorBox message={error}/>}
+      <div className="generate-row"><p>Bản phối đã đúng chất bạn?<br/><span>Tạo look để lưu lại và chia sẻ câu chuyện của mình.</span></p>
+        <button className="button primary" onClick={generate} disabled={!!busy || checking || !!scoreError || score?.key!==key}>{busy==='generate'?'Đang tạo look…':'Generate look'}<ArrowRight size={19}/></button>
+      </div>
+    </>}
   </main>;
 }
-
-function Field({ label, children }: { label: string; children: React.ReactNode }) { return <div className="field"><span className="t">{label}</span>{children}</div>; }
-function ViewThumb({ state, v, name, active, onPick }: { state: OutfitState; v: string; name: string; active: boolean; onPick: () => void }) {
-  const r = useFigure(state, v);
-  return <button aria-pressed={active} onClick={onPick}><span className="thumb" dangerouslySetInnerHTML={{ __html: r?.svg || '' }} /><span>{name}</span></button>;
-}
-export { Badges };

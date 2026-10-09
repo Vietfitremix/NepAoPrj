@@ -1,0 +1,26 @@
+# Bí mật: API key Gemini, mật khẩu DB — không bao giờ đưa lên git (dùng .env.example làm mẫu)
+.env
+**/.env
+!**/.env.example
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Thư mục rác do script chạy trên Windows tạo ra
+tools/%SystemDrive%/
+
+# Ảnh soát hình sinh ra từ tools/render_check.py (chạy lại script để tạo)
+review-svg/
+
+# Cấu hình máy cá nhân
+.claude/
+~$*
+*.bak
+
+# Tài liệu nội bộ: kế hoạch, báo cáo, ý tưởng (chỉ giữ trên máy, không đưa lên git)
+/PLAN-*.md
+/BAO-CAO-*.md
+*.docx

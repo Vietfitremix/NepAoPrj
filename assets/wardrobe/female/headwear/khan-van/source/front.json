@@ -1,0 +1,11 @@
+{
+  "tool": "image_gen",
+  "file": "assets/wardrobe/female/headwear/khan-van/source/front.png",
+  "view": "front",
+  "prompt": "Use case: product-mockup. Asset type: photoreal modular dress-up accessory source turnaround sprite sheet. Make a SINGLE item with FOUR views on ONE 2x2 square sheet, 2048x2048 preferred, equal cells with no margins between cells, each object isolated and fully inside its cell. TOP LEFT = front of a standing wearer facing camera. TOP RIGHT = strict LEFT profile, wearer faces image-left. BOTTOM LEFT = strict RIGHT profile, wearer faces image-right. BOTTOM RIGHT = rear/back, wearer faces away. Keep exact same physical item, materials, proportions, scale, soft studio light and camera height across all four views. Real photographic textures matching supplied avatar style references. Treat supplied avatars only as lighting/style/anatomical wearing direction references, do not reproduce avatars. Center each accessory within its cell with at least 12% empty padding. Background must be true transparent alpha, no checkerboard, no floor, no shadow background. NO person, skin, mannequin, hair, head, hands, feet, other accessory, labels, text, separators, border or watermark. These are accessory-only alpha cutouts for later attachment to avatar; show ONLY visible accessory surfaces in that viewing direction. Subject: Vietnamese khan van red silk round rolled head wrap, wide ring of layered rolled crimson fabric encircling the crown, open central crown, traditional elegant silk texture. No long scarf tails.",
+  "inputs": [
+    "assets/wardrobe/shared/headwear/khan-van/source/turnaround.png",
+    "frontend/public/figure/female-layers/body/front.png"
+  ],
+  "generatedPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a11c11-7882-7363-b4c8-8abb5e014dc7\\exec-100aa569-61b8-483f-b871-0a987a399a42.png"
+}

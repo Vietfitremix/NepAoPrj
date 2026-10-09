@@ -1,32 +1,14 @@
-# Bí mật: API key Gemini, mật khẩu DB — không bao giờ đưa lên git (dùng .env.example làm mẫu)
+# Environment & Secrets
 .env
-**/.env
-!**/.env.example
+.env.local
+*.env
 
-# Python
-.venv/
+# Python (ai-service)
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+ai-service/.venv/
 .pytest_cache/
-
-# Thư mục rác do script chạy trên Windows tạo ra
-tools/%SystemDrive%/
-
-# Ảnh soát hình sinh ra từ tools/render_check.py (chạy lại script để tạo)
-review-svg/
-
-# Cấu hình máy cá nhân
-.claude/
-~$*
-*.bak
-
-# Tài liệu nội bộ: kế hoạch, báo cáo, ý tưởng (chỉ giữ trên máy, không đưa lên git)
-/PLAN-*.md
-/BAO-CAO-*.md
-*.docx
-
-# Công cụ tải về để dựng người mẫu (Blender, MakeHuman) — không đưa lên git
-/.tools/
 
 # Java & Gradle (backend)
 backend/.gradle/
@@ -41,5 +23,15 @@ backend/bin/
 frontend/node_modules/
 frontend/dist/
 *.tsbuildinfo
+
+# IDE & OS
 .DS_Store
 Thumbs.db
+
+# Local Blender runtime and backup files
+.tools/
+*.blend1
+*.blend2
+
+# Generated asset export packages (rebuild with tools/package_*_assets.mjs)
+assets/exports/

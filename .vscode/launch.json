@@ -12,7 +12,7 @@
         "DATABASE_URL": "jdbc:postgresql://localhost:5432/viet_fit",
         "DATABASE_USERNAME": "viet_fit",
         "DATABASE_PASSWORD": "change-me",
-        "WEATHER_API_KEY": "",
+        "WEATHER_API_KEY": "6d0a8d868a4ce53d340d71e14fe04d9c",
         "AI_SERVICE_URL": "http://localhost:8000"
       }
     },

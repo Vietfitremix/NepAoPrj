@@ -1,0 +1,35 @@
+{
+  "mode": "Built-in imagegen",
+  "prompts": [
+    {
+      "gender": "male",
+      "view": "left",
+      "prompt": "Use case: identity-preserve. Create a new camera view of the exact adult Vietnamese man in the reference image for a 4-direction game avatar.\nReference is the FRONT view of this same character. Preserve the exact identity, face, hairstyle, skin tone, body proportions, grey tank top, grey shorts, bare feet and realistic polished 3D rendering.\nOutput exactly ONE full-body character, strict 90 degree SIDE PROFILE, nose and toes pointing toward the LEFT edge of the image; show the anatomically correct side of this person, not a three-quarter view.\nSame relaxed A pose with arms slightly away from torso and straight legs. Arms and feet overlap naturally in side profile; do not spread limbs sideways in the image like a front view.\nFrame: 1024x1536 transparent RGBA canvas. Top of hair y=35, soles y=1435, body centered x=512. Preserve full head, fingers and toes; camera height around waist, orthographic front-elevation perspective without perspective tilt.\nNo shoes, jewelry, accessories, props, floor, shadow, halo, text, borders, or other characters. Transparent background."
+    },
+    {
+      "gender": "male",
+      "view": "right",
+      "prompt": "Use case: identity-preserve. Create a new camera view of the exact adult Vietnamese man in the reference image for a 4-direction game avatar.\nReference is the FRONT view of this same character. Preserve the exact identity, face, hairstyle, skin tone, body proportions, grey tank top, grey shorts, bare feet and realistic polished 3D rendering.\nOutput exactly ONE full-body character, strict 90 degree SIDE PROFILE, nose and toes pointing toward the RIGHT edge of the image; show the anatomically correct side of this person, not a three-quarter view.\nSame relaxed A pose with arms slightly away from torso and straight legs. Arms and feet overlap naturally in side profile; do not spread limbs sideways in the image like a front view.\nFrame: 1024x1536 transparent RGBA canvas. Top of hair y=35, soles y=1435, body centered x=512. Preserve full head, fingers and toes; camera height around waist, orthographic front-elevation perspective without perspective tilt.\nNo shoes, jewelry, accessories, props, floor, shadow, halo, text, borders, or other characters. Transparent background."
+    },
+    {
+      "gender": "male",
+      "view": "back",
+      "prompt": "Use case: identity-preserve. Create a new camera view of the exact adult Vietnamese man in the reference image for a 4-direction game avatar.\nReference is the FRONT view of this same character. Preserve the exact identity, face, hairstyle, skin tone, body proportions, grey tank top, grey shorts, bare feet and realistic polished 3D rendering.\nOutput exactly ONE full-body character, strict BACK view, rotated 180 degrees, face entirely hidden, back of head and back of grey tank top visible.\nSame relaxed A pose with arms slightly away from torso and straight legs. Feet slightly apart exactly as front reference.\nFrame: 1024x1536 transparent RGBA canvas. Top of hair y=35, soles y=1435, body centered x=512. Preserve full head, fingers and toes; camera height around waist, orthographic front-elevation perspective without perspective tilt.\nNo shoes, jewelry, accessories, props, floor, shadow, halo, text, borders, or other characters. Transparent background."
+    },
+    {
+      "gender": "female",
+      "view": "left",
+      "prompt": "Use case: identity-preserve. Create a new camera view of the exact adult Vietnamese petite slender woman in the reference image for a 4-direction game avatar.\nReference is the FRONT view of this same character. Preserve the exact identity, face, hairstyle, skin tone, body proportions, grey tank top, grey shorts, bare feet and realistic polished 3D rendering.\nOutput exactly ONE full-body character, strict 90 degree SIDE PROFILE, nose and toes pointing toward the LEFT edge of the image; show the anatomically correct side of this person, not a three-quarter view.\nSame relaxed A pose with arms slightly away from torso and straight legs. Arms and feet overlap naturally in side profile; do not spread limbs sideways in the image like a front view.\nFrame: 1024x1536 transparent RGBA canvas. Top of hair y=35, soles y=1435, body centered x=512. Preserve full head, fingers and toes; camera height around waist, orthographic front-elevation perspective without perspective tilt.\nNo shoes, jewelry, accessories, props, floor, shadow, halo, text, borders, or other characters. Transparent background."
+    },
+    {
+      "gender": "female",
+      "view": "right",
+      "prompt": "Use case: identity-preserve. Create a new camera view of the exact adult Vietnamese petite slender woman in the reference image for a 4-direction game avatar.\nReference is the FRONT view of this same character. Preserve the exact identity, face, hairstyle, skin tone, body proportions, grey tank top, grey shorts, bare feet and realistic polished 3D rendering.\nOutput exactly ONE full-body character, strict 90 degree SIDE PROFILE, nose and toes pointing toward the RIGHT edge of the image; show the anatomically correct side of this person, not a three-quarter view.\nSame relaxed A pose with arms slightly away from torso and straight legs. Arms and feet overlap naturally in side profile; do not spread limbs sideways in the image like a front view.\nFrame: 1024x1536 transparent RGBA canvas. Top of hair y=35, soles y=1435, body centered x=512. Preserve full head, fingers and toes; camera height around waist, orthographic front-elevation perspective without perspective tilt.\nNo shoes, jewelry, accessories, props, floor, shadow, halo, text, borders, or other characters. Transparent background."
+    },
+    {
+      "gender": "female",
+      "view": "back",
+      "prompt": "Use case: identity-preserve. Create a new camera view of the exact adult Vietnamese petite slender woman in the reference image for a 4-direction game avatar.\nReference is the FRONT view of this same character. Preserve the exact identity, face, hairstyle, skin tone, body proportions, grey tank top, grey shorts, bare feet and realistic polished 3D rendering.\nOutput exactly ONE full-body character, strict BACK view, rotated 180 degrees, face entirely hidden, back of head and back of grey tank top visible.\nSame relaxed A pose with arms slightly away from torso and straight legs. Feet slightly apart exactly as front reference.\nFrame: 1024x1536 transparent RGBA canvas. Top of hair y=35, soles y=1435, body centered x=512. Preserve full head, fingers and toes; camera height around waist, orthographic front-elevation perspective without perspective tilt.\nNo shoes, jewelry, accessories, props, floor, shadow, halo, text, borders, or other characters. Transparent background."
+    }
+  ]
+}

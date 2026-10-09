@@ -1,36 +1,17 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Sparkles } from 'lucide-react';
-import { EmptyState, ErrorBox, Loading, PageHeading, Stepper } from '../components/common/UI';
-import OutfitCard from '../components/ai/OutfitCard';
-import { CTX_FIELDS, useActions } from '../ai/actions';
-import { useStore } from '../ai/store';
-import type { Context } from '../ai/types';
-
-export function useContextTags(ctx: Context | null): string[] {
-  const { catalog: CAT, quiz } = useStore();
-  if (!ctx || !CAT) return [];
-  const lab = (f: string, v: string) => f === 'occasion' ? CAT.occasion[v]?.name : f === 'style' ? CAT.style[v]?.name : f === 'gender' ? ({ nu: 'Nữ', nam: 'Nam' } as Record<string, string>)[v]
-    : quiz.find(q => q.field === f)?.options.find(o => o.value === v)?.label;
-  return CTX_FIELDS.map(f => { const v = ctx[f]; return typeof v === 'string' ? (lab(f, v) || '') : ''; }).filter(Boolean);
-}
-
-/** Bước 2: stylist gợi ý 3 bộ (luật chọn và chấm điểm, Gemini diễn giải). */
+import { useSession } from '../state';
+import { EmptyState, PageHeading, Stepper } from '../components/common/UI';
+import ConceptCard from '../components/concept/ConceptCard';
+import CulturalInfoModal from '../components/concept/CulturalInfoModal';
+import type { Concept } from '../types';
+import { cities, events, styles } from './StylistPage';
+import { initialWardrobe } from '../utils/mixWardrobe';
+import type { MixConfig } from '../types';
 export default function ConceptPage() {
-  const { stylist, context, catalog: CAT, loading } = useStore(); const { ask, open } = useActions();
-  const tags = useContextTags(context); const [ms, setMs] = useState(0);
-  useEffect(() => { setMs(stylist?.ms || 0); }, [stylist]);
-  if (loading || !CAT) return <main className="page-container"><Stepper active={1} /><Loading /></main>;
-  if (!stylist) return <main className="page-container"><EmptyState title="Cảm hứng bắt đầu từ bạn">Hãy cho stylist biết bối cảnh để có 3 bộ gợi ý dành riêng cho bạn.</EmptyState></main>;
-  return <main className="page-container"><Stepper active={1} />
-    <PageHeading eyebrow="3 GÓC NHÌN. MỘT CHẤT RIÊNG." title="Cảm hứng Việt, dành cho bạn." description="Chọn một bộ để bắt đầu. Bạn luôn có thể biến tấu theo cách mình thích." />
-    {stylist.loading && <Loading text="Stylist đang chọn đồ…" />}
-    {stylist.error && <ErrorBox message={stylist.error} retry={stylist.body ? () => ask(stylist.body!) : undefined} />}
-    {stylist.res?.kind === 'clarify' && <section className="panel clarify"><p className="bubble">{stylist.res.question}</p>
-      <div className="chips">{stylist.res.options.map(o => <button className="chip" key={o.label} onClick={() => ask({ ...stylist.body, override: { occasion: o.occasion || null } })}>{o.label}</button>)}</div></section>}
-    {stylist.res?.kind === 'outfits' && <>
-      <section className="understanding"><div><Sparkles size={21} /><strong>Stylist hiểu bạn đang tìm</strong></div><div className="tags">{tags.map(t => <span key={t}>{t}</span>)}</div>
-        <p>Nguồn: <b>{stylist.res.source}</b>{ms ? ` · ${ms} ms` : ''}</p></section>
-      <div className="concept-grid">{stylist.res.outfits.map((o, i) => <OutfitCard key={o.outfitId} o={o} index={i} onPick={() => open(o)} />)}</div></>}
-    <Link to="/stylist" className="text-button back-link"><ArrowLeft size={17} /> Sửa bối cảnh</Link></main>;
+  const { session, update }=useSession();const navigate=useNavigate();const [info,setInfo]=useState<Concept>();const { recommendation, preferences }=session;
+  function select(concept: Concept){const mix:MixConfig={conceptId:concept.id,outfitCode:concept.outfitCode,colorCode:concept.colorCode,styleCode:concept.styleCode,eventCode:preferences?.eventCode||'TET',accessoryCodes:concept.accessoryCodes||[]};mix.wardrobe=initialWardrobe(mix,preferences?.character||'female');update({mix});navigate(`/mix/${encodeURIComponent(concept.id)}`);}
+  if(!recommendation||!preferences)return <main className="page-container nepao-page"><EmptyState title="Cảm hứng bắt đầu từ bạn">Hãy chia sẻ sở thích để AI tạo 3 concept dành riêng cho bạn.</EmptyState></main>;
+  return <main className="page-container nepao-page"><Stepper active={1}/><PageHeading eyebrow="3 GÓC NHÌN. MỘT CHẤT RIÊNG." title="Cảm hứng Việt, dành cho bạn." description="Chọn một concept để bắt đầu. Bạn luôn có thể biến tấu theo cách mình thích."/><section className="understanding"><div><Sparkles size={21}/><strong>AI hiểu bạn đang tìm</strong></div><p>{recommendation.understanding}</p><div className="tags"><span>{events.find(e=>e.code===preferences.eventCode)?.label}</span><span>{cities.find(c=>c.code===preferences.city)?.label}</span><span>{preferences.weather.temperature}°C</span><span>{styles.find(s=>s.code===preferences.styleCode)?.label}</span></div></section><div className="concept-grid">{recommendation.concepts.map((concept,i)=><ConceptCard key={concept.id} concept={concept} index={i} character={preferences.character || 'female'} onInfo={()=>setInfo(concept)} onSelect={()=>select(concept)}/>)}</div><Link to="/stylist" className="text-button back-link"><ArrowLeft size={17}/> Điều chỉnh nhu cầu của bạn</Link>{info&&<CulturalInfoModal code={info.outfitCode} onClose={()=>setInfo(undefined)} onSelect={()=>select(info)}/>}</main>;
 }

@@ -1,0 +1,98 @@
+{
+  "width": 1024,
+  "height": 1536,
+  "base": "base.png",
+  "drawOrder": [
+    "base",
+    "shoes",
+    "pants",
+    "shirt"
+  ],
+  "outfits": [
+    {
+      "id": "jade",
+      "name": "Áo dài xanh ngọc",
+      "file": "ao-dai-jade.png",
+      "x": 0,
+      "y": 0,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "rose",
+      "name": "Áo dài hồng",
+      "file": "ao-dai-rose.png",
+      "x": 0,
+      "y": 0,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "tu-than",
+      "name": "Áo tứ thân",
+      "file": "tu-than.png",
+      "x": 0,
+      "y": 0,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "ngu-than",
+      "name": "Áo ngũ thân",
+      "file": "ngu-than.png",
+      "x": 0,
+      "y": 0,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "nhat-binh",
+      "name": "Nhật bình",
+      "file": "nhat-binh.png",
+      "x": 0,
+      "y": 0,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "ba-ba",
+      "name": "Áo bà ba",
+      "file": "ba-ba.png",
+      "x": 0,
+      "y": 0,
+      "width": 1024,
+      "height": 1536
+    }
+  ],
+  "pants": [
+    {
+      "id": "ivory",
+      "name": "Quần trắng ngà",
+      "file": "trousers-ivory.png",
+      "x": 0,
+      "y": 0,
+      "width": 1024,
+      "height": 1536
+    }
+  ],
+  "shoes": [
+    {
+      "id": "flats",
+      "name": "Giày búp bê",
+      "file": "shoes-flats.png",
+      "x": 0,
+      "y": 0,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "sneakers",
+      "name": "Sneaker trắng",
+      "file": "shoes-sneakers.png",
+      "x": 0,
+      "y": 0,
+      "width": 1024,
+      "height": 1536
+    }
+  ]
+}

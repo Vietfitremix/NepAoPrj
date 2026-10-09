@@ -23,8 +23,6 @@ services:
       ENABLE_DEV_ROUTES: "false"
       GEMINI_API_KEY: ${GEMINI_API_KEY:-}
       GEMINI_MODEL: ${GEMINI_MODEL:-gemini-3.5-flash}
-    volumes:
-      - ./data:/data:ro        # thang điểm 5 tiêu chí (scoring.json) và dữ liệu chung của AI
     ports:
       - "8000:8000"
     restart: unless-stopped
@@ -40,7 +38,7 @@ services:
       DATABASE_PASSWORD: ${DATABASE_PASSWORD:-change-me}
       WEATHER_API_KEY: ${WEATHER_API_KEY:-}
       AI_SERVICE_URL: http://ai-service:8000
-      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-http://localhost:5173}
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-http://localhost:5173,http://localhost:5176}
     depends_on:
       postgres:
         condition: service_healthy

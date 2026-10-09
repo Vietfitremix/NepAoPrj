@@ -1,0 +1,13 @@
+{
+  "gender": "male",
+  "kind": "outfits",
+  "id": "navy",
+  "view": "right",
+  "file": "assets/wardrobe/male/shirts/navy/source/right.png",
+  "inputs": [
+    "assets/wardrobe/male/shirts/navy/validation/right.png"
+  ],
+  "prompt": "Precise object extraction from this EXISTING IMAGE, for a layered dress-up sprite. EDIT IN PLACE on exactly the same 1024x1536 canvas. ERASE the man's head, hair, all skin, both hands, feet and the entire ivory trousers. ERASE ALL background and colored glow. KEEP ONLY the NAVY AO DAI FABRIC and gold embroidery, exactly as currently worn, exactly at its current pixel locations. CRITICAL NO REFRAMING: the empty transparent space above his collar MUST remain (collar approximately y=210), transparent space below the hem MUST remain (hem approximately y=1100), sleeve cuff MUST stay approximately y=750. Do not move, enlarge, crop, recenter or restyle any existing garment pixels. The man and pants are simply deleted from behind/around the dress. Preserve the side slit and make the space where his hand used to be transparent. It is a REALISTIC RIGHT-FACING PROFILE áo dài, following the same body that was in the input. Preserve exact navy silk brocade, gold embroidery, gold piping and fabric closures. Leave genuine fully transparent alpha at neck opening, hand area, legs and everywhere outside fabric; NO BODY, NO PANTS, NO SHOES, NO mannequin, NO glow, NO shadow. Single aligned RGBA clothing layer, 1024x1536.",
+  "tool": "built-in image_gen",
+  "generatedPath": "C:/Users/Admin/.codex/generated_images/01a11c11-7882-7363-b4c8-8abb5e014dc7/exec-bb8a6c86-9137-43d4-86fb-4ae915715f56.png"
+}
