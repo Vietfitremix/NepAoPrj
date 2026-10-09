@@ -15,6 +15,9 @@ tools/%SystemDrive%/
 # Ảnh soát hình sinh ra từ tools/render_check.py (chạy lại script để tạo)
 review-svg/
 
+# Thư mục xuất gói đồ và bộ kit (tạo từ script đóng gói)
+assets/exports/
+
 # Cấu hình máy cá nhân
 .claude/
 ~$*
