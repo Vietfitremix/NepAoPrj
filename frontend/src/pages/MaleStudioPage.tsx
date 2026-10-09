@@ -28,6 +28,7 @@ export default function MaleStudioPage({ initialCharacter }: { initialCharacter?
     try { return normalizeView(localStorage.getItem(characterViewKey)); } catch { return 'front'; }
   });
   const [baseViewMode,setBaseViewMode] = useState(false);
+  const [tab,setTab] = useState<'shirt'|'pants'|'shoes'|'acc'>('shirt');
   const [character, setCharacter] = useState<WardrobeCharacter>(() => {
     if (initialCharacter) return initialCharacter;
     try { return normalizeCharacter(localStorage.getItem(characterSelectionKey)); }
@@ -169,7 +170,7 @@ export default function MaleStudioPage({ initialCharacter }: { initialCharacter?
   }
 
   return <main className="page-container male-studio-page">
-    <PageHeading eyebrow="VIỆT FIT / STUDIO 3D" title="Chọn áo. Phối đồ. Chất riêng." description="Chọn trang phục và phụ kiện riêng cho nhân vật ở mọi hướng."/>
+    <PageHeading eyebrow="VIỆT FIT / STUDIO 3D" title="Chọn áo – Phối đồ – Chất riêng." description="Chọn trang phục và phụ kiện riêng cho nhân vật ở mọi hướng."/>
     <div className="male-studio-layout">
       <section className="male-character-stage" aria-busy={!images && !error}>
         <div className="male-character-heading"><span>NHÂN VẬT {characterName.toUpperCase()}</span><span>GÓC {viewLabel.toUpperCase()}</span></div>
@@ -205,6 +206,10 @@ export default function MaleStudioPage({ initialCharacter }: { initialCharacter?
         <div className="chips character-options" role="group" aria-label="Chọn nhân vật">
           {characters.map(item => <button key={item.id} className={`chip ${character === item.id ? 'selected' : ''}`} aria-pressed={character === item.id} disabled={!images || exporting} onClick={() => chooseCharacter(normalizeCharacter(item.id))}>{item.name}</button>)}
         </div>
+        <div className="wardrobe-tabs" role="tablist" aria-label="Nhóm trang phục">
+          {([['shirt','Áo'],['pants',character==='female'?'Quần / Váy':'Quần'],['shoes','Giày'],['acc','Phụ kiện']] as const).map(([id,label])=><button key={id} type="button" role="tab" aria-selected={tab===id} className={tab===id?'on':''} onClick={()=>setTab(id)}>{label}</button>)}
+        </div>
+        <div hidden={tab!=='shirt'}>
         <h3 className="male-wardrobe-category">Áo</h3>
         <div className="male-outfit-options" role="group" aria-label="Chọn áo">
           {maleWardrobe.outfits.map(item => <button key={item.id} type="button" className={`male-outfit-card ${selection.shirt === item.id ? 'selected' : ''}`} aria-pressed={selection.shirt === item.id} disabled={!images || exporting} onClick={() => choose({ shirt: item.id })}>
@@ -215,6 +220,8 @@ export default function MaleStudioPage({ initialCharacter }: { initialCharacter?
         </div>
         <button className="text-button male-remove-button" disabled={!images || exporting} aria-pressed={selection.shirt === null} onClick={() => choose({ shirt: null })}>Dùng áo nền</button>
         {styleControls('shirt','áo',!!outfit)}
+        </div>
+        <div hidden={tab!=='pants'}>
         <h3 className="male-wardrobe-category">{character === 'female' ? 'Quần / Váy' : 'Quần'}</h3>
         <div className="male-outfit-options" role="group" aria-label={character === 'female' ? 'Chọn quần hoặc váy' : 'Chọn quần'}>
           {maleWardrobe.pants.map(item => <button key={item.id} type="button" className={`male-outfit-card ${selection.pants === item.id ? 'selected' : ''}`} aria-pressed={selection.pants === item.id} disabled={!images || exporting} onClick={() => choose({ pants: item.id })}>
@@ -225,6 +232,8 @@ export default function MaleStudioPage({ initialCharacter }: { initialCharacter?
         </div>
         <button className="text-button male-remove-button" disabled={!images || exporting} aria-pressed={selection.pants === null} onClick={() => choose({ pants: null })}>Dùng quần nền</button>
         {styleControls('pants',character==='female'?'quần / váy':'quần',!!pants)}
+        </div>
+        <div hidden={tab!=='shoes'}>
         <h3 className="male-wardrobe-category">Giày</h3>
         <div className="male-outfit-options" role="group" aria-label="Chọn giày">
           {maleWardrobe.shoes.map(item => <button key={item.id} className={`male-outfit-card ${selection.shoes === item.id ? 'selected' : ''}`} aria-pressed={selection.shoes === item.id} disabled={!images || exporting} onClick={() => choose({shoes:item.id})}>
@@ -234,8 +243,10 @@ export default function MaleStudioPage({ initialCharacter }: { initialCharacter?
         </div>
         <button className="text-button male-remove-button" disabled={!images || exporting} aria-pressed={!selection.shoes} onClick={() => choose({shoes:null})}>Đi chân trần</button>
         {styleControls('shoes','giày',!!selection.shoes)}
-        {accessorySlots.map(slot=><div key={slot.id}>
-          <h3 className="male-wardrobe-category">{slot.name}</h3>
+        </div>
+        <div hidden={tab!=='acc'}>
+        {accessorySlots.map(slot=>{const chosen=maleWardrobe.accessories.find(x=>x.id===selection.accessories?.[slot.id]);return <details key={slot.id} className="acc-slot" open={!!chosen||undefined}>
+          <summary><span>{slot.name}</span><small>{chosen?chosen.name:'Chưa chọn'}</small></summary>
           <div className="male-outfit-options" role="group" aria-label={`Chọn ${slot.name.toLowerCase()}`}>
             {maleWardrobe.accessories.filter(item=>item.slot===slot.id).map(item=><button key={item.id} type="button" className={`male-outfit-card ${selection.accessories?.[slot.id]===item.id?'selected':''}`} aria-pressed={selection.accessories?.[slot.id]===item.id} disabled={!images || exporting} onClick={()=>chooseAccessory(slot.id,item.id)}>
               <span className="male-outfit-thumbnail"><img src={maleAssetRoot+item.thumbnail} alt=""/></span>
@@ -244,7 +255,8 @@ export default function MaleStudioPage({ initialCharacter }: { initialCharacter?
             </button>)}
           </div>
           <button type="button" className="text-button male-remove-button" disabled={!images || exporting} aria-pressed={!selection.accessories?.[slot.id]} onClick={()=>chooseAccessory(slot.id,null)}>Bỏ {slot.name.toLowerCase()}</button>
-        </div>)}
+        </details>;})}
+        </div>
         <button className="text-button male-base-button" disabled={!images || exporting} onClick={() => choose({ shirt: null, pants: null, shoes: null, accessories: {}, styles: {} })}><RotateCcw size={16}/> Xem nhân vật nền</button>
         <button className="button primary full-width" disabled={!images || exporting} onClick={download}><Download size={18}/>{exporting ? 'Đang xuất ảnh…' : showingBase?'Tải góc nhìn này':'Tải ảnh đã phối'}</button>
         {notice && <p className="male-download-notice" role="status">{notice}</p>}

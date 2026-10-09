@@ -61,3 +61,55 @@
 .remix-option{display:inline-flex;align-items:center;gap:8px;background:#fffef9;border:1px solid #cfd6c2;border-radius:8px;padding:8px 12px;font-size:12px}
 .remix-option small{color:#7e8873}
 .remix-option:not(:disabled):hover{border-color:#a43c30}
+
+/* Tiêu đề và chữ quan trọng in đậm (Playfair Display 700, Be Vietnam Pro 600/700) */
+h1,h2,h3,h4{font-weight:700}
+.hero h1,.page-heading h1,.section-title h2,.invitation h2,.empty-state h2,.empty-state h1,
+.tip-card h3,.concept-details h2,.modal-inner>h2,.final-details h2,.knowledge-section h2,
+.review-section h2,.qtitle,.alt-title,.share h3,.art-caption strong,.score-circle strong,
+.final-scores strong,.sc-total,.studio-toolbar>span,.male-outfit-caption,.art-caption>span,
+.garment-strip>span,.temperature{font-weight:700}
+.logo,.main-nav a,.button,.chip.selected,.tag,.sc-mini b,.ck li b,.male-wardrobe-category,
+.wardrobe-catalog-group summary,.remix-head,.remix-analysis b,legend{font-weight:600}
+.male-wardrobe-category,.ck-g,.eyebrow{font-weight:700}
+.wardrobe-catalog-group summary span{font-weight:400}
+.hero h2{font-weight:600}
+
+/* Logo Nếp Áo (biểu tượng cô gái áo dài) thay cho ✳ ở đầu/chân trang; các ✳ trang trí còn lại đổi sang xanh lá */
+.logo-mark{height:54px;width:54px;object-fit:contain;vertical-align:middle;margin-right:2px}
+.site-footer .logo-mark{height:44px;width:44px}
+.hero-flower,.tiny-star,.match-badge{color:#2f5d47}
+.gallery-star,.decor-star{color:#2f5d47}
+
+/* Dòng bản quyền cuối trang */
+.site-footer{flex-wrap:wrap}
+.site-copyright{flex-basis:100%;margin-top:6px;padding-top:14px;border-top:1px solid #e6e7dc;text-align:center;font-size:11px;letter-spacing:.2px;color:#7d867a}
+
+/* Tủ đồ Studio 3D gọn hơn: lưới 3 cột thay cho danh sách thẻ dài, khung tủ đồ tự cuộn */
+.male-wardrobe-panel{padding:20px!important}
+.male-wardrobe-panel>.muted{margin:0 0 6px}
+.male-wardrobe-category{font-size:13px;margin:16px 0 0;padding-top:12px;border-top:1px solid #e6e7dc}
+.male-wardrobe-category:first-of-type{border-top:0;padding-top:0;margin-top:10px}
+.male-outfit-options{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:10px 0 6px}
+.male-outfit-card{position:relative;flex-direction:column;align-items:stretch;gap:5px;min-height:0;padding:6px;text-align:center}
+.male-outfit-card.selected{padding:5px}
+.male-outfit-thumbnail{width:100%;height:86px}
+.male-outfit-copy strong{font-size:11px;line-height:1.3;font-weight:600}
+.male-outfit-copy small{display:none}
+.male-outfit-card>svg{position:absolute;top:5px;right:5px;width:16px;height:16px;padding:2px;border-radius:50%;background:#526947;color:#fff}
+.male-remove-button{margin:0 0 4px;font-size:11px}
+.male-wardrobe-panel .button.full-width{margin-top:12px}
+@media(min-width:901px){
+  .male-wardrobe-panel{position:sticky;top:88px;max-height:calc(100vh - 110px);overflow-y:auto;scrollbar-width:thin}
+}
+@media(max-width:750px){.male-outfit-options{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.wardrobe-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin:14px 0 4px;padding:4px;background:#efede2;border-radius:10px}
+.wardrobe-tabs button{border:0;background:transparent;border-radius:7px;padding:8px 4px;font-size:12px;font-weight:600;color:#626e57;cursor:pointer}
+.wardrobe-tabs button.on{background:#526947;color:#fff}
+.wardrobe-tabs button:focus-visible{outline:2px solid #526947;outline-offset:1px}
+.acc-slot{border-bottom:1px solid #e6e7dc}
+.acc-slot>summary{display:flex;justify-content:space-between;align-items:center;gap:8px;cursor:pointer;padding:11px 2px;font-size:13px;font-weight:700;list-style:none}
+.acc-slot>summary::-webkit-details-marker{display:none}
+.acc-slot>summary::after{content:'+';margin-left:6px;color:#7d867a;font-weight:400}
+.acc-slot[open]>summary::after{content:'−'}
+.acc-slot>summary small{margin-left:auto;font-size:11px;font-weight:400;color:#7d867a;max-width:50%;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}

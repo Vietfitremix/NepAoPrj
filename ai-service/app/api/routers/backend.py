@@ -19,6 +19,7 @@ from app.catalog.sources import load_ui_data
 from app.catalog.backend_bridge import enrich_catalog, native_catalog
 from app.core.config import get_settings
 from app.engine import score_outfit
+from app.engine.variety import accessory_sets, bottom_and_shoes, diverse_shortlist
 from app.models import Colors, Intent, OutfitState, StylistOutfit
 from app.services.stylist import StylistService
 
@@ -56,7 +57,7 @@ def request_catalog(ref: dict, scoring: dict | None = None) -> Catalog:
                   for r in ref["colors"]}
         styles = {r["code"]: {"id": r["code"], "name": r["name"]} for r in ref["styles"]}
         occasions = {r["code"]: {"id": r["code"], "name": r["name"]} for r in ref["events"]}
-        accessories = {r["code"]: {"id": r["code"], "name": r["name"], "slot": r["type"]}
+        accessories = {r["code"]: {"id": r["code"], "name": r["name"], "slot": r["type"], "type": r["type"]}
                        for r in ref["accessories"]}
         garments = {d["outfit"]["code"]: {"id": d["outfit"]["code"], "name": d["outfit"]["name"],
                     "allowedAccessories": [a["code"] for a in d["accessories"]]}
@@ -77,22 +78,59 @@ def validate_selection(look: Selection, cat: Catalog):
         raise HTTPException(422, "Unsupported backend selection")
 
 
-def state_for(look: Selection, cat: Catalog) -> OutfitState:
+def state_for(look: Selection, cat: Catalog, with_bottom_and_shoes: bool = False) -> OutfitState:
+    """with_bottom_and_shoes: gợi ý mới luôn kèm quần/váy và giày nên bộ luật quần/giày được áp dụng; các luồng khác
+    (remix, kiểm tra bộ đang mặc) giữ nguyên vì người dùng có thể chưa chọn hai món này."""
     bottom = next((c for c in ("WHITE", "CREAM", "BLACK", *cat.colors) if c != look.colorCode and c in cat.colors), look.colorCode)
+    extra = dict(zip(("bottom", "shoes"), bottom_and_shoes(look.accessories))) if with_bottom_and_shoes else {}
     return OutfitState(garment=look.outfitCode, gender="nu", occasion=look.eventCode,
                        style=look.styleCode, colors=Colors(main=look.colorCode, bottom=bottom),
-                       accessories=look.accessories)
+                       accessories=look.accessories, **extra)
 
 
-def requested_items(prompt: str, table: dict) -> tuple[list[str], list[str]]:
-    wanted, avoided = [], []
-    for raw_clause in re.split(r"[,.;\n]|\b(?:nhung|con|va)\b", prompt, flags=re.IGNORECASE):
-        clause = norm(raw_clause)
-        target = avoided if re.search(r"\b(khong|bo|tranh|ghet)\b", clause) else wanted
-        for code, row in table.items():
-            if re.search(rf"\b{re.escape(norm(row['name']))}\b", clause):
-                if code not in target:
-                    target.append(code)
+# Cách người dùng gọi màu (đã bỏ dấu). Tên trong danh mục luôn được dùng; bảng này thêm các cách gọi quen thuộc.
+COLOR_ALIASES = {
+    "RED": ["do", "do tuoi", "do son"], "DARK_RED": ["do sam", "do dam", "do ruou", "do tham", "do man"],
+    "WHITE": ["trang", "trang tinh"], "CREAM": ["kem", "be", "be kem", "trang nga"],
+    "BLUE": ["xanh duong", "xanh lam", "xanh da troi", "xanh bien", "xanh navy", "navy", "xanh coban", "xanh"],
+    "GREEN": ["xanh la", "xanh luc", "xanh ngoc", "xanh reu", "xanh la cay", "luc"],
+    "YELLOW": ["vang", "vang hoang", "vang dong", "vang nghe"], "BLACK": ["den", "den tuyen"],
+    "PINK": ["hong", "hong dao", "hong phan"], "PURPLE": ["tim", "tim hue", "tim than"], "BROWN": ["nau", "nau dat"],
+}
+# Từ phủ định: viết đủ dấu để "bộ" (một bộ áo dài) không bị hiểu nhầm là "bỏ".
+_AVOID = re.compile(r"\b(?:không|khong|ko|tránh|tranh|ghét|ghet|đừng|chẳng|chả|loại|bỏ|miễn)\b", re.IGNORECASE)
+_SPLIT = re.compile(r"[,.;!?\n]|\b(?:nhưng|nhung|còn|con|và|va|mà|chứ|hay)\b", re.IGNORECASE)
+
+
+def requested_items(prompt: str, table: dict, aliases: dict[str, list[str]] | None = None) -> tuple[list[str], list[str]]:
+    """Tách món/màu người dùng muốn và muốn tránh. Câu có từ phủ định ("không thích đỏ") đưa vào danh sách tránh;
+    các mục kể tiếp không kèm lời ("không thích đỏ, tím") giữ nguyên ý phủ định."""
+    names = []
+    for code, row in table.items():
+        for name in [row["name"], *(aliases or {}).get(code, [])]:
+            names.append((norm(name), code))
+    names.sort(key=lambda item: -len(item[0]))          # tên dài khớp trước: "xanh lá" trước "xanh", "đỏ sẫm" trước "đỏ"
+    wanted, avoided, avoid_mode = [], [], False
+    for raw_clause in _SPLIT.split(re.sub(r"bỏ qua", " ", prompt, flags=re.IGNORECASE)):
+        clause = f" {norm(raw_clause)} "
+        found = []
+        for name, code in names:
+            if name and f" {name} " in clause:
+                clause = clause.replace(f" {name} ", "  ")
+                if code not in found:
+                    found.append(code)
+        if not found:
+            avoid_mode = bool(_AVOID.search(raw_clause))
+            continue
+        leftover = clause.strip()
+        if _AVOID.search(raw_clause):
+            avoid_mode = True
+        elif leftover:
+            avoid_mode = False                           # có lời mới không phủ định: quay về "muốn"
+        target = avoided if avoid_mode else wanted
+        for code in found:
+            if code not in target:
+                target.append(code)
     return [c for c in wanted if c not in avoided], avoided
 
 
@@ -102,7 +140,7 @@ async def recommendations(body: BackendRequest, request: Request, svc: StylistSe
     cat = enrich_catalog(request_catalog(body.referenceData, native.scoring), native)
     if not body.city or not body.weather or body.eventCode not in cat.occasions or body.styleCode not in cat.styles:
         raise HTTPException(422, "Recommendation context is required")
-    wanted, avoided = requested_items(body.prompt, cat.colors)
+    wanted, avoided = requested_items(body.prompt, cat.colors, COLOR_ALIASES)
     accs, avoid_accs = requested_items(body.prompt, cat.accessories)
     parsed = parse_by_keywords(body.prompt, native)
     ctx = parsed.model_copy(update=dict(occasion=body.eventCode, style=body.styleCode, preferredColors=wanted,
@@ -115,27 +153,27 @@ async def recommendations(body: BackendRequest, request: Request, svc: StylistSe
     palette = [c for c in dict.fromkeys([*wanted, *style_palette, *event_palette, *cat.colors]) if c not in avoided]
     garments = [(g, r) for g, r in cat.garments.items() if gender in r['genders']]
     suitable = [(g, r) for g, r in garments if body.eventCode in r['occasions']] or garments
+    if len(suitable) < 3:                       # dịp chỉ có vài kiểu áo "chuẩn": thêm kiểu khác để vẫn có 3 lựa chọn khác nhau,
+        suitable += [(g, r) for g, r in garments if (g, r) not in suitable]   # bộ luật sẽ chấm thấp hơn nếu kiểu áo ít hợp dịp
+    ranks: dict[str, float] = {}
     for garment, row in suitable:
         defaults = cat.occasions[body.eventCode]['defaultAccessories'].get(garment, [])
-        selected, slots = [], set()
-        for acc in dict.fromkeys([*accs, *defaults]):
-            data = cat.accessories.get(acc, {})
-            slot = data.get('slot', acc)
-            if (acc in row['allowedAccessories'] and acc not in avoid_accs and slot not in slots
-                    and gender in data.get('genders', ['nu', 'nam'])):
-                selected.append(acc)
-                slots.add(slot)
-        for color in palette[:2]:
-            look = Selection(outfitCode=garment, colorCode=color, styleCode=body.styleCode,
-                             eventCode=body.eventCode,
-                             accessories=selected)
-            state = state_for(look, cat).model_copy(update={'gender': gender})
-            _, evaluations, harmony, card = score_outfit(state, cat, ctx)
-            candidates.append(StylistOutfit(outfitId=f"c{len(candidates)+1}", state=state,
-                                           evaluations=evaluations, color=harmony, scoreCard=card))
+        # Mỗi kiểu áo có nhiều bộ quần/giày/phụ kiện khác nhau để 3 gợi ý không trùng nhau ở những món này.
+        for selected in accessory_sets(cat, row, defaults, accs, avoid_accs, gender):
+            for color in palette[:max(2, min(len(wanted), 4))]:
+                look = Selection(outfitCode=garment, colorCode=color, styleCode=body.styleCode,
+                                 eventCode=body.eventCode, accessories=selected)
+                state = state_for(look, cat, with_bottom_and_shoes=True).model_copy(update={'gender': gender})
+                rank, evaluations, harmony, card = score_outfit(state, cat, ctx)
+                outfit_id = f"c{len(candidates)+1}"
+                ranks[outfit_id] = rank
+                candidates.append(StylistOutfit(outfitId=outfit_id, state=state,
+                                               evaluations=evaluations, color=harmony, scoreCard=card))
     if len(candidates) < 3:
         raise HTTPException(422, "Catalog cannot provide three concepts")
-    candidates.sort(key=lambda o: -score_outfit(o.state, cat, ctx)[0])
+    candidates.sort(key=lambda o: -ranks[o.outfitId])
+    # Danh sách ngắn gửi cho Gemini: giữ điểm cao nhưng phạt trùng kiểu áo, màu và phụ kiện để có đủ lựa chọn khác nhau.
+    candidates = diverse_shortlist(candidates, ranks, n=9, colour_locked=len(wanted) == 1)   # nhiều màu thích: trải đều qua các màu đó
     # Include Spring's measured weather and available cultural sources in the AI request.
     prompt = json.dumps({"request": body.prompt, "eventCode": body.eventCode, "styleCode": body.styleCode,
                          "city": body.city, "weather": body.weather,
@@ -257,7 +295,7 @@ async def remix(body: BackendRequest, request: Request, svc: StylistService = De
     except (AIError, ValueError, HTTPException) as exc:
         await svc.log("remix", svc.gemini.model, None, "fallback", False, str(exc)[:300])
         # Reuse the service's offline behavior while applying only explicit user wishes.
-        colors, _ = requested_items(body.prompt, cat.colors)
+        colors, _ = requested_items(body.prompt, cat.colors, COLOR_ALIASES)
         styles, _ = requested_items(body.prompt, cat.styles)
         wanted, avoided = requested_items(body.prompt, cat.accessories)
         allowed = cat.garments[current.outfitCode]["allowedAccessories"]

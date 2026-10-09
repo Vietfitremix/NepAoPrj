@@ -94,7 +94,7 @@ export default function MixStudioPage() {
     finally{if(active.current)setBusy('');}
   }
   return <main className="page-container studio-page nepao-page wide">
-    <Stepper active={2}/><PageHeading eyebrow="YOUR STYLE. YOUR STORY." title="Một chút remix. Một chất riêng." description="Đổi trang phục, phối quần váy, giày dép, màu, họa tiết và mọi phụ kiện trong tủ đồ của bạn."/>
+    <Stepper active={2}/><PageHeading eyebrow="YOUR STYLE – YOUR STORY" title="Một chút remix – Một chất riêng." description="Đổi trang phục, phối quần váy, giày dép, màu, họa tiết và mọi phụ kiện trong tủ đồ của bạn."/>
     <div className="studio-toolbar"><Link to="/concepts" className="text-button"><ArrowLeft size={16}/> Chọn lại concept</Link>
       <span>{concept?.name || 'Bản phối của bạn'}</span>
       {concept&&<button className="text-button" disabled={!!busy} onClick={reset}><RotateCcw size={15}/> Về bản gốc</button>}

@@ -161,7 +161,7 @@ export function nonLaGeometry(anchors: AccessoryAnchors, view: CharacterView, cr
   const {head} = anchors, profile = view === 'left' || view === 'right';
   const width = head.width * (profile ? 1.95 : 1.9), scale = width / crownCrop.width;
   const height = crownCrop.height * scale;
-  const seat = head.y + head.height * (profile ? .3 : view === 'back' ? .16 : .23);
+  const seat = head.y + head.height * (profile ? .34 : view === 'back' ? .4 : .43);
   const crown = box(center(head) - width / 2, seat - height, width, height);
   const strapY = crown.y + (strapCrop.y - crownCrop.y) * scale;
   const chinY = head.y + head.height * (view === 'back' ? 1.08 : 1.22);
@@ -185,6 +185,20 @@ function fitNonLa(pixels: Uint8ClampedArray, anchors: AccessoryAnchors,
     (fabric ? strapPixels.data : crownPixels.data).set(pixels.subarray(i, i + 4), i);
   }
   if (view === 'left' || view === 'right') {
+    // Side sprites also show the underside of the brim as a lens below the rim.
+    // Cut along the line through the two rim tips so only the outer cone is
+    // seated on the head, as in the front view.
+    const data = crownPixels.data;
+    let xl = W, xr = -1, yl = 0, yr = 0;
+    for (let x = 0; x < W && xl === W; x++) for (let y = H - 1; y >= 0; y--)
+      if (data[(y * W + x) * 4 + 3] > 200) { xl = x; yl = y; break; }
+    for (let x = W - 1; x >= 0 && xr < 0; x--) for (let y = H - 1; y >= 0; y--)
+      if (data[(y * W + x) * 4 + 3] > 200) { xr = x; yr = y; break; }
+    if (xr - xl > 100) {
+      const slope = (yr - yl) / (xr - xl);
+      for (let y = 0; y < H; y++) for (let x = xl; x <= xr; x++)
+        if (y > yl + (x - xl) * slope + 2) data[(y * W + x) * 4 + 3] = 0;
+    }
     // Restore the straw hidden by the old knot before moving that knot. The
     // brim is continuous, so its lower edge interpolates across the ribbon.
     const edges = new Int32Array(W).fill(-1), firstRed = new Int32Array(W).fill(H);
@@ -223,6 +237,16 @@ function fitNonLa(pixels: Uint8ClampedArray, anchors: AccessoryAnchors,
       crownPixels = lc.getImageData(0, 0, W, H);
     }
   }
+  if (view === 'front') {
+    // The front sprite is drawn from below, so the underside of the brim is a
+    // solid ellipse that would cover the forehead. Keep only the outer cone,
+    // whose lower edge arches over the face, so the hat reads as being worn.
+    const data = crownPixels.data;
+    for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
+      const arch = 214 + 62 * ((x - 510) / 210) ** 2;
+      if (y > arch + 3) data[(y * W + x) * 4 + 3] = 0;
+    }
+  }
   const crownCrop = bounds(crownPixels.data, box(0, 0, W, H));
   const strapCrop = bounds(strapPixels.data, box(0, 0, W, H));
   if (!crownCrop || !strapCrop) return;
@@ -254,7 +278,10 @@ function fitNonLa(pixels: Uint8ClampedArray, anchors: AccessoryAnchors,
   const top = Math.floor(Math.min(crown.y, strap.y)) - 2, bottom = Math.ceil(strap.y + strap.height) + 2;
   const fitted = canvas(bottom - top, right - left), context = fitted.getContext('2d')!;
   context.translate(-left, -top); context.imageSmoothingEnabled = true; context.imageSmoothingQuality = 'high';
-  const rearImage = profile ? canvas(bottom - top, right - left) : undefined;
+  // Seen from behind the chin strap passes in front of the face, so the whole
+  // strap goes on the rear layer and the head covers it.
+  const strapBehind = view === 'back';
+  const rearImage = profile || strapBehind ? canvas(bottom - top, right - left) : undefined;
   const rearContext = rearImage?.getContext('2d');
   rearContext?.translate(-left, -top);
   // The attachment stays at the brim. Only the lower loop moves towards the
@@ -280,7 +307,7 @@ function fitNonLa(pixels: Uint8ClampedArray, anchors: AccessoryAnchors,
       if (!near) continue;
       visible = box(Math.max(strapCrop.x, near.x - 1), near.y, Math.min(strapCrop.width, near.width + 2), 1);
     }
-    context.drawImage(strapSource, visible.x, visible.y, visible.width, 1,
+    if (!strapBehind) context.drawImage(strapSource, visible.x, visible.y, visible.width, 1,
       dx + (visible.x - strapCrop.x) / strapCrop.width * dw, dy, visible.width / strapCrop.width * dw, dh);
   }
   context.drawImage(crownSource, crownCrop.x, crownCrop.y, crownCrop.width, crownCrop.height,

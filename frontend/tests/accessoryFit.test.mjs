@@ -46,7 +46,7 @@ test('conical hats keep their crown shape, seat on the head, and let the strap h
     assert.deepEqual(a.crown,b.crown,'strap length cannot stretch the crown');
     assert.ok(Math.abs(a.crown.width/a.crown.height-crownCrop.width/crownCrop.height)<1e-8);
     const brim=a.crown.y+a.crown.height;
-    assert.ok(brim>anchors.head.y&&brim<anchors.head.y+anchors.head.height*.4);
+    assert.ok(brim>anchors.head.y&&brim<anchors.head.y+anchors.head.height*.5);
     assert.ok(a.strap.y+a.strap.height>anchors.head.y+anchors.head.height);
     if(view!=='back')assert.ok(a.strap.y+a.strap.height>=anchors.head.y+anchors.head.height*1.2);
     if(view==='left')assert.ok(a.chinX<anchors.head.x+anchors.head.width/2);

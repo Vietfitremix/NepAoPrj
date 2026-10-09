@@ -60,6 +60,7 @@ async def select_outfits(candidates: list[StylistOutfit], ctx, catalog, gemini: 
 
 def _apply_picks(raw: dict, candidates: list[StylistOutfit], ctx, catalog) -> list[StylistOutfit]:
     by_id = {c.outfitId: c for c in candidates}
+    distinct = len({c.state.garment for c in candidates}) >= 3
     picked: list[StylistOutfit] = []
     for item in raw.get("picks", []):
         if not isinstance(item, dict):
@@ -67,6 +68,8 @@ def _apply_picks(raw: dict, candidates: list[StylistOutfit], ctx, catalog) -> li
         o = by_id.get(item.get("outfitId"))
         if not o or o in picked:                      # mã lạ hoặc chọn trùng: bỏ qua
             continue
+        if distinct and o.state.garment in {p.state.garment for p in picked}:
+            continue                                  # đã có kiểu áo này: để chỗ cho kiểu áo khác (đủ lựa chọn thì mới ép)
         if valid_item(item, o):
             o.title, o.comment, o.tip = item["title"].strip(), trim_comment(item["comment"]), item["tip"].strip()
         else:
@@ -76,8 +79,12 @@ def _apply_picks(raw: dict, candidates: list[StylistOutfit], ctx, catalog) -> li
         if len(picked) == 3:
             break
     if len(picked) < 3:                               # Gemini chọn thiếu: bù bằng bộ điểm cao nhất còn lại
-        for o in _fallback([c for c in candidates if c not in picked], ctx, catalog):
+        rest = [c for c in candidates if c not in picked]
+        used = {p.state.garment for p in picked}
+        fresh = [c for c in rest if c.state.garment not in used] if distinct else rest
+        for o in _fallback(fresh, ctx, catalog) + _fallback(rest, ctx, catalog):
             if len(picked) == 3:
                 break
-            picked.append(o)
+            if o not in picked:
+                picked.append(o)
     return picked

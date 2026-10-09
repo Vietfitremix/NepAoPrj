@@ -19,7 +19,7 @@
       "_khac":        {"base": 75, "perModern": 5}
     }
   },
-  "rankBonus": {"style": 15, "preferredColor": 10, "preferredGarment": 20},
+  "rankBonus": {"style": 15, "preferredColor": 20, "preferredGarment": 20},
   "bands": [
     {"min": 80, "id": "chuan_bo", "text": "Chuẩn bộ"},
     {"min": 60, "id": "hop_dip",  "text": "Hợp dịp"},

@@ -51,7 +51,7 @@ class ApiIntegrationTest {
     @Test void catalogAndReferencesSeeded() throws Exception {
         mvc.perform(get("/api/outfits")).andExpect(status().isOk()).andExpect(jsonPath("$",hasSize(5)));
         mvc.perform(get("/api/outfits/AO_DAI")).andExpect(status().isOk())
-            .andExpect(jsonPath("$.colors",hasSize(7))).andExpect(jsonPath("$.accessories",hasSize(14)))
+            .andExpect(jsonPath("$.colors",hasSize(11))).andExpect(jsonPath("$.accessories",hasSize(17)))
             .andExpect(jsonPath("$.assets",hasSize(14)))
             .andExpect(jsonPath("$.assets[?(@.assetType == 'BASE_AVATAR')]",hasSize(7)))
             .andExpect(jsonPath("$.assets[?(@.assetType == 'GARMENT')]",hasSize(7)));

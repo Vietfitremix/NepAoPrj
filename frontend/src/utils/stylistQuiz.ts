@@ -47,17 +47,24 @@ export function answerLabels(question: QuizQuestion, answer?: QuizAnswer): strin
   return labels;
 }
 
+// Nhãn ngắn cho từng câu hỏi. Không đưa nguyên câu hỏi vào lời nhắn: câu "(có thể bỏ qua)" từng bị hiểu nhầm là
+// "bỏ màu", làm màu đầu tiên người dùng chọn bị loại khỏi gợi ý.
+const contextLabels: Record<string, string> = {
+  occasion:'Dịp', weather:'Thời tiết', setting:'Nơi mặc', timeOfDay:'Buổi', role:'Vai trò',
+  style:'Phong cách ưa thích', gender:'Người mặc', colors:'Màu ưa thích',
+};
 export function quizContext(answers: Record<string, QuizAnswer>): string {
   return stylistQuiz.map(question=>{
     const labels=answerLabels(question,answers[question.id]);
-    return labels.length ? `${question.question} ${labels.join(', ')}` : '';
+    return labels.length ? `${contextLabels[question.id]||question.id}: ${labels.join(', ')}` : '';
   }).filter(Boolean).join('. ');
 }
 
 export function quizPreferences(answers: Record<string, QuizAnswer>, prompt: string, city: string, weather: Weather): Preferences {
   const events:Record<string,string>={tet:'TET',ky_yeu:'GRADUATION',dam_cuoi:'CULTURAL_EVENT',le_hoi_chua:'FESTIVAL',dao_pho:'PHOTOSHOOT'};
   const styles:Record<string,string>={truyen_thong:'TRADITIONAL',toi_gian:'MINIMAL',duong_pho:'GEN_Z',pastel:'ELEGANT'};
-  const colors:Record<string,string>={'#b52838':'RED','#eee9dc':'WHITE','#32679e':'BLUE','#e2b44b':'YELLOW','#24242a':'BLACK'};
+  const colors:Record<string,string>={'#b52838':'RED','#de91aa':'PINK','#e2b44b':'YELLOW','#39705b':'GREEN','#32679e':'BLUE',
+    '#765a94':'PURPLE','#876044':'BROWN','#eee9dc':'WHITE','#24242a':'BLACK'};
   const firstColor=Array.isArray(answers.colors?.value)?answers.colors.value[0]:undefined;
   return {prompt:prompt.trim(),city,weather,answers,character:answers.gender?.value==='nam'?'male':'female',
     eventCode:events[String(answers.occasion?.value)]||'TET',styleCode:styles[String(answers.style?.value)]||'GEN_Z',

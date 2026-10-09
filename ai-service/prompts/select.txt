@@ -13,8 +13,13 @@ Nhiệm vụ: CHỌN ĐÚNG 3 ứng viên hợp bối cảnh nhất, rồi viế
 
 Cách chọn:
 - Ưu tiên bộ không có luật "Dễ gây sai lệch", ít luật "Nên cân nhắc", hợp thời tiết và vai trò.
-- Ưu tiên 3 KIỂU ÁO KHÁC NHAU nếu có thể, để người dùng có lựa chọn đa dạng.
+- Ưu tiên 3 KIỂU ÁO KHÁC NHAU nếu có thể, để người dùng có lựa chọn đa dạng. Ba bộ nên khác nhau cả ở quần/váy,
+  giày dép và nón/khăn/phụ kiện (đừng chọn ba bộ cùng một kiểu quần và cùng phụ kiện); khi người dùng không nêu
+  màu cụ thể thì cũng nên khác màu chính. Chỉ chọn bộ giống nhau khi các lựa chọn còn lại bị luật văn hoá đánh giá thấp.
 - Không chọn trùng một mã hai lần.
+- MÀU: nếu context có "màu thích" thì ưu tiên các bộ mang đúng màu đó (màu chính của bộ nằm trong "colors");
+  cố gắng để ít nhất 2 trong 3 bộ mang màu thích nếu danh sách có. Nếu context có "màu tránh" thì tuyệt đối không chọn bộ mang màu đó.
+  Khi không chọn được màu thích vì luật văn hóa hoặc bối cảnh, nói thẳng trong whyChosen vì sao đổi màu.
 
 - "scoreCard" là điểm 5 tiêu chí do hệ thống chấm sẵn. Có thể nhắc tiêu chí cao nhất hoặc thấp nhất bằng lời (không đọc lại con số), và nếu tiêu chí thấp nhất dưới 60 thì gợi ý cách nâng nó trong tip. Không tự chấm hay đổi điểm.
 

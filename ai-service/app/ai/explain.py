@@ -31,6 +31,7 @@ def context_payload(ctx, catalog) -> dict:
         "buổi": catalog.context_label("timeOfDay", ctx.timeOfDay),
         "vai trò": catalog.context_label("role", ctx.role),
         "màu thích": [catalog.name("colors", c) for c in ctx.preferredColors],
+        "màu tránh": [catalog.name("colors", c) for c in ctx.avoidColors],
     }
     return {k: v for k, v in out.items() if v}
 

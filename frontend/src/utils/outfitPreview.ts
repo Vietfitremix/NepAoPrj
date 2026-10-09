@@ -8,12 +8,17 @@ const garments: Record<string, string> = {
 export const apiColorHex: Record<string, string> = {
   RED: '#b52838', DARK_RED: '#8b2635', WHITE: '#eee9dc', BLUE: '#32679e',
   YELLOW: '#e2b44b', BLACK: '#24242a', CREAM: '#fff4db',
+  GREEN: '#39705b', PINK: '#de91aa', PURPLE: '#765a94', BROWN: '#876044',
 };
 export const apiAccessoryItems: Record<string, string[]> = {
   NON_LA: ['non-la'], NON_QUAI_THAO: ['non-quai-thao'], KHAN_VAN: ['khan-van'],
   KHAN_MO_QUA: ['khan-mo-qua'], KHAN_XEP: ['khan-xep'], HOA_CAI_TOC: ['hoa-cai-toc'],
   FAN: ['quat-giay'], QUAT_GIAY: ['quat-giay'], MINIMAL_BAG: ['tui-coi'], TUI: ['tui-coi'],
   KIENG_BAC: ['kieng-bac'], TRANG_SUC: ['bong-tai', 'vong-tay'],
+};
+// Quần có trong tủ đồ nhưng trước đây gợi ý không chọn được (mã khớp danh mục tham chiếu, migration V14).
+export const apiTrousers: Record<string, string> = {
+  QUAN_ONG_RONG: 'wide-charcoal', QUAN_DAI_DEN: 'long-black', QUAN_DAI_XANH: 'long-navy',
 };
 export const apiFootwearItems: Record<string, string> = {
   WHITE_SNEAKERS: 'sneakers', SNEAKER: 'sneakers', GUOC: 'guoc', HAI_THEU: 'hai-theu',
@@ -34,6 +39,8 @@ export function outfitPreview(config: Pick<MixConfig, 'outfitCode' | 'colorCode'
   };
   for (const code of config.accessoryCodes) {
     if (code === 'QUAN_LUA') selection.pants = 'ivory';
+    const trousers = apiTrousers[code];
+    if (trousers && wardrobe.pants.some(item => item.id === trousers)) selection.pants = trousers;
     if (code === 'VAY_DUP' && character === 'female') {
       selection.pants = 'skirt-long-ivory';
       selection.styles!.pants = { color: '#24242a' };
