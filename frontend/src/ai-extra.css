@@ -75,11 +75,10 @@ h1,h2,h3,h4{font-weight:700}
 .wardrobe-catalog-group summary span{font-weight:400}
 .hero h2{font-weight:600}
 
-/* Logo Nếp Áo (biểu tượng cô gái áo dài) thay cho ✳ ở đầu/chân trang; các ✳ trang trí còn lại đổi sang xanh lá */
+/* Logo Nếp Áo (biểu tượng cặp đôi áo dài) ở đầu/chân trang */
 .logo-mark{height:54px;width:54px;object-fit:contain;vertical-align:middle;margin-right:2px}
 .site-footer .logo-mark{height:44px;width:44px}
-.hero-flower,.tiny-star,.match-badge{color:#2f5d47}
-.gallery-star,.decor-star{color:#2f5d47}
+.match-badge{color:#2f5d47}
 
 /* Dòng bản quyền cuối trang */
 .site-footer{flex-wrap:wrap}
