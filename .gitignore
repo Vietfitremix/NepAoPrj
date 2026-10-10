@@ -47,3 +47,7 @@ frontend/dist/
 *.tsbuildinfo
 .DS_Store
 Thumbs.db
+*.log
+*.dump
+*.tmp
+frontend/.tools/
