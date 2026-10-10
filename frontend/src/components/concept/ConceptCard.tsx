@@ -11,7 +11,7 @@ export default function ConceptCard({ concept, index, onInfo, onSelect, characte
     <div className={`concept-image concept-tone-${index}`}>
       <span className="concept-number">{String(index + 1).padStart(2, '0')} / 03</span>
       <WardrobeFigure character={character} selection={outfitPreview({ ...concept, accessoryCodes:concept.accessoryCodes ?? [] }, character)} label={concept.name} className="ocard-fig"/>
-      <span className="match-badge"><span><b>{concept.matchScore}</b>/100 · Phù hợp</span></span>
+      <span className="match-badge"><img className="badge-lotus-icon" src="/lotus-logo-transparent.png" alt="" aria-hidden="true"/><span><b>{concept.matchScore}</b>/100 · Phù hợp</span></span>
     </div>
     <div className="concept-details"><span className="eyebrow">{concept.outfitName} · {concept.styleName}</span>
       <h2>{concept.name}</h2><div className="muted">{concept.colorName} · {concept.styleName}</div>

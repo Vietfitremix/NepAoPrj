@@ -78,7 +78,27 @@ h1,h2,h3,h4{font-weight:700}
 /* Logo Nếp Áo (biểu tượng cặp đôi áo dài) ở đầu/chân trang */
 .logo-mark{height:54px;width:54px;object-fit:contain;vertical-align:middle;margin-right:2px}
 .site-footer .logo-mark{height:44px;width:44px}
-.match-badge{color:#2f5d47}
+.match-badge{color:#2f5d47;display:inline-flex;align-items:center}
+
+/* Biểu tượng logo Hoa sen di sản Việt mới */
+.hero-lotus-emblem{position:absolute;right:-92px;bottom:6px;width:76px;height:76px;object-fit:contain;pointer-events:none}
+.tiny-lotus-icon{width:16px;height:16px;object-fit:contain;vertical-align:middle;display:inline-block;margin-right:4px}
+.gallery-lotus-emblem{position:absolute;right:-15px;top:5px;width:82px;height:82px;object-fit:contain;z-index:3;filter:drop-shadow(0 4px 10px rgba(37,61,52,.12));pointer-events:none}
+.strip-lotus-icon{width:20px;height:20px;object-fit:contain;vertical-align:middle;filter:brightness(0) saturate(100%) invert(88%) sepia(20%) saturate(600%) hue-rotate(350deg)}
+.badge-lotus-icon{width:15px;height:15px;object-fit:contain;vertical-align:middle;margin-right:5px;display:inline-block}
+
+@media(max-width:1100px){
+  .hero-lotus-emblem{right:-72px;width:60px;height:60px}
+  .gallery-lotus-emblem{right:-10px;width:70px;height:70px}
+}
+@media(max-width:850px){
+  .hero-lotus-emblem{right:-58px;width:48px;height:48px;bottom:4px}
+  .gallery-lotus-emblem{right:-45px;width:60px;height:60px}
+}
+@media(max-width:640px){
+  .hero-lotus-emblem{right:-62px;width:52px;height:52px}
+  .gallery-lotus-emblem{right:2px;top:-8px;width:56px;height:56px}
+}
 
 /* Dòng bản quyền cuối trang */
 .site-footer{flex-wrap:wrap}
