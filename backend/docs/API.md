@@ -27,7 +27,14 @@ Base URL: `http://localhost/api` với Docker; `http://localhost:8080/api` khi c
 }
 ```
 
-Response: `analysis` chứa event từ request, weather do backend lấy và styles từ concept;
+Request có thể gửi thêm `character` (`male | female`) và `context` chứa các lựa chọn quiz đã bấm
+(`occasion, style, gender, weather, setting, timeOfDay, role, preferredColors`).
+Mã `eventCode` và `styleCode` là giá trị dự phòng; không được chèn chúng vào prompt khi người dùng chưa chọn.
+AI đọc prompt bằng Gemini (bắt từ khóa khi không gọi được AI), ưu tiên lựa chọn quiz rõ ràng,
+rồi dùng bối cảnh đã hiểu để xếp hạng và chọn bộ.
+
+Response: `analysis` chứa `event` đã hiểu, `weather` hiện tại do backend lấy, `styles` từ concept,
+`understanding` tóm tắt bối cảnh, `character`, `context` đã phân tích và `source` (`gemini | fallback`);
 `concepts` có đúng 3 phần tử, mỗi phần tử gồm
 `conceptName, outfitCode, colorCode, styleCode, accessories, matchScore, reason`.
 Backend không dùng weather do AI tự trả về.

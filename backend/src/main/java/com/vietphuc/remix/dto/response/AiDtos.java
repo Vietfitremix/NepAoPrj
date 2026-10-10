@@ -1,4 +1,5 @@
 package com.vietphuc.remix.dto.response;
+import com.fasterxml.jackson.databind.JsonNode;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 import java.util.List;
@@ -11,7 +12,16 @@ public final class AiDtos {
         @NotNull @Min(0) @Max(100) Integer matchScore,
         @NotBlank @Size(max=2000) String reason
     ) {}
-    public record Analysis(String event,WeatherResponse weather,List<String> styles) {}
+    public record Interpretation(
+        @NotBlank @Size(max=2000) String understanding,
+        @NotBlank String event, @NotBlank String style,
+        @NotBlank @Pattern(regexp="male|female") String character,
+        @NotNull JsonNode context,
+        @NotBlank @Pattern(regexp="gemini|fallback") String source
+    ) {}
+    public record AiRecommendation(Interpretation analysis,List<Concept> concepts) {}
+    public record Analysis(String event,WeatherResponse weather,List<String> styles,
+                           String understanding,String character,JsonNode context,String source) {}
     public record RecommendationResponse(Analysis analysis,List<Concept> concepts) {}
     public record Changes(
         @Pattern(regexp="[A-Z][A-Z0-9_]{0,39}") String colorCode,

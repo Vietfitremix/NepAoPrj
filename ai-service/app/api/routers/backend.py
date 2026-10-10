@@ -11,12 +11,14 @@ from fastapi import APIRouter, Depends, HTTPException, Request
 from pydantic import BaseModel, ConfigDict, Field
 
 from app.ai import AIError
-from app.ai.fallback import norm, parse_by_keywords
+from app.ai.fallback import finalize_intent, norm
 from app.ai.select import select_outfits
+from app.ai.understand import understand
+from app.ai.explain import context_payload
 from app.api.deps import client_ip, get_service
 from app.catalog import Catalog
 from app.catalog.sources import load_ui_data
-from app.catalog.backend_bridge import enrich_catalog, native_catalog
+from app.catalog.backend_bridge import ACCESSORIES, EVENTS, STYLES, enrich_catalog, native_catalog, nearest_color
 from app.core.config import get_settings
 from app.engine import score_outfit
 from app.engine.variety import accessory_sets, bottom_and_shoes, diverse_shortlist
@@ -47,6 +49,7 @@ class BackendRequest(BaseModel):
     styleCode: str | None = None
     character: Literal['male', 'female'] | None = None
     weather: dict | None = None
+    context: Intent | None = None
     currentLook: Selection | None = None
 
 
@@ -143,27 +146,55 @@ async def recommendations(body: BackendRequest, request: Request, svc: StylistSe
         raise HTTPException(422, "Recommendation context is required")
     wanted, avoided = requested_items(body.prompt, cat.colors, COLOR_ALIASES)
     accs, avoid_accs = requested_items(body.prompt, cat.accessories)
-    parsed = parse_by_keywords(body.prompt, native)
-    ctx = parsed.model_copy(update=dict(occasion=body.eventCode, style=body.styleCode, preferredColors=wanted,
-                 avoidColors=avoided, mustHave=accs, avoidAccessories=avoid_accs))
+    gemini = svc._gemini_for(client_ip(request))
+    parsed, understanding_source = await understand(body.prompt, native, gemini, log=svc.log)
+    # Explicit quiz choices take precedence; request codes are only defaults for missing fields.
+    data = parsed.model_dump()
+    if body.context:
+        for key, value in body.context.model_dump(exclude_unset=True).items():
+            if value not in (None, [], 'khong_ro') and key != 'needsClarification':
+                data[key] = value
+    ctx = Intent.model_validate(data)
+    ctx.occasion = next((code for code, value in EVENTS.items() if value == ctx.occasion and code in cat.occasions),
+                        ctx.occasion if ctx.occasion in cat.occasions else body.eventCode)
+    ctx.style = next((code for code, value in STYLES.items() if value == ctx.style and code in cat.styles),
+                     ctx.style if ctx.style in cat.styles else body.styleCode)
+    ctx.preferredGarment = (ctx.preferredGarment or '').upper() or None
+    def colors(codes):
+        return list(dict.fromkeys(code if code in cat.colors else nearest_color(native.colors[code]['hex'], cat.colors)
+                                 for code in codes if code in cat.colors or code in native.colors))
+    def accessories(codes):
+        return [next((code for code in cat.accessories if ACCESSORIES.get(code, code.lower()) == value), value)
+                for value in codes]
+    if understanding_source == 'fallback':
+        ctx.preferredColors, ctx.avoidColors = wanted, avoided
+        ctx.mustHave, ctx.avoidAccessories = accs, avoid_accs
+    else:
+        ctx.preferredColors, ctx.avoidColors = colors(ctx.preferredColors), colors(ctx.avoidColors)
+        ctx.mustHave, ctx.avoidAccessories = accessories(ctx.mustHave), accessories(ctx.avoidAccessories)
+    if body.context and body.context.preferredColors:
+        ctx.preferredColors = colors(body.context.preferredColors)
+    ctx = finalize_intent(ctx, cat)
+    wanted, avoided, accs, avoid_accs = ctx.preferredColors, ctx.avoidColors, ctx.mustHave, ctx.avoidAccessories
+    event_code, style_code = ctx.occasion, ctx.style
     gender = ('nam' if body.character == 'male' else 'nu') if body.character else (ctx.gender if ctx.gender in ('nu', 'nam') else 'nu')
     ctx.gender = gender
     candidates = []
-    event_palette = cat.occasions[body.eventCode]['palette']
-    style_palette = [c for c in cat.styles[body.styleCode]['preferColors'] if c in event_palette]
+    event_palette = cat.occasions[event_code]['palette']
+    style_palette = [c for c in cat.styles[style_code]['preferColors'] if c in event_palette]
     palette = [c for c in dict.fromkeys([*wanted, *style_palette, *event_palette, *cat.colors]) if c not in avoided]
     garments = [(g, r) for g, r in cat.garments.items() if gender in r['genders']]
-    suitable = [(g, r) for g, r in garments if body.eventCode in r['occasions']] or garments
+    suitable = [(g, r) for g, r in garments if event_code in r['occasions']] or garments
     if len(suitable) < 3:                       # dịp chỉ có vài kiểu áo "chuẩn": thêm kiểu khác để vẫn có 3 lựa chọn khác nhau,
         suitable += [(g, r) for g, r in garments if (g, r) not in suitable]   # bộ luật sẽ chấm thấp hơn nếu kiểu áo ít hợp dịp
     ranks: dict[str, float] = {}
     for garment, row in suitable:
-        defaults = cat.occasions[body.eventCode]['defaultAccessories'].get(garment, [])
+        defaults = cat.occasions[event_code]['defaultAccessories'].get(garment, [])
         # Mỗi kiểu áo có nhiều bộ quần/giày/phụ kiện khác nhau để 3 gợi ý không trùng nhau ở những món này.
         for selected in accessory_sets(cat, row, defaults, accs, avoid_accs, gender):
             for color in palette[:max(2, min(len(wanted), 4))]:
-                look = Selection(outfitCode=garment, colorCode=color, styleCode=body.styleCode,
-                                 eventCode=body.eventCode, accessories=selected)
+                look = Selection(outfitCode=garment, colorCode=color, styleCode=style_code,
+                                 eventCode=event_code, accessories=selected)
                 state = state_for(look, cat, with_bottom_and_shoes=True).model_copy(update={'gender': gender})
                 rank, evaluations, harmony, card = score_outfit(state, cat, ctx)
                 outfit_id = f"c{len(candidates)+1}"
@@ -176,10 +207,10 @@ async def recommendations(body: BackendRequest, request: Request, svc: StylistSe
     # Danh sách ngắn gửi cho Gemini: giữ điểm cao nhưng phạt trùng kiểu áo, màu và phụ kiện để có đủ lựa chọn khác nhau.
     candidates = diverse_shortlist(candidates, ranks, n=9, colour_locked=len(wanted) == 1)   # nhiều màu thích: trải đều qua các màu đó
     # Include Spring's measured weather and available cultural sources in the AI request.
-    prompt = json.dumps({"request": body.prompt, "eventCode": body.eventCode, "styleCode": body.styleCode,
+    prompt = json.dumps({"request": body.prompt, "eventCode": event_code, "styleCode": style_code,
                          "city": body.city, "weather": body.weather,
                          "culturalContext": body.culturalContext}, ensure_ascii=False)
-    picked, source = await select_outfits(candidates, ctx, cat, svc._gemini_for(client_ip(request)),
+    picked, source = await select_outfits(candidates, ctx, cat, gemini,
                                           user_request=prompt, log=svc.log)
 
     concepts_out = []
@@ -187,7 +218,6 @@ async def recommendations(body: BackendRequest, request: Request, svc: StylistSe
         garment_name = cat.name("garments", o.state.garment)
         color_name = cat.name("colors", o.state.colors.main)
         style_name = cat.name("styles", o.state.style)
-        event_name = cat.name("occasions", o.state.occasion)
 
         if source == "gemini" and o.title and o.whyChosen:
             concept_name = o.title.strip()
@@ -208,7 +238,7 @@ async def recommendations(body: BackendRequest, request: Request, svc: StylistSe
                 temp = body.weather["temperature"]
                 cond = body.weather.get("condition", "CLEAR")
                 cond_str = "trời quang đãng" if cond == "CLEAR" else "thời tiết dễ chịu"
-                weather_part = f"Thời tiết tại {body.city or 'địa phương'} hiện khoảng {temp}°C ({cond_str}), rất thuận lợi để mặc chất liệu truyền thống. "
+                weather_part = f"Thời tiết hiện tại tại {body.city or 'địa phương'}: khoảng {temp}°C ({cond_str}), để tham khảo. "
 
             acc_part = ""
             if o.state.accessories:
@@ -218,7 +248,7 @@ async def recommendations(body: BackendRequest, request: Request, svc: StylistSe
             meaning_part = f"Ý nghĩa văn hóa: {cultural_text[:220]}..." if cultural_text else "Tôn vinh vẻ đẹp chuẩn mực và bản sắc trang phục Việt."
 
             reason = (
-                f"{garment_name} sắc {color_name.lower()} là lựa chọn tuyệt vời cho dịp {event_name.lower()} theo tinh thần {style_name.lower()}. "
+                f"{o.whyChosen} {garment_name} sắc {color_name.lower()} theo tinh thần {style_name.lower()}. "
                 f"{weather_part}{acc_part}{meaning_part}"
             )
 
@@ -233,7 +263,19 @@ async def recommendations(body: BackendRequest, request: Request, svc: StylistSe
             "reason": reason[:2000]
         })
 
-    return {"concepts": concepts_out}
+    labels = context_payload(ctx, cat)
+    details = [f"{key}: {', '.join(value) if isinstance(value, list) else value}" for key, value in labels.items()]
+    if ctx.preferredGarment:
+        details.append(f"trang phục mong muốn: {cat.name('garments', ctx.preferredGarment)}")
+    if ctx.mustHave:
+        details.append('phụ kiện muốn dùng: ' + ', '.join(cat.name('accessories', code) for code in ctx.mustHave))
+    if ctx.avoidAccessories:
+        details.append('phụ kiện muốn tránh: ' + ', '.join(cat.name('accessories', code) for code in ctx.avoidAccessories))
+    return {"concepts": concepts_out, "analysis": {
+        "event": event_code, "style": style_code, "character": 'male' if gender == 'nam' else 'female',
+        "understanding": ('Bạn đang tìm Việt phục với ' + '; '.join(details) + '.')[:2000],
+        "context": ctx.model_dump(exclude_none=True), "source": understanding_source,
+    }}
 
 
 class Changes(BaseModel):

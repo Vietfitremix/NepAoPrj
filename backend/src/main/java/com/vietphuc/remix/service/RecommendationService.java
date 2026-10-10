@@ -11,8 +11,10 @@ public class RecommendationService {
     public RecommendationResponse recommend(RecommendationRequest request) {
         selections.validateContext(request.eventCode(),request.styleCode());
         var currentWeather=weather.current(request.city());
-        var concepts=ai.recommend(request,currentWeather);
-        return new RecommendationResponse(new Analysis(request.eventCode(),currentWeather,
-            concepts.stream().map(Concept::styleCode).distinct().toList()),concepts);
+        var result=ai.recommend(request,currentWeather);
+        var analysis=result.analysis();
+        return new RecommendationResponse(new Analysis(analysis.event(),currentWeather,
+            result.concepts().stream().map(Concept::styleCode).distinct().toList(),analysis.understanding(),
+            analysis.character(),analysis.context(),analysis.source()),result.concepts());
     }
 }

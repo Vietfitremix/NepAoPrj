@@ -60,13 +60,14 @@ export function quizContext(answers: Record<string, QuizAnswer>): string {
   }).filter(Boolean).join('. ');
 }
 
+export const quizColorCodes: Record<string, string> = {'#b52838':'RED','#de91aa':'PINK','#e2b44b':'YELLOW','#39705b':'GREEN','#32679e':'BLUE',
+  '#765a94':'PURPLE','#876044':'BROWN','#eee9dc':'WHITE','#24242a':'BLACK'};
+
 export function quizPreferences(answers: Record<string, QuizAnswer>, prompt: string, city: string, weather: Weather): Preferences {
   const events:Record<string,string>={tet:'TET',ky_yeu:'GRADUATION',dam_cuoi:'CULTURAL_EVENT',le_hoi_chua:'FESTIVAL',dao_pho:'PHOTOSHOOT'};
   const styles:Record<string,string>={truyen_thong:'TRADITIONAL',toi_gian:'MINIMAL',duong_pho:'GEN_Z',pastel:'ELEGANT'};
-  const colors:Record<string,string>={'#b52838':'RED','#de91aa':'PINK','#e2b44b':'YELLOW','#39705b':'GREEN','#32679e':'BLUE',
-    '#765a94':'PURPLE','#876044':'BROWN','#eee9dc':'WHITE','#24242a':'BLACK'};
   const firstColor=Array.isArray(answers.colors?.value)?answers.colors.value[0]:undefined;
   return {prompt:prompt.trim(),city,weather,answers,character:answers.gender?.value==='nam'?'male':'female',
     eventCode:events[String(answers.occasion?.value)]||'TET',styleCode:styles[String(answers.style?.value)]||'GEN_Z',
-    colorCode:colors[firstColor||'']||'ANY'};
+    colorCode:quizColorCodes[firstColor||'']||'ANY'};
 }

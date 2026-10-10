@@ -24,24 +24,31 @@ public class AiService {
                 .enable(DeserializationFeature.FAIL_ON_NULL_FOR_PRIMITIVES)
                 .disable(DeserializationFeature.ACCEPT_FLOAT_AS_INT).build();
     }
-    public List<Concept> recommend(RecommendationRequest request,WeatherResponse weather) {
+    public AiRecommendation recommend(RecommendationRequest request,WeatherResponse weather) {
         var payload=new LinkedHashMap<String,Object>();
         payload.put("prompt",request.prompt()); payload.put("city",request.city());
         payload.put("eventCode",request.eventCode()); payload.put("styleCode",request.styleCode());
         payload.put("character",request.character());
+        payload.put("context",request.context());
         payload.put("weather",weather); payload.put("referenceData",outfits.references());
         payload.put("culturalContext",outfits.culturalContext());
         var data=client.recommendations(payload);
         if(data==null || !data.isObject() || !data.path("concepts").isArray() || data.path("concepts").size()!=3)
             throw invalidOutput();
+        var analysis=data.has("analysis") ? convert(data.path("analysis"),Interpretation.class)
+            : new Interpretation("Yêu cầu của bạn: " + request.prompt(),request.eventCode(),request.styleCode(),
+                request.character()==null?"female":request.character(),mapper.createObjectNode(),"fallback");
+        try { selections.validateContext(analysis.event(),analysis.style()); }
+        catch(ApiException e) { throw invalidOutput(); }
+        if(!analysis.context().isObject()) throw invalidOutput();
         List<Concept> result=new ArrayList<>();
         for(JsonNode node:data.path("concepts")) {
             var concept=convert(node,Concept.class);
             validateAiSelection(new LookSelection(concept.outfitCode(),concept.colorCode(),concept.styleCode(),
-                    request.eventCode(),concept.accessories()));
+                    analysis.event(),concept.accessories()));
             result.add(concept);
         }
-        return List.copyOf(result);
+        return new AiRecommendation(analysis,List.copyOf(result));
     }
     public RemixResponse remix(RemixRequest request) {
         selections.validate(request.currentLook());

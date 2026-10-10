@@ -20,10 +20,12 @@ import { configureWardrobe, initialWardrobe } from '../utils/mixWardrobe';
 import type { MaleSelection, WardrobeCharacter } from '../utils/maleWardrobe';
 import { events } from './StylistPage';
 import { reviewContext } from '../utils/outfitContext';
+import { contextualAnswers } from '../utils/recommendationContext';
 
 export default function MixStudioPage() {
   const {conceptId}=useParams();
   const {session,update}=useSession();
+  const answers=contextualAnswers(session.preferences,session.recommendation);
   const navigate=useNavigate();
   const config=session.mix?.conceptId===conceptId?session.mix:undefined;
   const concept=session.recommendation?.concepts.find(item=>item.id===conceptId);
@@ -39,7 +41,7 @@ export default function MixStudioPage() {
   const [error,setError]=useState('');
   const [remixResult,setRemixResult]=useState<WardrobeRemix>();
   const key=JSON.stringify(config);
-  const contextKey=JSON.stringify(reviewContext(session.preferences?.answers));
+  const contextKey=JSON.stringify(reviewContext(answers));
   const scoreKey=key+contextKey;
   const latestKey=useRef(key);latestKey.current=key;
   const active=useRef(true);
@@ -61,7 +63,7 @@ export default function MixStudioPage() {
     if(config.wardrobe && JSON.stringify(configureWardrobe(config,config.wardrobe.selection,config.wardrobe.character,outfits))!==key)return;
     const controller=new AbortController();setChecking(true);setScoreError('');
     const timer=setTimeout(()=>{
-      getCulturalScore(config,controller.signal,session.preferences?.answers).then(value=>{if(!controller.signal.aborted)setScore({key:scoreKey,value});})
+      getCulturalScore(config,controller.signal,answers).then(value=>{if(!controller.signal.aborted)setScore({key:scoreKey,value});})
         .catch(err=>{if(!controller.signal.aborted)setScoreError(errorMessage(err));})
         .finally(()=>{if(!controller.signal.aborted)setChecking(false);});
     },450);
@@ -86,7 +88,7 @@ export default function MixStudioPage() {
     event.preventDefault();if(!config || !prompt.trim() || busy)return;
     const requestKey=key;setBusy('remix');setError('');
     try{
-      const result=await wardrobeRemix(config,prompt.trim(),session.preferences?.answers);
+      const result=await wardrobeRemix(config,prompt.trim(),answers);
       if(!active.current || latestKey.current!==requestKey)return;
       if(result.applied)chooseWardrobe(result.selection,wardrobe.character);
       setRemixResult(result);setPrompt('');
@@ -97,7 +99,7 @@ export default function MixStudioPage() {
     if(!config || busy || checking || score?.key!==scoreKey)return;
     setBusy('generate');setError('');
     try{
-      const look=await createLook(config,session.preferences?.answers);
+      const look=await createLook(config,answers);
       if(!look.id)throw new Error('Máy chủ chưa trả về mã look. Vui lòng thử lại.');
       if(active.current)navigate(`/look/${encodeURIComponent(look.id)}`);
     }catch(err){if(active.current)setError(errorMessage(err));}

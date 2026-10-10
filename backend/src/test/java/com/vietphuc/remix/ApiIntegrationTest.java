@@ -176,11 +176,18 @@ class ApiIntegrationTest {
     }
     @Test void recommendExactlyThreeWithAuthoritativeWeather() throws Exception {
         var data=(com.fasterxml.jackson.databind.node.ObjectNode)concepts();
-        data.putObject("analysis").put("event","TET");
+        data.set("analysis",mapper.readTree("""
+            {"event":"GRADUATION","style":"MINIMAL","character":"male","source":"gemini",
+             "understanding":"Bạn chụp kỷ yếu ngoài trời, thích tối giản.",
+             "context":{"setting":"ngoai_troi","weather":"lanh"}}
+            """));
         when(ai.recommendations(any())).thenReturn(data);
         mvc.perform(post("/api/recommendations").contentType("application/json").content(RECOMMEND))
             .andExpect(status().isOk()).andExpect(jsonPath("$.concepts",hasSize(3)))
-            .andExpect(jsonPath("$.analysis.event").value("FESTIVAL"))
+            .andExpect(jsonPath("$.analysis.event").value("GRADUATION"))
+            .andExpect(jsonPath("$.analysis.understanding").value("Bạn chụp kỷ yếu ngoài trời, thích tối giản."))
+            .andExpect(jsonPath("$.analysis.character").value("male"))
+            .andExpect(jsonPath("$.analysis.context.setting").value("ngoai_troi"))
             .andExpect(jsonPath("$.analysis.weather.temperature").value(31.5));
         verify(ai).recommendations(argThat(p -> p instanceof Map<?,?> m && m.containsKey("referenceData") && m.containsKey("culturalContext")));
     }
@@ -200,6 +207,20 @@ class ApiIntegrationTest {
             mvc.perform(post("/api/recommendations").contentType("application/json").content(RECOMMEND))
                 .andExpect(status().isBadGateway());
         }
+    }
+    @Test void rejectInvalidInterpretationAndForwardExplicitContext() throws Exception {
+        var data=(com.fasterxml.jackson.databind.node.ObjectNode)concepts();
+        data.set("analysis",mapper.readTree("""
+            {"event":"NOPE","style":"MINIMAL","character":"male","source":"gemini",
+             "understanding":"Khách dự cưới.","context":{"role":"khach"}}
+            """));
+        when(ai.recommendations(any())).thenReturn(data);
+        var request=(com.fasterxml.jackson.databind.node.ObjectNode)mapper.readTree(RECOMMEND);
+        request.set("context",mapper.readTree("{\"role\":\"khach\",\"setting\":\"trong_nha\"}"));
+        mvc.perform(post("/api/recommendations").contentType("application/json").content(request.toString()))
+            .andExpect(status().isBadGateway()).andExpect(jsonPath("$.code").value("INVALID_AI_OUTPUT"));
+        verify(ai).recommendations(argThat(p -> p instanceof Map<?,?> m && m.get("context") instanceof JsonNode context
+            && context.path("role").asText().equals("khach") && context.path("setting").asText().equals("trong_nha")));
     }
     @Test void invalidRecommendationContextDoesNotCallUpstreams() throws Exception {
         mvc.perform(post("/api/recommendations").contentType("application/json").content(RECOMMEND.replace("GEN_Z","NOPE")))

@@ -94,6 +94,81 @@ def expanded_payload(payload):
     return payload
 
 
+def test_shortcut_context_replaces_defaults_and_changes_selection(backend_client, payload):
+    payload = expanded_payload(payload)
+    payload.pop('character')
+    payload.update(eventCode='TET', styleCode='GEN_Z', prompt='Mình là nam, chụp kỷ yếu ngoài trời, trời lạnh, thích tối giản, không thích đỏ')
+    response = backend_client.post('/ai/recommendations', json=payload)
+    assert response.status_code == 200, response.text
+    data = response.json()
+    analysis = data['analysis']
+    assert analysis['event'] == 'GRADUATION' and analysis['style'] == 'MINIMAL'
+    assert analysis['character'] == 'male'
+    assert analysis['context']['weather'] == 'lanh' and analysis['context']['setting'] == 'ngoai_troi'
+    assert 'kỷ yếu' in analysis['understanding'].lower() and 'ngoài trời' in analysis['understanding'].lower()
+    assert 'màu tránh: Đỏ' in analysis['understanding']
+    assert all(c['outfitCode'] not in ('NHAT_BINH', 'AO_TU_THAN') and c['colorCode'] != 'RED'
+               and c['styleCode'] == 'MINIMAL' for c in data['concepts'])
+
+
+def test_explicit_quiz_choices_take_precedence_over_free_text(backend_client, payload):
+    payload = expanded_payload(payload)
+    payload.update(prompt='Chụp kỷ yếu ngoài trời, tối giản',
+                   context={'occasion': 'dam_cuoi', 'style': 'truyen_thong', 'setting': 'trong_nha', 'role': 'khach'})
+    response = backend_client.post('/ai/recommendations', json=payload)
+    assert response.status_code == 200, response.text
+    analysis = response.json()['analysis']
+    assert analysis['event'] == 'CULTURAL_EVENT' and analysis['style'] == 'TRADITIONAL'
+    assert analysis['context']['setting'] == 'trong_nha' and analysis['context']['role'] == 'khach'
+
+
+def test_quiz_colors_survive_missing_text_and_still_respect_avoidance(backend_client, payload):
+    payload = expanded_payload(payload)
+    payload.update(prompt='Tránh màu đỏ', context={'preferredColors': ['BLUE', 'RED']})
+    response = backend_client.post('/ai/recommendations', json=payload)
+    assert response.status_code == 200, response.text
+    analysis = response.json()['analysis']
+    assert analysis['context']['preferredColors'] == ['BLUE']
+    assert analysis['context']['avoidColors'] == ['RED']
+    assert all(c['colorCode'] == 'BLUE' for c in response.json()['concepts'])
+
+
+def test_recommendations_use_semantic_understanding_before_scoring(backend_client, payload, monkeypatch):
+    from app.ai.gemini import GeminiClient, AIError
+    calls = []
+
+    async def semantic_call(self, system, contents, schema, temperature):
+        if 'occasion' not in schema['properties']:
+            raise AIError('selection deliberately uses fallback')
+        calls.append(contents)
+        return {'occasion': 'dam_cuoi', 'style': 'toi_gian', 'gender': 'nam', 'weather': 'mua',
+                'setting': 'trong_nha', 'timeOfDay': 'buoi_toi', 'role': 'khach',
+                'preferredColors': ['xanh_lam'], 'avoidColors': ['do_son']}, 10
+
+    monkeypatch.setattr(GeminiClient, 'call_json', semantic_call)
+    payload = expanded_payload(payload)
+    payload.pop('character')
+    payload.update(eventCode='TET', styleCode='GEN_Z', prompt='Mình đến chúc phúc cho chị khi mặt trời lặn; ưu tiên sự gọn gàng.')
+    response = backend_client.post('/ai/recommendations', json=payload)
+    assert response.status_code == 200, response.text
+    analysis = response.json()['analysis']
+    assert calls and payload['prompt'] in calls[0]
+    assert analysis['source'] == 'gemini' and analysis['event'] == 'CULTURAL_EVENT'
+    assert analysis['style'] == 'MINIMAL' and analysis['context']['timeOfDay'] == 'buoi_toi'
+    assert analysis['context']['preferredColors'] == ['BLUE'] and analysis['context']['avoidColors'] == ['RED']
+    assert all(c['styleCode'] == 'MINIMAL' and c['colorCode'] == 'BLUE' for c in response.json()['concepts'])
+
+
+def test_context_at_end_of_long_prompt_is_preserved(backend_client, payload):
+    payload = expanded_payload(payload)
+    payload.update(prompt=('Mong trang phục phù hợp. ' * 30) + 'Chụp kỷ yếu ngoài trời, buổi tối, trời lạnh, tối giản')
+    response = backend_client.post('/ai/recommendations', json=payload)
+    assert response.status_code == 200, response.text
+    analysis = response.json()['analysis']
+    assert analysis['event'] == 'GRADUATION' and analysis['style'] == 'MINIMAL'
+    assert analysis['context']['timeOfDay'] == 'buoi_toi' and analysis['context']['weather'] == 'lanh'
+
+
 def test_event_changes_actual_outfits_colors_and_accessories(backend_client, payload):
     payload = expanded_payload(payload)
     signatures = []

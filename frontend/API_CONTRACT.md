@@ -21,15 +21,20 @@ Thành phố có sẵn: `Hanoi`, `Ho Chi Minh City`, `Da Nang`, `Hue`. Điều k
   "prompt": "Mình thích màu đỏ trầm, trẻ trung",
   "eventCode": "TET",
   "styleCode": "GEN_Z",
-  "colorCode": "RED",
   "city": "Hanoi",
-  "weather": { "city": "Hanoi", "temperature": 30, "condition": "RAIN", "humidity": 82 }
+  "context": { "setting": "ngoai_troi", "preferredColors": ["DARK_RED"] }
 }
 ```
 
 Event: `TET | FESTIVAL | GRADUATION | PHOTOSHOOT`. Style ở form: `GEN_Z | MINIMAL | ELEGANT | TRADITIONAL`. Màu ở form: `RED | WHITE | BLUE | ANY`.
 
-Response gồm `id`, `understanding` (chuỗi tóm tắt nhu cầu) và `concepts` (**đúng 3 phần tử**). Mỗi concept:
+API trả `analysis` và `concepts` (**đúng 3 phần tử**). `analysis` có `event`, `weather` hiện tại từ backend,
+`styles`, `understanding`, `character`, `context`, `source`. Frontend dùng nguyên `analysis.understanding`
+để hiển thị “AI hiểu bạn đang tìm”, và giữ event/phong cách/người mặc đã phân tích khi vào Mix Studio.
+Prompt chỉ gồm câu người dùng nhập và câu trả lời quiz thật; không thêm Tết/Gen Z/nữ mặc định.
+Lựa chọn quiz đã bấm được gửi trong `context` và ưu tiên hơn suy luận từ câu tự do.
+
+Sau khi ánh xạ ở frontend, recommendation có `id`, `understanding`, bối cảnh đã phân tích và `concepts`. Mỗi concept:
 
 ```json
 {

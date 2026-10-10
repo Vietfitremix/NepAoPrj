@@ -11,7 +11,7 @@ from .schemas import intent_schema
 
 async def understand(text: str, catalog, gemini: GeminiClient, log=None) -> tuple[Intent, str]:
     """Trả về (intent, source) với source = "gemini" hoặc "fallback"."""
-    text = text.strip()[:600]                      # câu gõ nhanh hoặc phần gõ tự do của nhiều câu quiz
+    text = text.strip()[:2000]                     # giữ cả câu kể nhanh và phần gõ tự do cuối quiz
     try:
         raw, ms = await gemini.call_json(
             system=load_prompt("understand"),

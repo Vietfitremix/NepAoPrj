@@ -7,6 +7,7 @@ import { recommend } from '../services/recommendationApi';
 import { errorMessage } from '../services/api';
 import { useSession } from '../state';
 import { answerLabels, quizPreferences, stylistQuiz } from '../utils/stylistQuiz';
+import { resolvedPreferences } from '../utils/recommendationContext';
 import type { QuizAnswer, Weather } from '../types';
 
 export const events = [{code:'TET',label:'Tết'},{code:'FESTIVAL',label:'Lễ hội'},{code:'GRADUATION',label:'Kỷ yếu'},{code:'PHOTOSHOOT',label:'Chụp ảnh'},{code:'CULTURAL_EVENT',label:'Sự kiện văn hóa / cưới hỏi'}];
@@ -47,7 +48,7 @@ export default function StylistPage() {
       const recommendation = await recommend(preferences);
       if (!Array.isArray(recommendation.concepts) || recommendation.concepts.length !== 3)
         throw new Error('Máy chủ chưa trả về đủ 3 concept. Vui lòng thử lại.');
-      update({ preferences, recommendation, mix:undefined });
+      update({ preferences: resolvedPreferences(preferences, recommendation), recommendation, mix:undefined });
       navigate('/concepts');
     } catch (err) { setError(errorMessage(err)); }
     finally { setBusy(false); }

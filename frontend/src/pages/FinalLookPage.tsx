@@ -18,6 +18,7 @@ import type { LookbookExtras } from '../utils/lookbook';
 import { normalizeMaleSelection } from '../utils/maleWardrobe';
 import { ErrorBox, Loading, PageHeading, Stepper } from '../components/common/UI';
 import { CulturalContent } from '../components/concept/CulturalInfoModal';
+import { contextualAnswers } from '../utils/recommendationContext';
 function savedIds(): string[] {
   try {
     const value: unknown = JSON.parse(localStorage.getItem('viet-fit-saved-looks') || '[]');
@@ -29,7 +30,7 @@ export default function FinalLookPage(){
   useEffect(()=>{if(!lookId)return;const controller=new AbortController();setLook(undefined);setError('');setNotice('');setSaved(savedIds().includes(lookId));getLook(lookId,controller.signal).then(data=>{if(!controller.signal.aborted)setLook(data);}).catch(err=>{if(!controller.signal.aborted)setError(errorMessage(err));});return()=>controller.abort();},[lookId,retry]);
   useEffect(()=>{if(!look)return;setKnowledge(undefined);setCultureError('');const controller=new AbortController();getCulturalKnowledge(look.outfitCode,controller.signal).then(data=>{if(!controller.signal.aborted)setKnowledge(data);}).catch(err=>{if(!controller.signal.aborted)setCultureError(errorMessage(err));});return()=>controller.abort();},[look,cultureRetry]);
   useEffect(()=>{if(!look?.config.wardrobe)return;const controller=new AbortController();setReview(null);setReviewError('');setReviewBusy(true);
-    wardrobeReview(look.config,session.preferences?.answers,controller.signal).then(data=>{if(!controller.signal.aborted)setReview(data);})
+    wardrobeReview(look.config,contextualAnswers(session.preferences,session.recommendation),controller.signal).then(data=>{if(!controller.signal.aborted)setReview(data);})
       .catch(err=>{if(!controller.signal.aborted)setReviewError(errorMessage(err));}).finally(()=>{if(!controller.signal.aborted)setReviewBusy(false);});
     return()=>controller.abort();// eslint-disable-next-line react-hooks/exhaustive-deps
   },[look?.id,reviewRetry]);
